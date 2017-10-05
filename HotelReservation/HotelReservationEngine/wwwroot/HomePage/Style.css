@@ -21,25 +21,11 @@ label {
 
 .datePicker {
     border: 1px solid #c4c4c4;
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: #fff;
     color: grey;
-    font-size: 12px;
+    font-size: 16px;
 }
-
-[type="date"] {
-    background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 150% no-repeat;
-   
-   min-width:200px;
-}
-
-    [type="date"]::-webkit-inner-spin-button {
-        display: none;
-    }
-
-    [type="date"]::-webkit-calendar-picker-indicator {
-        opacity: 0;
-    }
 
 
 .pageButton {
