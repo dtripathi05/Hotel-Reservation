@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hotel Reservation</title>
+    <meta charset="utf-8">
+    <metaviewport></metaviewport>
+    <link rel="stylesheet" href="/HomePage/Style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="/HomePage/Script.js"></script>    
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand">Hotel Reservation</a>
+                    </div>
+                    <ul class=" nav navbar-nav navbar-right ">
+                        <li class="navbar-nav nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Sign In</a></li>
+                                <li><a href="#">Create An Account</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="hotelSearch">
+            <form id="hotelSearchForm">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <!--Going To-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div classs="col-md-10">
+                                    <div class="form-group">
+                                        <label for="from">Going To</label>
+                                        <input type="text" class="form-control placeholderfont" name="goingTo" id="place" placeholder="City,Landmark,Address,Station Name,Hotel Name..">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Check In Date-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Check-In</label>
+                                    <div class="input-group">
+                                        <input class="datePicker placeholderfont" type="date" name="checkInDate" placeholder="dd-mm-yyyy" id="datepickerId1">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Check Out Date-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Check Out</label>
+                                    <div class="input-group">
+                                        <span></span>
+                                        <input class="datePicker placeholderfont" type="date" name="checkOutdate" placeholder="dd-mm-yyyy" id="datepickerId2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Number of Rooms Option List-->
+                        <div class="col-md-2">
+                            <label for="rooms">Rooms</label>
+                            <select name="room" class="form-control" id="rooms">
+                                <option selected="selected" value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+                        <!--Adults Option List-->
+                        <div class="col-md-2">
+                            <label for="adults">Adults(18+)</label>
+                            <select name="adults" class="form-control" id="adult">
+                                <option selected="selected" value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                        </div>
+
+                        <!--Children-->
+                        <div class="col-md-2">
+                            <label for="children">Children(0-17)</label>
+                            <select name="child" class="form-control" id="children">
+                                <option selected="selected" value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+
+                            <div id="addElement" style="border: 1px solid black"></div>
+                        </div>
+
+                        <!--Search Button-->
+                        <div class="col-md-12">
+                            <button type="submit" name="searchBtn" id="searchButton" class="pageButton" onclick="extractData()">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>

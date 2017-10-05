@@ -1,0 +1,54 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans');
+
+.container {
+    opacity: 0.5;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    font-family: Dosis;
+    padding: 0px;
+}
+
+btn.btn-primary:active {
+    background-color: grey !important;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.datePicker {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    color: grey;
+    font-size: 12px;
+}
+
+[type="date"] {
+    background: #fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png) 97% 150% no-repeat;
+   
+   min-width:200px;
+}
+
+    [type="date"]::-webkit-inner-spin-button {
+        display: none;
+    }
+
+    [type="date"]::-webkit-calendar-picker-indicator {
+        opacity: 0;
+    }
+
+
+.pageButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-height: 80px;
+    color: white;
+    font-size: 25px;
+    background: #ff3300;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
