@@ -1,0 +1,40 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans');
+
+.container {
+    opacity: 0.5;
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    background-color: black;
+    font-family: Dosis;
+    padding: 0px;
+}
+
+btn.btn-primary:active {
+    background-color: grey !important;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.datePicker {
+    border: 1px solid #c4c4c4;
+    border-radius: 2px;
+    background-color: #fff;
+    color: grey;
+    font-size: 16px;
+}
+
+
+.pageButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-height: 80px;
+    color: white;
+    font-size: 25px;
+    background: #ff3300;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
