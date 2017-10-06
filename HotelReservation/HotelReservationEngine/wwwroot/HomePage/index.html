@@ -3,10 +3,10 @@
 <head>
     <title>Hotel Reservation</title>
     <meta charset="utf-8">
-    <metaviewport></metaviewport>
     <link rel="stylesheet" href="/HomePage/Style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-       <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-darkness/jquery-ui.min.css" />
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-darkness/jquery-ui.min.css" />
+   
 </head>
 <body>
     <div class="row">
@@ -59,7 +59,7 @@
                                 <div class="form-group">
                                     <label>Check-In</label>
                                 <div class="input-group">
-                                    <input class="datePicker placeholderfont" type="text" name="checkin" placeholder="dd-mm-yyyy" id="checkindate" required>
+                                    <input class="datePicker placeholderfont" type="text" name="checkin" placeholder="yyyy-mm-dd" id="checkindate" required>
                                 </div>
                             </div>
                                 </div>
@@ -70,9 +70,8 @@
                                     <label>Check Out</label>
                                     <div class="input-group">
                                         <span></span>
-                                            <input class="datePicker placeholderfont" type="text" name="checkout" placeholder="dd-mm-yyyy" id="checkoutdate" required>
+                                            <input class="datePicker placeholderfont" type="text" name="checkout" placeholder="yyyy-mm-dd" id="checkoutdate" required>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -127,7 +126,7 @@
 
                         <!--Search Button-->
                         <div class="col-md-12">
-                            <button type="submit" name="searchBtn" id="searchButton" class="pageButton" onclick="extractData()">Search</button>
+                            <button  name="searchBtn" id="searchButton" class="pageButton" onclick="extractData()">Search</button>
                         </div>
                     </div>
         </form>
@@ -137,4 +136,5 @@
 <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="/HomePage/Script.js"></script> 
+<script src="/AutoSuggest/AutoSuggest.js"></script>
 </html>
