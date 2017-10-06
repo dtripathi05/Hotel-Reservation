@@ -36,6 +36,11 @@ namespace HotelReservationEngine
             }
             app.UseStaticFiles();
             app.UseMvc();
+            app.Run(ctx =>
+            {
+                ctx.Response.Redirect("/index.html");
+                return Task.FromResult(0);
+            });
         }
     }
 }

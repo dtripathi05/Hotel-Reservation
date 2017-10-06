@@ -23,7 +23,7 @@
         },
         minLength: 2,
         select: function (event, ui) {
-           console.log(ui);
+            console.log(ui);
         }
     });
 });
