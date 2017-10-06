@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
-    $("#checkindate").datepicker({ minDate: 0 });
-    $("#checkoutdate").datepicker({ minDate:1 });
+    $("#checkindate").datepicker({ dateFormat:yy-mm-dd });
+    $("#checkoutdate").datepicker({ dateFormat:yy-mm-dd });
 });
 
 
@@ -8,7 +8,43 @@
 //Data Extraction Function
 var result;
 
+function validateDetails() {
 
+    if (document.guestDetailsForm.firstname.value == "") {
+        document.getElementById('errors').innerHTML = "Please Enter Your Name";
+        return false;
+    }
+    if (document.guestDetailsForm.lastname.value == "") {
+        document.getElementById('errors').innerHTML = "Please Enter Your Last Name";
+        return false;
+    }
+    if (document.guestDetailsForm.mobilenumber.value == "") {
+            document.getElementById('errors').innerHTML = "Please Enter Valid Mobile Number";
+            return false;
+    }
+    if (document.guestDetailsForm.age.value == "") {
+        document.getElementById('errors').innerHTML = "Please Select Age";
+        return false;
+    }
+    if (document.guestDetailsForm.email.value == "") {
+        document.getElementById('errors').innerHTML = "Please Enter Valid Email-ids";
+        return false;
+    }
+
+    var fName = $("#firstName")[0].value;
+    var lName = $("#lastNaame")[0].value;
+    var mobNumber = $("#mobileNumber")[0].value;
+    var age = $("#age")[0].value;
+    var mail = $("#emailId")[0].value;
+
+    var data = {
+        "firstName": fName,
+        "lastName": lName,
+        "mobileNumber": mobNumber,
+        "age": age,
+        "email-id": mail
+    };
+}
 function extractData() {
 
 

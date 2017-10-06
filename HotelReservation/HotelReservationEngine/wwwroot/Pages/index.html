@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hotel Reservation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Css/Style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-darkness/jquery-ui.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+
+</head>
+<body>
+    <header>
+        <h6>Hotel Reservation Engine</h6>
+    </header>
+    <div class="col-md-12">
+        <nav class="navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Hotel Reservation</a>
+                </div>
+                <ul class=" nav navbar-nav navbar-right ">
+                    <li class="navbar-nav nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Sign In</a></li>
+                            <li><a href="#">Create An Account</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <br />
+    <br />
+    <section>
+        <div class="container">
+            <div id="hotelSearch">
+                <form id="hotelSearchForm" onsubmit="return extractData();">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <article>
+                                <!--Going To-->
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-10">
+                                            <div class="form-group">
+                                                <label for="place">Going To</label>
+                                                <input type="text" class="form-control placeholderfont" name="goingTo" id="place" placeholder="City,Landmark,Address,Station Name,Hotel Name..">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!--Check In Date-->
+                            <article>
+                                <div class="row">
+                                    <div class="col-md-10">
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Check-In</label>
+                                                <div class="input-group">
+                                                    <input class="datePicker placeholderfont" type="text" name="checkin" placeholder="yyyy-mm-dd" id="checkindate" required>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--Check Out Date-->
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Check Out</label>
+                                                <div class="input-group">
+                                                    <span></span>
+                                                    <input class="datePicker placeholderfont" type="text" name="checkout" placeholder="yyyy-mm-dd" id="checkoutdate" required>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+
+
+                            <!--Number of Rooms Option List-->
+                            <article>
+                                <div class="col-md-2">
+                                    <label for="rooms">Rooms</label>
+                                    <select name="room" class="form-control" id="rooms">
+                                        <option selected="selected" value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                                <!--Adults Option List-->
+                                <div class="col-md-2">
+                                    <label for="adult">Adults(18+)</label>
+                                    <select name="adults" class="form-control" id="adult">
+                                        <option selected="selected" value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+
+                                <!--Children-->
+                                <div class="col-md-2">
+                                    <label for="children">Children(0-17)</label>
+                                    <select name="child" class="form-control" id="children">
+                                        <option selected="selected" value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </article>
+
+                            <article>
+                                <div class="form-group">
+                                    <div class="col-md-9 col-md-offset-3">
+                                        <div id="errors"></div>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!--Search Button-->
+                            <article>
+                                <div class="col-md-12">
+                                    <button type="submit" name="searchBtn" id="searchButton" class="pageButton">Search</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <br />
+    <footer class="foot">Developed @Tavisca</footer>
+    <script src="/Js/Script.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hotel Express</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/Style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <br/>
+    <br/>
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand">Hotel Reservation</a>
+                    </div>
+                    <ul class=" nav navbar-nav navbar-right ">
+                        <li class="navbar-nav nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Feedback</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Sign In</a></li>
+                                <li><a href="#">Create An Account</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+<br/>
+<br/>
+    <div class="container">
+        <div id="guestDetails">
+            <form id="guestDetailsForm">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <!--First Name-->
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="from">First Name</label>
+                                <input type="text" class="form-control placeholderfont" id="firstName" name="firstname" placeholder="First Name">
+                            </div>
+                        </div>
+
+                        <!--Last Name-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="from">Last Name</label>
+                                <input type="text" class="form-control placeholderfont" id="lastName" name="lastname" placeholder="Last Name">
+                            </div>
+                        </div>
+
+                        <!--Mobile Number-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="from">Mobile Number</label>
+                                <input type="text" class="form-control placeholderfont" id="mobileNumber" name="mobilenumber" placeholder="Mobile Number">
+                            </div>
+                        </div>
+
+                        <!--Age-->
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="from">Age</label>
+                                <input type="text" class="form-control placeholderfont" id="age" name="age" placeholder="Age">
+                            </div>
+                        </div>
+
+                        <!--Email-Id-->
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label for="from">Email-Id</label>
+                                <input type="text" class="form-control placeholderfont" id="emailId" name="emailid" placeholder="Example:abc@gmail.com">
+                            </div>
+                        </div>
+
+                        <!--Error Messaging-->
+                        <div class="form-group">
+                            <div class="col-md-9 col-md-offset-3">
+                                <div id="errors"></div>
+                            </div>
+                        </div>
+
+                        <!--Save Button-->
+                        <div class="col-md-12">
+                            <button type="submit" class="pageButton" id="saveBtn" onclick="validateDetails()">Save</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/Js/Script.js"></script>
+</html>
