@@ -37,7 +37,7 @@
     <br/>
     <div class="container">
         <div id="hotelSearch">
-         <form id="hotelSearchForm">
+         <form id="hotelSearchForm" onsubmit="extractData(); return false">
                 <div class="row">
                     <div class="col-md-12">
 
@@ -126,15 +126,18 @@
 
                         <!--Search Button-->
                         <div class="col-md-12">
-                            <button  name="searchBtn" id="searchButton" class="pageButton" onclick="extractData()">Search</button>
+                            <button  name="searchBtn" id="searchButton" class="pageButton">Search</button>
                         </div>
                     </div>
         </form>
        </div>
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>-->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <script src="/HomePage/Script.js"></script> 
 <script src="/AutoSuggest/AutoSuggest.js"></script>
 </html>
