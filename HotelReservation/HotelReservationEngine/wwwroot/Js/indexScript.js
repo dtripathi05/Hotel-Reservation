@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     $("#checkindate").datepicker({ dateFormat: 'yy-mm-dd' });
-    $("#checkoutdate").datepicker({ dateFormat:'yy-mm-dd' });
+    $("#checkoutdate").datepicker({ dateFormat: 'yy-mm-dd' });
 });
 
 
@@ -10,7 +10,7 @@ var result;
 
 
 function extractData() {
-  
+
     var place = $("#place")[0].value;
     var checkInDate = $("#checkindate").val();
     var checkOutDate = $("#checkoutdate")[0].value;
