@@ -27,7 +27,7 @@ function extractData() {
 
 
     var place = $("#place")[0].value;
-    var checkInDate = $("#checkindate")[0].value;
+    var checkInDate = $("#checkindate").val();
     var checkOutDate = $("#checkoutdate")[0].value;
     var numberOfRooms = $("#rooms")[0].value;
     var adultNumber = $("#adult")[0].value;
