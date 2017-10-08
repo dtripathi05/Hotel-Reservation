@@ -166,5 +166,30 @@ namespace Parser
             company.ID = SearchRequestStaticData._companyId;
             return company;
         }
+
+        public SearchResponse ResponseTranslator(HotelSearchRS hotelSearchRS)
+        {
+            SearchResponse parsedRes = new SearchResponse();
+            List<Itinerary> listing = new List<Itinerary>();
+            foreach (HotelItinerary itinerary in hotelSearchRS.Itineraries)
+            {
+                Itinerary newItinerary = new Itinerary();
+                newItinerary.Address = itinerary.HotelProperty.Address.CompleteAddress;
+                newItinerary.Name = itinerary.HotelProperty.Name;
+                newItinerary.GeoCode = JsonConvert.DeserializeObject<GeoAxisCode>(JsonConvert.SerializeObject(itinerary.HotelProperty.GeoCode));
+                foreach (Media media in itinerary.HotelProperty.MediaContent)
+                {
+                    if (media.Type == MediaType.Photo)
+                    {
+                        newItinerary.ImageUrl = media.Url;
+                        break;
+                    }
+                }
+                listing.Add(newItinerary);
+            }
+            parsedRes.HotelResults = listing.ToArray();
+            parsedRes.SessionId = hotelSearchRS.SessionId;
+            return parsedRes;
+        }
     }
 }
