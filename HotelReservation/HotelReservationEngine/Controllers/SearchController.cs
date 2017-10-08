@@ -3,10 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using System.IO;
-using HotelSearchService;
 using HotelEntities;
-
+using HotelAdapter;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -30,6 +28,12 @@ namespace HotelReservationEngine.Controllers
         {
             return _searchStore[guid];
         }
-        
+        [HttpPost("hotel")]
+        public async Task<SearchResponse> Hotel([FromBody]SearchRequest searchFields)
+        {
+            ConnectorAdapter connectorAdapter = new ConnectorAdapter();
+            var result = await connectorAdapter.SearchAsync(searchFields);
+            return result;
+        }
     }
 }
