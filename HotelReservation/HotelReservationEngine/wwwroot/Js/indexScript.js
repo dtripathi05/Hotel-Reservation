@@ -3,15 +3,20 @@
     $("#checkoutdate").datepicker({ dateFormat: 'yy-mm-dd' });
 });
 
+var latitude;
+var longitude;
+var cityName;
+var searchType;
+var result;
 
 
 //Data Extraction Function
-var result;
+
 
 
 function extractData() {
 
-    var place = $("#place")[0].value;
+    var place = $("#place").val();
     var checkInDate = $("#checkindate").val();
     var checkOutDate = $("#checkoutdate")[0].value;
     var numberOfRooms = $("#rooms")[0].value;
@@ -20,12 +25,17 @@ function extractData() {
 
 
     var data = {
-        "Destination": place,
-        "CheckIn": checkInDate,
-        "CheckOut": checkOutDate,
+        "Destination": {
+            "Longitude": longitude,
+            "Latitude": latitude,
+            "SearchType": searchType,
+            "CityName": cityName
+        },
+        "CheckInDate": checkInDate,
+        "CheckOutDate": checkOutDate,
         "Rooms": numberOfRooms,
         "Adults": adultNumber,
-        "ChildAge": childNumber
+        "ChildrenCount": childNumber
     };
 
     var modifiedData = JSON.stringify(data);
@@ -39,5 +49,4 @@ function extractData() {
         },
         data: modifiedData
     });
-
 }
