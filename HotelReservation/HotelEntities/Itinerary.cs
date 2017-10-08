@@ -13,5 +13,7 @@ namespace HotelEntities
         public GeoAxisCode GeoCode { get; set; }
 
         public string ImageUrl { get; set; }
+
+        public decimal MinPrice { get; set; }
     }
 }

@@ -176,6 +176,7 @@ namespace Parser
                 Itinerary newItinerary = new Itinerary();
                 newItinerary.Address = itinerary.HotelProperty.Address.CompleteAddress;
                 newItinerary.Name = itinerary.HotelProperty.Name;
+                newItinerary.MinPrice = itinerary.Fare.BaseFare.Amount;
                 newItinerary.GeoCode = JsonConvert.DeserializeObject<GeoAxisCode>(JsonConvert.SerializeObject(itinerary.HotelProperty.GeoCode));
                 foreach (Media media in itinerary.HotelProperty.MediaContent)
                 {
