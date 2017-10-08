@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using HotelEntities;
 using HotelAdapter;
+using Newtonsoft.Json;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -28,6 +29,7 @@ namespace HotelReservationEngine.Controllers
         {
             return _searchStore[guid];
         }
+
         [HttpPost("hotel")]
         public async Task<SearchResponse> Hotel([FromBody]SearchRequest searchFields)
         {

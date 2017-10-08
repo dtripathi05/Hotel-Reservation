@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Css/Style.css">
+    <title>Hotel Express</title>
+</head>
+<body>
+    <header>
+        <h6>Hotel Reservation Engine</h6>
+    </header>
+    <div class="col-md-12">
+        <nav class="navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Hotel Reservation</a>
+                </div>
+                <ul class=" nav navbar-nav navbar-right ">
+                    <li class="navbar-nav nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Sign In</a></li>
+                            <li><a href="#">Create An Account</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <h1>Available Options</h1>
+
+    <div id="hotelList-container"></div>
+    <script id="hotel-item" type="text/x-handlebars-template">
+        {{#each this}}
+        <div style="border:solid 1px gray;margin-bottom:10px" class="container">
+            <div class="col-md-12">
+                <section>
+                    <!--Image-->
+                    <div class="col-md-6">
+                        <img src="{{image}}" width="400" height="250" />
+                    </div>
+                </section>
+                <section>
+                    <!--Hotel Details-->
+                    <div class="col-md-4">
+                        <h4>{{name}}</h4>
+                        <h4>{{address}}</h4>
+                        <h4>{{price}}</h4>
+                    </div>
+                </section>
+                <section>
+                    <!--View Rooms Button-->
+                    <div class="col-md-2">
+                        <button name="viewRoomsBtn" id="viewRoomsButton" class="pageButton">View Rooms</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+        {{/each}}
+
+    </script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+    <script src="/Js/hotelListingScript.js" type=""></script>
+</body>
+</html>

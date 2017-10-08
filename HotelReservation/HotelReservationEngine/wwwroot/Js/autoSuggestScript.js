@@ -1,6 +1,19 @@
 ﻿$(document).ready(function () {
-    $("#checkindate").datepicker({ dateFormat: 'yy-mm-dd' });
-    $("#checkoutdate").datepicker({ dateFormat: 'yy-mm-dd' });
+    $("#checkindate").datepicker({
+        dateFormat: "yy-mm-dd",
+        minDate: 0,
+        onSelect: function () {
+            var checkOutDate = $('#checkoutdate');
+            var startDate = $(this).datepicker('getDate');
+            startDate.setDate(startDate.getDate() + 1);
+            var minDate = $(this).datepicker('getDate');
+            checkOutDate.datepicker('setDate', minDate);
+            checkOutDate.datepicker('option', 'minDate', minDate);
+        }
+    });
+    $('#checkoutdate').datepicker({
+        dateFormat: "yy-mm-dd"
+    });
 });
 
 var latitude;
@@ -8,11 +21,6 @@ var longitude;
 var cityName;
 var searchType;
 var result;
-
-
-//Data Extraction Function
-
-
 
 function extractData() {
 
@@ -41,7 +49,7 @@ function extractData() {
     var modifiedData = JSON.stringify(data);
 
     $.ajax({
-        url: '/api/search/newRequest',
+        url: 'hotel',
         type: 'post',
         contentType: "application/json",
         success: function (result) {
