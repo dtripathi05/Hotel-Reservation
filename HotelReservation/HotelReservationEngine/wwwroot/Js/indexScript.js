@@ -1,15 +1,29 @@
-﻿$(document).ready(function () {
-    $("#checkindate").datepicker({ dateFormat: 'yy-mm-dd' });
-    $("#checkoutdate").datepicker({ dateFormat: 'yy-mm-dd' });
+﻿
+$(document).ready(function () {
+    $("#checkindate").datepicker({
+        dateFormat: "yy-mm-dd",
+        minDate: 0,
+        onSelect: function () {
+            var checkOutDate = $('#checkoutdate');
+            var startDate = $(this).datepicker('getDate');
+            startDate.setDate(startDate.getDate() + 1);
+            var minDate = $(this).datepicker('getDate');
+            checkOutDate.datepicker('setDate', minDate);
+            checkOutDate.datepicker('option', 'minDate', minDate);
+        }
+    });
+    $('#checkoutdate').datepicker({
+        dateFormat: "yy-mm-dd"
+    });
 });
 
-
-
-//Data Extraction Function
 var result;
-
-
 function extractData() {
+
+    if (document.hotelSearchForm.place.value == "") {
+        document.getElementById('errors').innerHTML = "Please Enter The Place";
+        return false;
+    }
 
     var place = $("#place")[0].value;
     var checkInDate = $("#checkindate").val();

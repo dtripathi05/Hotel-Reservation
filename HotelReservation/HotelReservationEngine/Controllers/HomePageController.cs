@@ -17,7 +17,7 @@ namespace HotelReservationEngine.Controllers
         [HttpGet("index")]
         public IActionResult GetIndexPage()
         {
-            return File(new FileStream("wwwroot/HtmlPages/index.html", FileMode.Open), "text/html");
+            return File(new FileStream("wwwroot/HtmlPages/hotellisting.html", FileMode.Open), "text/html");
         }
     }
 }
