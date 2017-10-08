@@ -29,12 +29,5 @@ namespace HotelReservationEngine.Controllers
             return _searchStore[guid];
         }
 
-        //[HttpGet("hotel/{guid}")]
-        //public IActionResult GetListingPage(string guid)
-        //{
-        //    //process
-        //    return null;
-        //}
-
     }
 }
