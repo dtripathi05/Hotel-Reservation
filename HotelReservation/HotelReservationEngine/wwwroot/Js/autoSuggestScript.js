@@ -42,18 +42,18 @@ function extractData() {
         "CheckInDate": checkInDate,
         "CheckOutDate": checkOutDate,
         "Rooms": numberOfRooms,
-        "Adults": adultNumber,
+        "Adult": adultNumber,
         "ChildrenCount": childNumber
     };
 
     var modifiedData = JSON.stringify(data);
 
     $.ajax({
-        url: 'hotel',
+        url: '/api/search/newRequest',
         type: 'post',
         contentType: "application/json",
         success: function (result) {
-            alert(result);
+            window.location.href = "/hotel/" + result;
         },
         data: modifiedData
     });
