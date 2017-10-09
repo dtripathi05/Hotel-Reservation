@@ -1,15 +1,23 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans');
 
+body {
+    background: url("/Image/wallpaper.jpg") no-repeat fixed 100%;
+    background-size: cover;
+}
+
 .container {
-    opacity: 0.5;
+    opacity: 0.9;
     font-size: 24px;
     color: white;
     font-weight: bold;
     background-color: black;
     font-family: Dosis;
     padding: 0px;
+    margin-top: 90px;
 }
-
+.heading {
+    margin-top:90px;
+}
 btn.btn-primary:active {
     background-color: grey !important;
 }
@@ -38,6 +46,15 @@ label {
     border-radius: 4px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
-foot {
-text-align:center;
+
+.foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    color: black;
+}
+
+.anchorLink {
+    color: black;
 }
