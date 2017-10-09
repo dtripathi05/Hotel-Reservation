@@ -7,7 +7,7 @@ using Parser;
 
 namespace Parser
 {
-    public class DataParser
+    public class MultiAvailParser
     {
         private Dictionary<string, HotelSearchType> _hotelResolver = new Dictionary<string, HotelSearchType>()
             {

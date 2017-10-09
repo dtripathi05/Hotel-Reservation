@@ -48,7 +48,7 @@
     </div>
     <div id="hotelList-container"></div>
     <script id="hotel-item" type="text/x-handlebars-template">
-        {{#each this}}{{#unless image}}
+        {{#each this}}
         <div style="border:solid 1px gray;margin-bottom:10px" class="container">
             <div class="col-md-12">
                 <section>
@@ -73,7 +73,7 @@
                 </section>
             </div>
         </div>
-        {{/unless}}{{/each}}
+        {{/each}}
     </script>
     
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

@@ -11,7 +11,7 @@ namespace HotelAdapter
         public async Task<SearchResponse> SearchAsync(SearchRequest hotelSearchRQ)
         {
             HotelEngineClient engineRepresentative = new HotelEngineClient();
-            DataParser parser = new DataParser();
+            MultiAvailParser parser = new MultiAvailParser();
             HotelSearchRQ hotelSearchReq = parser.RequestTranslator(hotelSearchRQ);
             HotelSearchRS hotelSearchRS = await engineRepresentative.HotelAvailAsync(hotelSearchReq);
             SearchResponse searchResponse = parser.ResponseTranslator(hotelSearchRS);
