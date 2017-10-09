@@ -5,13 +5,14 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using HotelEntities;
 using HotelAdapter;
-using Newtonsoft.Json;
+using System.IO;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace HotelReservationEngine.Controllers
 {
-    [Route("api/[controller]")]
+
+    [Route("api/search")]
     public class SearchController : Controller
     {
         private static Dictionary<string, SearchRequest> _searchStore = new Dictionary<string, SearchRequest>();
