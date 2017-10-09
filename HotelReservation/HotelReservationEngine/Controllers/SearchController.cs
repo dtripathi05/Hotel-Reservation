@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using HotelEntities;
 using HotelAdapter;
 using System.IO;
+using HotelReservationEngine.Model;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,15 +21,13 @@ namespace HotelReservationEngine.Controllers
         [HttpPost("newRequest")]
         public string NewRequest([FromBody]SearchRequest searchFields)
         {
-            string guid = Guid.NewGuid().ToString();
-            _searchStore[guid] = searchFields;
-            return guid;
+            return Cache.AddToCache(searchFields);
         }
 
         [HttpGet("retriveRequest/{guid}")]
         public SearchRequest GetSearchFields(string guid)
         {
-            return _searchStore[guid];
+            return Cache.GetSearchRequest(guid);
         }
 
         [HttpPost("hotel")]
