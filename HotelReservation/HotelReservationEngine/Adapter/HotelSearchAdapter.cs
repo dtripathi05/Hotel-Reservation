@@ -5,7 +5,7 @@ using Parser;
 using System;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-
+using HotelReservationEngine.Contracts;
 
 namespace HotelAdapter
 {

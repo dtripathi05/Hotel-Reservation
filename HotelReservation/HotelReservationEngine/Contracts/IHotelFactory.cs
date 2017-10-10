@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace HotelReservationEngine.Adapter
+namespace HotelReservationEngine.Contracts
 {
     public interface IHotelFactory
     {
