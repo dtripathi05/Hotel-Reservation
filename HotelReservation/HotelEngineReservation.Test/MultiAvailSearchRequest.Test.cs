@@ -1,5 +1,6 @@
 using HotelEntities;
 using HotelReservationEngine.Adapter;
+using HotelReservationEngine.Contracts;
 using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;

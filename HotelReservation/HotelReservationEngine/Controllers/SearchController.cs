@@ -9,6 +9,7 @@ using System.IO;
 using HotelReservationEngine.Model;
 using HotelReservationEngine.Adapter;
 using Newtonsoft.Json;
+using HotelReservationEngine.Contracts;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
