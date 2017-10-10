@@ -23,12 +23,6 @@ var searchType;
 var result;
 
 function extractData() {
-
-    if (document.hotelSearchForm.place.value == "") {
-        document.getElementById('errors').innerHTML = "Please Enter The Place You would Visit";
-        return false;
-    }
-
     var place = $("#place").val();
     var checkInDate = $("#checkindate").val();
     var checkOutDate = $("#checkoutdate")[0].value;

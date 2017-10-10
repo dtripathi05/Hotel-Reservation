@@ -5,7 +5,7 @@ using Parser;
 using System;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using HotelReservationEngine.Log;
+
 
 namespace HotelAdapter
 {
@@ -25,10 +25,9 @@ namespace HotelAdapter
                 HotelSearchRS hotelSearchRS = await engineRepresentative.HotelAvailAsync(hotelSearchReq);
                 searchResponse = parser.ResponseTranslator(hotelSearchRS);
             }
-            catch(Exception ex)
+            catch
             {
-                Logger logger = new Logger();
-                logger.ExecuteLogger(ex.ToString());
+                throw;
             }
             finally
             {

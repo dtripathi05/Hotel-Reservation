@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using HotelEntities;
 using Newtonsoft.Json;
 using HotelReservationEngine.Constants;
-using HotelReservationEngine.Log;
+
 
 namespace Parser
 {
@@ -89,10 +89,8 @@ namespace Parser
                     End = checkOutDate,
                 };
             }
-            catch(Exception ex)
+            catch
             {
-                Logger logger = new Logger();
-                logger.ExecuteLogger(ex.ToString());
                 throw;
             }
         }
