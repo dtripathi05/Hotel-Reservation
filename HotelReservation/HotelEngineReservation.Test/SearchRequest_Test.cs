@@ -1,5 +1,7 @@
 using HotelAdapter;
 using HotelEntities;
+using HotelReservationEngine.Adapter;
+using Newtonsoft.Json;
 using System;
 using System.Threading.Tasks;
 using Xunit;
@@ -30,9 +32,12 @@ namespace HotelEngineReservation.Test
         [Fact]
         public async Task MultiAvailParser_Test()
         {
-            ConnectorAdapter adapter = new ConnectorAdapter();
-            var result = await adapter.SearchAsync(request);
-            Assert.NotNull(result);
+            IHotelFactory hotelFactory = Factory.GetHotelFactory("HotelsListing");
+            var serialize = JsonConvert.SerializeObject(request);
+            var result = await hotelFactory.SearchAsync(serialize);
+            var deserialize = JsonConvert.DeserializeObject<SearchResponse>(result);
+            Assert.NotNull(deserialize);
+            
         }
     }
 }

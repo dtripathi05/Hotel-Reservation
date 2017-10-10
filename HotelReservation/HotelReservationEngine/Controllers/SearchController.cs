@@ -7,6 +7,8 @@ using HotelEntities;
 using HotelAdapter;
 using System.IO;
 using HotelReservationEngine.Model;
+using HotelReservationEngine.Adapter;
+using Newtonsoft.Json;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -33,9 +35,11 @@ namespace HotelReservationEngine.Controllers
         [HttpPost("hotel")]
         public async Task<SearchResponse> Hotel([FromBody]SearchRequest searchFields)
         {
-            ConnectorAdapter connectorAdapter = new ConnectorAdapter();
-            var result = await connectorAdapter.SearchAsync(searchFields);
-            return result;
+            IHotelFactory hotelFactory = Factory.GetHotelFactory("HotelsListing");
+            var serialize = JsonConvert.SerializeObject(searchFields);
+            var result = await hotelFactory.SearchAsync(serialize);
+            var deserialize = JsonConvert.DeserializeObject<SearchResponse>(result);
+            return deserialize;
         }
     }
 }
