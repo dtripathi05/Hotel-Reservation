@@ -6,6 +6,7 @@ using System;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using HotelReservationEngine.Contracts;
+using HotelReservationEngine.HotelMultiAvailItinerary;
 
 namespace HotelAdapter
 {
@@ -14,8 +15,7 @@ namespace HotelAdapter
         public async Task<string> SearchAsync(string request)
         {
             HotelEngineClient engineRepresentative = null;
-            MultiAvailSearchResponse searchResponse = null;
-            
+            MultiAvailItinery searchResponse = null;
             try
             {
                 var convert = JsonConvert.DeserializeObject<MultiAvailSearchRequest>(request);
@@ -23,7 +23,7 @@ namespace HotelAdapter
                 MultiAvailParser parser = new MultiAvailParser();
                 HotelSearchRQ hotelSearchReq = parser.RequestTranslator(convert);
                 HotelSearchRS hotelSearchRS = await engineRepresentative.HotelAvailAsync(hotelSearchReq);
-                searchResponse = parser.ResponseTranslator(hotelSearchRS);
+                searchResponse = parser.ResponseTranslator(hotelSearchRS,hotelSearchReq);
             }
             catch
             {
@@ -33,7 +33,6 @@ namespace HotelAdapter
             {
                 await engineRepresentative.CloseAsync();
             }
-
             return JsonConvert.SerializeObject(searchResponse);
         }
     }

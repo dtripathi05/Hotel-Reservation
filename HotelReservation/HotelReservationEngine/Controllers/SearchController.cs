@@ -10,6 +10,7 @@ using HotelReservationEngine.Model;
 using HotelReservationEngine.Adapter;
 using Newtonsoft.Json;
 using HotelReservationEngine.Contracts;
+using HotelReservationEngine.HotelMultiAvailItinerary;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -32,14 +33,13 @@ namespace HotelReservationEngine.Controllers
         {
             return Cache.GetSearchRequest(guid);
         }
-
         [HttpPost("hotel")]
-        public async Task<MultiAvailSearchResponse> Hotel([FromBody]MultiAvailSearchRequest searchFields)
+        public async Task<MultiAvailItinery> Hotel([FromBody]MultiAvailSearchRequest searchFields)
         {
             IHotelFactory hotelFactory = Factory.GetHotelFactory("HotelsListing");
             var serialize = JsonConvert.SerializeObject(searchFields);
             var result = await hotelFactory.SearchAsync(serialize);
-            var deserialize = JsonConvert.DeserializeObject<MultiAvailSearchResponse>(result);
+            var deserialize = JsonConvert.DeserializeObject<MultiAvailItinery>(result);
             return deserialize;
         }
     }

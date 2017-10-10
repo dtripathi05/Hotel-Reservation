@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using Xunit;
 using HotelEntities;
 using System.Threading.Tasks;
 using HotelReservationEngine.Contracts;
 using HotelReservationEngine.Adapter;
-using Newtonsoft.Json;
 using HotelSearchService;
 using Parser;
-
-
 namespace HotelReservation.Test
 {
     public class MultiAvailSearchResponse_Test
@@ -42,17 +38,9 @@ namespace HotelReservation.Test
         {
             HotelEngineClient cLient = new HotelEngineClient();
             IHotelFactory hotelFactory = Factory.GetHotelFactory("HotelsListing");
-            var serialize = JsonConvert.SerializeObject(request);
             MultiAvailParser multiAvailParser = new MultiAvailParser();
-            var deserialize = JsonConvert.DeserializeObject<MultiAvailSearchRequest>(serialize);
-            HotelSearchRQ hotelSearchRQ = multiAvailParser.RequestTranslator(deserialize);
-            HotelSearchRS hotelSearchRS = await cLient.HotelAvailAsync(hotelSearchRQ);
-            MultiAvailSearchResponse searchResponse = multiAvailParser.ResponseTranslator(hotelSearchRS);
-            var itenaryresult = searchResponse.HotelResults;
-            var sessionId = searchResponse.SessionId;
-            Assert.NotNull(itenaryresult);
-            Assert.NotNull(sessionId);
-
+            HotelSearchRS hotelSearchRS= await cLient.HotelAvailAsync(multiAvailParser.RequestTranslator(request));
+            Assert.NotNull(hotelSearchRS);
         }
     }
 }
