@@ -3,14 +3,14 @@ using HotelReservationEngine.Model;
 using System;
 using Xunit;
 
-namespace HotelEngineReservation.Test
+namespace HotelReservation.Test
 {
     public class Cache_Test
     {
-        SearchRequest request = null;
+        MultiAvailSearchRequest request = null;
         public Cache_Test()
         {
-            request = new SearchRequest
+            request = new MultiAvailSearchRequest
             {
                 Destination = new Location
                 {

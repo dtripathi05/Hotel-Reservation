@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.16
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationEngine", "HotelReservationEngine\HotelReservationEngine.csproj", "{EED9D3F8-A12A-4167-A52A-79CB8C24371C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelEntities", "HotelEntities\HotelEntities.csproj", "{B791B166-50B6-4FD7-B21F-17F74EED7E18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelEngineReservation.Test", "HotelEngineReservation.Test\HotelEngineReservation.Test.csproj", "{B797FE39-4AC2-4B8B-A830-8BD6D5F4389A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservation.Test", "HotelEngineReservation.Test\HotelReservation.Test.csproj", "{B797FE39-4AC2-4B8B-A830-8BD6D5F4389A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace HotelEntities
 {
-    public class SearchResponse
+    public class MultiAvailSearchResponse
     {
-        public Itinerary[] HotelResults { get; set; }
+        public MultiAvailItinerary[] HotelResults { get; set; }
         public string SessionId { get; set; }
     }
 }

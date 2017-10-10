@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Parser
+namespace HotelReservationEngine.Constants
 {
-    public class SearchRequestStaticData
+    public class MultiAvailSearchRequestStaticData
     {
         public readonly static int _pagingInfoStartNumber = 100;
         public readonly static int _pagingInfoEndNumber = 120;

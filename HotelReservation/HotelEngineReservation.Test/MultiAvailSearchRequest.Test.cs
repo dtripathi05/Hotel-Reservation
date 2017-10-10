@@ -1,4 +1,3 @@
-using HotelAdapter;
 using HotelEntities;
 using HotelReservationEngine.Adapter;
 using Newtonsoft.Json;
@@ -6,14 +5,14 @@ using System;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace HotelEngineReservation.Test
+namespace HotelReservation.Test
 {
-    public class SearchRequest_Test
+    public class MultiAvailSearchRequest_Test
     {
-        SearchRequest request = null;
-        public SearchRequest_Test()
+        MultiAvailSearchRequest request = null;
+        public MultiAvailSearchRequest_Test()
         {
-            request = new SearchRequest
+            request = new MultiAvailSearchRequest
             {
                 Destination = new Location
                 {
@@ -35,7 +34,7 @@ namespace HotelEngineReservation.Test
             IHotelFactory hotelFactory = Factory.GetHotelFactory("HotelsListing");
             var serialize = JsonConvert.SerializeObject(request);
             var result = await hotelFactory.SearchAsync(serialize);
-            var deserialize = JsonConvert.DeserializeObject<SearchResponse>(result);
+            var deserialize = JsonConvert.DeserializeObject<MultiAvailSearchResponse>(result);
             Assert.NotNull(deserialize);
             
         }

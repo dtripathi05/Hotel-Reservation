@@ -18,27 +18,27 @@ namespace HotelReservationEngine.Controllers
     [Route("api/search")]
     public class SearchController : Controller
     {
-        private static Dictionary<string, SearchRequest> _searchStore = new Dictionary<string, SearchRequest>();
+        private static Dictionary<string, MultiAvailSearchRequest> _searchStore = new Dictionary<string, MultiAvailSearchRequest>();
 
         [HttpPost("newRequest")]
-        public string NewRequest([FromBody]SearchRequest searchFields)
+        public string NewRequest([FromBody]MultiAvailSearchRequest searchFields)
         {
             return Cache.AddToCache(searchFields);
         }
 
         [HttpGet("retriveRequest/{guid}")]
-        public SearchRequest GetSearchFields(string guid)
+        public MultiAvailSearchRequest GetSearchFields(string guid)
         {
             return Cache.GetSearchRequest(guid);
         }
 
         [HttpPost("hotel")]
-        public async Task<SearchResponse> Hotel([FromBody]SearchRequest searchFields)
+        public async Task<MultiAvailSearchResponse> Hotel([FromBody]MultiAvailSearchRequest searchFields)
         {
             IHotelFactory hotelFactory = Factory.GetHotelFactory("HotelsListing");
             var serialize = JsonConvert.SerializeObject(searchFields);
             var result = await hotelFactory.SearchAsync(serialize);
-            var deserialize = JsonConvert.DeserializeObject<SearchResponse>(result);
+            var deserialize = JsonConvert.DeserializeObject<MultiAvailSearchResponse>(result);
             return deserialize;
         }
     }
