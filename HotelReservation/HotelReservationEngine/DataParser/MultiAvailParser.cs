@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using HotelEntities;
 using Newtonsoft.Json;
 using HotelReservationEngine.Constants;
-
+using HotelReservationEngine.HotelMultiAvailItinerary;
 
 namespace Parser
 {
@@ -168,30 +168,18 @@ namespace Parser
             return company;
         }
 
-        public MultiAvailSearchResponse ResponseTranslator(HotelSearchRS hotelSearchRS)
+        public MultiAvailItinery ResponseTranslator(HotelSearchRS hotelSearchRS,HotelSearchRQ hotelSearchRQ)
         {
-            MultiAvailSearchResponse parsedRes = new MultiAvailSearchResponse();
-            List<MultiAvailItinerary> listing = new List<MultiAvailItinerary>();
-            foreach (HotelItinerary itinerary in hotelSearchRS.Itineraries)
+            MultiAvailItinery multiAvailItinery = new MultiAvailItinery();
+            List<HotelItinerary> itinerary = new List<HotelItinerary>();
+            foreach (var itineraries in hotelSearchRS.Itineraries)
             {
-                MultiAvailItinerary newItinerary = new MultiAvailItinerary();
-                newItinerary.Address = itinerary.HotelProperty.Address.CompleteAddress;
-                newItinerary.Name = itinerary.HotelProperty.Name;
-                newItinerary.MinPrice = itinerary.Fare.BaseFare.Amount;
-                newItinerary.GeoCode = JsonConvert.DeserializeObject<GeoAxisCode>(JsonConvert.SerializeObject(itinerary.HotelProperty.GeoCode));
-                foreach (Media media in itinerary.HotelProperty.MediaContent)
-                {
-                    if (media.Type == MediaType.Photo)
-                    {
-                        newItinerary.ImageUrl = media.Url;
-                        break;
-                    }
-                }
-                listing.Add(newItinerary);
+                itinerary.Add(itineraries);
             }
-            parsedRes.HotelResults = listing.ToArray();
-            parsedRes.SessionId = hotelSearchRS.SessionId;
-            return parsedRes;
+            multiAvailItinery.Itinerary = itinerary;
+            multiAvailItinery.SessionId = hotelSearchRS.SessionId;
+            multiAvailItinery.hotelSearchCriterion = hotelSearchRQ.HotelSearchCriterion;
+            return multiAvailItinery;
         }
     }
 }

@@ -176,7 +176,7 @@ namespace HotelReservationEngine.DataParser
                 },
                 Itinerary = new HotelItinerary()
                 {
-                    Id = new Guid("00000000-0000-0000-0000-000000000000"),
+                    Id = Guid.NewGuid(),
                     ItineraryStatus = ItineraryStatusType.Unbooked,
                     Rph = 0,
                     AllPaxDetailsRequired = false,
@@ -189,5 +189,13 @@ namespace HotelReservationEngine.DataParser
                 }
             };
         }
+
+        public async Task<HotelRoomAvailRS> GetSingleAvailResponse()
+        {
+            HotelEngineClient hotelEngineClient = new HotelEngineClient();
+            HotelRoomAvailRS hotelRoomAvailRS = await hotelEngineClient.HotelRoomAvailAsync(GetHotelRooms());
+            return hotelRoomAvailRS;
+        }
     }
 }
+ 

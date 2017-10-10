@@ -14,19 +14,20 @@ $.ajax({
             success: function (hotel) {
                
                 var hotelList = [];
-                
-                for (i = 0; i < hotel.hotelResults.length; i++)
+                var urlImage = "";
+                for (i = 0; i < hotel.itinerary.length; i++)
                 {
-                    var url = hotel.hotelResults[i].imageUrl;
-                    if (url == null)
-                    {
-                        hotel.hotelResults[i].imageUrl = "\Image\no-image-available.png";
+                    for (k = 0; k < hotel.itinerary[i].hotelProperty.mediaContent.length; k++) {
+                        if (hotel.itinerary[i].hotelProperty.mediaContent[k].url != null) {
+                            urlImage = hotel.itinerary[i].hotelProperty.mediaContent[k].url.toString();
+                            break;
+                        }
                     }
                     hotelList.push({
-                        image: hotel.hotelResults[i].imageUrl,
-                        name: hotel.hotelResults[i].name,
-                        address: hotel.hotelResults[i].address,
-                        price: hotel.hotelResults[i].minPrice
+                        image: urlImage,
+                        name: hotel.itinerary[i].hotelProperty.name,
+                        address: hotel.itinerary[i].hotelProperty.address.completeAddress,
+                        price: hotel.itinerary[i].fare.baseFare.amount
                     });
                 }
                 var template = $('#hotel-item');
