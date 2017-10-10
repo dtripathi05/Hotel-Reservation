@@ -17,6 +17,11 @@ $.ajax({
                 
                 for (i = 0; i < hotel.hotelResults.length; i++)
                 {
+                    var url = hotel.hotelResults[i].imageUrl;
+                    if (url == null)
+                    {
+                        hotel.hotelResults[i].imageUrl = "\Image\no-image-available.png";
+                    }
                     hotelList.push({
                         image: hotel.hotelResults[i].imageUrl,
                         name: hotel.hotelResults[i].name,

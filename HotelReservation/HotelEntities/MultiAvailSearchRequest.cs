@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HotelEntities
 {
-    public class SearchRequest
+    public class MultiAvailSearchRequest
     {
         private Location _pickedHotel;
         private DateTime _checkInDate;

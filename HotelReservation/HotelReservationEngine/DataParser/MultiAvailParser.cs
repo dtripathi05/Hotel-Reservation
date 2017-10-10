@@ -3,7 +3,8 @@ using HotelSearchService;
 using System.Collections.Generic;
 using HotelEntities;
 using Newtonsoft.Json;
-using Parser;
+using HotelReservationEngine.Constants;
+using HotelReservationEngine.Log;
 
 namespace Parser
 {
@@ -32,7 +33,7 @@ namespace Parser
             {"GeoCode",LocationCodeContext.GeoCode },
             {"Hotel", LocationCodeContext.GeoCode }
             };
-        public HotelSearchRQ RequestTranslator(SearchRequest searchRequest)
+        public HotelSearchRQ RequestTranslator(MultiAvailSearchRequest searchRequest)
         {
             HotelSearchRQ listRQ = new HotelSearchRQ();
             listRQ.SessionId = Guid.NewGuid().ToString();
@@ -41,17 +42,17 @@ namespace Parser
             {
                 new AvailabilityFilter()
             {
-            ReturnOnlyAvailableItineraries = SearchRequestStaticData._availableItenaries
+            ReturnOnlyAvailableItineraries = MultiAvailSearchRequestStaticData._availableItenaries
             }
             };
             GeoAxisCode geoAxis = new GeoAxisCode(searchRequest.Destination.Longitude, searchRequest.Destination.Latitude);
             listRQ.HotelSearchCriterion = new HotelSearchCriterion();
-            listRQ.HotelSearchCriterion.MatrixResults = SearchRequestStaticData._matrixResults;
-            listRQ.HotelSearchCriterion.MaximumResults = SearchRequestStaticData._maxResults;
+            listRQ.HotelSearchCriterion.MatrixResults = MultiAvailSearchRequestStaticData._matrixResults;
+            listRQ.HotelSearchCriterion.MaximumResults = MultiAvailSearchRequestStaticData._maxResults;
             listRQ.HotelSearchCriterion.Pos = new PointOfSale();
-            listRQ.HotelSearchCriterion.Pos.PosId = SearchRequestStaticData._defaultPosId;
+            listRQ.HotelSearchCriterion.Pos.PosId = MultiAvailSearchRequestStaticData._defaultPosId;
             listRQ.HotelSearchCriterion.Pos.Requester = GetDefaultRequester();
-            listRQ.HotelSearchCriterion.PriceCurrencyCode = SearchRequestStaticData._priceCurrencyCode;
+            listRQ.HotelSearchCriterion.PriceCurrencyCode = MultiAvailSearchRequestStaticData._priceCurrencyCode;
             listRQ.HotelSearchCriterion.Guests = GetGuestDetails(searchRequest.Adult, searchRequest.ChildrenCount);
             listRQ.HotelSearchCriterion.Location = GetLocation(searchRequest.Destination.CityName, searchRequest.Destination.SearchType, geoAxis);
             listRQ.HotelSearchCriterion.NoOfRooms = GetMinimumRoomsRequired(Convert.ToInt32(searchRequest.Adult), Convert.ToInt32(searchRequest.ChildrenCount));
@@ -71,10 +72,10 @@ namespace Parser
             listRQ.PagingInfo = new PagingInfo()
             {
                 Enabled = true,
-                StartNumber = SearchRequestStaticData._pagingInfoStartNumber,
-                EndNumber = SearchRequestStaticData._pagingInfoEndNumber,
-                TotalRecordsBeforeFiltering = SearchRequestStaticData._totalRecordsBeforeFiltering,
-                TotalResults = SearchRequestStaticData._totalResults
+                StartNumber = MultiAvailSearchRequestStaticData._pagingInfoStartNumber,
+                EndNumber = MultiAvailSearchRequestStaticData._pagingInfoEndNumber,
+                TotalRecordsBeforeFiltering = MultiAvailSearchRequestStaticData._totalRecordsBeforeFiltering,
+                TotalResults = MultiAvailSearchRequestStaticData._totalResults
             };
             return listRQ;
             }
@@ -88,8 +89,10 @@ namespace Parser
                     End = checkOutDate,
                 };
             }
-            catch
+            catch(Exception ex)
             {
+                Logger logger = new Logger();
+                logger.ExecuteLogger(ex.ToString());
                 throw;
             }
         }
@@ -105,7 +108,7 @@ namespace Parser
                 CodeContext = LocationCodeContext.GeoCode,
                 Radius = new Distance()
                 {
-                    Amount = SearchRequestStaticData._searchRadius,
+                    Amount = MultiAvailSearchRequestStaticData._searchRadius,
                     From = LocationCodeContext.GeoCode,
                     Unit = DistanceUnit.mi
                 },
@@ -148,32 +151,32 @@ namespace Parser
             Agency agency = new Agency();
             Address address = new Address();
             address.CodeContext = LocationCodeContext.Address;
-            address.GmtOffsetMinutes = SearchRequestStaticData._gmtOffsetMin;
-            address.Id = SearchRequestStaticData._addressId;
-            address.AddressLine1 = SearchRequestStaticData._addressLine1;
-            address.AddressLine2 = SearchRequestStaticData._addressLine2;
+            address.GmtOffsetMinutes = MultiAvailSearchRequestStaticData._gmtOffsetMin;
+            address.Id = MultiAvailSearchRequestStaticData._addressId;
+            address.AddressLine1 = MultiAvailSearchRequestStaticData._addressLine1;
+            address.AddressLine2 = MultiAvailSearchRequestStaticData._addressLine2;
             City city = new City();
             city.CodeContext = LocationCodeContext.City;
-            city.GmtOffsetMinutes = SearchRequestStaticData._gmtOffsetMin;
-            city.Id = SearchRequestStaticData._addressId;
+            city.GmtOffsetMinutes = MultiAvailSearchRequestStaticData._gmtOffsetMin;
+            city.Id = MultiAvailSearchRequestStaticData._addressId;
             address.City = city;
             agency.AgencyId = 0;
-            agency.AgencyName = SearchRequestStaticData._agencyName;
-            company.Code = SearchRequestStaticData._companyCode;
+            agency.AgencyName = MultiAvailSearchRequestStaticData._agencyName;
+            company.Code = MultiAvailSearchRequestStaticData._companyCode;
             company.CodeContext = CompanyCodeContext.PersonalTravelClient;
-            company.DK = SearchRequestStaticData._companyDk;
-            company.FullName = SearchRequestStaticData._companyName;
-            company.ID = SearchRequestStaticData._companyId;
+            company.DK = MultiAvailSearchRequestStaticData._companyDk;
+            company.FullName = MultiAvailSearchRequestStaticData._companyName;
+            company.ID = MultiAvailSearchRequestStaticData._companyId;
             return company;
         }
 
-        public SearchResponse ResponseTranslator(HotelSearchRS hotelSearchRS)
+        public MultiAvailSearchResponse ResponseTranslator(HotelSearchRS hotelSearchRS)
         {
-            SearchResponse parsedRes = new SearchResponse();
-            List<Itinerary> listing = new List<Itinerary>();
+            MultiAvailSearchResponse parsedRes = new MultiAvailSearchResponse();
+            List<MultiAvailItinerary> listing = new List<MultiAvailItinerary>();
             foreach (HotelItinerary itinerary in hotelSearchRS.Itineraries)
             {
-                Itinerary newItinerary = new Itinerary();
+                MultiAvailItinerary newItinerary = new MultiAvailItinerary();
                 newItinerary.Address = itinerary.HotelProperty.Address.CompleteAddress;
                 newItinerary.Name = itinerary.HotelProperty.Name;
                 newItinerary.MinPrice = itinerary.Fare.BaseFare.Amount;

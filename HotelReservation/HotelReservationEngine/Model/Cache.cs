@@ -8,15 +8,15 @@ namespace HotelReservationEngine.Model
 {
     public class Cache
     {
-        private static Dictionary<string, SearchRequest> _searchStore = new Dictionary<string, SearchRequest>();
+        private static Dictionary<string, MultiAvailSearchRequest> _searchStore = new Dictionary<string, MultiAvailSearchRequest>();
 
-        public static string AddToCache(SearchRequest request)
+        public static string AddToCache(MultiAvailSearchRequest request)
         {
             var guidId = Guid.NewGuid().ToString();
             _searchStore.Add(guidId, request);
             return guidId;
         }
-        public static SearchRequest GetSearchRequest(string guid)
+        public static MultiAvailSearchRequest GetSearchRequest(string guid)
         {
             return _searchStore[guid];
         }
