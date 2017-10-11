@@ -25,6 +25,5 @@ $(document).ready(function () {
     var compiledTemplate = Handlebars.compile(template.html());
     var html = compiledTemplate(roomType);
     $('#roomList-container').html(html);
-    //sucessFunction(roomType);
 }
 );
