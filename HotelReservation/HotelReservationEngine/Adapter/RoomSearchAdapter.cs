@@ -15,15 +15,17 @@ namespace HotelReservationEngine.Adapter
         public async Task<string> SearchAsync(string request)
         {
             HotelEngineClient engineRepresentative = null;
-            SingleAvailItinerary searchResponse = null;
+            HotelRoomAvailRQ hotelRoomAvailRQ = null;
+            HotelRoomAvailRS hotelRoomAvailRS = null;
+            SingleAvailItinerary singleAvailItinerary = null;
             try
             {
                 var convert = JsonConvert.DeserializeObject<SingleAvailItinerary>(request);
                 engineRepresentative = new HotelEngineClient();
                 SingleAvailParser parser = new SingleAvailParser();
-                HotelRoomAvailRQ hotelRoomAvailRQ = parser.RoomRequestTranslator(convert);
-                HotelRoomAvailRS hotelRoomAvailRS = await engineRepresentative.HotelRoomAvailAsync(hotelRoomAvailRQ);
-                //searchResponse = parser.ResponseTranslator(hotelSearchRS, hotelSearchReq);
+                hotelRoomAvailRQ = parser.RoomRequestTranslator(convert);
+                hotelRoomAvailRS = await  engineRepresentative.HotelRoomAvailAsync(hotelRoomAvailRQ);
+                singleAvailItinerary = parser.RoomResponseTranslator(hotelRoomAvailRS, convert);
             }
             catch
             {
@@ -33,7 +35,7 @@ namespace HotelReservationEngine.Adapter
             {
                 await engineRepresentative.CloseAsync();
             }
-            return JsonConvert.SerializeObject(searchResponse);
+            return JsonConvert.SerializeObject(singleAvailItinerary);
         }
     }
 }
