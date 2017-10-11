@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hotel Express</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/Image/favicon-bed.png">
+    <link rel="stylesheet" href="/Css/Style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <h6>.</h6>
+    </header>
+    <div class="col-md-12">
+        <nav class="navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Hotel Reservation</a>
+                </div>
+                <ul class=" nav navbar-nav navbar-right ">
+                    <li class="navbar-nav nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Sign In</a></li>
+                            <li><a href="#">Create An Account</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <br />
+    <br />
+    <br />
+    <article>
+        <div class="container">
+            <div id="guestDetails">
+                <form id="guestDetailsForm" onsubmit="importDetails(); return false">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <!--First Name-->
+                            <section>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="firstName">First Name</label>
+                                                <input type="text" class="form-control placeholderfont" id="firstName" name="firstname" placeholder="First Name">
+                                            </div>
+                                        </div>
+                                        <!--Last Name-->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="lastName">Last Name</label>
+                                                <input type="text" class="form-control placeholderfont" id="lastName" name="lastname" placeholder="Last Name">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <!--Mobile Number-->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="mobileNumber">Mobile Number</label>
+                                        <input type="text" class="form-control placeholderfont" id="mobileNumber" name="mobilenumber" placeholder="Mobile Number">
+                                    </div>
+                                </div>
+
+                                <!--Age-->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="age">Age</label>
+                                        <input type="text" class="form-control placeholderfont" id="age" name="age" placeholder="Age">
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <!--Email-Id-->
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="emailId">Email-Id</label>
+                                        <input type="text" class="form-control placeholderfont" id="emailId" name="emailid" placeholder="Example:abc@gmail.com">
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <!--Error Messaging-->
+                                <div class="form-group">
+                                    <div class="col-md-9 col-md-offset-3">
+                                        <div id="errors"></div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <!--Save Button-->
+                                <div class="col-md-12">
+                                    <button name="savebutton" id="saveButton" class="pageButton">Save</button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </article>
+    <footer class="foot">Tavisca &copy; 2017|<a class="anchorLink" href="http://www.tavisca.com/">Open Company Website</a></footer>
+    <script src="/Js/guestDetailsScript.js"></script>
+</body>
+</html>
