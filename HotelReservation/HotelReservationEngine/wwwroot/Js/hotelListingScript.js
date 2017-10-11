@@ -63,7 +63,7 @@ function roomDetails(data) {
                 crossDomain: true,
                 success: function (room) {
                     sessionStorage.setItem('rooms', JSON.stringify(room));
-                    window.location = "roomListing.html";
+                    window.location.href = "/rooms";
                 }
             });
         }
