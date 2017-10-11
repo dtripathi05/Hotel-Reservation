@@ -1,8 +1,6 @@
 ﻿using HotelEntities;
-using HotelReservationEngine.Adapter;
 using HotelSearchService;
 using Parser;
-using System;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using HotelReservationEngine.Contracts;

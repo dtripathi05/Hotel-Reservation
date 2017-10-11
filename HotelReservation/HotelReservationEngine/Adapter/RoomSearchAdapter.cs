@@ -3,9 +3,6 @@ using HotelReservationEngine.DataParser;
 using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelSearchService;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace HotelReservationEngine.Adapter
