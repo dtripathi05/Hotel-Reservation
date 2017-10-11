@@ -1,7 +1,7 @@
 ﻿var completeUrl = window.location.href;
 var end = completeUrl.lastIndexOf("/");
 var guidId = completeUrl.slice(end + 1);
-var hotelresult;
+var hotelResult;
 $.ajax({
     type: "GET",
     url: '../api/search/retriveRequest/' + guidId,
@@ -12,11 +12,10 @@ $.ajax({
             contentType: "application/json",
             data: JSON.stringify(result1),
             success: function (hotel) {
-               
+                hotelResult = hotel;
                 var hotelList = [];
                 var urlImage = "";
-                for (i = 0; i < hotel.itinerary.length; i++)
-                {
+                for (i = 0; i < hotel.itinerary.length; i++) {
                     for (k = 0; k < hotel.itinerary[i].hotelProperty.mediaContent.length; k++) {
                         if (hotel.itinerary[i].hotelProperty.mediaContent[k].url != null) {
                             urlImage = hotel.itinerary[i].hotelProperty.mediaContent[k].url.toString();
@@ -34,9 +33,36 @@ $.ajax({
                 var compiledTemplate = Handlebars.compile(template.html());
                 var html = compiledTemplate(hotelList);
                 $('#hotelList-container').html(html);
+
             }
         });
-        
+
     }
 });
-  
+
+function roomDetails() {
+    var hotelName = $("#viewRoomsButton").val();
+    for (i = 0; i < hotelResult.itinerary.length; i++) {
+        var check = hotelResult.itinerary[i].hotelProperty.name.toString();
+        if (hotelName.toString() == check) {
+            var data1 =
+                {
+                    "Itinerary": hotelResult.itinerary[i],
+                    "Criteria": hotelResult.hotelSearchCriterion,
+                    "SessionId": hotelResult.sessionId
+                };
+            $.ajax({
+                type: "post",
+                contentType: "application/json",
+                url: "/api/search/room",
+                data: JSON.stringify(data1),
+                dataType: 'json',
+                crossDomain: true,
+                success: function (room) {
+                    sessionStorage.setItem('rooms', JSON.stringify(room));
+                    // window.location = "roomListing.html";
+                }
+            });
+        }
+    }
+}

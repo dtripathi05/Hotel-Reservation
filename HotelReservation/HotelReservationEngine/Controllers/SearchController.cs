@@ -11,6 +11,7 @@ using HotelReservationEngine.Adapter;
 using Newtonsoft.Json;
 using HotelReservationEngine.Contracts;
 using HotelReservationEngine.HotelMultiAvailItinerary;
+using HotelSearchService;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -41,6 +42,12 @@ namespace HotelReservationEngine.Controllers
             var result = await hotelFactory.SearchAsync(serialize);
             var deserialize = JsonConvert.DeserializeObject<MultiAvailItinery>(result);
             return deserialize;
+        }
+        [HttpPost("room")]
+        public string Rooms([FromBody]SingleAvailItinerary hotelItinerary)
+        {
+            SingleAvailItinerary singleAvailItinerary = hotelItinerary;
+            return "xyz";
         }
     }
 }
