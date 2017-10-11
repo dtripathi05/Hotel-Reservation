@@ -26,7 +26,8 @@ $.ajax({
                         image: urlImage,
                         name: hotel.itinerary[i].hotelProperty.name,
                         address: hotel.itinerary[i].hotelProperty.address.completeAddress,
-                        price: hotel.itinerary[i].fare.baseFare.amount
+                        price: hotel.itinerary[i].fare.baseFare.amount,
+                        buttonName: hotel.itinerary[i].hotelProperty.name
                     });
                 }
                 var template = $('#hotel-item');
@@ -40,8 +41,10 @@ $.ajax({
     }
 });
 
-function roomDetails() {
-    var hotelName = $("#viewRoomsButton").val();
+
+function roomDetails(data) {
+    console.log(data.value);
+    var hotelName = data.value;
     for (i = 0; i < hotelResult.itinerary.length; i++) {
         var check = hotelResult.itinerary[i].hotelProperty.name.toString();
         if (hotelName.toString() == check) {
@@ -60,7 +63,7 @@ function roomDetails() {
                 crossDomain: true,
                 success: function (room) {
                     sessionStorage.setItem('rooms', JSON.stringify(room));
-                    // window.location = "roomListing.html";
+                    //window.location = "roomListing.html";
                 }
             });
         }

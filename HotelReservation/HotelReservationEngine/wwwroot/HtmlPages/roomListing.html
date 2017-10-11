@@ -13,7 +13,6 @@
     <header>
         <h6>.</h6>
     </header>
-
     <div class="col-md-12">
         <nav class="navbar-inverse">
             <div class="container-fluid">
@@ -37,7 +36,7 @@
         </nav>
     </div>
 
-    <div id="hotelList-container">
+    <div id="roomList-container">
         <div class="row">
             <div class="col-md-4 col-md-offset-5">
                 <img src="/Image/circlepreloader.gif" alt="Loading.." />
@@ -47,7 +46,7 @@
 
     <h1>Your Selection</h1>
 
-    <div id="hotelList-container"></div>
+    <div id="roomList-container"></div>
     <script id="hotel-item" type="text/x-handlebars-template">
         {{#each this}}
         <div style="border:solid 1px gray;margin-bottom:10px" class="container">
@@ -55,21 +54,24 @@
                 <section>
                     <!--Image-->
                     <div class="col-md-6">
-                        <img src="{{image}}" width="400" height="250" />
+                        <img src="{{image}}" width="600" height="250" />
                     </div>
                 </section>
                 <section>
                     <!--Hotel Details-->
                     <div class="col-md-4">
+                        <h4>{{hotelname}}</h4>
                         <h4>{{roomtype}}</h4>
                         <h4>{{address}}</h4>
+                        <h4>{{ammenities}}</h4>
+                        <h4>{{description}}</h4>
                         <h4>{{price}}</h4>
                     </div>
                 </section>
                 <section>
                     <!--View Rooms Button-->
                     <div class="col-md-2">
-                        <button name="viewRoomsBtn" id="viewRoomsButton" class="pageButton">View Rooms</button>
+                        <button name="BookBtn" id="viewRoomsButton" class="pageButton">View Rooms</button>
                     </div>
                 </section>
             </div>

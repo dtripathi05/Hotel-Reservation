@@ -41,7 +41,7 @@
     </div>
     <div id="hotelList-container">
         <div class="col-md-12">
-            <div class="col-md-4 col-md-offset-5">
+            <div class="col-md-offset-5">
                 <img src="/Image/circlepreloader.gif" alt="Loading.." />
             </div>
         </div>
@@ -62,19 +62,19 @@
                     <div class="col-md-4">
                         <h4>{{name}}</h4>
                         <h4>Address :{{address}}</h4>
-                        <h4>Price :$ {{price}}</h4>
+                        <h4>Price : ${{price}}</h4>
                     </div>
-
+                    </section>
+                <section>
                     <!--View Rooms Button-->
                     <div class="col-md-2">
-                        <button name="viewRoomsBtn" id="viewRoomsButton" value="{{name}}" onclick="roomDetails()" class="pageButton">View Rooms</button>
+                        <button name="viewRoomsBtn" id="viewRoomsButton" value="{{name}}" onClick="roomDetails(this)" class="pageButton">View Rooms</button>
                     </div>
                 </section>
             </div>
         </div>
         {{/each}}
     </script>
-    
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
     <script src="/Js/hotelListingScript.js"></script>
