@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using HotelEntities;
-using HotelAdapter;
-using System.IO;
 using HotelReservationEngine.Model;
 using HotelReservationEngine.Adapter;
 using Newtonsoft.Json;
 using HotelReservationEngine.Contracts;
 using HotelReservationEngine.HotelMultiAvailItinerary;
-using HotelSearchService;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace HotelReservationEngine.Controllers
 {
@@ -46,7 +40,6 @@ namespace HotelReservationEngine.Controllers
         [HttpPost("room")]
         public async Task<SingleAvailItinerary> Rooms([FromBody]SingleAvailItinerary hotelItinerary)
         {
-            // SingleAvailItinerary singleAvailItinerary = hotelItinerary;
             IHotelFactory hotelFactory = Factory.GetHotelFactory("RoomListing");
             var serialize = JsonConvert.SerializeObject(hotelItinerary);
             var result = await hotelFactory.SearchAsync(serialize);
