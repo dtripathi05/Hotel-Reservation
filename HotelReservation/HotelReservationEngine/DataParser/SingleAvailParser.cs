@@ -19,5 +19,14 @@ namespace HotelReservationEngine.DataParser
                 Itinerary = singleAvailItinerary.Itinerary
             };
         }
+        public SingleAvailItinerary RoomResponseTranslator(HotelRoomAvailRS hotelRoomAvailRS,SingleAvailItinerary singleAvailItinerary)
+        {
+            return new SingleAvailItinerary
+            {
+                SessionId=hotelRoomAvailRS.SessionId,
+                Itinerary=hotelRoomAvailRS.Itinerary,
+                Criteria= singleAvailItinerary.Criteria
+            };
+        }
     }
 }

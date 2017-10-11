@@ -44,10 +44,14 @@ namespace HotelReservationEngine.Controllers
             return deserialize;
         }
         [HttpPost("room")]
-        public string Rooms([FromBody]SingleAvailItinerary hotelItinerary)
+        public async Task<SingleAvailItinerary> Rooms([FromBody]SingleAvailItinerary hotelItinerary)
         {
-            SingleAvailItinerary singleAvailItinerary = hotelItinerary;
-            return "xyz";
+            // SingleAvailItinerary singleAvailItinerary = hotelItinerary;
+            IHotelFactory hotelFactory = Factory.GetHotelFactory("RoomListing");
+            var serialize = JsonConvert.SerializeObject(hotelItinerary);
+            var result = await hotelFactory.SearchAsync(serialize);
+            var deserialize = JsonConvert.DeserializeObject<SingleAvailItinerary>(result);
+            return deserialize;
         }
     }
 }
