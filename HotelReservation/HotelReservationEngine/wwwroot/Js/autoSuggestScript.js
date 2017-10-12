@@ -65,6 +65,7 @@ $(function () {
         source: function (request, response) {
             $.ajax({
                 url: "http://portal.dev-rovia.com/Services/api/Content/GetAutoCompleteDataGroups?type=poi",
+                //url:"http://portal.dev-rovia.com/Services/api/Content/GetAutoCompleteDataGroups?type=city%7Cairport%7Cpoi",
                 dataType: "jsonp",
                 data: {
                     query: request.term
