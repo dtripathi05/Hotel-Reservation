@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/Css/Style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
     <title>Hotel Express</title>
 </head>
 <body>
@@ -36,9 +38,6 @@
         </nav>
     </div>
 
-    <div class="container heading">
-        <h1> Your Selection</h1>
-    </div>
     <div id="roomList-container">
         <div class="col-md-12">
             <div class="col-md-offset-5">
@@ -46,7 +45,8 @@
             </div>
         </div>
     </div>
-    <div id="roomList-container"></div>
+    <div id="roomList-container">
+    </div>
     <script id="room-item" type="text/x-handlebars-template">
         {{#each this}}
         <div style="border:solid 1px gray;margin-bottom:10px" class="container">
@@ -58,27 +58,26 @@
                     </div>
                 </section>
                 <section>
-                        <!--Room Details-->
-                        <div class="col-md-4">
-                            <h4>{{hotelname}}</h4>
-                            <h4>{{roomtype}}</h4>
-                            <h4>{{address}}</h4>
-                            <h4>{{description}}</h4>
-                            <h4>{{price}}</h4>
-                        </div>
+                    <!--Room Details-->
+                    <div class="col-md-4">
+                        <h4>{{hotelname}}</h4>
+                        <h4>{{roomtype}}</h4>
+                        <h4>{{address}}</h4>
+                        <h4>{{description}}</h4>
+                        <h4>{{price}}</h4>
+                    </div>
                 </section>
                 <section>
                     <!--View Rooms Button-->
                     <div class="col-md-2">
-                        <button name=BookBtn" id="viewRoomsButton" value="{{roomtype}}" onClick="roomPrice(this)" class="pageButton">Book</button>
+                        <button name="BookBtn" id="viewRoomsButton" value="{{roomtype}}" onClick="roomPrice(this)" class="pageButton">Book</button>
                     </div>
                 </section>
             </div>
         </div>
         {{/each}}
-    </script>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+`    </script>
+
     <script src="/Js/roomListingScript.js"></script>
 </body>
 </html>

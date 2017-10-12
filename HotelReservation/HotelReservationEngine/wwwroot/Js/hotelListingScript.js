@@ -26,7 +26,7 @@ $.ajax({
                         image: urlImage,
                         name: hotel.itinerary[i].hotelProperty.name,
                         address: hotel.itinerary[i].hotelProperty.address.completeAddress,
-                        price: hotel.itinerary[i].fare.baseFare.amount,
+                        stars: hotel.itinerary[i].hotelProperty.hotelRating.rating,
                         buttonName: hotel.itinerary[i].hotelProperty.name
                     });
                 }

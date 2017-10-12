@@ -1,6 +1,6 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans');
 
-body {
+.indexBackground {
     background: url("/Image/wallpaper.jpg") no-repeat fixed 100%;
     background-size: cover;
 }
@@ -13,11 +13,13 @@ body {
     background-color: black;
     font-family: Dosis;
     padding: 0px;
-    margin-top: 60px;
+    margin-top: 15px;
 }
+
 .heading {
-    margin-top:90px;
+    margin-top: 90px;
 }
+
 btn.btn-primary:active {
     background-color: grey !important;
 }
@@ -36,9 +38,11 @@ label {
 }
 
 
+
 .pageButton {
-    margin-top: 20px;
+    margin-top: 60px;
     margin-bottom: 20px;
+    margin-left: 10px;
     max-height: 80px;
     color: white;
     font-size: 25px;
