@@ -8,7 +8,7 @@ namespace HotelReservationEngine.Adapter
     {
         private static Dictionary<string, IHotelFactory> _services = new Dictionary<string, IHotelFactory>()
         {
-            { "HotelsListing",new HotelSearchAdapter()},{"RoomListing",new RoomSearchAdapter()}
+            { "HotelsListing",new HotelSearchAdapter()},{"RoomListing",new RoomSearchAdapter()},{"RoomPricing",new RoomPricingAdapter()}
         };
         public static IHotelFactory GetHotelFactory(string type)
         {

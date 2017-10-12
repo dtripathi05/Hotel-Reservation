@@ -16,6 +16,7 @@ namespace HotelReservationEngine.DataParser
                 HotelSearchCriterion = singleAvailItinerary.Criteria,
                 SessionId=singleAvailItinerary.SessionId,
                 Itinerary=singleAvailItinerary.Itinerary,
+                ResultRequested = ResponseType.Complete
             };
         }
         public SingleAvailItinerary RoomPriceRSParser(HotelRoomPriceRS hotelRoomAvailRS, SingleAvailItinerary singleAvailItinerary)
