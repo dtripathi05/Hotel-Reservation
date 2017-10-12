@@ -46,5 +46,10 @@ namespace HotelReservationEngine.Controllers
             var deserialize = JsonConvert.DeserializeObject<SingleAvailItinerary>(result);
             return deserialize;
         }
+        //[HttpPost("roomPrice")]
+        //public async Task<SingleAvailItinerary> MarkUp([FromBody]SingleAvailItinerary hotelItinerary)
+        //{
+
+        //}
     }
 }

@@ -1,6 +1,5 @@
 ﻿var roomList;
-var rooms;
-
+var room;
 $(document).ready(function () {
 
     roomList = sessionStorage.getItem("rooms");
@@ -27,3 +26,34 @@ $(document).ready(function () {
     $('#roomList-container').html(html);
 }
 );
+var roomName
+function roomPrice(data1) {
+    console.log(data1);
+    roomName = data1.value;
+    for (i = 0; i < room.itinerary.rooms.length; i++)
+    {
+        var check = room.itinerary.rooms[i].roomName.toString();
+        if (roomName.toString() == check)
+        {
+            var data1 =
+                {
+                    "Itinerary": room.itinerary,
+                    "Criteria": room.hotelSearchCriterion,
+                    "SessionId": room.sessionId
+                };
+            $.ajax({
+                type: "post",
+                contentType: "application/json",
+                url: "/api/search/roomPrice",
+                data: JSON.stringify(data1),
+                dataType: 'json',
+                crossDomain: true,
+                success: function (roomPrice) {
+                    sessionStorage.setItem('roomPrice', JSON.stringify(roomPrice));
+                    window.location.href = "/roomPrice";
+                }
+            });
+
+        }
+    }
+}
