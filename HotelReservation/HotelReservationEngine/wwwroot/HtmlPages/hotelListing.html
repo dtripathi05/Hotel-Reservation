@@ -54,7 +54,7 @@
                 <section>
                     <!--Image-->
                     <div class="col-md-5">
-                        <img src="{{image}}" width="200" height="250" alt="No Image Available"/>
+                        <img src="{{image}}" width="200" height="250" alt="No Image Available" />
                     </div>
                 </section>
                 <section>
@@ -62,9 +62,15 @@
                     <div class="col-md-4">
                         <h3><u>{{name}}</u></h3>
                         <h3>Address : {{address}}</h3>
-                        <h3>Rating : {{stars}} *</h3>        
+
+                        <h3>
+                            Rating :{{#times stars}}
+                            <span class="glyphicon glyphicon-star blue-icon"></span>
+                            {{/times}}
+
+                        </h3>
                     </div>
-                    </section>
+                </section>
                 <section>
                     <!--View Rooms Button-->
                     <div class="col-md-2">

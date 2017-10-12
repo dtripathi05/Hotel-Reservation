@@ -5,20 +5,36 @@ using System.Threading.Tasks;
 using HotelSearchService;
 using HotelReservationEngine.DataParser;
 using HotelReservationEngine.HotelMultiAvailItinerary;
-
+using HotelReservationEngine.Contracts;
+using Newtonsoft.Json;
 namespace HotelReservationEngine.Adapter
 {
-    public class RoomPricingAdapter
+    public class RoomPricingAdapter:IHotelFactory
     {
-        public async Task<HotelRoomPriceRS> SearchAsync(SingleAvailItinerary request)
+        HotelEngineClient engineRepresentative = null;
+        HotelRoomPriceRQ hotelRoomPriceRQ = null;
+        HotelRoomPriceRS hotelRoomPriceRS = null;
+        SingleAvailItinerary singleAvailItinerary = null;
+        public async Task<string> SearchAsync(string request)
         {
-            HotelEngineClient hotelEngineClient = new HotelEngineClient();
-            
-
-            RoomPricingParser parser = new RoomPricingParser();
-            HotelRoomPriceRQ hotelRoomPriceRQ = parser.RoomPriceRQParser(request);
-            HotelRoomPriceRS hotelRoomPriceRS = await hotelEngineClient.HotelRoomPriceAsync(hotelRoomPriceRQ);
-            return hotelRoomPriceRS;
+            try
+            {
+                var deserialize = JsonConvert.DeserializeObject<SingleAvailItinerary>(request);
+                HotelEngineClient hotelEngineClient = new HotelEngineClient();
+                RoomPricingParser parser = new RoomPricingParser();
+                HotelRoomPriceRQ hotelRoomPriceRQ = parser.RoomPriceRQParser(deserialize);
+                HotelRoomPriceRS hotelRoomPriceRS = await hotelEngineClient.HotelRoomPriceAsync(hotelRoomPriceRQ);
+                SingleAvailItinerary singleAvailItinerary = parser.RoomPriceRSParser(hotelRoomPriceRS, deserialize);
+            }
+            catch
+            {
+                throw;
+            }
+            finally
+            {
+                await engineRepresentative.CloseAsync();
+            }
+            return JsonConvert.SerializeObject(singleAvailItinerary);
         }
     }
 }
