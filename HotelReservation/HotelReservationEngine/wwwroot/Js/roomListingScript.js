@@ -38,7 +38,7 @@ function roomPrice(data1) {
             var data1 =
                 {
                     "Itinerary": room.itinerary,
-                    "Criteria": room.hotelSearchCriterion,
+                    "Criteria": room.criteria,
                     "SessionId": room.sessionId
                 };
             $.ajax({

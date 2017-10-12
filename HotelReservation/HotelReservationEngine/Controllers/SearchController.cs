@@ -7,7 +7,7 @@ using HotelReservationEngine.Adapter;
 using Newtonsoft.Json;
 using HotelReservationEngine.Contracts;
 using HotelReservationEngine.HotelMultiAvailItinerary;
-
+using HotelSearchService;
 
 namespace HotelReservationEngine.Controllers
 {
@@ -46,10 +46,12 @@ namespace HotelReservationEngine.Controllers
             var deserialize = JsonConvert.DeserializeObject<SingleAvailItinerary>(result);
             return deserialize;
         }
-        //[HttpPost("roomPrice")]
-        //public async Task<SingleAvailItinerary> MarkUp([FromBody]SingleAvailItinerary hotelItinerary)
-        //{
-
-        //}
+        [HttpPost("roomPrice")]
+        public async Task<HotelRoomPriceRS> MarkUp([FromBody]SingleAvailItinerary hotelItinerary)
+        {
+            RoomPricingAdapter roomPricingAdapter = new RoomPricingAdapter();
+            return await  roomPricingAdapter.SearchAsync(hotelItinerary);
+           
+        }
     }
 }
