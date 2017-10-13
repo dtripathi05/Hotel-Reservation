@@ -2,30 +2,35 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using HotelSearchService;
 using HotelReservationEngine.HotelMultiAvailItinerary;
+using HotelSearchService;
+using TripEngine.Model;
+using TripEngineService;
 
 namespace HotelReservationEngine.DataParser
 {
     public class RoomPricingParser
     {
-        public HotelRoomPriceRQ RoomPriceRQParser(SingleAvailItinerary singleAvailItinerary)
+        public TripProductPriceRQ RoomPriceRQParser(RoomPricingItinerary roomPricingItinerary)
         {
-            return new HotelRoomPriceRQ
+            return new TripProductPriceRQ
             {
-                HotelSearchCriterion = singleAvailItinerary.Criteria,
-                SessionId=singleAvailItinerary.SessionId,
-                Itinerary=singleAvailItinerary.Itinerary,
-                ResultRequested = ResponseType.Complete
+                SessionId = roomPricingItinerary.SessionId,
+                TripProduct = new HotelTripProduct
+                {
+                    HotelSearchCriterion = roomPricingItinerary.Criteria,
+                    HotelItinerary = roomPricingItinerary.Itinerary,
+                } ,
+                ResultRequested=TripEngineService.ResponseType.Complete,
             };
         }
-        public SingleAvailItinerary RoomPriceRSParser(HotelRoomPriceRS hotelRoomAvailRS, SingleAvailItinerary singleAvailItinerary)
+        public RoomPricingResponse RoomPriceRSParser(TripEngineService.TripProductPriceRS tripProductPriceRS, RoomPricingItinerary roomPricingItinerary)
         {
-            return new SingleAvailItinerary
+            return new RoomPricingResponse
             {
-                SessionId = hotelRoomAvailRS.SessionId,
-                Itinerary = hotelRoomAvailRS.Itinerary,
-                Criteria = singleAvailItinerary.Criteria
+                Product=((HotelTripProduct)tripProductPriceRS.TripProduct),
+                SessionId=tripProductPriceRS.SessionId,
+                Criteria= roomPricingItinerary.Criteria
             };
         }
     }

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TripsEngineService
+namespace TripEngineService
 {
     using System.Runtime.Serialization;
     using System;
@@ -16,43 +16,43 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="WebServiceRQ", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripProductCancellationDetailsRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderDeleteRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderCancelRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderBookRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CompleteBookingRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderRetrieveRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderRetrieveRQWithPaging))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderPriceRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderSaveRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripProductPriceRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.SeatMapQueryRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirLowFareSearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirFullScheduleSearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirFareRulesRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirPriceRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelRoomAvailRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelRoomPriceRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelSearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelItinerarySearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarSearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarRateDetailRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ActivityDetailsRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ActivitySearchRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ReviewPendingRetrieveRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.SaveReviewStatusRQ))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderAssignSeatRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripProductCancellationDetailsRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderDeleteRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderCancelRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderBookRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CompleteBookingRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderRetrieveRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderRetrieveRQWithPaging))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderPriceRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderSaveRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripProductPriceRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.SeatMapQueryRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirLowFareSearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirFullScheduleSearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirFareRulesRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirPriceRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelRoomAvailRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelRoomPriceRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelSearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelItinerarySearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarSearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarRateDetailRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ActivityDetailsRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ActivitySearchRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ReviewPendingRetrieveRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.SaveReviewStatusRQ))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderAssignSeatRQ))]
     public partial class WebServiceRQ : object
     {
         
-        private TripsEngineService.StateBag[] AdditionalInfoField;
+        private TripEngineService.StateBag[] AdditionalInfoField;
         
-        private TripsEngineService.ResponseType ResultRequestedField;
+        private TripEngineService.ResponseType ResultRequestedField;
         
         private string SessionIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] AdditionalInfo
+        public TripEngineService.StateBag[] AdditionalInfo
         {
             get
             {
@@ -65,7 +65,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ResponseType ResultRequested
+        public TripEngineService.ResponseType ResultRequested
         {
             get
             {
@@ -94,20 +94,20 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripProductCancellationDetailsRQ", Namespace="http://tavisca.com")]
-    public partial class TripProductCancellationDetailsRQ : TripsEngineService.WebServiceRQ
+    public partial class TripProductCancellationDetailsRQ : TripEngineService.WebServiceRQ
     {
         
         private string ConfirmationNumberField;
         
-        private TripsEngineService.FareSource FareSourceField;
+        private TripEngineService.FareSource FareSourceField;
         
-        private TripsEngineService.User OwnerField;
+        private TripEngineService.User OwnerField;
         
-        private TripsEngineService.PointOfSale POSField;
+        private TripEngineService.PointOfSale POSField;
         
         private System.Guid TripFolderIdField;
         
-        private TripsEngineService.TripProcessingInfo TripProcessingInfoField;
+        private TripEngineService.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string ConfirmationNumber
@@ -123,7 +123,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FareSource FareSource
+        public TripEngineService.FareSource FareSource
         {
             get
             {
@@ -136,7 +136,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.User Owner
+        public TripEngineService.User Owner
         {
             get
             {
@@ -149,7 +149,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PointOfSale POS
+        public TripEngineService.PointOfSale POS
         {
             get
             {
@@ -175,7 +175,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripProcessingInfo TripProcessingInfo
+        public TripEngineService.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -191,13 +191,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderDeleteRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderDeleteRQ : TripsEngineService.WebServiceRQ
+    public partial class TripFolderDeleteRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.TripFolder TripFolderField;
+        private TripEngineService.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripFolder TripFolder
+        public TripEngineService.TripFolder TripFolder
         {
             get
             {
@@ -213,17 +213,17 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderCancelRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderCancelRQ : TripsEngineService.WebServiceRQ
+    public partial class TripFolderCancelRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.User OwnerField;
+        private TripEngineService.User OwnerField;
         
         private System.Guid TripFolderIdField;
         
-        private TripsEngineService.TripProcessingInfo TripProcessingInfoField;
+        private TripEngineService.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.User Owner
+        public TripEngineService.User Owner
         {
             get
             {
@@ -249,7 +249,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripProcessingInfo TripProcessingInfo
+        public TripEngineService.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -265,15 +265,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderBookRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderBookRQ : TripsEngineService.WebServiceRQ
+    public partial class TripFolderBookRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.TripFolder TripFolderField;
+        private TripEngineService.TripFolder TripFolderField;
         
-        private TripsEngineService.TripProcessingInfo TripProcessingInfoField;
+        private TripEngineService.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripFolder TripFolder
+        public TripEngineService.TripFolder TripFolder
         {
             get
             {
@@ -286,7 +286,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripProcessingInfo TripProcessingInfo
+        public TripEngineService.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -302,17 +302,17 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CompleteBookingRQ", Namespace="http://tavisca.com")]
-    public partial class CompleteBookingRQ : TripsEngineService.WebServiceRQ
+    public partial class CompleteBookingRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.Payment ExternalPaymentField;
+        private TripEngineService.Payment ExternalPaymentField;
         
-        private TripsEngineService.SecureAuthenticationRequest[] SecureAuthenticationRequestsField;
+        private TripEngineService.SecureAuthenticationRequest[] SecureAuthenticationRequestsField;
         
         private System.Guid TripFolderIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Payment ExternalPayment
+        public TripEngineService.Payment ExternalPayment
         {
             get
             {
@@ -325,7 +325,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.SecureAuthenticationRequest[] SecureAuthenticationRequests
+        public TripEngineService.SecureAuthenticationRequest[] SecureAuthenticationRequests
         {
             get
             {
@@ -354,15 +354,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderRetrieveRQ", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderRetrieveRQWithPaging))]
-    public partial class TripFolderRetrieveRQ : TripsEngineService.WebServiceRQ
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderRetrieveRQWithPaging))]
+    public partial class TripFolderRetrieveRQ : TripEngineService.WebServiceRQ
     {
         
         private bool ReturnLightWeightTripFoldersField;
         
-        private TripsEngineService.TripRetrieveCriterion SearchCriterionField;
+        private TripEngineService.TripRetrieveCriterion SearchCriterionField;
         
-        private TripsEngineService.User TripOwnerField;
+        private TripEngineService.User TripOwnerField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public bool ReturnLightWeightTripFolders
@@ -378,7 +378,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripRetrieveCriterion SearchCriterion
+        public TripEngineService.TripRetrieveCriterion SearchCriterion
         {
             get
             {
@@ -391,7 +391,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.User TripOwner
+        public TripEngineService.User TripOwner
         {
             get
             {
@@ -407,13 +407,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderRetrieveRQWithPaging", Namespace="http://tavisca.com")]
-    public partial class TripFolderRetrieveRQWithPaging : TripsEngineService.TripFolderRetrieveRQ
+    public partial class TripFolderRetrieveRQWithPaging : TripEngineService.TripFolderRetrieveRQ
     {
         
-        private TripsEngineService.TripRetrieveCriterionV2 TripSearchCriterionField;
+        private TripEngineService.TripRetrieveCriterionV2 TripSearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripRetrieveCriterionV2 TripSearchCriterion
+        public TripEngineService.TripRetrieveCriterionV2 TripSearchCriterion
         {
             get
             {
@@ -429,15 +429,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderPriceRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderPriceRQ : TripsEngineService.WebServiceRQ
+    public partial class TripFolderPriceRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.TripFolder TripFolderField;
+        private TripEngineService.TripFolder TripFolderField;
         
-        private TripsEngineService.TripProcessingInfo TripProcessingInfoField;
+        private TripEngineService.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripFolder TripFolder
+        public TripEngineService.TripFolder TripFolder
         {
             get
             {
@@ -450,7 +450,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripProcessingInfo TripProcessingInfo
+        public TripEngineService.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -466,15 +466,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderSaveRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderSaveRQ : TripsEngineService.WebServiceRQ
+    public partial class TripFolderSaveRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.TripFolder TripFolderField;
+        private TripEngineService.TripFolder TripFolderField;
         
-        private TripsEngineService.TripProcessingInfo TripProcessingInfoField;
+        private TripEngineService.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripFolder TripFolder
+        public TripEngineService.TripFolder TripFolder
         {
             get
             {
@@ -487,7 +487,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripProcessingInfo TripProcessingInfo
+        public TripEngineService.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -503,13 +503,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripProductPriceRQ", Namespace="http://tavisca.com")]
-    public partial class TripProductPriceRQ : TripsEngineService.WebServiceRQ
+    public partial class TripProductPriceRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.TripProduct TripProductField;
+        private TripEngineService.TripProduct TripProductField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripProduct TripProduct
+        public TripEngineService.TripProduct TripProduct
         {
             get
             {
@@ -525,17 +525,17 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SeatMapQueryRQ", Namespace="http://tavisca.com")]
-    public partial class SeatMapQueryRQ : TripsEngineService.WebServiceRQ
+    public partial class SeatMapQueryRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.SeatMapSearchCriterion CriterionField;
+        private TripEngineService.SeatMapSearchCriterion CriterionField;
         
-        private TripsEngineService.FareSource FareSourceField;
+        private TripEngineService.FareSource FareSourceField;
         
-        private TripsEngineService.PointOfSale PosField;
+        private TripEngineService.PointOfSale PosField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.SeatMapSearchCriterion Criterion
+        public TripEngineService.SeatMapSearchCriterion Criterion
         {
             get
             {
@@ -548,7 +548,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FareSource FareSource
+        public TripEngineService.FareSource FareSource
         {
             get
             {
@@ -561,7 +561,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PointOfSale Pos
+        public TripEngineService.PointOfSale Pos
         {
             get
             {
@@ -577,15 +577,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirLowFareSearchRQ", Namespace="http://tavisca.com")]
-    public partial class AirLowFareSearchRQ : TripsEngineService.WebServiceRQ
+    public partial class AirLowFareSearchRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.AirSearchCriterion AirSearchCriterionField;
+        private TripEngineService.AirSearchCriterion AirSearchCriterionField;
         
-        private TripsEngineService.PagingInfo PagingInfoField;
+        private TripEngineService.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirSearchCriterion AirSearchCriterion
+        public TripEngineService.AirSearchCriterion AirSearchCriterion
         {
             get
             {
@@ -598,7 +598,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PagingInfo PagingInfo
+        public TripEngineService.PagingInfo PagingInfo
         {
             get
             {
@@ -614,17 +614,17 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFullScheduleSearchRQ", Namespace="http://tavisca.com")]
-    public partial class AirFullScheduleSearchRQ : TripsEngineService.WebServiceRQ
+    public partial class AirFullScheduleSearchRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.AirSearchCriterion AirSearchCriterionField;
+        private TripEngineService.AirSearchCriterion AirSearchCriterionField;
         
         private int QueryLegRphField;
         
-        private TripsEngineService.AirLeg[] SelectedLegsField;
+        private TripEngineService.AirLeg[] SelectedLegsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirSearchCriterion AirSearchCriterion
+        public TripEngineService.AirSearchCriterion AirSearchCriterion
         {
             get
             {
@@ -650,7 +650,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirLeg[] SelectedLegs
+        public TripEngineService.AirLeg[] SelectedLegs
         {
             get
             {
@@ -666,17 +666,17 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFareRulesRQ", Namespace="http://tavisca.com")]
-    public partial class AirFareRulesRQ : TripsEngineService.WebServiceRQ
+    public partial class AirFareRulesRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.AirFareSource[] FareSourcesField;
+        private TripEngineService.AirFareSource[] FareSourcesField;
         
-        private TripsEngineService.AirItinerary ItineraryField;
+        private TripEngineService.AirItinerary ItineraryField;
         
-        private TripsEngineService.PointOfSale PosField;
+        private TripEngineService.PointOfSale PosField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirFareSource[] FareSources
+        public TripEngineService.AirFareSource[] FareSources
         {
             get
             {
@@ -689,7 +689,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirItinerary Itinerary
+        public TripEngineService.AirItinerary Itinerary
         {
             get
             {
@@ -702,7 +702,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PointOfSale Pos
+        public TripEngineService.PointOfSale Pos
         {
             get
             {
@@ -718,21 +718,21 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirPriceRQ", Namespace="http://tavisca.com")]
-    public partial class AirPriceRQ : TripsEngineService.WebServiceRQ
+    public partial class AirPriceRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.AirFareSource[] FareSourcesField;
+        private TripEngineService.AirFareSource[] FareSourcesField;
         
-        private TripsEngineService.FareType[] FareTypesField;
+        private TripEngineService.FareType[] FareTypesField;
         
         private bool IsRepriceField;
         
-        private TripsEngineService.AirItinerary ItineraryField;
+        private TripEngineService.AirItinerary ItineraryField;
         
-        private TripsEngineService.AirSearchCriterion SearchCriterionField;
+        private TripEngineService.AirSearchCriterion SearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirFareSource[] FareSources
+        public TripEngineService.AirFareSource[] FareSources
         {
             get
             {
@@ -745,7 +745,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FareType[] FareTypes
+        public TripEngineService.FareType[] FareTypes
         {
             get
             {
@@ -771,7 +771,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirItinerary Itinerary
+        public TripEngineService.AirItinerary Itinerary
         {
             get
             {
@@ -784,7 +784,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirSearchCriterion SearchCriterion
+        public TripEngineService.AirSearchCriterion SearchCriterion
         {
             get
             {
@@ -800,15 +800,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomAvailRQ", Namespace="http://tavisca.com")]
-    public partial class HotelRoomAvailRQ : TripsEngineService.WebServiceRQ
+    public partial class HotelRoomAvailRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.HotelSearchCriterion HotelSearchCriterionField;
+        private TripEngineService.HotelSearchCriterion HotelSearchCriterionField;
         
-        private TripsEngineService.HotelItinerary ItineraryField;
+        private TripEngineService.HotelItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelSearchCriterion HotelSearchCriterion
+        public TripEngineService.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -821,7 +821,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelItinerary Itinerary
+        public TripEngineService.HotelItinerary Itinerary
         {
             get
             {
@@ -837,15 +837,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomPriceRQ", Namespace="http://tavisca.com")]
-    public partial class HotelRoomPriceRQ : TripsEngineService.WebServiceRQ
+    public partial class HotelRoomPriceRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.HotelSearchCriterion HotelSearchCriterionField;
+        private TripEngineService.HotelSearchCriterion HotelSearchCriterionField;
         
-        private TripsEngineService.HotelItinerary ItineraryField;
+        private TripEngineService.HotelItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelSearchCriterion HotelSearchCriterion
+        public TripEngineService.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -858,7 +858,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelItinerary Itinerary
+        public TripEngineService.HotelItinerary Itinerary
         {
             get
             {
@@ -874,17 +874,17 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchRQ", Namespace="http://tavisca.com")]
-    public partial class HotelSearchRQ : TripsEngineService.WebServiceRQ
+    public partial class HotelSearchRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.HotelFilter[] FiltersField;
+        private TripEngineService.HotelFilter[] FiltersField;
         
-        private TripsEngineService.HotelSearchCriterion HotelSearchCriterionField;
+        private TripEngineService.HotelSearchCriterion HotelSearchCriterionField;
         
-        private TripsEngineService.PagingInfo PagingInfoField;
+        private TripEngineService.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelFilter[] Filters
+        public TripEngineService.HotelFilter[] Filters
         {
             get
             {
@@ -897,7 +897,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelSearchCriterion HotelSearchCriterion
+        public TripEngineService.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -910,7 +910,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PagingInfo PagingInfo
+        public TripEngineService.PagingInfo PagingInfo
         {
             get
             {
@@ -926,7 +926,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerarySearchRQ", Namespace="http://tavisca.com")]
-    public partial class HotelItinerarySearchRQ : TripsEngineService.WebServiceRQ
+    public partial class HotelItinerarySearchRQ : TripEngineService.WebServiceRQ
     {
         
         private int ItineraryIdField;
@@ -948,15 +948,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarSearchRQ", Namespace="http://tavisca.com")]
-    public partial class CarSearchRQ : TripsEngineService.WebServiceRQ
+    public partial class CarSearchRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.CarSearchCriterion CarSearchCriterionField;
+        private TripEngineService.CarSearchCriterion CarSearchCriterionField;
         
-        private TripsEngineService.PagingInfo PagingInfoField;
+        private TripEngineService.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarSearchCriterion CarSearchCriterion
+        public TripEngineService.CarSearchCriterion CarSearchCriterion
         {
             get
             {
@@ -969,7 +969,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PagingInfo PagingInfo
+        public TripEngineService.PagingInfo PagingInfo
         {
             get
             {
@@ -985,15 +985,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarRateDetailRQ", Namespace="http://tavisca.com")]
-    public partial class CarRateDetailRQ : TripsEngineService.WebServiceRQ
+    public partial class CarRateDetailRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.CarSearchCriterion CarSearchCriterionField;
+        private TripEngineService.CarSearchCriterion CarSearchCriterionField;
         
-        private TripsEngineService.CarItinerary ItineraryField;
+        private TripEngineService.CarItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarSearchCriterion CarSearchCriterion
+        public TripEngineService.CarSearchCriterion CarSearchCriterion
         {
             get
             {
@@ -1006,7 +1006,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarItinerary Itinerary
+        public TripEngineService.CarItinerary Itinerary
         {
             get
             {
@@ -1022,15 +1022,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityDetailsRQ", Namespace="http://tavisca.com")]
-    public partial class ActivityDetailsRQ : TripsEngineService.WebServiceRQ
+    public partial class ActivityDetailsRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.ActivityItinerary ActivityItineraryField;
+        private TripEngineService.ActivityItinerary ActivityItineraryField;
         
-        private TripsEngineService.ActivitySearchCriterion ActivitySearchCriterionField;
+        private TripEngineService.ActivitySearchCriterion ActivitySearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivityItinerary ActivityItinerary
+        public TripEngineService.ActivityItinerary ActivityItinerary
         {
             get
             {
@@ -1043,7 +1043,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivitySearchCriterion ActivitySearchCriterion
+        public TripEngineService.ActivitySearchCriterion ActivitySearchCriterion
         {
             get
             {
@@ -1059,15 +1059,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivitySearchRQ", Namespace="http://tavisca.com")]
-    public partial class ActivitySearchRQ : TripsEngineService.WebServiceRQ
+    public partial class ActivitySearchRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.ActivitySearchCriterion ActivitySearchCriterionField;
+        private TripEngineService.ActivitySearchCriterion ActivitySearchCriterionField;
         
-        private TripsEngineService.PagingInfo PagingInfoField;
+        private TripEngineService.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivitySearchCriterion ActivitySearchCriterion
+        public TripEngineService.ActivitySearchCriterion ActivitySearchCriterion
         {
             get
             {
@@ -1080,7 +1080,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PagingInfo PagingInfo
+        public TripEngineService.PagingInfo PagingInfo
         {
             get
             {
@@ -1096,15 +1096,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ReviewPendingRetrieveRQ", Namespace="http://schemas.datacontract.org/2004/07/TripsEngine.Rovia.DataContract")]
-    public partial class ReviewPendingRetrieveRQ : TripsEngineService.WebServiceRQ
+    public partial class ReviewPendingRetrieveRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.TripCountRetrieveCriterion SearchCriterionField;
+        private TripEngineService.TripCountRetrieveCriterion SearchCriterionField;
         
-        private TripsEngineService.User1 TripOwnerField;
+        private TripEngineService.User1 TripOwnerField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripCountRetrieveCriterion SearchCriterion
+        public TripEngineService.TripCountRetrieveCriterion SearchCriterion
         {
             get
             {
@@ -1117,7 +1117,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.User1 TripOwner
+        public TripEngineService.User1 TripOwner
         {
             get
             {
@@ -1133,7 +1133,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SaveReviewStatusRQ", Namespace="http://schemas.datacontract.org/2004/07/TripsEngine.Rovia.DataContract")]
-    public partial class SaveReviewStatusRQ : TripsEngineService.WebServiceRQ
+    public partial class SaveReviewStatusRQ : TripEngineService.WebServiceRQ
     {
         
         private System.Guid ProductIdField;
@@ -1155,17 +1155,17 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderAssignSeatRQ", Namespace="http://tavisca.com")]
-    public partial class TripFolderAssignSeatRQ : TripsEngineService.WebServiceRQ
+    public partial class TripFolderAssignSeatRQ : TripEngineService.WebServiceRQ
     {
         
-        private TripsEngineService.PassengerSegmentSeatInfo[] PaxSegSeatInfoListField;
+        private TripEngineService.PassengerSegmentSeatInfo[] PaxSegSeatInfoListField;
         
         private int TriProductRphField;
         
-        private TripsEngineService.TripFolder TripFolderField;
+        private TripEngineService.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PassengerSegmentSeatInfo[] PaxSegSeatInfoList
+        public TripEngineService.PassengerSegmentSeatInfo[] PaxSegSeatInfoList
         {
             get
             {
@@ -1191,7 +1191,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripFolder TripFolder
+        public TripEngineService.TripFolder TripFolder
         {
             get
             {
@@ -1259,42 +1259,42 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolder", Namespace="http://tavisca.com")]
-    public partial class TripFolder : TripsEngineService.Folder
+    public partial class TripFolder : TripEngineService.Folder
     {
         
         private string CitiesField;
         
         private string ConfirmationNumberField;
         
-        private TripsEngineService.CustomData CustomDataField;
+        private TripEngineService.CustomData CustomDataField;
         
         private System.DateTime EndDateField;
         
-        private TripsEngineService.ErrorInfo[] ErrorInfoListField;
+        private TripEngineService.ErrorInfo[] ErrorInfoListField;
         
-        private TripsEngineService.Passenger[] PassengersField;
+        private TripEngineService.Passenger[] PassengersField;
         
-        private TripsEngineService.Payment[] PaymentsField;
+        private TripEngineService.Payment[] PaymentsField;
         
-        private TripsEngineService.PNRSegment[] PnrSegmentsField;
+        private TripEngineService.PNRSegment[] PnrSegmentsField;
         
-        private TripsEngineService.TripProduct[] ProductsField;
+        private TripEngineService.TripProduct[] ProductsField;
         
-        private TripsEngineService.Remark[] RemarksField;
+        private TripEngineService.Remark[] RemarksField;
         
-        private TripsEngineService.ServiceStatus ServiceStatusField;
+        private TripEngineService.ServiceStatus ServiceStatusField;
         
         private System.DateTime StartDateField;
         
-        private TripsEngineService.TripStatus StatusField;
+        private TripEngineService.TripStatus StatusField;
         
-        private TripsEngineService.FareSource SupplierField;
+        private TripEngineService.FareSource SupplierField;
         
         private string SupplierConfirmationNumberField;
         
-        private TripsEngineService.StateBag[] TicketingLinesField;
+        private TripEngineService.StateBag[] TicketingLinesField;
         
-        private TripsEngineService.Ticket[] TicketsField;
+        private TripEngineService.Ticket[] TicketsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Cities
@@ -1323,7 +1323,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CustomData CustomData
+        public TripEngineService.CustomData CustomData
         {
             get
             {
@@ -1349,7 +1349,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ErrorInfo[] ErrorInfoList
+        public TripEngineService.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -1362,7 +1362,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Passenger[] Passengers
+        public TripEngineService.Passenger[] Passengers
         {
             get
             {
@@ -1375,7 +1375,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Payment[] Payments
+        public TripEngineService.Payment[] Payments
         {
             get
             {
@@ -1388,7 +1388,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PNRSegment[] PnrSegments
+        public TripEngineService.PNRSegment[] PnrSegments
         {
             get
             {
@@ -1401,7 +1401,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripProduct[] Products
+        public TripEngineService.TripProduct[] Products
         {
             get
             {
@@ -1414,7 +1414,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Remark[] Remarks
+        public TripEngineService.Remark[] Remarks
         {
             get
             {
@@ -1427,7 +1427,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ServiceStatus ServiceStatus
+        public TripEngineService.ServiceStatus ServiceStatus
         {
             get
             {
@@ -1453,7 +1453,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripStatus Status
+        public TripEngineService.TripStatus Status
         {
             get
             {
@@ -1466,7 +1466,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FareSource Supplier
+        public TripEngineService.FareSource Supplier
         {
             get
             {
@@ -1492,7 +1492,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] TicketingLines
+        public TripEngineService.StateBag[] TicketingLines
         {
             get
             {
@@ -1505,7 +1505,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Ticket[] Tickets
+        public TripEngineService.Ticket[] Tickets
         {
             get
             {
@@ -1603,11 +1603,11 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="FareSource", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirFareSource))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelFareSource))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarFareSource))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ActivityFareSource))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.GenericFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ActivityFareSource))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.GenericFareSource))]
     public partial class FareSource : object
     {
         
@@ -1663,7 +1663,7 @@ namespace TripsEngineService
     public partial class User : object
     {
         
-        private TripsEngineService.StateBag[] AdditionalInfoField;
+        private TripEngineService.StateBag[] AdditionalInfoField;
         
         private string EmailField;
         
@@ -1684,7 +1684,7 @@ namespace TripsEngineService
         private string UserNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] AdditionalInfo
+        public TripEngineService.StateBag[] AdditionalInfo
         {
             get
             {
@@ -1820,16 +1820,16 @@ namespace TripsEngineService
     public partial class PointOfSale : object
     {
         
-        private TripsEngineService.StateBag[] AdditionalInfoField;
+        private TripEngineService.StateBag[] AdditionalInfoField;
         
         private string AgentSignField;
         
         private int PosIdField;
         
-        private TripsEngineService.Company RequesterField;
+        private TripEngineService.Company RequesterField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] AdditionalInfo
+        public TripEngineService.StateBag[] AdditionalInfo
         {
             get
             {
@@ -1868,7 +1868,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Company Requester
+        public TripEngineService.Company Requester
         {
             get
             {
@@ -1921,32 +1921,32 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFareSource", Namespace="http://tavisca.com")]
-    public partial class AirFareSource : TripsEngineService.FareSource
+    public partial class AirFareSource : TripEngineService.FareSource
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFareSource", Namespace="http://tavisca.com")]
-    public partial class HotelFareSource : TripsEngineService.FareSource
+    public partial class HotelFareSource : TripEngineService.FareSource
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarFareSource", Namespace="http://tavisca.com")]
-    public partial class CarFareSource : TripsEngineService.FareSource
+    public partial class CarFareSource : TripEngineService.FareSource
     {
         
         private string[] AirportCodesField;
         
-        private TripsEngineService.CarCompany[] CarCompaniesField;
+        private TripEngineService.CarCompany[] CarCompaniesField;
         
         private string[] CityCodesField;
         
         private bool IsGdsField;
         
-        private TripsEngineService.CarDiscountCode[] RateCodesField;
+        private TripEngineService.CarDiscountCode[] RateCodesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string[] AirportCodes
@@ -1962,7 +1962,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarCompany[] CarCompanies
+        public TripEngineService.CarCompany[] CarCompanies
         {
             get
             {
@@ -2001,7 +2001,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarDiscountCode[] RateCodes
+        public TripEngineService.CarDiscountCode[] RateCodes
         {
             get
             {
@@ -2017,21 +2017,21 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityFareSource", Namespace="http://tavisca.com")]
-    public partial class ActivityFareSource : TripsEngineService.FareSource
+    public partial class ActivityFareSource : TripEngineService.FareSource
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GenericFareSource", Namespace="http://tavisca.com")]
-    public partial class GenericFareSource : TripsEngineService.FareSource
+    public partial class GenericFareSource : TripEngineService.FareSource
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarCompany", Namespace="http://tavisca.com")]
-    public partial class CarCompany : TripsEngineService.Company
+    public partial class CarCompany : TripEngineService.Company
     {
     }
     
@@ -2041,14 +2041,14 @@ namespace TripsEngineService
     public partial class CarDiscountCode : object
     {
         
-        private TripsEngineService.CarDiscountType DiscountTypeField;
+        private TripEngineService.CarDiscountType DiscountTypeField;
         
         private string NumberField;
         
         private string VendorCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarDiscountType DiscountType
+        public TripEngineService.CarDiscountType DiscountType
         {
             get
             {
@@ -2090,18 +2090,18 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Company", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.Airline))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelChain))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CompanyPreference))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarCompany))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.Airline))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelChain))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CompanyPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarCompany))]
     public partial class Company : object
     {
         
-        private TripsEngineService.Agency AgencyField;
+        private TripEngineService.Agency AgencyField;
         
         private string CodeField;
         
-        private TripsEngineService.CompanyCodeContext CodeContextField;
+        private TripEngineService.CompanyCodeContext CodeContextField;
         
         private string DKField;
         
@@ -2113,12 +2113,12 @@ namespace TripsEngineService
         
         private int IDField;
         
-        private TripsEngineService.Media LogoField;
+        private TripEngineService.Media LogoField;
         
         private string ShortNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Agency Agency
+        public TripEngineService.Agency Agency
         {
             get
             {
@@ -2144,7 +2144,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CompanyCodeContext CodeContext
+        public TripEngineService.CompanyCodeContext CodeContext
         {
             get
             {
@@ -2222,7 +2222,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Media Logo
+        public TripEngineService.Media Logo
         {
             get
             {
@@ -2254,14 +2254,14 @@ namespace TripsEngineService
     public partial class Agency : object
     {
         
-        private TripsEngineService.Address AgencyAddressField;
+        private TripEngineService.Address AgencyAddressField;
         
         private int AgencyIdField;
         
         private string AgencyNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Address AgencyAddress
+        public TripEngineService.Address AgencyAddress
         {
             get
             {
@@ -2306,16 +2306,16 @@ namespace TripsEngineService
     public partial class Media : object
     {
         
-        private TripsEngineService.MediaCaptionType CaptionField;
+        private TripEngineService.MediaCaptionType CaptionField;
         
         private string MimeTypeField;
         
-        private TripsEngineService.MediaType TypeField;
+        private TripEngineService.MediaType TypeField;
         
         private string UrlField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.MediaCaptionType Caption
+        public TripEngineService.MediaCaptionType Caption
         {
             get
             {
@@ -2341,7 +2341,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.MediaType Type
+        public TripEngineService.MediaType Type
         {
             get
             {
@@ -2370,7 +2370,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Airline", Namespace="http://tavisca.com")]
-    public partial class Airline : TripsEngineService.Company
+    public partial class Airline : TripEngineService.Company
     {
         
         private bool IsNonArcCarrierField;
@@ -2392,20 +2392,20 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelChain", Namespace="http://tavisca.com")]
-    public partial class HotelChain : TripsEngineService.Company
+    public partial class HotelChain : TripEngineService.Company
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CompanyPreference", Namespace="http://tavisca.com")]
-    public partial class CompanyPreference : TripsEngineService.Company
+    public partial class CompanyPreference : TripEngineService.Company
     {
         
-        private TripsEngineService.PreferLevel PreferLevelField;
+        private TripEngineService.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PreferLevel PreferLevel
+        public TripEngineService.PreferLevel PreferLevel
         {
             get
             {
@@ -2442,7 +2442,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Address", Namespace="http://tavisca.com")]
-    public partial class Address : TripsEngineService.Location
+    public partial class Address : TripEngineService.Location
     {
         
         private string AddressLine1Field;
@@ -2451,7 +2451,7 @@ namespace TripsEngineService
         
         private string AddressSchemeField;
         
-        private TripsEngineService.City CityField;
+        private TripEngineService.City CityField;
         
         private string CompleteAddressField;
         
@@ -2499,7 +2499,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.City City
+        public TripEngineService.City City
         {
             get
             {
@@ -2554,17 +2554,17 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Location", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.Airport))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.City))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.Address))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.Airport))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.City))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.Address))]
     public partial class Location : object
     {
         
         private string CodeField;
         
-        private TripsEngineService.LocationCodeContext CodeContextField;
+        private TripEngineService.LocationCodeContext CodeContextField;
         
-        private TripsEngineService.GeoCode GeoCodeField;
+        private TripEngineService.GeoCode GeoCodeField;
         
         private int GmtOffsetMinutesField;
         
@@ -2572,9 +2572,9 @@ namespace TripsEngineService
         
         private string NameField;
         
-        private TripsEngineService.Distance RadiusField;
+        private TripEngineService.Distance RadiusField;
         
-        private TripsEngineService.StateBag[] SupplierSideDataField;
+        private TripEngineService.StateBag[] SupplierSideDataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -2590,7 +2590,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.LocationCodeContext CodeContext
+        public TripEngineService.LocationCodeContext CodeContext
         {
             get
             {
@@ -2603,7 +2603,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.GeoCode GeoCode
+        public TripEngineService.GeoCode GeoCode
         {
             get
             {
@@ -2655,7 +2655,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Distance Radius
+        public TripEngineService.Distance Radius
         {
             get
             {
@@ -2668,7 +2668,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] SupplierSideData
+        public TripEngineService.StateBag[] SupplierSideData
         {
             get
             {
@@ -2726,9 +2726,9 @@ namespace TripsEngineService
         
         private float AmountField;
         
-        private TripsEngineService.LocationCodeContext FromField;
+        private TripEngineService.LocationCodeContext FromField;
         
-        private TripsEngineService.DistanceUnit UnitField;
+        private TripEngineService.DistanceUnit UnitField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public float Amount
@@ -2744,7 +2744,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.LocationCodeContext From
+        public TripEngineService.LocationCodeContext From
         {
             get
             {
@@ -2757,7 +2757,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DistanceUnit Unit
+        public TripEngineService.DistanceUnit Unit
         {
             get
             {
@@ -2773,15 +2773,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Airport", Namespace="http://tavisca.com")]
-    public partial class Airport : TripsEngineService.Location
+    public partial class Airport : TripEngineService.Location
     {
         
-        private TripsEngineService.AirportType AirportTypeField;
+        private TripEngineService.AirportType AirportTypeField;
         
-        private TripsEngineService.City CityField;
+        private TripEngineService.City CityField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirportType AirportType
+        public TripEngineService.AirportType AirportType
         {
             get
             {
@@ -2794,7 +2794,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.City City
+        public TripEngineService.City City
         {
             get
             {
@@ -2810,7 +2810,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="City", Namespace="http://tavisca.com")]
-    public partial class City : TripsEngineService.Location
+    public partial class City : TripEngineService.Location
     {
         
         private string CountryField;
@@ -3252,13 +3252,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Folder", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolder))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolder))]
     public partial class Folder : object
     {
         
         private System.DateTime CreatedDateField;
         
-        private TripsEngineService.User CreatorField;
+        private TripEngineService.User CreatorField;
         
         private string FolderNameField;
         
@@ -3266,11 +3266,11 @@ namespace TripsEngineService
         
         private System.DateTime LastModifiedDateField;
         
-        private TripsEngineService.User OwnerField;
+        private TripEngineService.User OwnerField;
         
-        private TripsEngineService.PointOfSale PosField;
+        private TripEngineService.PointOfSale PosField;
         
-        private TripsEngineService.TripFolderType TypeField;
+        private TripEngineService.TripFolderType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime CreatedDate
@@ -3286,7 +3286,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.User Creator
+        public TripEngineService.User Creator
         {
             get
             {
@@ -3338,7 +3338,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.User Owner
+        public TripEngineService.User Owner
         {
             get
             {
@@ -3351,7 +3351,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PointOfSale Pos
+        public TripEngineService.PointOfSale Pos
         {
             get
             {
@@ -3364,7 +3364,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripFolderType Type
+        public TripEngineService.TripFolderType Type
         {
             get
             {
@@ -3395,18 +3395,18 @@ namespace TripsEngineService
     public partial class CustomData : object
     {
         
-        private TripsEngineService.dateTimeCustomFields DateFieldsField;
+        private TripEngineService.dateTimeCustomFields DateFieldsField;
         
-        private TripsEngineService.decimalCustomFields DecimalFieldsField;
+        private TripEngineService.decimalCustomFields DecimalFieldsField;
         
-        private TripsEngineService.intCustomFields IntFieldsField;
+        private TripEngineService.intCustomFields IntFieldsField;
         
-        private TripsEngineService.stringCustomFields StringFieldsField;
+        private TripEngineService.stringCustomFields StringFieldsField;
         
-        private TripsEngineService.stringCustomFields TextFieldsField;
+        private TripEngineService.stringCustomFields TextFieldsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.dateTimeCustomFields DateFields
+        public TripEngineService.dateTimeCustomFields DateFields
         {
             get
             {
@@ -3419,7 +3419,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.decimalCustomFields DecimalFields
+        public TripEngineService.decimalCustomFields DecimalFields
         {
             get
             {
@@ -3432,7 +3432,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.intCustomFields IntFields
+        public TripEngineService.intCustomFields IntFields
         {
             get
             {
@@ -3445,7 +3445,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.stringCustomFields StringFields
+        public TripEngineService.stringCustomFields StringFields
         {
             get
             {
@@ -3458,7 +3458,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.stringCustomFields TextFields
+        public TripEngineService.stringCustomFields TextFields
         {
             get
             {
@@ -3483,7 +3483,7 @@ namespace TripsEngineService
         
         private string[] MissingItemsField;
         
-        private TripsEngineService.ServiceStatusType StatusField;
+        private TripEngineService.ServiceStatusType StatusField;
         
         private int StatusCodeField;
         
@@ -3529,7 +3529,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ServiceStatusType Status
+        public TripEngineService.ServiceStatusType Status
         {
             get
             {
@@ -3576,7 +3576,7 @@ namespace TripsEngineService
         
         private string ErrorCodeField;
         
-        private TripsEngineService.ErrorContext ErrorContextField;
+        private TripEngineService.ErrorContext ErrorContextField;
         
         private string ErrorMessageField;
         
@@ -3596,7 +3596,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ErrorContext ErrorContext
+        public TripEngineService.ErrorContext ErrorContext
         {
             get
             {
@@ -3643,23 +3643,23 @@ namespace TripsEngineService
         
         private int AgeField;
         
-        private TripsEngineService.Membership[] AirMembershipsField;
+        private TripEngineService.Membership[] AirMembershipsField;
         
         private System.DateTime BirthDateField;
         
-        private TripsEngineService.Membership[] CarMembershipsField;
+        private TripEngineService.Membership[] CarMembershipsField;
         
-        private TripsEngineService.StateBag[] CustomFieldsField;
+        private TripEngineService.StateBag[] CustomFieldsField;
         
-        private TripsEngineService.Address DeliveryAddressField;
+        private TripEngineService.Address DeliveryAddressField;
         
         private string EmailField;
         
         private string FirstNameField;
         
-        private TripsEngineService.Gender GenderField;
+        private TripEngineService.Gender GenderField;
         
-        private TripsEngineService.Membership[] HotelMembershipsField;
+        private TripEngineService.Membership[] HotelMembershipsField;
         
         private string KnownTravelerNumberField;
         
@@ -3669,9 +3669,9 @@ namespace TripsEngineService
         
         private System.Guid PassengerIdField;
         
-        private TripsEngineService.PassengerType PassengerTypeField;
+        private TripEngineService.PassengerType PassengerTypeField;
         
-        private TripsEngineService.Passport PassportField;
+        private TripEngineService.Passport PassportField;
         
         private string PhoneNumberField;
         
@@ -3705,7 +3705,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Membership[] AirMemberships
+        public TripEngineService.Membership[] AirMemberships
         {
             get
             {
@@ -3731,7 +3731,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Membership[] CarMemberships
+        public TripEngineService.Membership[] CarMemberships
         {
             get
             {
@@ -3744,7 +3744,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] CustomFields
+        public TripEngineService.StateBag[] CustomFields
         {
             get
             {
@@ -3757,7 +3757,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Address DeliveryAddress
+        public TripEngineService.Address DeliveryAddress
         {
             get
             {
@@ -3796,7 +3796,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Gender Gender
+        public TripEngineService.Gender Gender
         {
             get
             {
@@ -3809,7 +3809,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Membership[] HotelMemberships
+        public TripEngineService.Membership[] HotelMemberships
         {
             get
             {
@@ -3874,7 +3874,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PassengerType PassengerType
+        public TripEngineService.PassengerType PassengerType
         {
             get
             {
@@ -3887,7 +3887,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Passport Passport
+        public TripEngineService.Passport Passport
         {
             get
             {
@@ -4020,31 +4020,31 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Payment", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CreditCardPayment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.SoftCashPayment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.BankAccountPayment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ExternalPayment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CheckPayment))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.DeferredPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CreditCardPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.SoftCashPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.BankAccountPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ExternalPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CheckPayment))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.DeferredPayment))]
     public partial class Payment : object
     {
         
-        private TripsEngineService.Money AmountField;
+        private TripEngineService.Money AmountField;
         
-        private TripsEngineService.StateBag[] AttributesField;
+        private TripEngineService.StateBag[] AttributesField;
         
-        private TripsEngineService.Address BillingAddressField;
+        private TripEngineService.Address BillingAddressField;
         
-        private TripsEngineService.ChargeTransaction[] ChargeTransactionsField;
+        private TripEngineService.ChargeTransaction[] ChargeTransactionsField;
         
         private System.Guid IdField;
         
-        private TripsEngineService.PaymentType PaymentTypeField;
+        private TripEngineService.PaymentType PaymentTypeField;
         
         private int RphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money Amount
+        public TripEngineService.Money Amount
         {
             get
             {
@@ -4057,7 +4057,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] Attributes
+        public TripEngineService.StateBag[] Attributes
         {
             get
             {
@@ -4070,7 +4070,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Address BillingAddress
+        public TripEngineService.Address BillingAddress
         {
             get
             {
@@ -4083,7 +4083,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ChargeTransaction[] ChargeTransactions
+        public TripEngineService.ChargeTransaction[] ChargeTransactions
         {
             get
             {
@@ -4109,7 +4109,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PaymentType PaymentType
+        public TripEngineService.PaymentType PaymentType
         {
             get
             {
@@ -4280,23 +4280,23 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripProduct", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.GenericTripProduct))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirTripProduct))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ActivityTripProduct))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelTripProduct))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarTripProduct))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.GenericTripProduct))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirTripProduct))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ActivityTripProduct))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelTripProduct))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarTripProduct))]
     public partial class TripProduct : object
     {
         
-        private TripsEngineService.Payment[] AgencyGeneratedPaymentsField;
+        private TripEngineService.Payment[] AgencyGeneratedPaymentsField;
         
-        private TripsEngineService.StateBag[] AttributesField;
+        private TripEngineService.StateBag[] AttributesField;
         
         private int BookingSequenceNumberField;
         
-        private TripsEngineService.CancellationDetails CancellationDetailsField;
+        private TripEngineService.CancellationDetails CancellationDetailsField;
         
-        private TripsEngineService.ErrorInfo[] ErrorInfoListField;
+        private TripEngineService.ErrorInfo[] ErrorInfoListField;
         
         private System.Guid IdField;
         
@@ -4304,20 +4304,20 @@ namespace TripsEngineService
         
         private int LeadPassengerRphField;
         
-        private TripsEngineService.User OwnerField;
+        private TripEngineService.User OwnerField;
         
-        private TripsEngineService.PassengerSegment[] PassengerSegmentsField;
+        private TripEngineService.PassengerSegment[] PassengerSegmentsField;
         
-        private TripsEngineService.PaymentBreakup[] PaymentBreakupsField;
+        private TripEngineService.PaymentBreakup[] PaymentBreakupsField;
         
-        private TripsEngineService.PaymentType[] PaymentOptionsField;
+        private TripEngineService.PaymentType[] PaymentOptionsField;
         
-        private TripsEngineService.TripItinerary[] PreferredItinerariesField;
+        private TripEngineService.TripItinerary[] PreferredItinerariesField;
         
         private int RphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Payment[] AgencyGeneratedPayments
+        public TripEngineService.Payment[] AgencyGeneratedPayments
         {
             get
             {
@@ -4330,7 +4330,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] Attributes
+        public TripEngineService.StateBag[] Attributes
         {
             get
             {
@@ -4356,7 +4356,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CancellationDetails CancellationDetails
+        public TripEngineService.CancellationDetails CancellationDetails
         {
             get
             {
@@ -4369,7 +4369,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ErrorInfo[] ErrorInfoList
+        public TripEngineService.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -4421,7 +4421,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.User Owner
+        public TripEngineService.User Owner
         {
             get
             {
@@ -4434,7 +4434,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PassengerSegment[] PassengerSegments
+        public TripEngineService.PassengerSegment[] PassengerSegments
         {
             get
             {
@@ -4447,7 +4447,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PaymentBreakup[] PaymentBreakups
+        public TripEngineService.PaymentBreakup[] PaymentBreakups
         {
             get
             {
@@ -4460,7 +4460,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PaymentType[] PaymentOptions
+        public TripEngineService.PaymentType[] PaymentOptions
         {
             get
             {
@@ -4473,7 +4473,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripItinerary[] PreferredItineraries
+        public TripEngineService.TripItinerary[] PreferredItineraries
         {
             get
             {
@@ -4502,15 +4502,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Remark", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.PNRRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.GeneralRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.OSIRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.SpecializedRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.PNRRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.GeneralRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.OSIRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.SpecializedRemark))]
     public partial class Remark : object
     {
         
-        private TripsEngineService.StateBag[] AttributesField;
+        private TripEngineService.StateBag[] AttributesField;
         
         private string CategoryField;
         
@@ -4521,7 +4521,7 @@ namespace TripsEngineService
         private string ValueField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] Attributes
+        public TripEngineService.StateBag[] Attributes
         {
             get
             {
@@ -4624,11 +4624,11 @@ namespace TripsEngineService
         
         private string RecordLocatorField;
         
-        private TripsEngineService.SegmentReference[] SegmentReferencesField;
+        private TripEngineService.SegmentReference[] SegmentReferencesField;
         
         private string TicketNumberField;
         
-        private TripsEngineService.TicketStatus TicketStatusField;
+        private TripEngineService.TicketStatus TicketStatusField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string AirlineRecordLocator
@@ -4722,7 +4722,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.SegmentReference[] SegmentReferences
+        public TripEngineService.SegmentReference[] SegmentReferences
         {
             get
             {
@@ -4748,7 +4748,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TicketStatus TicketStatus
+        public TripEngineService.TicketStatus TicketStatus
         {
             get
             {
@@ -5463,7 +5463,7 @@ namespace TripsEngineService
         
         private string PlaceOfIssueField;
         
-        private TripsEngineService.Visa[] VisasField;
+        private TripEngineService.Visa[] VisasField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int[] ApplicablePassengerRPHs
@@ -5570,7 +5570,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Visa[] Visas
+        public TripEngineService.Visa[] Visas
         {
             get
             {
@@ -5789,16 +5789,16 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Money", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.DailyRate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarCharge))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ServiceFee))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.Fee))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.Markup))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.BaseFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarRate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.Commission))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.Discount))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.Tax))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.DailyRate))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarCharge))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ServiceFee))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.Fee))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.Markup))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.BaseFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarRate))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.Commission))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.Discount))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.Tax))]
     public partial class Money : object
     {
         
@@ -5911,12 +5911,12 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CreditCardPayment", Namespace="http://tavisca.com")]
-    public partial class CreditCardPayment : TripsEngineService.Payment
+    public partial class CreditCardPayment : TripEngineService.Payment
     {
         
-        private TripsEngineService.CreditCardMake CardMakeField;
+        private TripEngineService.CreditCardMake CardMakeField;
         
-        private TripsEngineService.CreditCardType CardTypeField;
+        private TripEngineService.CreditCardType CardTypeField;
         
         private System.DateTime ExpiryMonthYearField;
         
@@ -5926,12 +5926,12 @@ namespace TripsEngineService
         
         private string NumberField;
         
-        private TripsEngineService.SecureAuthenticationData SecureAuthenticationDataField;
+        private TripEngineService.SecureAuthenticationData SecureAuthenticationDataField;
         
         private string SecurityCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CreditCardMake CardMake
+        public TripEngineService.CreditCardMake CardMake
         {
             get
             {
@@ -5944,7 +5944,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CreditCardType CardType
+        public TripEngineService.CreditCardType CardType
         {
             get
             {
@@ -6009,7 +6009,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.SecureAuthenticationData SecureAuthenticationData
+        public TripEngineService.SecureAuthenticationData SecureAuthenticationData
         {
             get
             {
@@ -6038,7 +6038,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SoftCashPayment", Namespace="http://tavisca.com")]
-    public partial class SoftCashPayment : TripsEngineService.Payment
+    public partial class SoftCashPayment : TripEngineService.Payment
     {
         
         private System.DateTime AddDateTimeField;
@@ -6075,7 +6075,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BankAccountPayment", Namespace="http://tavisca.com")]
-    public partial class BankAccountPayment : TripsEngineService.Payment
+    public partial class BankAccountPayment : TripEngineService.Payment
     {
         
         private string AccountHolderNameField;
@@ -6142,10 +6142,10 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ExternalPayment", Namespace="http://tavisca.com")]
-    public partial class ExternalPayment : TripsEngineService.Payment
+    public partial class ExternalPayment : TripEngineService.Payment
     {
         
-        private TripsEngineService.ChargeStatus ChargeStatusField;
+        private TripEngineService.ChargeStatus ChargeStatusField;
         
         private decimal ChargedAmountField;
         
@@ -6154,7 +6154,7 @@ namespace TripsEngineService
         private string ProviderNameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ChargeStatus ChargeStatus
+        public TripEngineService.ChargeStatus ChargeStatus
         {
             get
             {
@@ -6209,14 +6209,14 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CheckPayment", Namespace="http://tavisca.com")]
-    public partial class CheckPayment : TripsEngineService.Payment
+    public partial class CheckPayment : TripEngineService.Payment
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DeferredPayment", Namespace="http://tavisca.com")]
-    public partial class DeferredPayment : TripsEngineService.Payment
+    public partial class DeferredPayment : TripEngineService.Payment
     {
     }
     
@@ -6226,24 +6226,24 @@ namespace TripsEngineService
     public partial class ChargeTransaction : object
     {
         
-        private TripsEngineService.StateBag[] AdditionalInfoField;
+        private TripEngineService.StateBag[] AdditionalInfoField;
         
         private System.Guid AssociatedChargeTransactionIdField;
         
-        private TripsEngineService.ChargeBreakup[] ChargeBreakupsField;
+        private TripEngineService.ChargeBreakup[] ChargeBreakupsField;
         
-        private TripsEngineService.ChargeStatus ChargeStatusField;
+        private TripEngineService.ChargeStatus ChargeStatusField;
         
         private System.Guid ChargeTransactionIdField;
         
-        private TripsEngineService.Money ChargedAmountField;
+        private TripEngineService.Money ChargedAmountField;
         
         private string ProviderTransactionIdField;
         
         private string TransactionIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] AdditionalInfo
+        public TripEngineService.StateBag[] AdditionalInfo
         {
             get
             {
@@ -6269,7 +6269,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ChargeBreakup[] ChargeBreakups
+        public TripEngineService.ChargeBreakup[] ChargeBreakups
         {
             get
             {
@@ -6282,7 +6282,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ChargeStatus ChargeStatus
+        public TripEngineService.ChargeStatus ChargeStatus
         {
             get
             {
@@ -6308,7 +6308,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money ChargedAmount
+        public TripEngineService.Money ChargedAmount
         {
             get
             {
@@ -6383,7 +6383,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DailyRate", Namespace="http://tavisca.com")]
-    public partial class DailyRate : TripsEngineService.Money
+    public partial class DailyRate : TripEngineService.Money
     {
         
         private System.DateTime EndDateField;
@@ -6420,21 +6420,21 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarCharge", Namespace="http://tavisca.com")]
-    public partial class CarCharge : TripsEngineService.Money
+    public partial class CarCharge : TripEngineService.Money
     {
         
-        private TripsEngineService.ChargeAssociation AssociationField;
+        private TripEngineService.ChargeAssociation AssociationField;
         
         private string DescriptionField;
         
         private int QuantityField;
         
-        private TripsEngineService.ChargeType TypeField;
+        private TripEngineService.ChargeType TypeField;
         
-        private TripsEngineService.ChargeUnit UnitField;
+        private TripEngineService.ChargeUnit UnitField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ChargeAssociation Association
+        public TripEngineService.ChargeAssociation Association
         {
             get
             {
@@ -6473,7 +6473,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ChargeType Type
+        public TripEngineService.ChargeType Type
         {
             get
             {
@@ -6486,7 +6486,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ChargeUnit Unit
+        public TripEngineService.ChargeUnit Unit
         {
             get
             {
@@ -6502,12 +6502,12 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ServiceFee", Namespace="http://tavisca.com")]
-    public partial class ServiceFee : TripsEngineService.Money
+    public partial class ServiceFee : TripEngineService.Money
     {
         
         private decimal PercentValueField;
         
-        private TripsEngineService.ServiceFeeType ServiceFeeTypeField;
+        private TripEngineService.ServiceFeeType ServiceFeeTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public decimal PercentValue
@@ -6523,7 +6523,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ServiceFeeType ServiceFeeType
+        public TripEngineService.ServiceFeeType ServiceFeeType
         {
             get
             {
@@ -6539,7 +6539,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Fee", Namespace="http://tavisca.com")]
-    public partial class Fee : TripsEngineService.Money
+    public partial class Fee : TripEngineService.Money
     {
         
         private long IdField;
@@ -6606,7 +6606,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Markup", Namespace="http://tavisca.com")]
-    public partial class Markup : TripsEngineService.Money
+    public partial class Markup : TripEngineService.Money
     {
         
         private long IdField;
@@ -6658,20 +6658,20 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BaseFare", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarRate))]
-    public partial class BaseFare : TripsEngineService.Money
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarRate))]
+    public partial class BaseFare : TripEngineService.Money
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarRate", Namespace="http://tavisca.com")]
-    public partial class CarRate : TripsEngineService.BaseFare
+    public partial class CarRate : TripEngineService.BaseFare
     {
         
         private int QuantityField;
         
-        private TripsEngineService.CarRateType RateTypeField;
+        private TripEngineService.CarRateType RateTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int Quantity
@@ -6687,7 +6687,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarRateType RateType
+        public TripEngineService.CarRateType RateType
         {
             get
             {
@@ -6703,7 +6703,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Commission", Namespace="http://tavisca.com")]
-    public partial class Commission : TripsEngineService.Money
+    public partial class Commission : TripEngineService.Money
     {
         
         private long IdField;
@@ -6755,7 +6755,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Discount", Namespace="http://tavisca.com")]
-    public partial class Discount : TripsEngineService.Money
+    public partial class Discount : TripEngineService.Money
     {
         
         private long IdField;
@@ -6807,7 +6807,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Tax", Namespace="http://tavisca.com")]
-    public partial class Tax : TripsEngineService.Money
+    public partial class Tax : TripEngineService.Money
     {
         
         private string CodeField;
@@ -7072,7 +7072,7 @@ namespace TripsEngineService
     public partial class ChargeBreakup : object
     {
         
-        private TripsEngineService.Money ChargedAmountField;
+        private TripEngineService.Money ChargedAmountField;
         
         private System.Guid IdField;
         
@@ -7081,7 +7081,7 @@ namespace TripsEngineService
         private int ProductRphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money ChargedAmount
+        public TripEngineService.Money ChargedAmount
         {
             get
             {
@@ -7214,7 +7214,7 @@ namespace TripsEngineService
         
         private string ACSUrlField;
         
-        private TripsEngineService.StateBag[] AdditionalInfoField;
+        private TripEngineService.StateBag[] AdditionalInfoField;
         
         private string MDField;
         
@@ -7234,7 +7234,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] AdditionalInfo
+        public TripEngineService.StateBag[] AdditionalInfo
         {
             get
             {
@@ -7299,7 +7299,7 @@ namespace TripsEngineService
         
         private System.Nullable<System.DateTime> AppliedOnField;
         
-        private TripsEngineService.CancellationRule AppliedRuleField;
+        private TripEngineService.CancellationRule AppliedRuleField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.Nullable<System.DateTime> AppliedOn
@@ -7315,7 +7315,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CancellationRule AppliedRule
+        public TripEngineService.CancellationRule AppliedRule
         {
             get
             {
@@ -7331,15 +7331,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GenericTripProduct", Namespace="http://tavisca.com")]
-    public partial class GenericTripProduct : TripsEngineService.TripProduct
+    public partial class GenericTripProduct : TripEngineService.TripProduct
     {
         
-        private TripsEngineService.GenericItinerary GenericItineraryField;
+        private TripEngineService.GenericItinerary GenericItineraryField;
         
-        private TripsEngineService.GenericSearchCriterion GenericSearchCriterionField;
+        private TripEngineService.GenericSearchCriterion GenericSearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.GenericItinerary GenericItinerary
+        public TripEngineService.GenericItinerary GenericItinerary
         {
             get
             {
@@ -7352,7 +7352,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.GenericSearchCriterion GenericSearchCriterion
+        public TripEngineService.GenericSearchCriterion GenericSearchCriterion
         {
             get
             {
@@ -7368,15 +7368,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirTripProduct", Namespace="http://tavisca.com")]
-    public partial class AirTripProduct : TripsEngineService.TripProduct
+    public partial class AirTripProduct : TripEngineService.TripProduct
     {
         
-        private TripsEngineService.AirItinerary AirItineraryField;
+        private TripEngineService.AirItinerary AirItineraryField;
         
-        private TripsEngineService.AirSearchCriterion AirSearchCriterionField;
+        private TripEngineService.AirSearchCriterion AirSearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirItinerary AirItinerary
+        public TripEngineService.AirItinerary AirItinerary
         {
             get
             {
@@ -7389,7 +7389,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirSearchCriterion AirSearchCriterion
+        public TripEngineService.AirSearchCriterion AirSearchCriterion
         {
             get
             {
@@ -7405,15 +7405,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityTripProduct", Namespace="http://tavisca.com")]
-    public partial class ActivityTripProduct : TripsEngineService.TripProduct
+    public partial class ActivityTripProduct : TripEngineService.TripProduct
     {
         
-        private TripsEngineService.ActivityItinerary ActivityItineraryField;
+        private TripEngineService.ActivityItinerary ActivityItineraryField;
         
-        private TripsEngineService.ActivitySearchCriterion ActivitySearchCriterionField;
+        private TripEngineService.ActivitySearchCriterion ActivitySearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivityItinerary ActivityItinerary
+        public TripEngineService.ActivityItinerary ActivityItinerary
         {
             get
             {
@@ -7426,7 +7426,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivitySearchCriterion ActivitySearchCriterion
+        public TripEngineService.ActivitySearchCriterion ActivitySearchCriterion
         {
             get
             {
@@ -7442,17 +7442,17 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelTripProduct", Namespace="http://tavisca.com")]
-    public partial class HotelTripProduct : TripsEngineService.TripProduct
+    public partial class HotelTripProduct : TripEngineService.TripProduct
     {
         
-        private TripsEngineService.HotelItinerary HotelItineraryField;
+        private TripEngineService.HotelItinerary HotelItineraryField;
         
-        private TripsEngineService.HotelSearchCriterion HotelSearchCriterionField;
+        private TripEngineService.HotelSearchCriterion HotelSearchCriterionField;
         
-        private TripsEngineService.RoomOccupancyType[] RoomOccupancyTypesField;
+        private TripEngineService.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelItinerary HotelItinerary
+        public TripEngineService.HotelItinerary HotelItinerary
         {
             get
             {
@@ -7465,7 +7465,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelSearchCriterion HotelSearchCriterion
+        public TripEngineService.HotelSearchCriterion HotelSearchCriterion
         {
             get
             {
@@ -7478,7 +7478,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RoomOccupancyType[] RoomOccupancyTypes
+        public TripEngineService.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -7494,15 +7494,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarTripProduct", Namespace="http://tavisca.com")]
-    public partial class CarTripProduct : TripsEngineService.TripProduct
+    public partial class CarTripProduct : TripEngineService.TripProduct
     {
         
-        private TripsEngineService.CarItinerary CarItineraryField;
+        private TripEngineService.CarItinerary CarItineraryField;
         
-        private TripsEngineService.CarSearchCriterion CarSearchCriterionField;
+        private TripEngineService.CarSearchCriterion CarSearchCriterionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarItinerary CarItinerary
+        public TripEngineService.CarItinerary CarItinerary
         {
             get
             {
@@ -7515,7 +7515,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarSearchCriterion CarSearchCriterion
+        public TripEngineService.CarSearchCriterion CarSearchCriterion
         {
             get
             {
@@ -7536,7 +7536,7 @@ namespace TripsEngineService
         
         private string AgencyNotesField;
         
-        private TripsEngineService.TripProductStatus BookingStatusField;
+        private TripEngineService.TripProductStatus BookingStatusField;
         
         private string CancellationNumberField;
         
@@ -7546,7 +7546,7 @@ namespace TripsEngineService
         
         private int PassengerRphField;
         
-        private TripsEngineService.PostBookingTripStatus PostBookingStatusField;
+        private TripEngineService.PostBookingTripStatus PostBookingStatusField;
         
         private int RphField;
         
@@ -7568,7 +7568,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripProductStatus BookingStatus
+        public TripEngineService.TripProductStatus BookingStatus
         {
             get
             {
@@ -7633,7 +7633,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PostBookingTripStatus PostBookingStatus
+        public TripEngineService.PostBookingTripStatus PostBookingStatus
         {
             get
             {
@@ -7691,14 +7691,14 @@ namespace TripsEngineService
     public partial class PaymentBreakup : object
     {
         
-        private TripsEngineService.Money AmountField;
+        private TripEngineService.Money AmountField;
         
         private int PassengerRphField;
         
         private int PaymentRphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money Amount
+        public TripEngineService.Money Amount
         {
             get
             {
@@ -7740,32 +7740,32 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripItinerary", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirItinerary))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelItinerary))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarItinerary))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ActivityItinerary))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.GenericItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ActivityItinerary))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.GenericItinerary))]
     public partial class TripItinerary : object
     {
         
-        private TripsEngineService.StateBag[] AdditionalInformationField;
+        private TripEngineService.StateBag[] AdditionalInformationField;
         
-        private TripsEngineService.TripAddOn[] AvailableAddonsField;
+        private TripEngineService.TripAddOn[] AvailableAddonsField;
         
         private System.Guid IdField;
         
-        private TripsEngineService.ItineraryStatusType ItineraryStatusField;
+        private TripEngineService.ItineraryStatusType ItineraryStatusField;
         
         private string NotesField;
         
         private int RphField;
         
-        private TripsEngineService.TripAddOn[] SelectedAddonsField;
+        private TripEngineService.TripAddOn[] SelectedAddonsField;
         
-        private TripsEngineService.Tag[] TagsField;
+        private TripEngineService.Tag[] TagsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] AdditionalInformation
+        public TripEngineService.StateBag[] AdditionalInformation
         {
             get
             {
@@ -7778,7 +7778,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripAddOn[] AvailableAddons
+        public TripEngineService.TripAddOn[] AvailableAddons
         {
             get
             {
@@ -7804,7 +7804,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ItineraryStatusType ItineraryStatus
+        public TripEngineService.ItineraryStatusType ItineraryStatus
         {
             get
             {
@@ -7843,7 +7843,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripAddOn[] SelectedAddons
+        public TripEngineService.TripAddOn[] SelectedAddons
         {
             get
             {
@@ -7856,7 +7856,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Tag[] Tags
+        public TripEngineService.Tag[] Tags
         {
             get
             {
@@ -7872,27 +7872,27 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CancellationRule", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelCancellationRule))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirCancellationRule))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarCancellationRule))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ActivityCancellationRule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelCancellationRule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirCancellationRule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarCancellationRule))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ActivityCancellationRule))]
     public partial class CancellationRule : object
     {
         
-        private TripsEngineService.StateBag[] AdditionalInfoField;
+        private TripEngineService.StateBag[] AdditionalInfoField;
         
         private string DescriptionField;
         
-        private TripsEngineService.Penalty PenaltyField;
+        private TripEngineService.Penalty PenaltyField;
         
         private int RphField;
         
-        private TripsEngineService.ProviderCancellationRuleType TypeField;
+        private TripEngineService.ProviderCancellationRuleType TypeField;
         
-        private TripsEngineService.DateTimeSpan WindowField;
+        private TripEngineService.DateTimeSpan WindowField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] AdditionalInfo
+        public TripEngineService.StateBag[] AdditionalInfo
         {
             get
             {
@@ -7918,7 +7918,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Penalty Penalty
+        public TripEngineService.Penalty Penalty
         {
             get
             {
@@ -7944,7 +7944,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ProviderCancellationRuleType Type
+        public TripEngineService.ProviderCancellationRuleType Type
         {
             get
             {
@@ -7957,7 +7957,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DateTimeSpan Window
+        public TripEngineService.DateTimeSpan Window
         {
             get
             {
@@ -7973,25 +7973,25 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Penalty", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelCancellationPenalty))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirCancellationPenalty))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.PassengerPenalty))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarCancellationPenalty))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ActivityCancellationPenalty))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ActivityPassengerPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelCancellationPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirCancellationPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.PassengerPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarCancellationPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ActivityCancellationPenalty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ActivityPassengerPenalty))]
     public partial class Penalty : object
     {
         
-        private TripsEngineService.Money BasePenaltyField;
+        private TripEngineService.Money BasePenaltyField;
         
-        private TripsEngineService.Fee[] FeesField;
+        private TripEngineService.Fee[] FeesField;
         
-        private TripsEngineService.Markup[] MarkupsField;
+        private TripEngineService.Markup[] MarkupsField;
         
-        private TripsEngineService.Money TotalPenaltyField;
+        private TripEngineService.Money TotalPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money BasePenalty
+        public TripEngineService.Money BasePenalty
         {
             get
             {
@@ -8004,7 +8004,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Fee[] Fees
+        public TripEngineService.Fee[] Fees
         {
             get
             {
@@ -8017,7 +8017,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Markup[] Markups
+        public TripEngineService.Markup[] Markups
         {
             get
             {
@@ -8030,7 +8030,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money TotalPenalty
+        public TripEngineService.Money TotalPenalty
         {
             get
             {
@@ -8098,13 +8098,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationRule", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationRule : TripsEngineService.CancellationRule
+    public partial class HotelCancellationRule : TripEngineService.CancellationRule
     {
         
-        private TripsEngineService.HotelCancellationPenalty HotelCancellationPenaltyField;
+        private TripEngineService.HotelCancellationPenalty HotelCancellationPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelCancellationPenalty HotelCancellationPenalty
+        public TripEngineService.HotelCancellationPenalty HotelCancellationPenalty
         {
             get
             {
@@ -8120,13 +8120,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirCancellationRule", Namespace="http://tavisca.com")]
-    public partial class AirCancellationRule : TripsEngineService.CancellationRule
+    public partial class AirCancellationRule : TripEngineService.CancellationRule
     {
         
-        private TripsEngineService.AirCancellationPenalty AirPenaltyField;
+        private TripEngineService.AirCancellationPenalty AirPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirCancellationPenalty AirPenalty
+        public TripEngineService.AirCancellationPenalty AirPenalty
         {
             get
             {
@@ -8142,13 +8142,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarCancellationRule", Namespace="http://tavisca.com")]
-    public partial class CarCancellationRule : TripsEngineService.CancellationRule
+    public partial class CarCancellationRule : TripEngineService.CancellationRule
     {
         
-        private TripsEngineService.CarCancellationPenalty CarCancellationPenaltyField;
+        private TripEngineService.CarCancellationPenalty CarCancellationPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarCancellationPenalty CarCancellationPenalty
+        public TripEngineService.CarCancellationPenalty CarCancellationPenalty
         {
             get
             {
@@ -8164,13 +8164,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityCancellationRule", Namespace="http://tavisca.com")]
-    public partial class ActivityCancellationRule : TripsEngineService.CancellationRule
+    public partial class ActivityCancellationRule : TripEngineService.CancellationRule
     {
         
-        private TripsEngineService.ActivityCancellationPenalty ActivityCancellationPenaltyField;
+        private TripEngineService.ActivityCancellationPenalty ActivityCancellationPenaltyField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivityCancellationPenalty ActivityCancellationPenalty
+        public TripEngineService.ActivityCancellationPenalty ActivityCancellationPenalty
         {
             get
             {
@@ -8198,20 +8198,20 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationPenalty", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationPenalty : TripsEngineService.Penalty
+    public partial class HotelCancellationPenalty : TripEngineService.Penalty
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirCancellationPenalty", Namespace="http://tavisca.com")]
-    public partial class AirCancellationPenalty : TripsEngineService.Penalty
+    public partial class AirCancellationPenalty : TripEngineService.Penalty
     {
         
-        private TripsEngineService.PassengerPenalty[] PassengersPenaltiesField;
+        private TripEngineService.PassengerPenalty[] PassengersPenaltiesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PassengerPenalty[] PassengersPenalties
+        public TripEngineService.PassengerPenalty[] PassengersPenalties
         {
             get
             {
@@ -8227,15 +8227,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PassengerPenalty", Namespace="http://tavisca.com")]
-    public partial class PassengerPenalty : TripsEngineService.Penalty
+    public partial class PassengerPenalty : TripEngineService.Penalty
     {
         
-        private TripsEngineService.PassengerType PassengerTypeField;
+        private TripEngineService.PassengerType PassengerTypeField;
         
         private int QuantityField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PassengerType PassengerType
+        public TripEngineService.PassengerType PassengerType
         {
             get
             {
@@ -8264,20 +8264,20 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarCancellationPenalty", Namespace="http://tavisca.com")]
-    public partial class CarCancellationPenalty : TripsEngineService.Penalty
+    public partial class CarCancellationPenalty : TripEngineService.Penalty
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityCancellationPenalty", Namespace="http://tavisca.com")]
-    public partial class ActivityCancellationPenalty : TripsEngineService.Penalty
+    public partial class ActivityCancellationPenalty : TripEngineService.Penalty
     {
         
-        private TripsEngineService.ActivityPassengerPenalty[] PassengersPenaltiesField;
+        private TripEngineService.ActivityPassengerPenalty[] PassengersPenaltiesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivityPassengerPenalty[] PassengersPenalties
+        public TripEngineService.ActivityPassengerPenalty[] PassengersPenalties
         {
             get
             {
@@ -8293,7 +8293,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityPassengerPenalty", Namespace="http://tavisca.com")]
-    public partial class ActivityPassengerPenalty : TripsEngineService.Penalty
+    public partial class ActivityPassengerPenalty : TripEngineService.Penalty
     {
         
         private string PassengerTypeField;
@@ -8378,35 +8378,35 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirItinerary", Namespace="http://tavisca.com")]
-    public partial class AirItinerary : TripsEngineService.TripItinerary
+    public partial class AirItinerary : TripEngineService.TripItinerary
     {
         
-        private TripsEngineService.AirCancellationPolicy AirCancellationPolicyField;
+        private TripEngineService.AirCancellationPolicy AirCancellationPolicyField;
         
-        private TripsEngineService.AirFareSource AirFareSourceField;
+        private TripEngineService.AirFareSource AirFareSourceField;
         
         private float BiasRatingField;
         
-        private TripsEngineService.DBAirContract ContractField;
+        private TripEngineService.DBAirContract ContractField;
         
-        private TripsEngineService.AirFare FareField;
+        private TripEngineService.AirFare FareField;
         
         private string IdentifierField;
         
-        private TripsEngineService.AirItineraryType ItineraryTypeField;
+        private TripEngineService.AirItineraryType ItineraryTypeField;
         
-        private TripsEngineService.AirLeg[] LegsField;
+        private TripEngineService.AirLeg[] LegsField;
         
-        private TripsEngineService.MarkupPlan MarkupPlanField;
+        private TripEngineService.MarkupPlan MarkupPlanField;
         
-        private TripsEngineService.AirPolicy[] PoliciesField;
+        private TripEngineService.AirPolicy[] PoliciesField;
         
-        private TripsEngineService.StateBag[] SupplierSideDataField;
+        private TripEngineService.StateBag[] SupplierSideDataField;
         
-        private TripsEngineService.TicketingInfo TicketingInfoField;
+        private TripEngineService.TicketingInfo TicketingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirCancellationPolicy AirCancellationPolicy
+        public TripEngineService.AirCancellationPolicy AirCancellationPolicy
         {
             get
             {
@@ -8419,7 +8419,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirFareSource AirFareSource
+        public TripEngineService.AirFareSource AirFareSource
         {
             get
             {
@@ -8445,7 +8445,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DBAirContract Contract
+        public TripEngineService.DBAirContract Contract
         {
             get
             {
@@ -8458,7 +8458,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirFare Fare
+        public TripEngineService.AirFare Fare
         {
             get
             {
@@ -8484,7 +8484,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirItineraryType ItineraryType
+        public TripEngineService.AirItineraryType ItineraryType
         {
             get
             {
@@ -8497,7 +8497,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirLeg[] Legs
+        public TripEngineService.AirLeg[] Legs
         {
             get
             {
@@ -8510,7 +8510,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.MarkupPlan MarkupPlan
+        public TripEngineService.MarkupPlan MarkupPlan
         {
             get
             {
@@ -8523,7 +8523,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirPolicy[] Policies
+        public TripEngineService.AirPolicy[] Policies
         {
             get
             {
@@ -8536,7 +8536,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] SupplierSideData
+        public TripEngineService.StateBag[] SupplierSideData
         {
             get
             {
@@ -8549,7 +8549,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TicketingInfo TicketingInfo
+        public TripEngineService.TicketingInfo TicketingInfo
         {
             get
             {
@@ -8565,59 +8565,59 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerary", Namespace="http://tavisca.com")]
-    public partial class HotelItinerary : TripsEngineService.TripItinerary
+    public partial class HotelItinerary : TripEngineService.TripItinerary
     {
         
-        private TripsEngineService.Deposit[] AcceptableDepositsField;
+        private TripEngineService.Deposit[] AcceptableDepositsField;
         
-        private TripsEngineService.Guarantee[] AcceptableGuaranteesField;
+        private TripEngineService.Guarantee[] AcceptableGuaranteesField;
         
         private bool AllPaxDetailsRequiredField;
         
-        private TripsEngineService.AllowedCountry[] AllowedCountriesField;
+        private TripEngineService.AllowedCountry[] AllowedCountriesField;
         
-        private TripsEngineService.HotelContract ContractField;
+        private TripEngineService.HotelContract ContractField;
         
-        private TripsEngineService.Deal[] DealsField;
+        private TripEngineService.Deal[] DealsField;
         
         private bool DepositRequiredField;
         
         private string[] DepositTextField;
         
-        private TripsEngineService.HotelDiscountCode DiscountCodeField;
+        private TripEngineService.HotelDiscountCode DiscountCodeField;
         
-        private TripsEngineService.HotelFare FareField;
+        private TripEngineService.HotelFare FareField;
         
         private bool GuaranteeRequiredField;
         
         private string[] GuaranteeTextField;
         
-        private TripsEngineService.HotelCancellationPolicy HotelCancellationPolicyField;
+        private TripEngineService.HotelCancellationPolicy HotelCancellationPolicyField;
         
-        private TripsEngineService.PromotionalHotelDeal[] HotelDealsField;
+        private TripEngineService.PromotionalHotelDeal[] HotelDealsField;
         
-        private TripsEngineService.HotelFareSource HotelFareSourceField;
+        private TripEngineService.HotelFareSource HotelFareSourceField;
         
-        private TripsEngineService.HotelProperty HotelPropertyField;
+        private TripEngineService.HotelProperty HotelPropertyField;
         
         private string ItineraryTypeField;
         
-        private TripsEngineService.MarkupPlan MarkupPlanField;
+        private TripEngineService.MarkupPlan MarkupPlanField;
         
-        private TripsEngineService.HotelPolicy[] PoliciesField;
+        private TripEngineService.HotelPolicy[] PoliciesField;
         
-        private TripsEngineService.Room[] RoomsField;
+        private TripEngineService.Room[] RoomsField;
         
-        private TripsEngineService.Season[] SeasonsField;
+        private TripEngineService.Season[] SeasonsField;
         
         private string SegmentRefField;
         
         private bool ShippingAddressRequiredField;
         
-        private TripsEngineService.DateTimeSpan StayPeriodField;
+        private TripEngineService.DateTimeSpan StayPeriodField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Deposit[] AcceptableDeposits
+        public TripEngineService.Deposit[] AcceptableDeposits
         {
             get
             {
@@ -8630,7 +8630,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Guarantee[] AcceptableGuarantees
+        public TripEngineService.Guarantee[] AcceptableGuarantees
         {
             get
             {
@@ -8656,7 +8656,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AllowedCountry[] AllowedCountries
+        public TripEngineService.AllowedCountry[] AllowedCountries
         {
             get
             {
@@ -8669,7 +8669,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelContract Contract
+        public TripEngineService.HotelContract Contract
         {
             get
             {
@@ -8682,7 +8682,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Deal[] Deals
+        public TripEngineService.Deal[] Deals
         {
             get
             {
@@ -8721,7 +8721,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelDiscountCode DiscountCode
+        public TripEngineService.HotelDiscountCode DiscountCode
         {
             get
             {
@@ -8734,7 +8734,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelFare Fare
+        public TripEngineService.HotelFare Fare
         {
             get
             {
@@ -8773,7 +8773,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelCancellationPolicy HotelCancellationPolicy
+        public TripEngineService.HotelCancellationPolicy HotelCancellationPolicy
         {
             get
             {
@@ -8786,7 +8786,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PromotionalHotelDeal[] HotelDeals
+        public TripEngineService.PromotionalHotelDeal[] HotelDeals
         {
             get
             {
@@ -8799,7 +8799,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelFareSource HotelFareSource
+        public TripEngineService.HotelFareSource HotelFareSource
         {
             get
             {
@@ -8812,7 +8812,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelProperty HotelProperty
+        public TripEngineService.HotelProperty HotelProperty
         {
             get
             {
@@ -8838,7 +8838,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.MarkupPlan MarkupPlan
+        public TripEngineService.MarkupPlan MarkupPlan
         {
             get
             {
@@ -8851,7 +8851,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelPolicy[] Policies
+        public TripEngineService.HotelPolicy[] Policies
         {
             get
             {
@@ -8864,7 +8864,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Room[] Rooms
+        public TripEngineService.Room[] Rooms
         {
             get
             {
@@ -8877,7 +8877,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Season[] Seasons
+        public TripEngineService.Season[] Seasons
         {
             get
             {
@@ -8916,7 +8916,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DateTimeSpan StayPeriod
+        public TripEngineService.DateTimeSpan StayPeriod
         {
             get
             {
@@ -8932,47 +8932,47 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarItinerary", Namespace="http://tavisca.com")]
-    public partial class CarItinerary : TripsEngineService.TripItinerary
+    public partial class CarItinerary : TripEngineService.TripItinerary
     {
         
-        private TripsEngineService.Guarantee[] AcceptableGuaranteesField;
+        private TripEngineService.Guarantee[] AcceptableGuaranteesField;
         
-        private TripsEngineService.CarCancellationPolicy CarCancellationPolicyField;
+        private TripEngineService.CarCancellationPolicy CarCancellationPolicyField;
         
-        private TripsEngineService.CarCompany CarCompanyField;
+        private TripEngineService.CarCompany CarCompanyField;
         
-        private TripsEngineService.CarFareSource CarFareSourceField;
+        private TripEngineService.CarFareSource CarFareSourceField;
         
-        private TripsEngineService.CarDiscountCode DiscountCodeField;
+        private TripEngineService.CarDiscountCode DiscountCodeField;
         
-        private TripsEngineService.RentalLocationInfo DropOffInfoField;
+        private TripEngineService.RentalLocationInfo DropOffInfoField;
         
-        private TripsEngineService.Location DropOffLocationField;
+        private TripEngineService.Location DropOffLocationField;
         
-        private TripsEngineService.CarFare FareField;
+        private TripEngineService.CarFare FareField;
         
         private bool GuaranteeRequiredField;
         
         private string[] GuaranteeTextField;
         
-        private TripsEngineService.Mileage MileageField;
+        private TripEngineService.Mileage MileageField;
         
-        private TripsEngineService.RentalLocationInfo PickupInfoField;
+        private TripEngineService.RentalLocationInfo PickupInfoField;
         
-        private TripsEngineService.Location PickupLocationField;
+        private TripEngineService.Location PickupLocationField;
         
-        private TripsEngineService.CarPolicy[] PoliciesField;
+        private TripEngineService.CarPolicy[] PoliciesField;
         
-        private TripsEngineService.DateTimeSpan RentalPeriodField;
+        private TripEngineService.DateTimeSpan RentalPeriodField;
         
         private string SegmentRefField;
         
-        private TripsEngineService.StateBag[] SupplierSideDataField;
+        private TripEngineService.StateBag[] SupplierSideDataField;
         
-        private TripsEngineService.Vehicle VehicleField;
+        private TripEngineService.Vehicle VehicleField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Guarantee[] AcceptableGuarantees
+        public TripEngineService.Guarantee[] AcceptableGuarantees
         {
             get
             {
@@ -8985,7 +8985,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarCancellationPolicy CarCancellationPolicy
+        public TripEngineService.CarCancellationPolicy CarCancellationPolicy
         {
             get
             {
@@ -8998,7 +8998,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarCompany CarCompany
+        public TripEngineService.CarCompany CarCompany
         {
             get
             {
@@ -9011,7 +9011,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarFareSource CarFareSource
+        public TripEngineService.CarFareSource CarFareSource
         {
             get
             {
@@ -9024,7 +9024,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarDiscountCode DiscountCode
+        public TripEngineService.CarDiscountCode DiscountCode
         {
             get
             {
@@ -9037,7 +9037,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RentalLocationInfo DropOffInfo
+        public TripEngineService.RentalLocationInfo DropOffInfo
         {
             get
             {
@@ -9050,7 +9050,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Location DropOffLocation
+        public TripEngineService.Location DropOffLocation
         {
             get
             {
@@ -9063,7 +9063,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarFare Fare
+        public TripEngineService.CarFare Fare
         {
             get
             {
@@ -9102,7 +9102,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Mileage Mileage
+        public TripEngineService.Mileage Mileage
         {
             get
             {
@@ -9115,7 +9115,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RentalLocationInfo PickupInfo
+        public TripEngineService.RentalLocationInfo PickupInfo
         {
             get
             {
@@ -9128,7 +9128,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Location PickupLocation
+        public TripEngineService.Location PickupLocation
         {
             get
             {
@@ -9141,7 +9141,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarPolicy[] Policies
+        public TripEngineService.CarPolicy[] Policies
         {
             get
             {
@@ -9154,7 +9154,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DateTimeSpan RentalPeriod
+        public TripEngineService.DateTimeSpan RentalPeriod
         {
             get
             {
@@ -9180,7 +9180,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] SupplierSideData
+        public TripEngineService.StateBag[] SupplierSideData
         {
             get
             {
@@ -9193,7 +9193,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Vehicle Vehicle
+        public TripEngineService.Vehicle Vehicle
         {
             get
             {
@@ -9209,69 +9209,69 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityItinerary", Namespace="http://tavisca.com")]
-    public partial class ActivityItinerary : TripsEngineService.TripItinerary
+    public partial class ActivityItinerary : TripEngineService.TripItinerary
     {
         
-        private TripsEngineService.ActivityCancellationPolicy ActivityCancellationPolicyField;
+        private TripEngineService.ActivityCancellationPolicy ActivityCancellationPolicyField;
         
-        private TripsEngineService.ActivityFareSource ActivityFareSourceField;
+        private TripEngineService.ActivityFareSource ActivityFareSourceField;
         
-        private TripsEngineService.ActivityOption[] ActivityOptionsField;
+        private TripEngineService.ActivityOption[] ActivityOptionsField;
         
-        private TripsEngineService.ActivityReview[] ActivityReviewsField;
+        private TripEngineService.ActivityReview[] ActivityReviewsField;
         
         private string AdditionalTextField;
         
         private double AverageRatingField;
         
-        private TripsEngineService.BookingAnswer[] BookingAnswersField;
+        private TripEngineService.BookingAnswer[] BookingAnswersField;
         
-        private TripsEngineService.BookingQuestion[] BookingQuestionsField;
+        private TripEngineService.BookingQuestion[] BookingQuestionsField;
         
-        private TripsEngineService.ActivityCategory CategoryField;
+        private TripEngineService.ActivityCategory CategoryField;
         
         private string DescriptionField;
         
         private string DurationTextField;
         
-        private TripsEngineService.ActivityFare FareField;
+        private TripEngineService.ActivityFare FareField;
         
-        private TripsEngineService.GeoCode GeoCodeField;
+        private TripEngineService.GeoCode GeoCodeField;
         
-        private TripsEngineService.Media ImageField;
+        private TripEngineService.Media ImageField;
         
-        private TripsEngineService.ImageInfo[] ImagesField;
+        private TripEngineService.ImageInfo[] ImagesField;
         
         private string ItineraryTypeField;
         
         private string LegalTextField;
         
-        private TripsEngineService.Location LocationField;
+        private TripEngineService.Location LocationField;
         
         private string LongDescriptionField;
         
-        private TripsEngineService.Media MapField;
+        private TripEngineService.Media MapField;
         
         private string NameField;
         
-        private TripsEngineService.Policy[] PoliciesField;
+        private TripEngineService.Policy[] PoliciesField;
         
         private string ScheduleTextField;
         
-        private TripsEngineService.ActivityOption SelectedOptionField;
+        private TripEngineService.ActivityOption SelectedOptionField;
         
         private string SupplierItineraryIdField;
         
         private string SupplierItineraryTypeField;
         
-        private TripsEngineService.Media ThumbnailField;
+        private TripEngineService.Media ThumbnailField;
         
         private string TitleField;
         
         private string VendorItineraryTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivityCancellationPolicy ActivityCancellationPolicy
+        public TripEngineService.ActivityCancellationPolicy ActivityCancellationPolicy
         {
             get
             {
@@ -9284,7 +9284,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivityFareSource ActivityFareSource
+        public TripEngineService.ActivityFareSource ActivityFareSource
         {
             get
             {
@@ -9297,7 +9297,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivityOption[] ActivityOptions
+        public TripEngineService.ActivityOption[] ActivityOptions
         {
             get
             {
@@ -9310,7 +9310,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivityReview[] ActivityReviews
+        public TripEngineService.ActivityReview[] ActivityReviews
         {
             get
             {
@@ -9349,7 +9349,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.BookingAnswer[] BookingAnswers
+        public TripEngineService.BookingAnswer[] BookingAnswers
         {
             get
             {
@@ -9362,7 +9362,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.BookingQuestion[] BookingQuestions
+        public TripEngineService.BookingQuestion[] BookingQuestions
         {
             get
             {
@@ -9375,7 +9375,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivityCategory Category
+        public TripEngineService.ActivityCategory Category
         {
             get
             {
@@ -9414,7 +9414,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivityFare Fare
+        public TripEngineService.ActivityFare Fare
         {
             get
             {
@@ -9427,7 +9427,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.GeoCode GeoCode
+        public TripEngineService.GeoCode GeoCode
         {
             get
             {
@@ -9440,7 +9440,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Media Image
+        public TripEngineService.Media Image
         {
             get
             {
@@ -9453,7 +9453,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ImageInfo[] Images
+        public TripEngineService.ImageInfo[] Images
         {
             get
             {
@@ -9492,7 +9492,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Location Location
+        public TripEngineService.Location Location
         {
             get
             {
@@ -9518,7 +9518,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Media Map
+        public TripEngineService.Media Map
         {
             get
             {
@@ -9544,7 +9544,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Policy[] Policies
+        public TripEngineService.Policy[] Policies
         {
             get
             {
@@ -9570,7 +9570,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivityOption SelectedOption
+        public TripEngineService.ActivityOption SelectedOption
         {
             get
             {
@@ -9609,7 +9609,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Media Thumbnail
+        public TripEngineService.Media Thumbnail
         {
             get
             {
@@ -9651,33 +9651,33 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GenericItinerary", Namespace="http://tavisca.com")]
-    public partial class GenericItinerary : TripsEngineService.TripItinerary
+    public partial class GenericItinerary : TripEngineService.TripItinerary
     {
         
-        private TripsEngineService.StateBag[] AttributesField;
+        private TripEngineService.StateBag[] AttributesField;
         
         private string DescriptionField;
         
         private System.DateTime EndDateField;
         
-        private TripsEngineService.GenericFare FareField;
+        private TripEngineService.GenericFare FareField;
         
-        private TripsEngineService.GenericFareSource GenericFareSourceField;
+        private TripEngineService.GenericFareSource GenericFareSourceField;
         
         private string ImageUrlField;
         
-        private TripsEngineService.Location LocationField;
+        private TripEngineService.Location LocationField;
         
         private string NameField;
         
-        private TripsEngineService.PolicyInfo[] PoliciesField;
+        private TripEngineService.PolicyInfo[] PoliciesField;
         
         private System.DateTime StartDateField;
         
-        private TripsEngineService.SupplierInfo SupplierInfoField;
+        private TripEngineService.SupplierInfo SupplierInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] Attributes
+        public TripEngineService.StateBag[] Attributes
         {
             get
             {
@@ -9716,7 +9716,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.GenericFare Fare
+        public TripEngineService.GenericFare Fare
         {
             get
             {
@@ -9729,7 +9729,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.GenericFareSource GenericFareSource
+        public TripEngineService.GenericFareSource GenericFareSource
         {
             get
             {
@@ -9755,7 +9755,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Location Location
+        public TripEngineService.Location Location
         {
             get
             {
@@ -9781,7 +9781,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PolicyInfo[] Policies
+        public TripEngineService.PolicyInfo[] Policies
         {
             get
             {
@@ -9807,7 +9807,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.SupplierInfo SupplierInfo
+        public TripEngineService.SupplierInfo SupplierInfo
         {
             get
             {
@@ -9823,21 +9823,21 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripAddOn", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.BaggageAddOn))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelAddOn))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TransferAddOn))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.BaggageAddOn))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelAddOn))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TransferAddOn))]
     public partial class TripAddOn : object
     {
         
-        private TripsEngineService.StateBag[] AdditionalInformationField;
+        private TripEngineService.StateBag[] AdditionalInformationField;
         
-        private TripsEngineService.AddOnBookingInfo BookingInformationField;
+        private TripEngineService.AddOnBookingInfo BookingInformationField;
         
         private string DescriptionField;
         
-        private TripsEngineService.TripAddOnFare FareField;
+        private TripEngineService.TripAddOnFare FareField;
         
-        private TripsEngineService.FareSource FareSourceField;
+        private TripEngineService.FareSource FareSourceField;
         
         private System.Guid IdField;
         
@@ -9848,7 +9848,7 @@ namespace TripsEngineService
         private string TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] AdditionalInformation
+        public TripEngineService.StateBag[] AdditionalInformation
         {
             get
             {
@@ -9861,7 +9861,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AddOnBookingInfo BookingInformation
+        public TripEngineService.AddOnBookingInfo BookingInformation
         {
             get
             {
@@ -9887,7 +9887,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripAddOnFare Fare
+        public TripEngineService.TripAddOnFare Fare
         {
             get
             {
@@ -9900,7 +9900,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FareSource FareSource
+        public TripEngineService.FareSource FareSource
         {
             get
             {
@@ -10038,7 +10038,7 @@ namespace TripsEngineService
     public partial class AddOnBookingInfo : object
     {
         
-        private TripsEngineService.AddOnBookingStatusType BookingStatusField;
+        private TripEngineService.AddOnBookingStatusType BookingStatusField;
         
         private int PassengerRphField;
         
@@ -10047,7 +10047,7 @@ namespace TripsEngineService
         private string VendorConfirmationNumberField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AddOnBookingStatusType BookingStatus
+        public TripEngineService.AddOnBookingStatusType BookingStatus
         {
             get
             {
@@ -10102,17 +10102,17 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripAddOnFare", Namespace="http://tavisca.com")]
-    public partial class TripAddOnFare : TripsEngineService.Fare
+    public partial class TripAddOnFare : TripEngineService.Fare
     {
         
-        private TripsEngineService.Money BaseTotalFareField;
+        private TripEngineService.Money BaseTotalFareField;
         
         private bool IsAlreadyIncludedField;
         
         private int QuantityField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money BaseTotalFare
+        public TripEngineService.Money BaseTotalFare
         {
             get
             {
@@ -10154,14 +10154,14 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="BaggageAddOn", Namespace="http://tavisca.com")]
-    public partial class BaggageAddOn : TripsEngineService.TripAddOn
+    public partial class BaggageAddOn : TripEngineService.TripAddOn
     {
         
         private int AllowedWeightLimitField;
         
         private bool IsLimitSpecifiedField;
         
-        private TripsEngineService.WeightUnit WeightUnitField;
+        private TripEngineService.WeightUnit WeightUnitField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int AllowedWeightLimit
@@ -10190,7 +10190,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.WeightUnit WeightUnit
+        public TripEngineService.WeightUnit WeightUnit
         {
             get
             {
@@ -10206,8 +10206,8 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelAddOn", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TransferAddOn))]
-    public partial class HotelAddOn : TripsEngineService.TripAddOn
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TransferAddOn))]
+    public partial class HotelAddOn : TripEngineService.TripAddOn
     {
         
         private string[] RoomRphsField;
@@ -10229,21 +10229,21 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TransferAddOn", Namespace="http://tavisca.com")]
-    public partial class TransferAddOn : TripsEngineService.HotelAddOn
+    public partial class TransferAddOn : TripEngineService.HotelAddOn
     {
         
-        private TripsEngineService.Location DestinationField;
+        private TripEngineService.Location DestinationField;
         
         private System.DateTime DropOffField;
         
-        private TripsEngineService.Location OriginField;
+        private TripEngineService.Location OriginField;
         
-        private TripsEngineService.PassengerTypeQuantity[] PassengersField;
+        private TripEngineService.PassengerTypeQuantity[] PassengersField;
         
         private System.DateTime PickUpField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Location Destination
+        public TripEngineService.Location Destination
         {
             get
             {
@@ -10269,7 +10269,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Location Origin
+        public TripEngineService.Location Origin
         {
             get
             {
@@ -10282,7 +10282,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PassengerTypeQuantity[] Passengers
+        public TripEngineService.PassengerTypeQuantity[] Passengers
         {
             get
             {
@@ -10326,70 +10326,70 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Fare", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.PassengerFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.RoomRate))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ActivityPassengerFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ActivityFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.GenericFare))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripAddOnFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.PassengerFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.RoomRate))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ActivityPassengerFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ActivityFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.GenericFare))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripAddOnFare))]
     public partial class Fare : object
     {
         
-        private TripsEngineService.BaseFare BaseFareField;
+        private TripEngineService.BaseFare BaseFareField;
         
-        private TripsEngineService.Commission[] CommissionsField;
+        private TripEngineService.Commission[] CommissionsField;
         
-        private TripsEngineService.Fee ConsolidatorFeeField;
+        private TripEngineService.Fee ConsolidatorFeeField;
         
-        private TripsEngineService.Discount[] DiscountsField;
+        private TripEngineService.Discount[] DiscountsField;
         
-        private TripsEngineService.Money EstimatedCommissionField;
+        private TripEngineService.Money EstimatedCommissionField;
         
         private string FareCodeField;
         
-        private TripsEngineService.FareRestrictionType[] FareRestrictionTypesField;
+        private TripEngineService.FareRestrictionType[] FareRestrictionTypesField;
         
-        private TripsEngineService.FareType FareTypeField;
+        private TripEngineService.FareType FareTypeField;
         
-        private TripsEngineService.Fee[] FeesField;
+        private TripEngineService.Fee[] FeesField;
         
         private int IdField;
         
-        private TripsEngineService.Money MarkupField;
+        private TripEngineService.Money MarkupField;
         
-        private TripsEngineService.Markup[] MarkupsField;
+        private TripEngineService.Markup[] MarkupsField;
         
-        private TripsEngineService.Fee PartnerFeeField;
+        private TripEngineService.Fee PartnerFeeField;
         
-        private TripsEngineService.Money PartnerMarkupField;
+        private TripEngineService.Money PartnerMarkupField;
         
         private string RemarksField;
         
         private int RphField;
         
-        private TripsEngineService.Money SavingsIncludedField;
+        private TripEngineService.Money SavingsIncludedField;
         
-        private TripsEngineService.Fee ServiceFeeField;
+        private TripEngineService.Fee ServiceFeeField;
         
-        private TripsEngineService.StateBag[] SupplierSideDataField;
+        private TripEngineService.StateBag[] SupplierSideDataField;
         
-        private TripsEngineService.Tax[] TaxesField;
+        private TripEngineService.Tax[] TaxesField;
         
-        private TripsEngineService.Commission TotalCommissionField;
+        private TripEngineService.Commission TotalCommissionField;
         
-        private TripsEngineService.Discount TotalDiscountField;
+        private TripEngineService.Discount TotalDiscountField;
         
-        private TripsEngineService.Money TotalFareField;
+        private TripEngineService.Money TotalFareField;
         
-        private TripsEngineService.Fee TotalFeeField;
+        private TripEngineService.Fee TotalFeeField;
         
-        private TripsEngineService.Money TotalTaxField;
+        private TripEngineService.Money TotalTaxField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.BaseFare BaseFare
+        public TripEngineService.BaseFare BaseFare
         {
             get
             {
@@ -10402,7 +10402,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Commission[] Commissions
+        public TripEngineService.Commission[] Commissions
         {
             get
             {
@@ -10415,7 +10415,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Fee ConsolidatorFee
+        public TripEngineService.Fee ConsolidatorFee
         {
             get
             {
@@ -10428,7 +10428,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Discount[] Discounts
+        public TripEngineService.Discount[] Discounts
         {
             get
             {
@@ -10441,7 +10441,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money EstimatedCommission
+        public TripEngineService.Money EstimatedCommission
         {
             get
             {
@@ -10467,7 +10467,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FareRestrictionType[] FareRestrictionTypes
+        public TripEngineService.FareRestrictionType[] FareRestrictionTypes
         {
             get
             {
@@ -10480,7 +10480,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FareType FareType
+        public TripEngineService.FareType FareType
         {
             get
             {
@@ -10493,7 +10493,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Fee[] Fees
+        public TripEngineService.Fee[] Fees
         {
             get
             {
@@ -10519,7 +10519,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money Markup
+        public TripEngineService.Money Markup
         {
             get
             {
@@ -10532,7 +10532,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Markup[] Markups
+        public TripEngineService.Markup[] Markups
         {
             get
             {
@@ -10545,7 +10545,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Fee PartnerFee
+        public TripEngineService.Fee PartnerFee
         {
             get
             {
@@ -10558,7 +10558,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money PartnerMarkup
+        public TripEngineService.Money PartnerMarkup
         {
             get
             {
@@ -10597,7 +10597,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money SavingsIncluded
+        public TripEngineService.Money SavingsIncluded
         {
             get
             {
@@ -10610,7 +10610,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Fee ServiceFee
+        public TripEngineService.Fee ServiceFee
         {
             get
             {
@@ -10623,7 +10623,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] SupplierSideData
+        public TripEngineService.StateBag[] SupplierSideData
         {
             get
             {
@@ -10636,7 +10636,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Tax[] Taxes
+        public TripEngineService.Tax[] Taxes
         {
             get
             {
@@ -10649,7 +10649,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Commission TotalCommission
+        public TripEngineService.Commission TotalCommission
         {
             get
             {
@@ -10662,7 +10662,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Discount TotalDiscount
+        public TripEngineService.Discount TotalDiscount
         {
             get
             {
@@ -10675,7 +10675,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money TotalFare
+        public TripEngineService.Money TotalFare
         {
             get
             {
@@ -10688,7 +10688,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Fee TotalFee
+        public TripEngineService.Fee TotalFee
         {
             get
             {
@@ -10701,7 +10701,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money TotalTax
+        public TripEngineService.Money TotalTax
         {
             get
             {
@@ -10717,12 +10717,12 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFare", Namespace="http://tavisca.com")]
-    public partial class AirFare : TripsEngineService.Fare
+    public partial class AirFare : TripEngineService.Fare
     {
         
         private string[] LegGroupsField;
         
-        private TripsEngineService.PassengerFare[] PassengerFaresField;
+        private TripEngineService.PassengerFare[] PassengerFaresField;
         
         private string[] TagsField;
         
@@ -10740,7 +10740,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PassengerFare[] PassengerFares
+        public TripEngineService.PassengerFare[] PassengerFares
         {
             get
             {
@@ -10769,14 +10769,14 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PassengerFare", Namespace="http://tavisca.com")]
-    public partial class PassengerFare : TripsEngineService.Fare
+    public partial class PassengerFare : TripEngineService.Fare
     {
         
         private int MaxAgeField;
         
         private int MinAgeField;
         
-        private TripsEngineService.PassengerType PassengerTypeField;
+        private TripEngineService.PassengerType PassengerTypeField;
         
         private int QuantityField;
         
@@ -10809,7 +10809,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PassengerType PassengerType
+        public TripEngineService.PassengerType PassengerType
         {
             get
             {
@@ -10851,14 +10851,14 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="RoomRate", Namespace="http://tavisca.com")]
-    public partial class RoomRate : TripsEngineService.Fare
+    public partial class RoomRate : TripEngineService.Fare
     {
         
         private string BookingCodeField;
         
-        private TripsEngineService.DailyRate[] DailyRatesField;
+        private TripEngineService.DailyRate[] DailyRatesField;
         
-        private TripsEngineService.RateIndicatorType RateIndicatorTypeField;
+        private TripEngineService.RateIndicatorType RateIndicatorTypeField;
         
         private string RatePlanCategoryField;
         
@@ -10886,7 +10886,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DailyRate[] DailyRates
+        public TripEngineService.DailyRate[] DailyRates
         {
             get
             {
@@ -10899,7 +10899,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RateIndicatorType RateIndicatorType
+        public TripEngineService.RateIndicatorType RateIndicatorType
         {
             get
             {
@@ -10993,17 +10993,17 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelFare", Namespace="http://tavisca.com")]
-    public partial class HotelFare : TripsEngineService.Fare
+    public partial class HotelFare : TripEngineService.Fare
     {
         
-        private TripsEngineService.Money AvgDailyRateField;
+        private TripEngineService.Money AvgDailyRateField;
         
-        private TripsEngineService.Money MaxDailyRateField;
+        private TripEngineService.Money MaxDailyRateField;
         
-        private TripsEngineService.Money MinDailyRateField;
+        private TripEngineService.Money MinDailyRateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money AvgDailyRate
+        public TripEngineService.Money AvgDailyRate
         {
             get
             {
@@ -11016,7 +11016,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money MaxDailyRate
+        public TripEngineService.Money MaxDailyRate
         {
             get
             {
@@ -11029,7 +11029,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money MinDailyRate
+        public TripEngineService.Money MinDailyRate
         {
             get
             {
@@ -11045,19 +11045,19 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarFare", Namespace="http://tavisca.com")]
-    public partial class CarFare : TripsEngineService.Fare
+    public partial class CarFare : TripEngineService.Fare
     {
         
-        private TripsEngineService.CarRate BaseRateField;
+        private TripEngineService.CarRate BaseRateField;
         
-        private TripsEngineService.Money BaseTotalFareField;
+        private TripEngineService.Money BaseTotalFareField;
         
-        private TripsEngineService.CarCharge[] ChargesField;
+        private TripEngineService.CarCharge[] ChargesField;
         
-        private TripsEngineService.Money TotalChargesField;
+        private TripEngineService.Money TotalChargesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarRate BaseRate
+        public TripEngineService.CarRate BaseRate
         {
             get
             {
@@ -11070,7 +11070,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money BaseTotalFare
+        public TripEngineService.Money BaseTotalFare
         {
             get
             {
@@ -11083,7 +11083,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarCharge[] Charges
+        public TripEngineService.CarCharge[] Charges
         {
             get
             {
@@ -11096,7 +11096,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money TotalCharges
+        public TripEngineService.Money TotalCharges
         {
             get
             {
@@ -11112,7 +11112,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityPassengerFare", Namespace="http://tavisca.com")]
-    public partial class ActivityPassengerFare : TripsEngineService.Fare
+    public partial class ActivityPassengerFare : TripEngineService.Fare
     {
         
         private int MaxAgeField;
@@ -11239,13 +11239,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityFare", Namespace="http://tavisca.com")]
-    public partial class ActivityFare : TripsEngineService.Fare
+    public partial class ActivityFare : TripEngineService.Fare
     {
         
-        private TripsEngineService.Money MinFareField;
+        private TripEngineService.Money MinFareField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money MinFare
+        public TripEngineService.Money MinFare
         {
             get
             {
@@ -11261,7 +11261,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GenericFare", Namespace="http://tavisca.com")]
-    public partial class GenericFare : TripsEngineService.Fare
+    public partial class GenericFare : TripEngineService.Fare
     {
     }
     
@@ -11405,7 +11405,7 @@ namespace TripsEngineService
         
         private int[] AgesField;
         
-        private TripsEngineService.PassengerType PassengerTypeField;
+        private TripEngineService.PassengerType PassengerTypeField;
         
         private int QuantityField;
         
@@ -11423,7 +11423,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PassengerType PassengerType
+        public TripEngineService.PassengerType PassengerType
         {
             get
             {
@@ -11452,7 +11452,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirCancellationPolicy", Namespace="http://tavisca.com")]
-    public partial class AirCancellationPolicy : TripsEngineService.CancellationPolicy
+    public partial class AirCancellationPolicy : TripEngineService.CancellationPolicy
     {
     }
     
@@ -11502,19 +11502,19 @@ namespace TripsEngineService
         
         private int PreferenceField;
         
-        private TripsEngineService.SpecialServiceRequest[] SSRsField;
+        private TripEngineService.SpecialServiceRequest[] SSRsField;
         
         private long SearchAirFareSourceIdField;
         
         private string TicketDesignatorField;
         
-        private TripsEngineService.DateTimeSpan TicketingPeriodField;
+        private TripEngineService.DateTimeSpan TicketingPeriodField;
         
         private string TourCodeField;
         
-        private TripsEngineService.DateTimeSpan TravelPeriodField;
+        private TripEngineService.DateTimeSpan TravelPeriodField;
         
-        private TripsEngineService.DateTimeSpan ValidPeriodField;
+        private TripEngineService.DateTimeSpan ValidPeriodField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public long AgencyId
@@ -11777,7 +11777,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.SpecialServiceRequest[] SSRs
+        public TripEngineService.SpecialServiceRequest[] SSRs
         {
             get
             {
@@ -11816,7 +11816,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DateTimeSpan TicketingPeriod
+        public TripEngineService.DateTimeSpan TicketingPeriod
         {
             get
             {
@@ -11842,7 +11842,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DateTimeSpan TravelPeriod
+        public TripEngineService.DateTimeSpan TravelPeriod
         {
             get
             {
@@ -11855,7 +11855,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DateTimeSpan ValidPeriod
+        public TripEngineService.DateTimeSpan ValidPeriod
         {
             get
             {
@@ -11876,13 +11876,13 @@ namespace TripsEngineService
         
         private bool AllowDynamicField;
         
-        private TripsEngineService.MarkupApplicationAmount ApplyOnAmountField;
+        private TripEngineService.MarkupApplicationAmount ApplyOnAmountField;
         
         private string FareTypeField;
         
         private bool IsEnabledField;
         
-        private TripsEngineService.MarkupApplicationType MarkupApplicationTypeField;
+        private TripEngineService.MarkupApplicationType MarkupApplicationTypeField;
         
         private long MarkupPlanIdField;
         
@@ -11904,7 +11904,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.MarkupApplicationAmount ApplyOnAmount
+        public TripEngineService.MarkupApplicationAmount ApplyOnAmount
         {
             get
             {
@@ -11943,7 +11943,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.MarkupApplicationType MarkupApplicationType
+        public TripEngineService.MarkupApplicationType MarkupApplicationType
         {
             get
             {
@@ -12007,7 +12007,7 @@ namespace TripsEngineService
         
         private string ETicketNumberField;
         
-        private TripsEngineService.TicketType TypeField;
+        private TripEngineService.TicketType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime BookingTimeLimit
@@ -12049,7 +12049,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TicketType Type
+        public TripEngineService.TicketType Type
         {
             get
             {
@@ -12085,23 +12085,23 @@ namespace TripsEngineService
         
         private string[] ContractReferencesField;
         
-        private TripsEngineService.FlightSegment[] FlightSegmentsField;
+        private TripEngineService.FlightSegment[] FlightSegmentsField;
         
         private int LegDurationField;
         
-        private TripsEngineService.Distance MileageField;
+        private TripEngineService.Distance MileageField;
         
-        private TripsEngineService.RateCodeInfo RateCodeInfoField;
+        private TripEngineService.RateCodeInfo RateCodeInfoField;
         
         private int RphField;
         
         private int ScopeIdField;
         
-        private TripsEngineService.FlightSegmentStop[] StopDetailsField;
+        private TripEngineService.FlightSegmentStop[] StopDetailsField;
         
         private int StopsField;
         
-        private TripsEngineService.StateBag[] SupplierSideDataField;
+        private TripEngineService.StateBag[] SupplierSideDataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string[] ContractReferences
@@ -12117,7 +12117,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FlightSegment[] FlightSegments
+        public TripEngineService.FlightSegment[] FlightSegments
         {
             get
             {
@@ -12143,7 +12143,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Distance Mileage
+        public TripEngineService.Distance Mileage
         {
             get
             {
@@ -12156,7 +12156,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RateCodeInfo RateCodeInfo
+        public TripEngineService.RateCodeInfo RateCodeInfo
         {
             get
             {
@@ -12195,7 +12195,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FlightSegmentStop[] StopDetails
+        public TripEngineService.FlightSegmentStop[] StopDetails
         {
             get
             {
@@ -12221,7 +12221,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] SupplierSideData
+        public TripEngineService.StateBag[] SupplierSideData
         {
             get
             {
@@ -12237,24 +12237,24 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirPolicy", Namespace="http://schemas.datacontract.org/2004/07/Tavisca.TravelNxt.Air.DataContracts")]
-    public partial class AirPolicy : TripsEngineService.Policy
+    public partial class AirPolicy : TripEngineService.Policy
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CancellationPolicy", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelCancellationPolicy))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarCancellationPolicy))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ActivityCancellationPolicy))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirCancellationPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelCancellationPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarCancellationPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ActivityCancellationPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirCancellationPolicy))]
     public partial class CancellationPolicy : object
     {
         
-        private TripsEngineService.CancellationRule[] CancellationRulesField;
+        private TripEngineService.CancellationRule[] CancellationRulesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CancellationRule[] CancellationRules
+        public TripEngineService.CancellationRule[] CancellationRules
         {
             get
             {
@@ -12270,21 +12270,21 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelCancellationPolicy", Namespace="http://tavisca.com")]
-    public partial class HotelCancellationPolicy : TripsEngineService.CancellationPolicy
+    public partial class HotelCancellationPolicy : TripEngineService.CancellationPolicy
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarCancellationPolicy", Namespace="http://tavisca.com")]
-    public partial class CarCancellationPolicy : TripsEngineService.CancellationPolicy
+    public partial class CarCancellationPolicy : TripEngineService.CancellationPolicy
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityCancellationPolicy", Namespace="http://tavisca.com")]
-    public partial class ActivityCancellationPolicy : TripsEngineService.CancellationPolicy
+    public partial class ActivityCancellationPolicy : TripEngineService.CancellationPolicy
     {
     }
     
@@ -12294,7 +12294,7 @@ namespace TripsEngineService
     public partial class SpecialServiceRequest : object
     {
         
-        private TripsEngineService.StateBag[] AdditionalInfoField;
+        private TripEngineService.StateBag[] AdditionalInfoField;
         
         private string SSRAirlineField;
         
@@ -12303,7 +12303,7 @@ namespace TripsEngineService
         private string SSRFreeFormField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] AdditionalInfo
+        public TripEngineService.StateBag[] AdditionalInfo
         {
             get
             {
@@ -12363,7 +12363,7 @@ namespace TripsEngineService
         
         private string RateCodeField;
         
-        private TripsEngineService.StateBag[] SupplierSideDataField;
+        private TripEngineService.StateBag[] SupplierSideDataField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string RateCode
@@ -12379,7 +12379,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] SupplierSideData
+        public TripEngineService.StateBag[] SupplierSideData
         {
             get
             {
@@ -12398,17 +12398,17 @@ namespace TripsEngineService
     public partial class FlightSegment : object
     {
         
-        private TripsEngineService.Aircraft AirCraftField;
+        private TripEngineService.Aircraft AirCraftField;
         
         private string AirlineRecordLocatorField;
         
-        private TripsEngineService.Airport ArrivalAirportField;
+        private TripEngineService.Airport ArrivalAirportField;
         
         private System.DateTime ArrivalDateTimeField;
         
-        private TripsEngineService.CabinClass CabinClassField;
+        private TripEngineService.CabinClass CabinClassField;
         
-        private TripsEngineService.Airport DepartureAirportField;
+        private TripEngineService.Airport DepartureAirportField;
         
         private System.DateTime DepartureDateTimeField;
         
@@ -12416,7 +12416,7 @@ namespace TripsEngineService
         
         private string FlightNumberField;
         
-        private TripsEngineService.FlightSegmentStop[] FlightSegmentStopsField;
+        private TripEngineService.FlightSegmentStop[] FlightSegmentStopsField;
         
         private bool IsETicketField;
         
@@ -12424,30 +12424,30 @@ namespace TripsEngineService
         
         private int LayoverDurationField;
         
-        private TripsEngineService.Airline MarketingAirlineField;
+        private TripEngineService.Airline MarketingAirlineField;
         
         private string MarriageGroupCodeField;
         
         private string MealCodeField;
         
-        private TripsEngineService.Distance MileageField;
+        private TripEngineService.Distance MileageField;
         
-        private TripsEngineService.Airline OperatingAirlineField;
+        private TripEngineService.Airline OperatingAirlineField;
         
-        private TripsEngineService.PassengerSeat[] PassengerSeatField;
+        private TripEngineService.PassengerSeat[] PassengerSeatField;
         
-        private TripsEngineService.SegmentQualifier[] QualifiersField;
+        private TripEngineService.SegmentQualifier[] QualifiersField;
         
         private int RphField;
         
         private string SegmentRefField;
         
-        private TripsEngineService.SellStatus SellStatusField;
+        private TripEngineService.SellStatus SellStatusField;
         
         private int StopsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Aircraft AirCraft
+        public TripEngineService.Aircraft AirCraft
         {
             get
             {
@@ -12473,7 +12473,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Airport ArrivalAirport
+        public TripEngineService.Airport ArrivalAirport
         {
             get
             {
@@ -12499,7 +12499,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CabinClass CabinClass
+        public TripEngineService.CabinClass CabinClass
         {
             get
             {
@@ -12512,7 +12512,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Airport DepartureAirport
+        public TripEngineService.Airport DepartureAirport
         {
             get
             {
@@ -12564,7 +12564,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FlightSegmentStop[] FlightSegmentStops
+        public TripEngineService.FlightSegmentStop[] FlightSegmentStops
         {
             get
             {
@@ -12616,7 +12616,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Airline MarketingAirline
+        public TripEngineService.Airline MarketingAirline
         {
             get
             {
@@ -12655,7 +12655,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Distance Mileage
+        public TripEngineService.Distance Mileage
         {
             get
             {
@@ -12668,7 +12668,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Airline OperatingAirline
+        public TripEngineService.Airline OperatingAirline
         {
             get
             {
@@ -12681,7 +12681,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PassengerSeat[] PassengerSeat
+        public TripEngineService.PassengerSeat[] PassengerSeat
         {
             get
             {
@@ -12694,7 +12694,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.SegmentQualifier[] Qualifiers
+        public TripEngineService.SegmentQualifier[] Qualifiers
         {
             get
             {
@@ -12733,7 +12733,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.SellStatus SellStatus
+        public TripEngineService.SellStatus SellStatus
         {
             get
             {
@@ -12765,7 +12765,7 @@ namespace TripsEngineService
     public partial class FlightSegmentStop : object
     {
         
-        private TripsEngineService.Airport AirportField;
+        private TripEngineService.Airport AirportField;
         
         private System.DateTime ArrivalDateTimeField;
         
@@ -12780,7 +12780,7 @@ namespace TripsEngineService
         private int RphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Airport Airport
+        public TripEngineService.Airport Airport
         {
             get
             {
@@ -12991,11 +12991,11 @@ namespace TripsEngineService
         
         private string FareBasisCodeField;
         
-        private TripsEngineService.FareType FareTypeField;
+        private TripEngineService.FareType FareTypeField;
         
         private string LineNumberField;
         
-        private TripsEngineService.PassengerType PassengerTypeField;
+        private TripEngineService.PassengerType PassengerTypeField;
         
         private string SegmentRefField;
         
@@ -13028,7 +13028,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FareType FareType
+        public TripEngineService.FareType FareType
         {
             get
             {
@@ -13054,7 +13054,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PassengerType PassengerType
+        public TripEngineService.PassengerType PassengerType
         {
             get
             {
@@ -13153,8 +13153,8 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Policy", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarPolicy))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarPolicy))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirPolicy))]
     public partial class Policy : object
     {
         
@@ -13192,7 +13192,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarPolicy", Namespace="http://tavisca.com")]
-    public partial class CarPolicy : TripsEngineService.Policy
+    public partial class CarPolicy : TripEngineService.Policy
     {
     }
     
@@ -13379,9 +13379,9 @@ namespace TripsEngineService
         
         private string RateCodeField;
         
-        private TripsEngineService.StateBag[] SupplierSideDataField;
+        private TripEngineService.StateBag[] SupplierSideDataField;
         
-        private TripsEngineService.HotelDiscountType TypeField;
+        private TripEngineService.HotelDiscountType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string ChainCode
@@ -13436,7 +13436,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] SupplierSideData
+        public TripEngineService.StateBag[] SupplierSideData
         {
             get
             {
@@ -13449,7 +13449,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelDiscountType Type
+        public TripEngineService.HotelDiscountType Type
         {
             get
             {
@@ -13465,41 +13465,41 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelProperty", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.VacationRentalProperty))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.VacationRentalProperty))]
     public partial class HotelProperty : object
     {
         
-        private TripsEngineService.Activity[] ActivityOptionsField;
+        private TripEngineService.Activity[] ActivityOptionsField;
         
-        private TripsEngineService.Address AddressField;
+        private TripEngineService.Address AddressField;
         
-        private TripsEngineService.Amenity[] AmenitiesField;
+        private TripEngineService.Amenity[] AmenitiesField;
         
-        private TripsEngineService.AreaAttraction[] AreaAttractionsField;
+        private TripEngineService.AreaAttraction[] AreaAttractionsField;
         
-        private TripsEngineService.AvailabilityCalender AvailabilityCalenderField;
+        private TripEngineService.AvailabilityCalender AvailabilityCalenderField;
         
-        private TripsEngineService.TimeDetail[] CheckInOptionsField;
+        private TripEngineService.TimeDetail[] CheckInOptionsField;
         
-        private TripsEngineService.TimeDetail[] CheckOutOptionsField;
+        private TripEngineService.TimeDetail[] CheckOutOptionsField;
         
-        private TripsEngineService.HotelDescription[] DescriptionsField;
+        private TripEngineService.HotelDescription[] DescriptionsField;
         
-        private TripsEngineService.Distance DistanceField;
+        private TripEngineService.Distance DistanceField;
         
         private string FaxNumberField;
         
-        private TripsEngineService.GeoCode GeoCodeField;
+        private TripEngineService.GeoCode GeoCodeField;
         
-        private TripsEngineService.HotelChain HotelChainField;
+        private TripEngineService.HotelChain HotelChainField;
         
-        private TripsEngineService.HotelMultimedia HotelMultiMediaField;
+        private TripEngineService.HotelMultimedia HotelMultiMediaField;
         
-        private TripsEngineService.HotelRating HotelRatingField;
+        private TripEngineService.HotelRating HotelRatingField;
         
         private int IdField;
         
-        private TripsEngineService.Media[] MediaContentField;
+        private TripEngineService.Media[] MediaContentField;
         
         private string NameField;
         
@@ -13507,20 +13507,20 @@ namespace TripsEngineService
         
         private string PhoneNumberField;
         
-        private TripsEngineService.Review[] ReviewsField;
+        private TripEngineService.Review[] ReviewsField;
         
-        private TripsEngineService.StateBag[] StateBagField;
+        private TripEngineService.StateBag[] StateBagField;
         
         private string SupplierHotelIdField;
         
-        private TripsEngineService.Tag[] TagsField;
+        private TripEngineService.Tag[] TagsField;
         
-        private TripsEngineService.Media ThumbnailField;
+        private TripEngineService.Media ThumbnailField;
         
         private string WebsiteUrlField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Activity[] ActivityOptions
+        public TripEngineService.Activity[] ActivityOptions
         {
             get
             {
@@ -13533,7 +13533,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Address Address
+        public TripEngineService.Address Address
         {
             get
             {
@@ -13546,7 +13546,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Amenity[] Amenities
+        public TripEngineService.Amenity[] Amenities
         {
             get
             {
@@ -13559,7 +13559,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AreaAttraction[] AreaAttractions
+        public TripEngineService.AreaAttraction[] AreaAttractions
         {
             get
             {
@@ -13572,7 +13572,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AvailabilityCalender AvailabilityCalender
+        public TripEngineService.AvailabilityCalender AvailabilityCalender
         {
             get
             {
@@ -13585,7 +13585,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TimeDetail[] CheckInOptions
+        public TripEngineService.TimeDetail[] CheckInOptions
         {
             get
             {
@@ -13598,7 +13598,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TimeDetail[] CheckOutOptions
+        public TripEngineService.TimeDetail[] CheckOutOptions
         {
             get
             {
@@ -13611,7 +13611,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelDescription[] Descriptions
+        public TripEngineService.HotelDescription[] Descriptions
         {
             get
             {
@@ -13624,7 +13624,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Distance Distance
+        public TripEngineService.Distance Distance
         {
             get
             {
@@ -13650,7 +13650,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.GeoCode GeoCode
+        public TripEngineService.GeoCode GeoCode
         {
             get
             {
@@ -13663,7 +13663,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelChain HotelChain
+        public TripEngineService.HotelChain HotelChain
         {
             get
             {
@@ -13676,7 +13676,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelMultimedia HotelMultiMedia
+        public TripEngineService.HotelMultimedia HotelMultiMedia
         {
             get
             {
@@ -13689,7 +13689,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelRating HotelRating
+        public TripEngineService.HotelRating HotelRating
         {
             get
             {
@@ -13715,7 +13715,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Media[] MediaContent
+        public TripEngineService.Media[] MediaContent
         {
             get
             {
@@ -13767,7 +13767,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Review[] Reviews
+        public TripEngineService.Review[] Reviews
         {
             get
             {
@@ -13780,7 +13780,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] StateBag
+        public TripEngineService.StateBag[] StateBag
         {
             get
             {
@@ -13806,7 +13806,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Tag[] Tags
+        public TripEngineService.Tag[] Tags
         {
             get
             {
@@ -13819,7 +13819,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Media Thumbnail
+        public TripEngineService.Media Thumbnail
         {
             get
             {
@@ -13855,7 +13855,7 @@ namespace TripsEngineService
         
         private string NameField;
         
-        private TripsEngineService.DepositType TypeField;
+        private TripEngineService.DepositType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -13884,7 +13884,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DepositType Type
+        public TripEngineService.DepositType Type
         {
             get
             {
@@ -13907,7 +13907,7 @@ namespace TripsEngineService
         
         private string NameField;
         
-        private TripsEngineService.GuaranteeType TypeField;
+        private TripEngineService.GuaranteeType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Code
@@ -13936,7 +13936,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.GuaranteeType Type
+        public TripEngineService.GuaranteeType Type
         {
             get
             {
@@ -13955,14 +13955,14 @@ namespace TripsEngineService
     public partial class AllowedCountry : object
     {
         
-        private TripsEngineService.AllowedState[] AllowedStatesField;
+        private TripEngineService.AllowedState[] AllowedStatesField;
         
         private string CodeField;
         
         private string NameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AllowedState[] AllowedStates
+        public TripEngineService.AllowedState[] AllowedStates
         {
             get
             {
@@ -14004,20 +14004,20 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Deal", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.PaystayDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.PercentageDiscountDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.OpaqueDeal))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.DiscountDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.PaystayDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.PercentageDiscountDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.OpaqueDeal))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.DiscountDeal))]
     public partial class Deal : object
     {
         
-        private TripsEngineService.DealStatus DealStatusField;
+        private TripEngineService.DealStatus DealStatusField;
         
         private string DealTypeField;
         
         private System.DateTime EndDateField;
         
-        private TripsEngineService.Media ImageField;
+        private TripEngineService.Media ImageField;
         
         private bool IsPackageOnlyField;
         
@@ -14031,7 +14031,7 @@ namespace TripsEngineService
         
         private System.DateTime StartDateField;
         
-        private TripsEngineService.Tag[] TagsField;
+        private TripEngineService.Tag[] TagsField;
         
         private string TitleField;
         
@@ -14040,7 +14040,7 @@ namespace TripsEngineService
         private System.DateTime UsageStartDateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DealStatus DealStatus
+        public TripEngineService.DealStatus DealStatus
         {
             get
             {
@@ -14079,7 +14079,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Media Image
+        public TripEngineService.Media Image
         {
             get
             {
@@ -14170,7 +14170,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Tag[] Tags
+        public TripEngineService.Tag[] Tags
         {
             get
             {
@@ -14230,21 +14230,21 @@ namespace TripsEngineService
         
         private System.DateTime AddDateField;
         
-        private TripsEngineService.DealStatus DealStatusField;
+        private TripEngineService.DealStatus DealStatusField;
         
         private string DealTitleField;
         
         private System.DateTime EndDateField;
         
-        private TripsEngineService.FareSource FareSourceField;
+        private TripEngineService.FareSource FareSourceField;
         
         private int FreeNightsField;
         
-        private TripsEngineService.HotelProperty HotelPropertyField;
+        private TripEngineService.HotelProperty HotelPropertyField;
         
         private int IdField;
         
-        private TripsEngineService.Money MinFareField;
+        private TripEngineService.Money MinFareField;
         
         private string PromotionalTextField;
         
@@ -14266,7 +14266,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DealStatus DealStatus
+        public TripEngineService.DealStatus DealStatus
         {
             get
             {
@@ -14305,7 +14305,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FareSource FareSource
+        public TripEngineService.FareSource FareSource
         {
             get
             {
@@ -14331,7 +14331,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelProperty HotelProperty
+        public TripEngineService.HotelProperty HotelProperty
         {
             get
             {
@@ -14357,7 +14357,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money MinFare
+        public TripEngineService.Money MinFare
         {
             get
             {
@@ -14452,11 +14452,11 @@ namespace TripsEngineService
     public partial class Room : object
     {
         
-        private TripsEngineService.StateBag[] AdditionalInformationField;
+        private TripEngineService.StateBag[] AdditionalInformationField;
         
-        private TripsEngineService.AgeRestriction AgeRestrictionField;
+        private TripEngineService.AgeRestriction AgeRestrictionField;
         
-        private TripsEngineService.AllowedCreditCard[] AllowedCreditCardsField;
+        private TripEngineService.AllowedCreditCard[] AllowedCreditCardsField;
         
         private int BaseOccupancyField;
         
@@ -14464,7 +14464,7 @@ namespace TripsEngineService
         
         private bool DepositRequiredField;
         
-        private TripsEngineService.RoomRate DisplayRoomRateField;
+        private TripEngineService.RoomRate DisplayRoomRateField;
         
         private bool GuaranteeRequiredField;
         
@@ -14472,7 +14472,7 @@ namespace TripsEngineService
         
         private int GuestCountField;
         
-        private TripsEngineService.HotelFareSource HotelFareSourceField;
+        private TripEngineService.HotelFareSource HotelFareSourceField;
         
         private bool IsRoomWithNearByDateField;
         
@@ -14488,7 +14488,7 @@ namespace TripsEngineService
         
         private int[] PassengerRphsField;
         
-        private TripsEngineService.HotelPolicy[] PoliciesField;
+        private TripEngineService.HotelPolicy[] PoliciesField;
         
         private bool PrepaidField;
         
@@ -14504,12 +14504,12 @@ namespace TripsEngineService
         
         private string RoomTypeField;
         
-        private TripsEngineService.DateTimeSpan StayPeriodField;
+        private TripEngineService.DateTimeSpan StayPeriodField;
         
-        private TripsEngineService.RoomRate StdRoomRateField;
+        private TripEngineService.RoomRate StdRoomRateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] AdditionalInformation
+        public TripEngineService.StateBag[] AdditionalInformation
         {
             get
             {
@@ -14522,7 +14522,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AgeRestriction AgeRestriction
+        public TripEngineService.AgeRestriction AgeRestriction
         {
             get
             {
@@ -14535,7 +14535,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AllowedCreditCard[] AllowedCreditCards
+        public TripEngineService.AllowedCreditCard[] AllowedCreditCards
         {
             get
             {
@@ -14587,7 +14587,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RoomRate DisplayRoomRate
+        public TripEngineService.RoomRate DisplayRoomRate
         {
             get
             {
@@ -14639,7 +14639,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelFareSource HotelFareSource
+        public TripEngineService.HotelFareSource HotelFareSource
         {
             get
             {
@@ -14743,7 +14743,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelPolicy[] Policies
+        public TripEngineService.HotelPolicy[] Policies
         {
             get
             {
@@ -14847,7 +14847,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DateTimeSpan StayPeriod
+        public TripEngineService.DateTimeSpan StayPeriod
         {
             get
             {
@@ -14860,7 +14860,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RoomRate StdRoomRate
+        public TripEngineService.RoomRate StdRoomRate
         {
             get
             {
@@ -14883,7 +14883,7 @@ namespace TripsEngineService
         
         private string StartField;
         
-        private TripsEngineService.SeasonType TypeField;
+        private TripEngineService.SeasonType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string End
@@ -14912,7 +14912,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.SeasonType Type
+        public TripEngineService.SeasonType Type
         {
             get
             {
@@ -15010,7 +15010,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PaystayDeal", Namespace="http://tavisca.com")]
-    public partial class PaystayDeal : TripsEngineService.Deal
+    public partial class PaystayDeal : TripEngineService.Deal
     {
         
         private int FreeNightsField;
@@ -15047,7 +15047,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PercentageDiscountDeal", Namespace="http://tavisca.com")]
-    public partial class PercentageDiscountDeal : TripsEngineService.Deal
+    public partial class PercentageDiscountDeal : TripEngineService.Deal
     {
         
         private string ApplyOnField;
@@ -15084,22 +15084,22 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OpaqueDeal", Namespace="http://tavisca.com")]
-    public partial class OpaqueDeal : TripsEngineService.Deal
+    public partial class OpaqueDeal : TripEngineService.Deal
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="DiscountDeal", Namespace="http://tavisca.com")]
-    public partial class DiscountDeal : TripsEngineService.Deal
+    public partial class DiscountDeal : TripEngineService.Deal
     {
         
-        private TripsEngineService.Money AmountField;
+        private TripEngineService.Money AmountField;
         
         private string ApplyOnField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money Amount
+        public TripEngineService.Money Amount
         {
             get
             {
@@ -15164,12 +15164,12 @@ namespace TripsEngineService
     public partial class AvailabilityCalender : object
     {
         
-        private TripsEngineService.AvailabilityStatus AvailabilityStatusField;
+        private TripEngineService.AvailabilityStatus AvailabilityStatusField;
         
-        private TripsEngineService.DateRange[] TimeSpansField;
+        private TripEngineService.DateRange[] TimeSpansField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AvailabilityStatus AvailabilityStatus
+        public TripEngineService.AvailabilityStatus AvailabilityStatus
         {
             get
             {
@@ -15182,7 +15182,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DateRange[] TimeSpans
+        public TripEngineService.DateRange[] TimeSpans
         {
             get
             {
@@ -15375,7 +15375,7 @@ namespace TripsEngineService
         
         private float RatingField;
         
-        private TripsEngineService.RatingType RatingTypeField;
+        private TripEngineService.RatingType RatingTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public float Rating
@@ -15391,7 +15391,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RatingType RatingType
+        public TripEngineService.RatingType RatingType
         {
             get
             {
@@ -15407,7 +15407,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="VacationRentalProperty", Namespace="http://tavisca.com")]
-    public partial class VacationRentalProperty : TripsEngineService.HotelProperty
+    public partial class VacationRentalProperty : TripEngineService.HotelProperty
     {
         
         private int BathroomsField;
@@ -15418,11 +15418,11 @@ namespace TripsEngineService
         
         private int MaxOccupancyField;
         
-        private TripsEngineService.PropertyOwner OwnerField;
+        private TripEngineService.PropertyOwner OwnerField;
         
-        private TripsEngineService.Area PropertyAreaField;
+        private TripEngineService.Area PropertyAreaField;
         
-        private TripsEngineService.SeasonalRate[] SeasonalRatesField;
+        private TripEngineService.SeasonalRate[] SeasonalRatesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int Bathrooms
@@ -15477,7 +15477,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PropertyOwner Owner
+        public TripEngineService.PropertyOwner Owner
         {
             get
             {
@@ -15490,7 +15490,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Area PropertyArea
+        public TripEngineService.Area PropertyArea
         {
             get
             {
@@ -15503,7 +15503,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.SeasonalRate[] SeasonalRates
+        public TripEngineService.SeasonalRate[] SeasonalRates
         {
             get
             {
@@ -15526,13 +15526,13 @@ namespace TripsEngineService
         
         private string DescriptionField;
         
-        private TripsEngineService.Distance DistanceField;
+        private TripEngineService.Distance DistanceField;
         
-        private TripsEngineService.GeoCode GeoCodeField;
+        private TripEngineService.GeoCode GeoCodeField;
         
         private string NameField;
         
-        private TripsEngineService.Tag[] TagsField;
+        private TripEngineService.Tag[] TagsField;
         
         private string TypeField;
         
@@ -15563,7 +15563,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Distance Distance
+        public TripEngineService.Distance Distance
         {
             get
             {
@@ -15576,7 +15576,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.GeoCode GeoCode
+        public TripEngineService.GeoCode GeoCode
         {
             get
             {
@@ -15602,7 +15602,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Tag[] Tags
+        public TripEngineService.Tag[] Tags
         {
             get
             {
@@ -15631,7 +15631,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Amenity", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AmenityPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AmenityPreference))]
     public partial class Amenity : object
     {
         
@@ -15766,11 +15766,11 @@ namespace TripsEngineService
         
         private string DescriptionField;
         
-        private TripsEngineService.GeoCode GeoCodeField;
+        private TripEngineService.GeoCode GeoCodeField;
         
         private string NameField;
         
-        private TripsEngineService.Tag[] TagsField;
+        private TripEngineService.Tag[] TagsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Address
@@ -15799,7 +15799,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.GeoCode GeoCode
+        public TripEngineService.GeoCode GeoCode
         {
             get
             {
@@ -15825,7 +15825,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Tag[] Tags
+        public TripEngineService.Tag[] Tags
         {
             get
             {
@@ -15846,7 +15846,7 @@ namespace TripsEngineService
         
         private System.DateTime BeginDateField;
         
-        private TripsEngineService.Day DayField;
+        private TripEngineService.Day DayField;
         
         private System.DateTime EndDateField;
         
@@ -15866,7 +15866,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Day Day
+        public TripEngineService.Day Day
         {
             get
             {
@@ -15948,20 +15948,20 @@ namespace TripsEngineService
     public partial class Review : object
     {
         
-        private TripsEngineService.HelpfulVotes HelpfulVotesField;
+        private TripEngineService.HelpfulVotes HelpfulVotesField;
         
         private decimal RatingField;
         
-        private TripsEngineService.ReviewRating[] RatingsField;
+        private TripEngineService.ReviewRating[] RatingsField;
         
-        private TripsEngineService.Reviewer ReviewerField;
+        private TripEngineService.Reviewer ReviewerField;
         
         private string TextField;
         
         private string TitleField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HelpfulVotes HelpfulVotes
+        public TripEngineService.HelpfulVotes HelpfulVotes
         {
             get
             {
@@ -15987,7 +15987,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ReviewRating[] Ratings
+        public TripEngineService.ReviewRating[] Ratings
         {
             get
             {
@@ -16000,7 +16000,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Reviewer Reviewer
+        public TripEngineService.Reviewer Reviewer
         {
             get
             {
@@ -16042,13 +16042,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AmenityPreference", Namespace="http://tavisca.com")]
-    public partial class AmenityPreference : TripsEngineService.Amenity
+    public partial class AmenityPreference : TripEngineService.Amenity
     {
         
-        private TripsEngineService.PreferLevel PreferLevelField;
+        private TripEngineService.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PreferLevel PreferLevel
+        public TripEngineService.PreferLevel PreferLevel
         {
             get
             {
@@ -16201,7 +16201,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Reviewer", Namespace="http://tavisca.com")]
-    public partial class Reviewer : TripsEngineService.Person
+    public partial class Reviewer : TripEngineService.Person
     {
         
         private System.DateTime StayDateField;
@@ -16260,8 +16260,8 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Person", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.PropertyOwner))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.Reviewer))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.PropertyOwner))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.Reviewer))]
     public partial class Person : object
     {
         
@@ -16329,7 +16329,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PropertyOwner", Namespace="http://tavisca.com")]
-    public partial class PropertyOwner : TripsEngineService.Person
+    public partial class PropertyOwner : TripEngineService.Person
     {
     }
     
@@ -16380,11 +16380,11 @@ namespace TripsEngineService
         
         private System.DateTime EndDateField;
         
-        private TripsEngineService.StayDuration MinimumStayField;
+        private TripEngineService.StayDuration MinimumStayField;
         
         private string PeriodNameField;
         
-        private TripsEngineService.Money RateField;
+        private TripEngineService.Money RateField;
         
         private string RateTypeField;
         
@@ -16415,7 +16415,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StayDuration MinimumStay
+        public TripEngineService.StayDuration MinimumStay
         {
             get
             {
@@ -16441,7 +16441,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money Rate
+        public TripEngineService.Money Rate
         {
             get
             {
@@ -16646,13 +16646,13 @@ namespace TripsEngineService
         
         private bool AtAirportField;
         
-        private TripsEngineService.HoursOfOperation[] HoursField;
+        private TripEngineService.HoursOfOperation[] HoursField;
         
         private bool InTerminalField;
         
-        private TripsEngineService.ShuttleInfo ShuttleInfoField;
+        private TripEngineService.ShuttleInfo ShuttleInfoField;
         
-        private TripsEngineService.RentalLocationType TypeField;
+        private TripEngineService.RentalLocationType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public bool AtAirport
@@ -16668,7 +16668,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HoursOfOperation[] Hours
+        public TripEngineService.HoursOfOperation[] Hours
         {
             get
             {
@@ -16694,7 +16694,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ShuttleInfo ShuttleInfo
+        public TripEngineService.ShuttleInfo ShuttleInfo
         {
             get
             {
@@ -16707,7 +16707,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RentalLocationType Type
+        public TripEngineService.RentalLocationType Type
         {
             get
             {
@@ -16726,16 +16726,16 @@ namespace TripsEngineService
     public partial class Mileage : object
     {
         
-        private TripsEngineService.Distance AllowedUnitsField;
+        private TripEngineService.Distance AllowedUnitsField;
         
-        private TripsEngineService.CarCharge[] ExtraMileageChargesField;
+        private TripEngineService.CarCharge[] ExtraMileageChargesField;
         
         private bool IsUnlimitedField;
         
-        private TripsEngineService.CarRateType MileageRateTypeField;
+        private TripEngineService.CarRateType MileageRateTypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Distance AllowedUnits
+        public TripEngineService.Distance AllowedUnits
         {
             get
             {
@@ -16748,7 +16748,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarCharge[] ExtraMileageCharges
+        public TripEngineService.CarCharge[] ExtraMileageCharges
         {
             get
             {
@@ -16774,7 +16774,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarRateType MileageRateType
+        public TripEngineService.CarRateType MileageRateType
         {
             get
             {
@@ -16793,19 +16793,19 @@ namespace TripsEngineService
     public partial class Vehicle : object
     {
         
-        private TripsEngineService.CarAirConditioning AirConditioningField;
+        private TripEngineService.CarAirConditioning AirConditioningField;
         
         private int BaggageField;
         
-        private TripsEngineService.PassengerCapacity CapacityField;
+        private TripEngineService.PassengerCapacity CapacityField;
         
-        private TripsEngineService.CarCategory CategoryField;
+        private TripEngineService.CarCategory CategoryField;
         
-        private TripsEngineService.Doors DoorsField;
+        private TripEngineService.Doors DoorsField;
         
-        private TripsEngineService.CarDrive DriveField;
+        private TripEngineService.CarDrive DriveField;
         
-        private TripsEngineService.CarFuel FuelField;
+        private TripEngineService.CarFuel FuelField;
         
         private string ImageField;
         
@@ -16813,14 +16813,14 @@ namespace TripsEngineService
         
         private string SippCodeField;
         
-        private TripsEngineService.StateBag[] SupplierSideDataField;
+        private TripEngineService.StateBag[] SupplierSideDataField;
         
-        private TripsEngineService.CarTransmission TransmissionField;
+        private TripEngineService.CarTransmission TransmissionField;
         
-        private TripsEngineService.CarType TypeField;
+        private TripEngineService.CarType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarAirConditioning AirConditioning
+        public TripEngineService.CarAirConditioning AirConditioning
         {
             get
             {
@@ -16846,7 +16846,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PassengerCapacity Capacity
+        public TripEngineService.PassengerCapacity Capacity
         {
             get
             {
@@ -16859,7 +16859,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarCategory Category
+        public TripEngineService.CarCategory Category
         {
             get
             {
@@ -16872,7 +16872,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Doors Doors
+        public TripEngineService.Doors Doors
         {
             get
             {
@@ -16885,7 +16885,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarDrive Drive
+        public TripEngineService.CarDrive Drive
         {
             get
             {
@@ -16898,7 +16898,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarFuel Fuel
+        public TripEngineService.CarFuel Fuel
         {
             get
             {
@@ -16950,7 +16950,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] SupplierSideData
+        public TripEngineService.StateBag[] SupplierSideData
         {
             get
             {
@@ -16963,7 +16963,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarTransmission Transmission
+        public TripEngineService.CarTransmission Transmission
         {
             get
             {
@@ -16976,7 +16976,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarType Type
+        public TripEngineService.CarType Type
         {
             get
             {
@@ -16995,14 +16995,14 @@ namespace TripsEngineService
     public partial class HoursOfOperation : object
     {
         
-        private TripsEngineService.WeekDay DayOfWeekField;
+        private TripEngineService.WeekDay DayOfWeekField;
         
         private string EndTimeField;
         
         private string StartTimeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.WeekDay DayOfWeek
+        public TripEngineService.WeekDay DayOfWeek
         {
             get
             {
@@ -17416,7 +17416,7 @@ namespace TripsEngineService
     public partial class ActivityCategory : object
     {
         
-        private TripsEngineService.ActivityCategoryType CategoryTypeField;
+        private TripEngineService.ActivityCategoryType CategoryTypeField;
         
         private string IdField;
         
@@ -17425,7 +17425,7 @@ namespace TripsEngineService
         private string SupplierCategoryIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivityCategoryType CategoryType
+        public TripEngineService.ActivityCategoryType CategoryType
         {
             get
             {
@@ -17483,7 +17483,7 @@ namespace TripsEngineService
     public partial class ActivityOption : object
     {
         
-        private TripsEngineService.Date[] AvailableOnField;
+        private TripEngineService.Date[] AvailableOnField;
         
         private string DescriptionField;
         
@@ -17493,12 +17493,12 @@ namespace TripsEngineService
         
         private string NameField;
         
-        private TripsEngineService.ActivityPassengerFare[] PassengerFaresField;
+        private TripEngineService.ActivityPassengerFare[] PassengerFaresField;
         
-        private TripsEngineService.Date SelectedDateTimeField;
+        private TripEngineService.Date SelectedDateTimeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Date[] AvailableOn
+        public TripEngineService.Date[] AvailableOn
         {
             get
             {
@@ -17563,7 +17563,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivityPassengerFare[] PassengerFares
+        public TripEngineService.ActivityPassengerFare[] PassengerFares
         {
             get
             {
@@ -17576,7 +17576,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Date SelectedDateTime
+        public TripEngineService.Date SelectedDateTime
         {
             get
             {
@@ -18028,19 +18028,19 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GenericSearchCriterion", Namespace="http://tavisca.com")]
-    public partial class GenericSearchCriterion : TripsEngineService.TripSearchCriterion
+    public partial class GenericSearchCriterion : TripEngineService.TripSearchCriterion
     {
         
-        private TripsEngineService.DateTimeSpan DurationField;
+        private TripEngineService.DateTimeSpan DurationField;
         
-        private TripsEngineService.TravellerInfo[] GuestsField;
+        private TripEngineService.TravellerInfo[] GuestsField;
         
-        private TripsEngineService.Location LocationField;
+        private TripEngineService.Location LocationField;
         
         private string NameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DateTimeSpan Duration
+        public TripEngineService.DateTimeSpan Duration
         {
             get
             {
@@ -18053,7 +18053,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TravellerInfo[] Guests
+        public TripEngineService.TravellerInfo[] Guests
         {
             get
             {
@@ -18066,7 +18066,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Location Location
+        public TripEngineService.Location Location
         {
             get
             {
@@ -18095,26 +18095,26 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripSearchCriterion", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelSearchCriterion))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirSearchCriterion))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarSearchCriterion))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ActivitySearchCriterion))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.GenericSearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelSearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirSearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarSearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ActivitySearchCriterion))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.GenericSearchCriterion))]
     public partial class TripSearchCriterion : object
     {
         
-        private TripsEngineService.StateBag[] AttributesField;
+        private TripEngineService.StateBag[] AttributesField;
         
         private bool MatrixResultsField;
         
         private int MaximumResultsField;
         
-        private TripsEngineService.PointOfSale PosField;
+        private TripEngineService.PointOfSale PosField;
         
         private string PriceCurrencyCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] Attributes
+        public TripEngineService.StateBag[] Attributes
         {
             get
             {
@@ -18153,7 +18153,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PointOfSale Pos
+        public TripEngineService.PointOfSale Pos
         {
             get
             {
@@ -18182,39 +18182,39 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchCriterion", Namespace="http://tavisca.com")]
-    public partial class HotelSearchCriterion : TripsEngineService.TripSearchCriterion
+    public partial class HotelSearchCriterion : TripEngineService.TripSearchCriterion
     {
         
-        private TripsEngineService.PassengerTypeQuantity[] GuestsField;
+        private TripEngineService.PassengerTypeQuantity[] GuestsField;
         
         private bool IsReturnRoomsField;
         
-        private TripsEngineService.Location LocationField;
+        private TripEngineService.Location LocationField;
         
         private string NoOfBedRoomsField;
         
         private int NoOfRoomsField;
         
-        private TripsEngineService.HotelSearchProcessingInfo ProcessingInfoField;
+        private TripEngineService.HotelSearchProcessingInfo ProcessingInfoField;
         
-        private TripsEngineService.HotelProperty[] PropertiesToSearchField;
+        private TripEngineService.HotelProperty[] PropertiesToSearchField;
         
-        private TripsEngineService.RoomOccupancyType[] RoomOccupancyTypesField;
+        private TripEngineService.RoomOccupancyType[] RoomOccupancyTypesField;
         
         private string SearchBehaviorField;
         
         private string[] SearchCategoriesField;
         
-        private TripsEngineService.HotelSearchType SearchTypeField;
+        private TripEngineService.HotelSearchType SearchTypeField;
         
-        private TripsEngineService.DateTimeSpan StayPeriodField;
+        private TripEngineService.DateTimeSpan StayPeriodField;
         
-        private TripsEngineService.Tag[] TagsField;
+        private TripEngineService.Tag[] TagsField;
         
-        private TripsEngineService.HotelSearchPreference TravelPreferenceField;
+        private TripEngineService.HotelSearchPreference TravelPreferenceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PassengerTypeQuantity[] Guests
+        public TripEngineService.PassengerTypeQuantity[] Guests
         {
             get
             {
@@ -18240,7 +18240,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Location Location
+        public TripEngineService.Location Location
         {
             get
             {
@@ -18279,7 +18279,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelSearchProcessingInfo ProcessingInfo
+        public TripEngineService.HotelSearchProcessingInfo ProcessingInfo
         {
             get
             {
@@ -18292,7 +18292,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelProperty[] PropertiesToSearch
+        public TripEngineService.HotelProperty[] PropertiesToSearch
         {
             get
             {
@@ -18305,7 +18305,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RoomOccupancyType[] RoomOccupancyTypes
+        public TripEngineService.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -18344,7 +18344,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelSearchType SearchType
+        public TripEngineService.HotelSearchType SearchType
         {
             get
             {
@@ -18357,7 +18357,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DateTimeSpan StayPeriod
+        public TripEngineService.DateTimeSpan StayPeriod
         {
             get
             {
@@ -18370,7 +18370,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Tag[] Tags
+        public TripEngineService.Tag[] Tags
         {
             get
             {
@@ -18383,7 +18383,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelSearchPreference TravelPreference
+        public TripEngineService.HotelSearchPreference TravelPreference
         {
             get
             {
@@ -18399,19 +18399,19 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirSearchCriterion", Namespace="http://tavisca.com")]
-    public partial class AirSearchCriterion : TripsEngineService.TripSearchCriterion
+    public partial class AirSearchCriterion : TripEngineService.TripSearchCriterion
     {
         
-        private TripsEngineService.PassengerTypeQuantity[] PassengerInfoSummaryField;
+        private TripEngineService.PassengerTypeQuantity[] PassengerInfoSummaryField;
         
-        private TripsEngineService.AirSearchProcessingInfo ProcessingInfoField;
+        private TripEngineService.AirSearchProcessingInfo ProcessingInfoField;
         
-        private TripsEngineService.OriginDestinationInformation[] SearchSegmentsField;
+        private TripEngineService.OriginDestinationInformation[] SearchSegmentsField;
         
-        private TripsEngineService.AirSearchPreference TravelPreferenceField;
+        private TripEngineService.AirSearchPreference TravelPreferenceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PassengerTypeQuantity[] PassengerInfoSummary
+        public TripEngineService.PassengerTypeQuantity[] PassengerInfoSummary
         {
             get
             {
@@ -18424,7 +18424,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirSearchProcessingInfo ProcessingInfo
+        public TripEngineService.AirSearchProcessingInfo ProcessingInfo
         {
             get
             {
@@ -18437,7 +18437,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.OriginDestinationInformation[] SearchSegments
+        public TripEngineService.OriginDestinationInformation[] SearchSegments
         {
             get
             {
@@ -18450,7 +18450,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirSearchPreference TravelPreference
+        public TripEngineService.AirSearchPreference TravelPreference
         {
             get
             {
@@ -18466,23 +18466,23 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarSearchCriterion", Namespace="http://tavisca.com")]
-    public partial class CarSearchCriterion : TripsEngineService.TripSearchCriterion
+    public partial class CarSearchCriterion : TripEngineService.TripSearchCriterion
     {
         
-        private TripsEngineService.CarSearchPreference CarPreferenceField;
+        private TripEngineService.CarSearchPreference CarPreferenceField;
         
-        private TripsEngineService.CarDiscountCode[] DiscountCodesField;
+        private TripEngineService.CarDiscountCode[] DiscountCodesField;
         
-        private TripsEngineService.Location DropOffLocationField;
+        private TripEngineService.Location DropOffLocationField;
         
-        private TripsEngineService.Location PickupLocationField;
+        private TripEngineService.Location PickupLocationField;
         
-        private TripsEngineService.CarSearchProcessingInfo ProcessingInfoField;
+        private TripEngineService.CarSearchProcessingInfo ProcessingInfoField;
         
-        private TripsEngineService.DateTimeSpan RentalPeriodField;
+        private TripEngineService.DateTimeSpan RentalPeriodField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarSearchPreference CarPreference
+        public TripEngineService.CarSearchPreference CarPreference
         {
             get
             {
@@ -18495,7 +18495,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarDiscountCode[] DiscountCodes
+        public TripEngineService.CarDiscountCode[] DiscountCodes
         {
             get
             {
@@ -18508,7 +18508,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Location DropOffLocation
+        public TripEngineService.Location DropOffLocation
         {
             get
             {
@@ -18521,7 +18521,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Location PickupLocation
+        public TripEngineService.Location PickupLocation
         {
             get
             {
@@ -18534,7 +18534,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarSearchProcessingInfo ProcessingInfo
+        public TripEngineService.CarSearchProcessingInfo ProcessingInfo
         {
             get
             {
@@ -18547,7 +18547,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DateTimeSpan RentalPeriod
+        public TripEngineService.DateTimeSpan RentalPeriod
         {
             get
             {
@@ -18563,17 +18563,17 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivitySearchCriterion", Namespace="http://tavisca.com")]
-    public partial class ActivitySearchCriterion : TripsEngineService.TripSearchCriterion
+    public partial class ActivitySearchCriterion : TripEngineService.TripSearchCriterion
     {
         
-        private TripsEngineService.Location DestinationField;
+        private TripEngineService.Location DestinationField;
         
-        private TripsEngineService.DateTimeSpan DurationField;
+        private TripEngineService.DateTimeSpan DurationField;
         
-        private TripsEngineService.ActivitySearchProcessingInfo ProcessingInfoField;
+        private TripEngineService.ActivitySearchProcessingInfo ProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Location Destination
+        public TripEngineService.Location Destination
         {
             get
             {
@@ -18586,7 +18586,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DateTimeSpan Duration
+        public TripEngineService.DateTimeSpan Duration
         {
             get
             {
@@ -18599,7 +18599,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivitySearchProcessingInfo ProcessingInfo
+        public TripEngineService.ActivitySearchProcessingInfo ProcessingInfo
         {
             get
             {
@@ -18620,7 +18620,7 @@ namespace TripsEngineService
         
         private int AgeField;
         
-        private TripsEngineService.PurchaseType TypeField;
+        private TripEngineService.PurchaseType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public int Age
@@ -18636,7 +18636,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PurchaseType Type
+        public TripEngineService.PurchaseType Type
         {
             get
             {
@@ -18655,22 +18655,22 @@ namespace TripsEngineService
     public partial class HotelSearchProcessingInfo : object
     {
         
-        private TripsEngineService.HotelDisplayOrder DisplayOrderField;
+        private TripEngineService.HotelDisplayOrder DisplayOrderField;
         
-        private TripsEngineService.HotelFareSource[] FareSourcesField;
+        private TripEngineService.HotelFareSource[] FareSourcesField;
         
-        private TripsEngineService.FareType[] FareTypesField;
+        private TripEngineService.FareType[] FareTypesField;
         
-        private TripsEngineService.HotelContentPreference[] HotelContentPreferencesField;
+        private TripEngineService.HotelContentPreference[] HotelContentPreferencesField;
         
-        private TripsEngineService.HotelSearchNearByDates HotelSearchNearByDatesField;
+        private TripEngineService.HotelSearchNearByDates HotelSearchNearByDatesField;
         
-        private TripsEngineService.GeoCode POIGeoCodeField;
+        private TripEngineService.GeoCode POIGeoCodeField;
         
-        private TripsEngineService.PreferenceSortInfo[] PreferenceSortInfoListField;
+        private TripEngineService.PreferenceSortInfo[] PreferenceSortInfoListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelDisplayOrder DisplayOrder
+        public TripEngineService.HotelDisplayOrder DisplayOrder
         {
             get
             {
@@ -18683,7 +18683,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelFareSource[] FareSources
+        public TripEngineService.HotelFareSource[] FareSources
         {
             get
             {
@@ -18696,7 +18696,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FareType[] FareTypes
+        public TripEngineService.FareType[] FareTypes
         {
             get
             {
@@ -18709,7 +18709,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelContentPreference[] HotelContentPreferences
+        public TripEngineService.HotelContentPreference[] HotelContentPreferences
         {
             get
             {
@@ -18722,7 +18722,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelSearchNearByDates HotelSearchNearByDates
+        public TripEngineService.HotelSearchNearByDates HotelSearchNearByDates
         {
             get
             {
@@ -18735,7 +18735,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.GeoCode POIGeoCode
+        public TripEngineService.GeoCode POIGeoCode
         {
             get
             {
@@ -18748,7 +18748,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PreferenceSortInfo[] PreferenceSortInfoList
+        public TripEngineService.PreferenceSortInfo[] PreferenceSortInfoList
         {
             get
             {
@@ -18764,41 +18764,41 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchPreference", Namespace="http://tavisca.com")]
-    public partial class HotelSearchPreference : TripsEngineService.TravelPreference
+    public partial class HotelSearchPreference : TripEngineService.TravelPreference
     {
         
-        private TripsEngineService.AmenityPreference[] AmenitiesField;
+        private TripEngineService.AmenityPreference[] AmenitiesField;
         
         private string[] CityNamePreferenceListField;
         
-        private TripsEngineService.FareType[] FareTypeListField;
+        private TripEngineService.FareType[] FareTypeListField;
         
-        private TripsEngineService.CompanyPreference[] HotelChainsField;
+        private TripEngineService.CompanyPreference[] HotelChainsField;
         
-        private TripsEngineService.HotelNamePreference HotelNamePreferenceField;
+        private TripEngineService.HotelNamePreference HotelNamePreferenceField;
         
         private string[] ItineraryRphListToFilterField;
         
-        private TripsEngineService.Distance MaxDistanceField;
+        private TripEngineService.Distance MaxDistanceField;
         
         private int MaxNumberOfBedRoomsField;
         
         private int MaxOccupancyField;
         
-        private TripsEngineService.Distance MinDistanceField;
+        private TripEngineService.Distance MinDistanceField;
         
         private int MinNumberOfBedRoomsField;
         
         private int MinOccupancyField;
         
-        private TripsEngineService.HotelPaymentType[] PaymentTypesField;
+        private TripEngineService.HotelPaymentType[] PaymentTypesField;
         
-        private TripsEngineService.RateRangePreference RateRangePreferenceField;
+        private TripEngineService.RateRangePreference RateRangePreferenceField;
         
-        private TripsEngineService.HotelRating[] RatingListField;
+        private TripEngineService.HotelRating[] RatingListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AmenityPreference[] Amenities
+        public TripEngineService.AmenityPreference[] Amenities
         {
             get
             {
@@ -18824,7 +18824,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FareType[] FareTypeList
+        public TripEngineService.FareType[] FareTypeList
         {
             get
             {
@@ -18837,7 +18837,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CompanyPreference[] HotelChains
+        public TripEngineService.CompanyPreference[] HotelChains
         {
             get
             {
@@ -18850,7 +18850,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelNamePreference HotelNamePreference
+        public TripEngineService.HotelNamePreference HotelNamePreference
         {
             get
             {
@@ -18876,7 +18876,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Distance MaxDistance
+        public TripEngineService.Distance MaxDistance
         {
             get
             {
@@ -18915,7 +18915,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Distance MinDistance
+        public TripEngineService.Distance MinDistance
         {
             get
             {
@@ -18954,7 +18954,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelPaymentType[] PaymentTypes
+        public TripEngineService.HotelPaymentType[] PaymentTypes
         {
             get
             {
@@ -18967,7 +18967,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RateRangePreference RateRangePreference
+        public TripEngineService.RateRangePreference RateRangePreference
         {
             get
             {
@@ -18980,7 +18980,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelRating[] RatingList
+        public TripEngineService.HotelRating[] RatingList
         {
             get
             {
@@ -19001,7 +19001,7 @@ namespace TripsEngineService
         
         private string OccupancyCodeField;
         
-        private TripsEngineService.PassengerTypeQuantity[] PaxQuantitiesField;
+        private TripEngineService.PassengerTypeQuantity[] PaxQuantitiesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string OccupancyCode
@@ -19017,7 +19017,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PassengerTypeQuantity[] PaxQuantities
+        public TripEngineService.PassengerTypeQuantity[] PaxQuantities
         {
             get
             {
@@ -19205,14 +19205,14 @@ namespace TripsEngineService
     public partial class PreferenceSortInfo : object
     {
         
-        private TripsEngineService.FareType FareTypeField;
+        private TripEngineService.FareType FareTypeField;
         
         private bool FareTypeSpecifiedField;
         
         private string VendorCodeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FareType FareType
+        public TripEngineService.FareType FareType
         {
             get
             {
@@ -19254,15 +19254,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TravelPreference", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirSearchPreference))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarSearchPreference))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelSearchPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirSearchPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarSearchPreference))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelSearchPreference))]
     public partial class TravelPreference : object
     {
         
         private string SpecialRequestField;
         
-        private TripsEngineService.CompanyPreference[] VendorPreferencesField;
+        private TripEngineService.CompanyPreference[] VendorPreferencesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string SpecialRequest
@@ -19278,7 +19278,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CompanyPreference[] VendorPreferences
+        public TripEngineService.CompanyPreference[] VendorPreferences
         {
             get
             {
@@ -19294,18 +19294,18 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirSearchPreference", Namespace="http://tavisca.com")]
-    public partial class AirSearchPreference : TripsEngineService.TravelPreference
+    public partial class AirSearchPreference : TripEngineService.TravelPreference
     {
         
         private bool AllowMixedAirlinesField;
         
-        private TripsEngineService.DateTimeSpan ArrivalTimeRangeField;
+        private TripEngineService.DateTimeSpan ArrivalTimeRangeField;
         
-        private TripsEngineService.CabinClass[] CabinClassesPreferredField;
+        private TripEngineService.CabinClass[] CabinClassesPreferredField;
         
-        private TripsEngineService.Location ConnectionCityField;
+        private TripEngineService.Location ConnectionCityField;
         
-        private TripsEngineService.DateTimeSpan DepartureTimeRangeField;
+        private TripEngineService.DateTimeSpan DepartureTimeRangeField;
         
         private bool DirectConnectField;
         
@@ -19313,7 +19313,7 @@ namespace TripsEngineService
         
         private bool ETicketOnlyField;
         
-        private TripsEngineService.FareType[] FareTypeListField;
+        private TripEngineService.FareType[] FareTypeListField;
         
         private string[] ItineraryRphListToFilterField;
         
@@ -19325,15 +19325,15 @@ namespace TripsEngineService
         
         private bool MaxStopsQuantitySpecifiedField;
         
-        private TripsEngineService.MealType MealPreferenceField;
+        private TripEngineService.MealType MealPreferenceField;
         
         private int[] NoOfStopsListField;
         
-        private TripsEngineService.RateRangePreference RateRangePreferenceField;
+        private TripEngineService.RateRangePreference RateRangePreferenceField;
         
         private bool RefundableFareOnlyField;
         
-        private TripsEngineService.SeatType SeatingPreferenceField;
+        private TripEngineService.SeatType SeatingPreferenceField;
         
         private bool UnRestrictedFareField;
         
@@ -19351,7 +19351,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DateTimeSpan ArrivalTimeRange
+        public TripEngineService.DateTimeSpan ArrivalTimeRange
         {
             get
             {
@@ -19364,7 +19364,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CabinClass[] CabinClassesPreferred
+        public TripEngineService.CabinClass[] CabinClassesPreferred
         {
             get
             {
@@ -19377,7 +19377,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Location ConnectionCity
+        public TripEngineService.Location ConnectionCity
         {
             get
             {
@@ -19390,7 +19390,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.DateTimeSpan DepartureTimeRange
+        public TripEngineService.DateTimeSpan DepartureTimeRange
         {
             get
             {
@@ -19442,7 +19442,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FareType[] FareTypeList
+        public TripEngineService.FareType[] FareTypeList
         {
             get
             {
@@ -19520,7 +19520,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.MealType MealPreference
+        public TripEngineService.MealType MealPreference
         {
             get
             {
@@ -19546,7 +19546,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RateRangePreference RateRangePreference
+        public TripEngineService.RateRangePreference RateRangePreference
         {
             get
             {
@@ -19572,7 +19572,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.SeatType SeatingPreference
+        public TripEngineService.SeatType SeatingPreference
         {
             get
             {
@@ -19601,25 +19601,25 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarSearchPreference", Namespace="http://tavisca.com")]
-    public partial class CarSearchPreference : TripsEngineService.TravelPreference
+    public partial class CarSearchPreference : TripEngineService.TravelPreference
     {
         
-        private TripsEngineService.CarAirConditioning ACPreferenceField;
+        private TripEngineService.CarAirConditioning ACPreferenceField;
         
-        private TripsEngineService.CarCategory[] CarClassListField;
+        private TripEngineService.CarCategory[] CarClassListField;
         
-        private TripsEngineService.CarType[] CarTypeListField;
+        private TripEngineService.CarType[] CarTypeListField;
         
-        private TripsEngineService.FareType[] FareTypeListField;
+        private TripEngineService.FareType[] FareTypeListField;
         
-        private TripsEngineService.RateRangePreference RateRangePreferenceField;
+        private TripEngineService.RateRangePreference RateRangePreferenceField;
         
         private string SippCodeField;
         
-        private TripsEngineService.CarTransmission TransmissionField;
+        private TripEngineService.CarTransmission TransmissionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarAirConditioning ACPreference
+        public TripEngineService.CarAirConditioning ACPreference
         {
             get
             {
@@ -19632,7 +19632,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarCategory[] CarClassList
+        public TripEngineService.CarCategory[] CarClassList
         {
             get
             {
@@ -19645,7 +19645,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarType[] CarTypeList
+        public TripEngineService.CarType[] CarTypeList
         {
             get
             {
@@ -19658,7 +19658,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FareType[] FareTypeList
+        public TripEngineService.FareType[] FareTypeList
         {
             get
             {
@@ -19671,7 +19671,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RateRangePreference RateRangePreference
+        public TripEngineService.RateRangePreference RateRangePreference
         {
             get
             {
@@ -19697,7 +19697,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarTransmission Transmission
+        public TripEngineService.CarTransmission Transmission
         {
             get
             {
@@ -19718,7 +19718,7 @@ namespace TripsEngineService
         
         private string NameField;
         
-        private TripsEngineService.PreferLevel PreferLevelField;
+        private TripEngineService.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public string Name
@@ -19734,7 +19734,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PreferLevel PreferLevel
+        public TripEngineService.PreferLevel PreferLevel
         {
             get
             {
@@ -19753,14 +19753,14 @@ namespace TripsEngineService
     public partial class RateRangePreference : object
     {
         
-        private TripsEngineService.Money MaxRateField;
+        private TripEngineService.Money MaxRateField;
         
-        private TripsEngineService.Money MinRateField;
+        private TripEngineService.Money MinRateField;
         
-        private TripsEngineService.PreferLevel PreferLevelField;
+        private TripEngineService.PreferLevel PreferLevelField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money MaxRate
+        public TripEngineService.Money MaxRate
         {
             get
             {
@@ -19773,7 +19773,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Money MinRate
+        public TripEngineService.Money MinRate
         {
             get
             {
@@ -19786,7 +19786,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PreferLevel PreferLevel
+        public TripEngineService.PreferLevel PreferLevel
         {
             get
             {
@@ -19849,15 +19849,15 @@ namespace TripsEngineService
         
         private bool CompressResultsField;
         
-        private TripsEngineService.AirDisplayOrder DisplayOrderField;
+        private TripEngineService.AirDisplayOrder DisplayOrderField;
         
-        private TripsEngineService.AirFareSource[] FareSourcesField;
+        private TripEngineService.AirFareSource[] FareSourcesField;
         
-        private TripsEngineService.FareType[] FareTypesField;
+        private TripEngineService.FareType[] FareTypesField;
         
-        private TripsEngineService.AirItineraryType ItineraryTypeField;
+        private TripEngineService.AirItineraryType ItineraryTypeField;
         
-        private TripsEngineService.PreferenceSortInfo[] PreferenceSortInfoListField;
+        private TripEngineService.PreferenceSortInfo[] PreferenceSortInfoListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public bool CompressResults
@@ -19873,7 +19873,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirDisplayOrder DisplayOrder
+        public TripEngineService.AirDisplayOrder DisplayOrder
         {
             get
             {
@@ -19886,7 +19886,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirFareSource[] FareSources
+        public TripEngineService.AirFareSource[] FareSources
         {
             get
             {
@@ -19899,7 +19899,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FareType[] FareTypes
+        public TripEngineService.FareType[] FareTypes
         {
             get
             {
@@ -19912,7 +19912,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirItineraryType ItineraryType
+        public TripEngineService.AirItineraryType ItineraryType
         {
             get
             {
@@ -19925,7 +19925,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PreferenceSortInfo[] PreferenceSortInfoList
+        public TripEngineService.PreferenceSortInfo[] PreferenceSortInfoList
         {
             get
             {
@@ -19944,26 +19944,26 @@ namespace TripsEngineService
     public partial class OriginDestinationInformation : object
     {
         
-        private TripsEngineService.TravelDateTime DepartureDateTimeField;
+        private TripEngineService.TravelDateTime DepartureDateTimeField;
         
-        private TripsEngineService.AlternateAirportInfo DestAltArptsInfoField;
+        private TripEngineService.AlternateAirportInfo DestAltArptsInfoField;
         
-        private TripsEngineService.Location DestinationLocationField;
+        private TripEngineService.Location DestinationLocationField;
         
-        private TripsEngineService.Location[] ExcludeConnectionCityField;
+        private TripEngineService.Location[] ExcludeConnectionCityField;
         
         private string[] ExcludeServiceClassField;
         
-        private TripsEngineService.Location[] IncludeConnectionCityField;
+        private TripEngineService.Location[] IncludeConnectionCityField;
         
         private string[] IncludeServiceClassField;
         
-        private TripsEngineService.AlternateAirportInfo OriginAltArptsInfoField;
+        private TripEngineService.AlternateAirportInfo OriginAltArptsInfoField;
         
-        private TripsEngineService.Location OriginLocationField;
+        private TripEngineService.Location OriginLocationField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TravelDateTime DepartureDateTime
+        public TripEngineService.TravelDateTime DepartureDateTime
         {
             get
             {
@@ -19976,7 +19976,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AlternateAirportInfo DestAltArptsInfo
+        public TripEngineService.AlternateAirportInfo DestAltArptsInfo
         {
             get
             {
@@ -19989,7 +19989,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Location DestinationLocation
+        public TripEngineService.Location DestinationLocation
         {
             get
             {
@@ -20002,7 +20002,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Location[] ExcludeConnectionCity
+        public TripEngineService.Location[] ExcludeConnectionCity
         {
             get
             {
@@ -20028,7 +20028,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Location[] IncludeConnectionCity
+        public TripEngineService.Location[] IncludeConnectionCity
         {
             get
             {
@@ -20054,7 +20054,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AlternateAirportInfo OriginAltArptsInfo
+        public TripEngineService.AlternateAirportInfo OriginAltArptsInfo
         {
             get
             {
@@ -20067,7 +20067,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Location OriginLocation
+        public TripEngineService.Location OriginLocation
         {
             get
             {
@@ -20201,7 +20201,7 @@ namespace TripsEngineService
         
         private bool EnabledField;
         
-        private TripsEngineService.Distance RadiusField;
+        private TripEngineService.Distance RadiusField;
         
         private bool RadiusSpecifiedField;
         
@@ -20245,7 +20245,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Distance Radius
+        public TripEngineService.Distance Radius
         {
             get
             {
@@ -20277,14 +20277,14 @@ namespace TripsEngineService
     public partial class CarSearchProcessingInfo : object
     {
         
-        private TripsEngineService.CarDisplayOrder CarDisplayOrderField;
+        private TripEngineService.CarDisplayOrder CarDisplayOrderField;
         
-        private TripsEngineService.CarFareSource[] CarFareSourcesField;
+        private TripEngineService.CarFareSource[] CarFareSourcesField;
         
-        private TripsEngineService.FareType[] CarFareTypesField;
+        private TripEngineService.FareType[] CarFareTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarDisplayOrder CarDisplayOrder
+        public TripEngineService.CarDisplayOrder CarDisplayOrder
         {
             get
             {
@@ -20297,7 +20297,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarFareSource[] CarFareSources
+        public TripEngineService.CarFareSource[] CarFareSources
         {
             get
             {
@@ -20310,7 +20310,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FareType[] CarFareTypes
+        public TripEngineService.FareType[] CarFareTypes
         {
             get
             {
@@ -20359,14 +20359,14 @@ namespace TripsEngineService
     public partial class ActivitySearchProcessingInfo : object
     {
         
-        private TripsEngineService.ActivityDisplayOrder DisplayOrderField;
+        private TripEngineService.ActivityDisplayOrder DisplayOrderField;
         
         private bool IncludeActivityPhotosField;
         
         private bool IncludeActivityReviewsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivityDisplayOrder DisplayOrder
+        public TripEngineService.ActivityDisplayOrder DisplayOrder
         {
             get
             {
@@ -20453,7 +20453,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripRemark", Namespace="http://tavisca.com")]
-    public partial class TripRemark : TripsEngineService.Remark
+    public partial class TripRemark : TripEngineService.Remark
     {
         
         private string AddedByField;
@@ -20490,10 +20490,10 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PNRRemark", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.GeneralRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.OSIRemark))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.SpecializedRemark))]
-    public partial class PNRRemark : TripsEngineService.Remark
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.GeneralRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.OSIRemark))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.SpecializedRemark))]
+    public partial class PNRRemark : TripEngineService.Remark
     {
         
         private int LineNumberField;
@@ -20545,14 +20545,14 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="GeneralRemark", Namespace="http://tavisca.com")]
-    public partial class GeneralRemark : TripsEngineService.PNRRemark
+    public partial class GeneralRemark : TripEngineService.PNRRemark
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="OSIRemark", Namespace="http://tavisca.com")]
-    public partial class OSIRemark : TripsEngineService.PNRRemark
+    public partial class OSIRemark : TripEngineService.PNRRemark
     {
         
         private string AirlineCodeField;
@@ -20574,7 +20574,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SpecializedRemark", Namespace="http://tavisca.com")]
-    public partial class SpecializedRemark : TripsEngineService.PNRRemark
+    public partial class SpecializedRemark : TripEngineService.PNRRemark
     {
         
         private string AlphabetField;
@@ -20705,7 +20705,7 @@ namespace TripsEngineService
     public partial class SecureAuthenticationRequest : object
     {
         
-        private TripsEngineService.StateBag[] AdditionalInfoField;
+        private TripEngineService.StateBag[] AdditionalInfoField;
         
         private string MDField;
         
@@ -20714,7 +20714,7 @@ namespace TripsEngineService
         private int PaymentRphField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] AdditionalInfo
+        public TripEngineService.StateBag[] AdditionalInfo
         {
             get
             {
@@ -20772,12 +20772,12 @@ namespace TripsEngineService
     public partial class TripRetrieveCriterion : object
     {
         
-        private TripsEngineService.AggregateMatchPreference AggregateMatchPreferenceField;
+        private TripEngineService.AggregateMatchPreference AggregateMatchPreferenceField;
         
-        private TripsEngineService.SingleMatchPreference SingleMatchPreferenceField;
+        private TripEngineService.SingleMatchPreference SingleMatchPreferenceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AggregateMatchPreference AggregateMatchPreference
+        public TripEngineService.AggregateMatchPreference AggregateMatchPreference
         {
             get
             {
@@ -20790,7 +20790,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.SingleMatchPreference SingleMatchPreference
+        public TripEngineService.SingleMatchPreference SingleMatchPreference
         {
             get
             {
@@ -20813,9 +20813,9 @@ namespace TripsEngineService
         
         private System.DateTime BeforeDateField;
         
-        private TripsEngineService.CompareDate CompareAfterDateField;
+        private TripEngineService.CompareDate CompareAfterDateField;
         
-        private TripsEngineService.CompareDate CompareBeforeDateField;
+        private TripEngineService.CompareDate CompareBeforeDateField;
         
         private string DealerIdField;
         
@@ -20837,7 +20837,7 @@ namespace TripsEngineService
         
         private long PassengerIDField;
         
-        private TripsEngineService.TripStatus StatusField;
+        private TripEngineService.TripStatus StatusField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime AfterDate
@@ -20866,7 +20866,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CompareDate CompareAfterDate
+        public TripEngineService.CompareDate CompareAfterDate
         {
             get
             {
@@ -20879,7 +20879,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CompareDate CompareBeforeDate
+        public TripEngineService.CompareDate CompareBeforeDate
         {
             get
             {
@@ -21022,7 +21022,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripStatus Status
+        public TripEngineService.TripStatus Status
         {
             get
             {
@@ -21130,21 +21130,21 @@ namespace TripsEngineService
         
         private bool IsStatusPresentField;
         
-        private TripsEngineService.OrderSortedTripFoldersBy OrderSortedTripFoldersByField;
+        private TripEngineService.OrderSortedTripFoldersBy OrderSortedTripFoldersByField;
         
         private string OwnerNameField;
         
         private long PackageCodeField;
         
-        private TripsEngineService.PagingDetail PagingDetailsField;
+        private TripEngineService.PagingDetail PagingDetailsField;
         
         private string PassengerFirstNameField;
         
         private string PassengerLastNameField;
         
-        private TripsEngineService.ProductType ProductTypeField;
+        private TripEngineService.ProductType ProductTypeField;
         
-        private TripsEngineService.SortTripFolderBy SortTripFolderByField;
+        private TripEngineService.SortTripFolderBy SortTripFolderByField;
         
         private string SupplierConfirmationNumberField;
         
@@ -21154,7 +21154,7 @@ namespace TripsEngineService
         
         private System.DateTime TripStartDateField;
         
-        private TripsEngineService.TripStatus[] TripStatusesField;
+        private TripEngineService.TripStatus[] TripStatusesField;
         
         private string VendorConfirmationNumberField;
         
@@ -21224,7 +21224,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.OrderSortedTripFoldersBy OrderSortedTripFoldersBy
+        public TripEngineService.OrderSortedTripFoldersBy OrderSortedTripFoldersBy
         {
             get
             {
@@ -21263,7 +21263,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PagingDetail PagingDetails
+        public TripEngineService.PagingDetail PagingDetails
         {
             get
             {
@@ -21302,7 +21302,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ProductType ProductType
+        public TripEngineService.ProductType ProductType
         {
             get
             {
@@ -21315,7 +21315,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.SortTripFolderBy SortTripFolderBy
+        public TripEngineService.SortTripFolderBy SortTripFolderBy
         {
             get
             {
@@ -21380,7 +21380,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripStatus[] TripStatuses
+        public TripEngineService.TripStatus[] TripStatuses
         {
             get
             {
@@ -21535,9 +21535,9 @@ namespace TripsEngineService
         
         private string AirlineCodeField;
         
-        private TripsEngineService.StateBag[] AttributesField;
+        private TripEngineService.StateBag[] AttributesField;
         
-        private TripsEngineService.CabinClass CabinClassField;
+        private TripEngineService.CabinClass CabinClassField;
         
         private string ClassOfServiceField;
         
@@ -21565,7 +21565,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.StateBag[] Attributes
+        public TripEngineService.StateBag[] Attributes
         {
             get
             {
@@ -21578,7 +21578,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CabinClass CabinClass
+        public TripEngineService.CabinClass CabinClass
         {
             get
             {
@@ -21925,40 +21925,40 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="WebServiceRS", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripProductCancellationDetailsRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderBookRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CompleteBookingRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderRetrieveRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderRetrieveRSWithPaging))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderPriceRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderSaveRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripProductPriceRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderDeleteRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderCancelRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.SeatMapQueryRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirLowFareSearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirFullScheduleSearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirFareRulesRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.AirPriceRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelRoomAvailRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelRoomPriceRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelSearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.HotelItinerarySearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarSearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.CarRateDetailRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ActivitySearchRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ActivityDetailsRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.ReviewPendingRetrieveRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.SaveReviewStatusRS))]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderAssignSeatRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripProductCancellationDetailsRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderBookRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CompleteBookingRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderRetrieveRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderRetrieveRSWithPaging))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderPriceRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderSaveRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripProductPriceRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderDeleteRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderCancelRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.SeatMapQueryRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirLowFareSearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirFullScheduleSearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirFareRulesRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.AirPriceRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelRoomAvailRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelRoomPriceRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelSearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.HotelItinerarySearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarSearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.CarRateDetailRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ActivitySearchRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ActivityDetailsRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.ReviewPendingRetrieveRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.SaveReviewStatusRS))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderAssignSeatRS))]
     public partial class WebServiceRS : object
     {
         
         private string CallIdField;
         
-        private TripsEngineService.ResponseType ResponseRecievedField;
+        private TripEngineService.ResponseType ResponseRecievedField;
         
-        private TripsEngineService.ServiceStatus ServiceStatusField;
+        private TripEngineService.ServiceStatus ServiceStatusField;
         
         private string SessionIdField;
         
@@ -21976,7 +21976,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ResponseType ResponseRecieved
+        public TripEngineService.ResponseType ResponseRecieved
         {
             get
             {
@@ -21989,7 +21989,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ServiceStatus ServiceStatus
+        public TripEngineService.ServiceStatus ServiceStatus
         {
             get
             {
@@ -22018,15 +22018,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripProductCancellationDetailsRS", Namespace="http://tavisca.com")]
-    public partial class TripProductCancellationDetailsRS : TripsEngineService.WebServiceRS
+    public partial class TripProductCancellationDetailsRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.CancellationDetails CancellationDetailsField;
+        private TripEngineService.CancellationDetails CancellationDetailsField;
         
-        private TripsEngineService.ErrorInfo[] ErrorInfoListField;
+        private TripEngineService.ErrorInfo[] ErrorInfoListField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CancellationDetails CancellationDetails
+        public TripEngineService.CancellationDetails CancellationDetails
         {
             get
             {
@@ -22039,7 +22039,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ErrorInfo[] ErrorInfoList
+        public TripEngineService.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22055,15 +22055,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderBookRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderBookRS : TripsEngineService.WebServiceRS
+    public partial class TripFolderBookRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.ErrorInfo[] ErrorInfoListField;
+        private TripEngineService.ErrorInfo[] ErrorInfoListField;
         
-        private TripsEngineService.TripFolder TripFolderField;
+        private TripEngineService.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ErrorInfo[] ErrorInfoList
+        public TripEngineService.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22076,7 +22076,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripFolder TripFolder
+        public TripEngineService.TripFolder TripFolder
         {
             get
             {
@@ -22092,15 +22092,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CompleteBookingRS", Namespace="http://tavisca.com")]
-    public partial class CompleteBookingRS : TripsEngineService.WebServiceRS
+    public partial class CompleteBookingRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.ErrorInfo[] ErrorInfoListField;
+        private TripEngineService.ErrorInfo[] ErrorInfoListField;
         
-        private TripsEngineService.TripFolder TripFolderField;
+        private TripEngineService.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ErrorInfo[] ErrorInfoList
+        public TripEngineService.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22113,7 +22113,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripFolder TripFolder
+        public TripEngineService.TripFolder TripFolder
         {
             get
             {
@@ -22129,14 +22129,14 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderRetrieveRS", Namespace="http://tavisca.com")]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripsEngineService.TripFolderRetrieveRSWithPaging))]
-    public partial class TripFolderRetrieveRS : TripsEngineService.WebServiceRS
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(TripEngineService.TripFolderRetrieveRSWithPaging))]
+    public partial class TripFolderRetrieveRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.TripFolder[] TripFoldersField;
+        private TripEngineService.TripFolder[] TripFoldersField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripFolder[] TripFolders
+        public TripEngineService.TripFolder[] TripFolders
         {
             get
             {
@@ -22152,13 +22152,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderRetrieveRSWithPaging", Namespace="http://tavisca.com")]
-    public partial class TripFolderRetrieveRSWithPaging : TripsEngineService.TripFolderRetrieveRS
+    public partial class TripFolderRetrieveRSWithPaging : TripEngineService.TripFolderRetrieveRS
     {
         
-        private TripsEngineService.PagingDetail PagingDetailField;
+        private TripEngineService.PagingDetail PagingDetailField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PagingDetail PagingDetail
+        public TripEngineService.PagingDetail PagingDetail
         {
             get
             {
@@ -22174,17 +22174,17 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderPriceRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderPriceRS : TripsEngineService.WebServiceRS
+    public partial class TripFolderPriceRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.ErrorInfo[] ErrorInfoListField;
+        private TripEngineService.ErrorInfo[] ErrorInfoListField;
         
-        private TripsEngineService.TripFolder TripFolderField;
+        private TripEngineService.TripFolder TripFolderField;
         
-        private TripsEngineService.TripProcessingInfo TripProcessingInfoField;
+        private TripEngineService.TripProcessingInfo TripProcessingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ErrorInfo[] ErrorInfoList
+        public TripEngineService.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22197,7 +22197,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripFolder TripFolder
+        public TripEngineService.TripFolder TripFolder
         {
             get
             {
@@ -22210,7 +22210,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripProcessingInfo TripProcessingInfo
+        public TripEngineService.TripProcessingInfo TripProcessingInfo
         {
             get
             {
@@ -22226,13 +22226,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderSaveRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderSaveRS : TripsEngineService.WebServiceRS
+    public partial class TripFolderSaveRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.TripFolder TripFolderField;
+        private TripEngineService.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripFolder TripFolder
+        public TripEngineService.TripFolder TripFolder
         {
             get
             {
@@ -22248,15 +22248,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripProductPriceRS", Namespace="http://tavisca.com")]
-    public partial class TripProductPriceRS : TripsEngineService.WebServiceRS
+    public partial class TripProductPriceRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.ErrorInfo[] ErrorInfoListField;
+        private TripEngineService.ErrorInfo[] ErrorInfoListField;
         
-        private TripsEngineService.TripProduct TripProductField;
+        private TripEngineService.TripProduct TripProductField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ErrorInfo[] ErrorInfoList
+        public TripEngineService.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22269,7 +22269,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripProduct TripProduct
+        public TripEngineService.TripProduct TripProduct
         {
             get
             {
@@ -22285,7 +22285,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderDeleteRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderDeleteRS : TripsEngineService.WebServiceRS
+    public partial class TripFolderDeleteRS : TripEngineService.WebServiceRS
     {
         
         private bool SuccessField;
@@ -22307,15 +22307,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderCancelRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderCancelRS : TripsEngineService.WebServiceRS
+    public partial class TripFolderCancelRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.ErrorInfo[] ErrorInfoListField;
+        private TripEngineService.ErrorInfo[] ErrorInfoListField;
         
-        private TripsEngineService.TripFolder TripFolderField;
+        private TripEngineService.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ErrorInfo[] ErrorInfoList
+        public TripEngineService.ErrorInfo[] ErrorInfoList
         {
             get
             {
@@ -22328,7 +22328,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripFolder TripFolder
+        public TripEngineService.TripFolder TripFolder
         {
             get
             {
@@ -22344,13 +22344,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SeatMapQueryRS", Namespace="http://tavisca.com")]
-    public partial class SeatMapQueryRS : TripsEngineService.WebServiceRS
+    public partial class SeatMapQueryRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.SeatMap SeatMapField;
+        private TripEngineService.SeatMap SeatMapField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.SeatMap SeatMap
+        public TripEngineService.SeatMap SeatMap
         {
             get
             {
@@ -22366,16 +22366,16 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirLowFareSearchRS", Namespace="http://tavisca.com")]
-    public partial class AirLowFareSearchRS : TripsEngineService.WebServiceRS
+    public partial class AirLowFareSearchRS : TripEngineService.WebServiceRS
     {
         
         private byte[] CompressedItinerariesField;
         
         private bool IsCompressedField;
         
-        private TripsEngineService.AirItinerary[] ItinerariesField;
+        private TripEngineService.AirItinerary[] ItinerariesField;
         
-        private TripsEngineService.PagingInfo PagingInfoField;
+        private TripEngineService.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public byte[] CompressedItineraries
@@ -22404,7 +22404,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirItinerary[] Itineraries
+        public TripEngineService.AirItinerary[] Itineraries
         {
             get
             {
@@ -22417,7 +22417,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PagingInfo PagingInfo
+        public TripEngineService.PagingInfo PagingInfo
         {
             get
             {
@@ -22433,17 +22433,17 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFullScheduleSearchRS", Namespace="http://tavisca.com")]
-    public partial class AirFullScheduleSearchRS : TripsEngineService.WebServiceRS
+    public partial class AirFullScheduleSearchRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.AirFare[] LegOptionFaresField;
+        private TripEngineService.AirFare[] LegOptionFaresField;
         
-        private TripsEngineService.AirLeg[] LegOptionsField;
+        private TripEngineService.AirLeg[] LegOptionsField;
         
-        private TripsEngineService.AirLeg[] SelectedLegsField;
+        private TripEngineService.AirLeg[] SelectedLegsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirFare[] LegOptionFares
+        public TripEngineService.AirFare[] LegOptionFares
         {
             get
             {
@@ -22456,7 +22456,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirLeg[] LegOptions
+        public TripEngineService.AirLeg[] LegOptions
         {
             get
             {
@@ -22469,7 +22469,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirLeg[] SelectedLegs
+        public TripEngineService.AirLeg[] SelectedLegs
         {
             get
             {
@@ -22485,13 +22485,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirFareRulesRS", Namespace="http://tavisca.com")]
-    public partial class AirFareRulesRS : TripsEngineService.WebServiceRS
+    public partial class AirFareRulesRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.AirFareRules RulesField;
+        private TripEngineService.AirFareRules RulesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirFareRules Rules
+        public TripEngineService.AirFareRules Rules
         {
             get
             {
@@ -22507,13 +22507,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="AirPriceRS", Namespace="http://tavisca.com")]
-    public partial class AirPriceRS : TripsEngineService.WebServiceRS
+    public partial class AirPriceRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.AirItinerary ItineraryField;
+        private TripEngineService.AirItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirItinerary Itinerary
+        public TripEngineService.AirItinerary Itinerary
         {
             get
             {
@@ -22529,15 +22529,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomAvailRS", Namespace="http://tavisca.com")]
-    public partial class HotelRoomAvailRS : TripsEngineService.WebServiceRS
+    public partial class HotelRoomAvailRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.HotelItinerary ItineraryField;
+        private TripEngineService.HotelItinerary ItineraryField;
         
-        private TripsEngineService.RoomOccupancyType[] RoomOccupancyTypesField;
+        private TripEngineService.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelItinerary Itinerary
+        public TripEngineService.HotelItinerary Itinerary
         {
             get
             {
@@ -22550,7 +22550,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RoomOccupancyType[] RoomOccupancyTypes
+        public TripEngineService.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -22566,15 +22566,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelRoomPriceRS", Namespace="http://tavisca.com")]
-    public partial class HotelRoomPriceRS : TripsEngineService.WebServiceRS
+    public partial class HotelRoomPriceRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.HotelItinerary ItineraryField;
+        private TripEngineService.HotelItinerary ItineraryField;
         
-        private TripsEngineService.RoomOccupancyType[] RoomOccupancyTypesField;
+        private TripEngineService.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelItinerary Itinerary
+        public TripEngineService.HotelItinerary Itinerary
         {
             get
             {
@@ -22587,7 +22587,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RoomOccupancyType[] RoomOccupancyTypes
+        public TripEngineService.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -22603,17 +22603,17 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelSearchRS", Namespace="http://tavisca.com")]
-    public partial class HotelSearchRS : TripsEngineService.WebServiceRS
+    public partial class HotelSearchRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.HotelItinerary[] ItinerariesField;
+        private TripEngineService.HotelItinerary[] ItinerariesField;
         
-        private TripsEngineService.PagingInfo PagingInfoField;
+        private TripEngineService.PagingInfo PagingInfoField;
         
-        private TripsEngineService.RoomOccupancyType[] RoomOccupancyTypesField;
+        private TripEngineService.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelItinerary[] Itineraries
+        public TripEngineService.HotelItinerary[] Itineraries
         {
             get
             {
@@ -22626,7 +22626,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PagingInfo PagingInfo
+        public TripEngineService.PagingInfo PagingInfo
         {
             get
             {
@@ -22639,7 +22639,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RoomOccupancyType[] RoomOccupancyTypes
+        public TripEngineService.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -22655,15 +22655,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HotelItinerarySearchRS", Namespace="http://tavisca.com")]
-    public partial class HotelItinerarySearchRS : TripsEngineService.WebServiceRS
+    public partial class HotelItinerarySearchRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.HotelItinerary ItineraryField;
+        private TripEngineService.HotelItinerary ItineraryField;
         
-        private TripsEngineService.RoomOccupancyType[] RoomOccupancyTypesField;
+        private TripEngineService.RoomOccupancyType[] RoomOccupancyTypesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.HotelItinerary Itinerary
+        public TripEngineService.HotelItinerary Itinerary
         {
             get
             {
@@ -22676,7 +22676,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RoomOccupancyType[] RoomOccupancyTypes
+        public TripEngineService.RoomOccupancyType[] RoomOccupancyTypes
         {
             get
             {
@@ -22692,15 +22692,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarSearchRS", Namespace="http://tavisca.com")]
-    public partial class CarSearchRS : TripsEngineService.WebServiceRS
+    public partial class CarSearchRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.CarItinerary[] ItinerariesField;
+        private TripEngineService.CarItinerary[] ItinerariesField;
         
-        private TripsEngineService.PagingInfo PagingInfoField;
+        private TripEngineService.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarItinerary[] Itineraries
+        public TripEngineService.CarItinerary[] Itineraries
         {
             get
             {
@@ -22713,7 +22713,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PagingInfo PagingInfo
+        public TripEngineService.PagingInfo PagingInfo
         {
             get
             {
@@ -22729,13 +22729,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CarRateDetailRS", Namespace="http://tavisca.com")]
-    public partial class CarRateDetailRS : TripsEngineService.WebServiceRS
+    public partial class CarRateDetailRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.CarItinerary ItineraryField;
+        private TripEngineService.CarItinerary ItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.CarItinerary Itinerary
+        public TripEngineService.CarItinerary Itinerary
         {
             get
             {
@@ -22751,15 +22751,15 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivitySearchRS", Namespace="http://tavisca.com")]
-    public partial class ActivitySearchRS : TripsEngineService.WebServiceRS
+    public partial class ActivitySearchRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.ActivityItinerary[] ActivityItinerariesField;
+        private TripEngineService.ActivityItinerary[] ActivityItinerariesField;
         
-        private TripsEngineService.PagingInfo PagingInfoField;
+        private TripEngineService.PagingInfo PagingInfoField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivityItinerary[] ActivityItineraries
+        public TripEngineService.ActivityItinerary[] ActivityItineraries
         {
             get
             {
@@ -22772,7 +22772,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.PagingInfo PagingInfo
+        public TripEngineService.PagingInfo PagingInfo
         {
             get
             {
@@ -22788,13 +22788,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ActivityDetailsRS", Namespace="http://tavisca.com")]
-    public partial class ActivityDetailsRS : TripsEngineService.WebServiceRS
+    public partial class ActivityDetailsRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.ActivityItinerary ActivityItineraryField;
+        private TripEngineService.ActivityItinerary ActivityItineraryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ActivityItinerary ActivityItinerary
+        public TripEngineService.ActivityItinerary ActivityItinerary
         {
             get
             {
@@ -22810,7 +22810,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ReviewPendingRetrieveRS", Namespace="http://schemas.datacontract.org/2004/07/TripsEngine.Rovia.DataContract")]
-    public partial class ReviewPendingRetrieveRS : TripsEngineService.WebServiceRS
+    public partial class ReviewPendingRetrieveRS : TripEngineService.WebServiceRS
     {
         
         private int PendingReviewsCountField;
@@ -22832,7 +22832,7 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="SaveReviewStatusRS", Namespace="http://schemas.datacontract.org/2004/07/TripsEngine.Rovia.DataContract")]
-    public partial class SaveReviewStatusRS : TripsEngineService.WebServiceRS
+    public partial class SaveReviewStatusRS : TripEngineService.WebServiceRS
     {
         
         private bool StatusField;
@@ -22854,13 +22854,13 @@ namespace TripsEngineService
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="TripFolderAssignSeatRS", Namespace="http://tavisca.com")]
-    public partial class TripFolderAssignSeatRS : TripsEngineService.WebServiceRS
+    public partial class TripFolderAssignSeatRS : TripEngineService.WebServiceRS
     {
         
-        private TripsEngineService.TripFolder TripFolderField;
+        private TripEngineService.TripFolder TripFolderField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.TripFolder TripFolder
+        public TripEngineService.TripFolder TripFolder
         {
             get
             {
@@ -22879,10 +22879,10 @@ namespace TripsEngineService
     public partial class SeatMap : object
     {
         
-        private TripsEngineService.ClassOfServiceDetail[] ClassesOfServiceField;
+        private TripEngineService.ClassOfServiceDetail[] ClassesOfServiceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ClassOfServiceDetail[] ClassesOfService
+        public TripEngineService.ClassOfServiceDetail[] ClassesOfService
         {
             get
             {
@@ -22901,20 +22901,20 @@ namespace TripsEngineService
     public partial class ClassOfServiceDetail : object
     {
         
-        private TripsEngineService.Column[] ColumnsField;
+        private TripEngineService.Column[] ColumnsField;
         
         private int EndRowNumberField;
         
-        private TripsEngineService.ArrayOfCabinFeature FeaturesField;
+        private TripEngineService.ArrayOfCabinFeature FeaturesField;
         
         private string NameField;
         
-        private TripsEngineService.Row[] RowsField;
+        private TripEngineService.Row[] RowsField;
         
         private int StartRowNumberField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Column[] Columns
+        public TripEngineService.Column[] Columns
         {
             get
             {
@@ -22940,7 +22940,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ArrayOfCabinFeature Features
+        public TripEngineService.ArrayOfCabinFeature Features
         {
             get
             {
@@ -22966,7 +22966,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Row[] Rows
+        public TripEngineService.Row[] Rows
         {
             get
             {
@@ -22998,14 +22998,14 @@ namespace TripsEngineService
     public partial class Column : object
     {
         
-        private TripsEngineService.ColumnCharacterstics CharacteristicsField;
+        private TripEngineService.ColumnCharacterstics CharacteristicsField;
         
-        private TripsEngineService.ColumnLocation LocationField;
+        private TripEngineService.ColumnLocation LocationField;
         
         private string NameField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ColumnCharacterstics Characteristics
+        public TripEngineService.ColumnCharacterstics Characteristics
         {
             get
             {
@@ -23018,7 +23018,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.ColumnLocation Location
+        public TripEngineService.ColumnLocation Location
         {
             get
             {
@@ -23057,16 +23057,16 @@ namespace TripsEngineService
     public partial class Row : object
     {
         
-        private TripsEngineService.RowCharacterstics CharactersticsField;
+        private TripEngineService.RowCharacterstics CharactersticsField;
         
         private int NumberField;
         
-        private TripsEngineService.Seat[] SeatsField;
+        private TripEngineService.Seat[] SeatsField;
         
-        private TripsEngineService.RowType TypeField;
+        private TripEngineService.RowType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RowCharacterstics Characterstics
+        public TripEngineService.RowCharacterstics Characterstics
         {
             get
             {
@@ -23092,7 +23092,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Seat[] Seats
+        public TripEngineService.Seat[] Seats
         {
             get
             {
@@ -23105,7 +23105,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RowType Type
+        public TripEngineService.RowType Type
         {
             get
             {
@@ -23168,16 +23168,16 @@ namespace TripsEngineService
     public partial class Seat : object
     {
         
-        private TripsEngineService.SeatCharacterstics CharactersticsField;
+        private TripEngineService.SeatCharacterstics CharactersticsField;
         
         private string NameField;
         
-        private TripsEngineService.SeatOccupationStatus StatusField;
+        private TripEngineService.SeatOccupationStatus StatusField;
         
-        private TripsEngineService.AirSeatType TypeField;
+        private TripEngineService.AirSeatType TypeField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.SeatCharacterstics Characterstics
+        public TripEngineService.SeatCharacterstics Characterstics
         {
             get
             {
@@ -23203,7 +23203,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.SeatOccupationStatus Status
+        public TripEngineService.SeatOccupationStatus Status
         {
             get
             {
@@ -23216,7 +23216,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.AirSeatType Type
+        public TripEngineService.AirSeatType Type
         {
             get
             {
@@ -23314,10 +23314,10 @@ namespace TripsEngineService
     public partial class AirFareRules : object
     {
         
-        private TripsEngineService.FlightFareRule[] FlightRulesField;
+        private TripEngineService.FlightFareRule[] FlightRulesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.FlightFareRule[] FlightRules
+        public TripEngineService.FlightFareRule[] FlightRules
         {
             get
             {
@@ -23336,22 +23336,22 @@ namespace TripsEngineService
     public partial class FlightFareRule : object
     {
         
-        private TripsEngineService.Airline AirlineField;
+        private TripEngineService.Airline AirlineField;
         
-        private TripsEngineService.Airport ArrivalAirportField;
+        private TripEngineService.Airport ArrivalAirportField;
         
         private string BookingClassField;
         
-        private TripsEngineService.Airport DepartureAirportField;
+        private TripEngineService.Airport DepartureAirportField;
         
         private System.DateTime DepartureDateField;
         
         private string[] FareBasisCodesField;
         
-        private TripsEngineService.RuleInfo[] RulesField;
+        private TripEngineService.RuleInfo[] RulesField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Airline Airline
+        public TripEngineService.Airline Airline
         {
             get
             {
@@ -23364,7 +23364,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Airport ArrivalAirport
+        public TripEngineService.Airport ArrivalAirport
         {
             get
             {
@@ -23390,7 +23390,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.Airport DepartureAirport
+        public TripEngineService.Airport DepartureAirport
         {
             get
             {
@@ -23429,7 +23429,7 @@ namespace TripsEngineService
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public TripsEngineService.RuleInfo[] Rules
+        public TripEngineService.RuleInfo[] Rules
         {
             get
             {
@@ -23480,52 +23480,52 @@ namespace TripsEngineService
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tavisca.com", ConfigurationName="TripsEngineService.TripsEngine")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://tavisca.com", ConfigurationName="TripEngineService.TripsEngine")]
     public interface TripsEngine
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/AssignAirSeats", ReplyAction="http://tavisca.com/TripsEngine/AssignAirSeatsResponse")]
-        System.Threading.Tasks.Task<TripsEngineService.TripFolderAssignSeatRS> AssignAirSeatsAsync(TripsEngineService.TripFolderAssignSeatRQ req);
+        System.Threading.Tasks.Task<TripEngineService.TripFolderAssignSeatRS> AssignAirSeatsAsync(TripEngineService.TripFolderAssignSeatRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/BookTripFolder", ReplyAction="http://tavisca.com/TripsEngine/BookTripFolderResponse")]
-        System.Threading.Tasks.Task<TripsEngineService.TripFolderBookRS> BookTripFolderAsync(TripsEngineService.TripFolderBookRQ req);
+        System.Threading.Tasks.Task<TripEngineService.TripFolderBookRS> BookTripFolderAsync(TripEngineService.TripFolderBookRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/CompleteBooking", ReplyAction="http://tavisca.com/TripsEngine/CompleteBookingResponse")]
-        System.Threading.Tasks.Task<TripsEngineService.CompleteBookingRS> CompleteBookingAsync(TripsEngineService.CompleteBookingRQ req);
+        System.Threading.Tasks.Task<TripEngineService.CompleteBookingRS> CompleteBookingAsync(TripEngineService.CompleteBookingRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/CancelTripFolder", ReplyAction="http://tavisca.com/TripsEngine/CancelTripFolderResponse")]
-        System.Threading.Tasks.Task<TripsEngineService.TripFolderCancelRS> CancelTripFolderAsync(TripsEngineService.TripFolderCancelRQ req);
+        System.Threading.Tasks.Task<TripEngineService.TripFolderCancelRS> CancelTripFolderAsync(TripEngineService.TripFolderCancelRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/DeleteTripFolder", ReplyAction="http://tavisca.com/TripsEngine/DeleteTripFolderResponse")]
-        System.Threading.Tasks.Task<TripsEngineService.TripFolderDeleteRS> DeleteTripFolderAsync(TripsEngineService.TripFolderDeleteRQ req);
+        System.Threading.Tasks.Task<TripEngineService.TripFolderDeleteRS> DeleteTripFolderAsync(TripEngineService.TripFolderDeleteRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/GetProductCancellationDetails", ReplyAction="http://tavisca.com/TripsEngine/GetProductCancellationDetailsResponse")]
-        System.Threading.Tasks.Task<TripsEngineService.TripProductCancellationDetailsRS> GetProductCancellationDetailsAsync(TripsEngineService.TripProductCancellationDetailsRQ req);
+        System.Threading.Tasks.Task<TripEngineService.TripProductCancellationDetailsRS> GetProductCancellationDetailsAsync(TripEngineService.TripProductCancellationDetailsRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/PriceTripFolder", ReplyAction="http://tavisca.com/TripsEngine/PriceTripFolderResponse")]
-        System.Threading.Tasks.Task<TripsEngineService.TripFolderPriceRS> PriceTripFolderAsync(TripsEngineService.TripFolderPriceRQ req);
+        System.Threading.Tasks.Task<TripEngineService.TripFolderPriceRS> PriceTripFolderAsync(TripEngineService.TripFolderPriceRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/PriceTripProduct", ReplyAction="http://tavisca.com/TripsEngine/PriceTripProductResponse")]
-        System.Threading.Tasks.Task<TripsEngineService.TripProductPriceRS> PriceTripProductAsync(TripsEngineService.TripProductPriceRQ req);
+        System.Threading.Tasks.Task<TripEngineService.TripProductPriceRS> PriceTripProductAsync(TripEngineService.TripProductPriceRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/RetrieveTripFolders", ReplyAction="http://tavisca.com/TripsEngine/RetrieveTripFoldersResponse")]
-        System.Threading.Tasks.Task<TripsEngineService.TripFolderRetrieveRS> RetrieveTripFoldersAsync(TripsEngineService.TripFolderRetrieveRQ req);
+        System.Threading.Tasks.Task<TripEngineService.TripFolderRetrieveRS> RetrieveTripFoldersAsync(TripEngineService.TripFolderRetrieveRQ req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/RetrieveTripFoldersWithPaging", ReplyAction="http://tavisca.com/TripsEngine/RetrieveTripFoldersWithPagingResponse")]
-        System.Threading.Tasks.Task<TripsEngineService.TripFolderRetrieveRSWithPaging> RetrieveTripFoldersWithPagingAsync(TripsEngineService.TripFolderRetrieveRQWithPaging req);
+        System.Threading.Tasks.Task<TripEngineService.TripFolderRetrieveRSWithPaging> RetrieveTripFoldersWithPagingAsync(TripEngineService.TripFolderRetrieveRQWithPaging req);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tavisca.com/TripsEngine/SaveTripFolder", ReplyAction="http://tavisca.com/TripsEngine/SaveTripFolderResponse")]
-        System.Threading.Tasks.Task<TripsEngineService.TripFolderSaveRS> SaveTripFolderAsync(TripsEngineService.TripFolderSaveRQ req);
+        System.Threading.Tasks.Task<TripEngineService.TripFolderSaveRS> SaveTripFolderAsync(TripEngineService.TripFolderSaveRQ req);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    public interface TripsEngineChannel : TripsEngineService.TripsEngine, System.ServiceModel.IClientChannel
+    public interface TripsEngineChannel : TripEngineService.TripsEngine, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "0.5.0.0")]
-    public partial class TripsEngineClient : System.ServiceModel.ClientBase<TripsEngineService.TripsEngine>, TripsEngineService.TripsEngine
+    public partial class TripsEngineClient : System.ServiceModel.ClientBase<TripEngineService.TripsEngine>, TripEngineService.TripsEngine
     {
         
     /// <summary>
@@ -23568,57 +23568,57 @@ namespace TripsEngineService
         {
         }
         
-        public System.Threading.Tasks.Task<TripsEngineService.TripFolderAssignSeatRS> AssignAirSeatsAsync(TripsEngineService.TripFolderAssignSeatRQ req)
+        public System.Threading.Tasks.Task<TripEngineService.TripFolderAssignSeatRS> AssignAirSeatsAsync(TripEngineService.TripFolderAssignSeatRQ req)
         {
             return base.Channel.AssignAirSeatsAsync(req);
         }
         
-        public System.Threading.Tasks.Task<TripsEngineService.TripFolderBookRS> BookTripFolderAsync(TripsEngineService.TripFolderBookRQ req)
+        public System.Threading.Tasks.Task<TripEngineService.TripFolderBookRS> BookTripFolderAsync(TripEngineService.TripFolderBookRQ req)
         {
             return base.Channel.BookTripFolderAsync(req);
         }
         
-        public System.Threading.Tasks.Task<TripsEngineService.CompleteBookingRS> CompleteBookingAsync(TripsEngineService.CompleteBookingRQ req)
+        public System.Threading.Tasks.Task<TripEngineService.CompleteBookingRS> CompleteBookingAsync(TripEngineService.CompleteBookingRQ req)
         {
             return base.Channel.CompleteBookingAsync(req);
         }
         
-        public System.Threading.Tasks.Task<TripsEngineService.TripFolderCancelRS> CancelTripFolderAsync(TripsEngineService.TripFolderCancelRQ req)
+        public System.Threading.Tasks.Task<TripEngineService.TripFolderCancelRS> CancelTripFolderAsync(TripEngineService.TripFolderCancelRQ req)
         {
             return base.Channel.CancelTripFolderAsync(req);
         }
         
-        public System.Threading.Tasks.Task<TripsEngineService.TripFolderDeleteRS> DeleteTripFolderAsync(TripsEngineService.TripFolderDeleteRQ req)
+        public System.Threading.Tasks.Task<TripEngineService.TripFolderDeleteRS> DeleteTripFolderAsync(TripEngineService.TripFolderDeleteRQ req)
         {
             return base.Channel.DeleteTripFolderAsync(req);
         }
         
-        public System.Threading.Tasks.Task<TripsEngineService.TripProductCancellationDetailsRS> GetProductCancellationDetailsAsync(TripsEngineService.TripProductCancellationDetailsRQ req)
+        public System.Threading.Tasks.Task<TripEngineService.TripProductCancellationDetailsRS> GetProductCancellationDetailsAsync(TripEngineService.TripProductCancellationDetailsRQ req)
         {
             return base.Channel.GetProductCancellationDetailsAsync(req);
         }
         
-        public System.Threading.Tasks.Task<TripsEngineService.TripFolderPriceRS> PriceTripFolderAsync(TripsEngineService.TripFolderPriceRQ req)
+        public System.Threading.Tasks.Task<TripEngineService.TripFolderPriceRS> PriceTripFolderAsync(TripEngineService.TripFolderPriceRQ req)
         {
             return base.Channel.PriceTripFolderAsync(req);
         }
         
-        public System.Threading.Tasks.Task<TripsEngineService.TripProductPriceRS> PriceTripProductAsync(TripsEngineService.TripProductPriceRQ req)
+        public System.Threading.Tasks.Task<TripEngineService.TripProductPriceRS> PriceTripProductAsync(TripEngineService.TripProductPriceRQ req)
         {
             return base.Channel.PriceTripProductAsync(req);
         }
         
-        public System.Threading.Tasks.Task<TripsEngineService.TripFolderRetrieveRS> RetrieveTripFoldersAsync(TripsEngineService.TripFolderRetrieveRQ req)
+        public System.Threading.Tasks.Task<TripEngineService.TripFolderRetrieveRS> RetrieveTripFoldersAsync(TripEngineService.TripFolderRetrieveRQ req)
         {
             return base.Channel.RetrieveTripFoldersAsync(req);
         }
         
-        public System.Threading.Tasks.Task<TripsEngineService.TripFolderRetrieveRSWithPaging> RetrieveTripFoldersWithPagingAsync(TripsEngineService.TripFolderRetrieveRQWithPaging req)
+        public System.Threading.Tasks.Task<TripEngineService.TripFolderRetrieveRSWithPaging> RetrieveTripFoldersWithPagingAsync(TripEngineService.TripFolderRetrieveRQWithPaging req)
         {
             return base.Channel.RetrieveTripFoldersWithPagingAsync(req);
         }
         
-        public System.Threading.Tasks.Task<TripsEngineService.TripFolderSaveRS> SaveTripFolderAsync(TripsEngineService.TripFolderSaveRQ req)
+        public System.Threading.Tasks.Task<TripEngineService.TripFolderSaveRS> SaveTripFolderAsync(TripEngineService.TripFolderSaveRQ req)
         {
             return base.Channel.SaveTripFolderAsync(req);
         }

@@ -7,34 +7,38 @@ using HotelReservationEngine.DataParser;
 using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelReservationEngine.Contracts;
 using Newtonsoft.Json;
+using TripEngineService;
+using TripEngine.Model;
+
 namespace HotelReservationEngine.Adapter
 {
     public class RoomPricingAdapter:IHotelFactory
     {
-        HotelEngineClient engineRepresentative = null;
-        HotelRoomPriceRQ hotelRoomPriceRQ = null;
-        HotelRoomPriceRS hotelRoomPriceRS = null;
-        SingleAvailItinerary singleAvailItinerary = null;
+        TripsEngineClient engineClient;
+        TripProductPriceRQ tripProductPriceRQ;
+        TripProductPriceRS tripProductPriceRS;
+        RoomPricingResponse roomPricingResponse;
+        
         public async Task<string> SearchAsync(string request)
         {
             try
             {
-                var deserialize = JsonConvert.DeserializeObject<SingleAvailItinerary>(request);
-                HotelEngineClient hotelEngineClient = new HotelEngineClient();
+                engineClient = new TripsEngineClient();
+                var deserialize = JsonConvert.DeserializeObject<RoomPricingItinerary>(request);
                 RoomPricingParser parser = new RoomPricingParser();
-                HotelRoomPriceRQ hotelRoomPriceRQ = parser.RoomPriceRQParser(deserialize);
-                HotelRoomPriceRS hotelRoomPriceRS = await hotelEngineClient.HotelRoomPriceAsync(hotelRoomPriceRQ);
-                SingleAvailItinerary singleAvailItinerary = parser.RoomPriceRSParser(hotelRoomPriceRS, deserialize);
+                tripProductPriceRQ = parser.RoomPriceRQParser(deserialize);
+                tripProductPriceRS = await engineClient.PriceTripProductAsync(tripProductPriceRQ);
+                roomPricingResponse = parser.RoomPriceRSParser(tripProductPriceRS, deserialize);
             }
-            catch
+            catch(Exception excep)
             {
                 throw;
             }
             finally
             {
-                await engineRepresentative.CloseAsync();
+                await engineClient.CloseAsync();
             }
-            return JsonConvert.SerializeObject(singleAvailItinerary);
+            return JsonConvert.SerializeObject(roomPricingResponse);
         }
     }
 }
