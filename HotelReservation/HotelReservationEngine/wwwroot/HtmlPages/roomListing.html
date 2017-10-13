@@ -10,15 +10,13 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
     <title>Hotel Express</title>
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
     <script src="/Js/roomListingScript.js"></script>
 </head>
 <body>
     <header>
         <h6>.</h6>
     </header>
-    <div class="col-md-12">
+    <div class="col-md-12" id="navibar">
         <nav class="navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -48,13 +46,16 @@
             </div>
         </div>
     </div>
+
+    <script id="x" type="text/x-handlebars-template">
+        <div class="container" id="hotelnm">
+            <h1>{{ hotelname }}</h1>
+        </div>
+    </script>
     <div id="roomList-container">
     </div>
-    <script id="room-item" type="text/x-handlebars-template">
-        <div>
-            <h1>{{hotelname}}</h1>
-        </div>
 
+    <script id="room-item" type="text/x-handlebars-template">
         {{#each this}}
         <div style="border:solid 1px gray;margin-bottom:10px" class="container">
             <div class="col-md-12">

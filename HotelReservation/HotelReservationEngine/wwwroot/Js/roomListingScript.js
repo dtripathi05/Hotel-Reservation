@@ -6,7 +6,7 @@ $(document).ready(function () {
     room = JSON.parse(roomList);
 
     var roomType = [];
-    var img="";
+    var img = "";
     for (var i = 0; i < room.itinerary.rooms.length; i++) {
         img = room.itinerary.hotelProperty.mediaContent[i].url.toString();
         roomType.push({
@@ -20,21 +20,27 @@ $(document).ready(function () {
         });
 
     }
+    var temp = $("#x");
+    var cmp = Handlebars.compile(temp.html());
+    var htm = cmp({ hotelname: roomType[0].hotelname });
+    $("#roomList-container").html(htm);
+
     var template = $('#room-item');
+    //console.log(roomType[0].hotelname);
+    //console.log(template.html());
     var compiledTemplate = Handlebars.compile(template.html());
     var html = compiledTemplate(roomType);
-    $('#roomList-container').html(html);
+    //console.log(html);
+    $('#roomList-container').append(html);
 }
 );
 var roomName
 function roomPrice(data1) {
     console.log(data1);
     roomName = data1.value;
-    for (i = 0; i < room.itinerary.rooms.length; i++)
-    {
+    for (i = 0; i < room.itinerary.rooms.length; i++) {
         var check = room.itinerary.rooms[i].roomName.toString();
-        if (roomName.toString() == check)
-        {
+        if (roomName.toString() == check) {
             var data1 =
                 {
                     "Itinerary": room.itinerary,
