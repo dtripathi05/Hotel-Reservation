@@ -1,14 +1,15 @@
-﻿var room;
+﻿var roomList;
+var room;
 $(document).ready(function () {
 
     roomList = sessionStorage.getItem("rooms");
     room = JSON.parse(roomList);
 
-    var roomTypes = [];
+    var roomType = [];
     var img = "";
     for (var i = 0; i < room.itinerary.rooms.length; i++) {
         img = room.itinerary.hotelProperty.mediaContent[i].url.toString();
-        roomTypes.push({
+        roomType.push({
 
             hotelname: room.itinerary.hotelProperty.name,
             description: room.itinerary.rooms[i].roomDescription,
@@ -19,15 +20,9 @@ $(document).ready(function () {
         });
 
     }
-    var hotel = {
-        hotelname: room.itinerary.hotelProperty.name,
-        address: room.itinerary.hotelProperty.address.completeAddress,
-        imageurl: img,
-        roomTypes: roomTypes
-    };
     var temp = $("#x");
     var cmp = Handlebars.compile(temp.html());
-    var htm = cmp(hotel);
+    var htm = cmp({ hotelname: roomType[0].hotelname });
     $("#roomList-container").html(htm);
 
     var template = $('#room-item');
@@ -37,20 +32,24 @@ $(document).ready(function () {
     var html = compiledTemplate(roomType);
     //console.log(html);
     $('#roomList-container').append(html);
-}
-);
-var roomName
+});
+var roomName;
+var roomSelected;
+
 function roomPrice(data1) {
     console.log(data1);
     roomName = data1.value;
     for (i = 0; i < room.itinerary.rooms.length; i++) {
         var check = room.itinerary.rooms[i].roomName.toString();
+        //roomSelected = room.itinerary.rooms[i];
+        //room.itinerary.rooms = roomSelected;
         if (roomName.toString() == check) {
             var data1 =
                 {
                     "Itinerary": room.itinerary,
                     "Criteria": room.criteria,
-                    "SessionId": room.sessionId
+                    "SessionId": room.sessionId,
+                    "RoomName": roomName
                 };
             $.ajax({
                 type: "post",

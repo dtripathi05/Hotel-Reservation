@@ -9,7 +9,7 @@
     opacity: 0.9;
     font-size: 20px;
     color: white;
-    font-weight:normal;
+    font-weight: normal;
     background-color: black;
     font-family: Dosis;
     padding: 0px;
@@ -26,8 +26,8 @@ btn.btn-primary:active {
 
 label {
     font-size: 20px;
-    font-weight:normal;
-    margin-top:4px;
+    font-weight: normal;
+    margin-top: 6px;
 }
 
 .datePicker {
@@ -69,8 +69,9 @@ label {
 .anchorLink {
     color: black;
 }
+
 h4 {
-margin-bottom:60px;
+    margin-bottom: 60px;
 }
 
 .panel-pricing {
@@ -87,12 +88,13 @@ margin-bottom:60px;
         color: white;
         border-radius: 4px;
         background-color: black;
-        margin-top:4px;
+        margin-top: 4px;
     }
+
 .panel {
-    margin-top:6px;
+    margin-top: 6px;
     border: 1px solid !important;
-    border-color:white;
+    border-color: white;
 }
 
 .panel-pricing .panel-body {
@@ -101,8 +103,7 @@ margin-bottom:60px;
     background-color: black;
     border-bottom: 1px solid white
 }
+
 .panel-footer {
     background-color: black !important;
 }
-
-
