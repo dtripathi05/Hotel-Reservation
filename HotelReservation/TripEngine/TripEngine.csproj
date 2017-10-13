@@ -5,19 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\ListingPage\**" />
-    <Content Remove="wwwroot\ListingPage\**" />
-    <EmbeddedResource Remove="wwwroot\ListingPage\**" />
-    <None Remove="wwwroot\ListingPage\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="wwwroot\HtmlPages\Navbar.html" />
+    <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.0.0" />
     <PackageReference Include="System.ServiceModel.Duplex" Version="4.4.0" />
     <PackageReference Include="System.ServiceModel.Http" Version="4.4.0" />
     <PackageReference Include="System.ServiceModel.NetTcp" Version="4.4.0" />
@@ -26,11 +18,6 @@
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\HotelEntities\HotelEntities.csproj" />
-    <ProjectReference Include="..\TripEngine\TripEngine.csproj" />
   </ItemGroup>
 
   <ItemGroup>
