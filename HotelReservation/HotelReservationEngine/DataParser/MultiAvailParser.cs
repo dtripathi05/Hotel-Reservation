@@ -117,29 +117,29 @@ namespace Parser
         private PassengerTypeQuantity[] GetGuestDetails(int adultCount, int childCount)
         {
 
-            PassengerTypeQuantity[] passengerTypeQuantity = new PassengerTypeQuantity[2];
+            PassengerTypeQuantity[] passengerTypeQuantity = new PassengerTypeQuantity[1];
             PassengerTypeQuantity adultPassengers = new PassengerTypeQuantity();
             adultPassengers.PassengerType = PassengerType.Adult;
             adultPassengers.Quantity = adultCount;
-            PassengerTypeQuantity childPassengers = new PassengerTypeQuantity();
-            childPassengers.PassengerType = PassengerType.Child;
-            childPassengers.Quantity = childCount;
-            childPassengers.Ages = new int[childCount];
-            if (childCount == 0)
-            {
-                childPassengers.Ages = new int[1];
-            }
-            else
-            {
-                childPassengers.Ages = new int[childCount];
-            }
-            for (int i = 0; i < childPassengers.Ages.Length; i++)
-            {
-                childPassengers.Ages[i] = 12;
-            }
-            childPassengers.Quantity = childCount;
+            //PassengerTypeQuantity childPassengers = new PassengerTypeQuantity();
+            //childPassengers.PassengerType = PassengerType.Child;
+            //childPassengers.Quantity = childCount;
+            //childPassengers.Ages = new int[childCount];
+            //if (childCount == 0)
+            //{
+            //    childPassengers.Ages = new int[1];
+            //}
+            //else
+            //{
+            //    childPassengers.Ages = new int[childCount];
+            //}
+            //for (int i = 0; i < childPassengers.Ages.Length; i++)
+            //{
+            //    childPassengers.Ages[i] = 12;
+            //}
+            //childPassengers.Quantity = childCount;childPassengers
+            //passengerTypeQuantity[0] = childPassengers;
             passengerTypeQuantity[0] = adultPassengers;
-            passengerTypeQuantity[1] = childPassengers;
             return passengerTypeQuantity;
         }
 
