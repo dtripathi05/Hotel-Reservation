@@ -32,20 +32,24 @@ $(document).ready(function () {
     var html = compiledTemplate(roomType);
     //console.log(html);
     $('#roomList-container').append(html);
-}
-);
-var roomName
+});
+var roomName;
+var roomSelected;
+
 function roomPrice(data1) {
     console.log(data1);
     roomName = data1.value;
     for (i = 0; i < room.itinerary.rooms.length; i++) {
         var check = room.itinerary.rooms[i].roomName.toString();
+        //roomSelected = room.itinerary.rooms[i];
+        //room.itinerary.rooms = roomSelected;
         if (roomName.toString() == check) {
             var data1 =
                 {
                     "Itinerary": room.itinerary,
                     "Criteria": room.criteria,
-                    "SessionId": room.sessionId
+                    "SessionId": room.sessionId,
+                    "RoomName": roomName
                 };
             $.ajax({
                 type: "post",
