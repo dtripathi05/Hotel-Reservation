@@ -62,13 +62,13 @@
             <div class="col-md-12">
                 <section>
                     <!--Image-->
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <img src="{{imageurl}}" width="200" height="250" alt="No Image Available" />
                     </div>
                 </section>
                 <section>
                     <!--Room Details-->
-                    <div class="col-md-5">
+                    <div class="col-md-6">
                         <h4>{{roomtype}}</h4>
                         <h4>{{address}}</h4>
                         <h4>{{description}}</h4>
@@ -80,20 +80,19 @@
                         <!-- item -->
                         <div class="panel panel-pricing">
                             <div class="panel-heading">
-                                <h3>Starting From</h3>
+                                <h4>Starting From</h4>
                             </div>
                             <div class="panel-body text-center">
-                                <p class="p-price">₦ 50.00 </p><!--p-price close-->
-                                <p class="p-tax">*Conditions Apply</p><!--p-tax close-->
-                            </div><!--panel-body text-center close-->
-                            <div class="panel-footer">
-                                <a class="btn sub-btn" href="#">Book Now</a>
+                                <p class="p-price">$ {{price}}</p>
                             </div>
-                        </div><!--panel panel-pricing close-->
+                            <div class="panel-footer">
+                                <button name="BookBtn" id="viewRoomsButton" class="panelButton" value="{{roomtype}}" onclick="roomPrice(this)">Subscribe Now</button>
+                            </div>
+
+                        </div>
 
                         <!--<h2><button class="pageButton">Price : {{price}} $</button></h2>
                         <h2><button name="BookBtn" id="viewRoomsButton" value="{{roomtype}}" onClick="roomPrice(this)" class="pageButton">Book</button></h2>-->
-
                     </div>
                 </section>
             </div>
