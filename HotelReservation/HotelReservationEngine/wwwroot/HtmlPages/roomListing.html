@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/Css/Style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" media="all">
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
     <title>Hotel Express</title>
@@ -48,7 +49,7 @@
     </div>
 
     <script id="x" type="text/x-handlebars-template">
-        <div class="container" id="hotelnm">
+        <div class="container heading" id="hotelnm">
             <h1>{{ hotelname }}</h1>
         </div>
     </script>
@@ -61,13 +62,13 @@
             <div class="col-md-12">
                 <section>
                     <!--Image-->
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <img src="{{imageurl}}" width="200" height="250" alt="No Image Available" />
                     </div>
                 </section>
                 <section>
                     <!--Room Details-->
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <h4>{{roomtype}}</h4>
                         <h4>{{address}}</h4>
                         <h4>{{description}}</h4>
@@ -76,8 +77,23 @@
                 <section>
                     <!--View Rooms Button-->
                     <div class="col-md-2 ">
-                        <h2><button class="pageButton">Price : {{price}} $</button></h2>
-                        <h2><button name="BookBtn" id="viewRoomsButton" value="{{roomtype}}" onClick="roomPrice(this)" class="pageButton">Book</button></h2>
+                        <!-- item -->
+                        <div class="panel panel-pricing">
+                            <div class="panel-heading">
+                                <h3>Starting From</h3>
+                            </div>
+                            <div class="panel-body text-center">
+                                <p class="p-price">₦ 50.00 </p><!--p-price close-->
+                                <p class="p-tax">*Conditions Apply</p><!--p-tax close-->
+                            </div><!--panel-body text-center close-->
+                            <div class="panel-footer">
+                                <a class="btn sub-btn" href="#">Book Now</a>
+                            </div>
+                        </div><!--panel panel-pricing close-->
+
+                        <!--<h2><button class="pageButton">Price : {{price}} $</button></h2>
+                        <h2><button name="BookBtn" id="viewRoomsButton" value="{{roomtype}}" onClick="roomPrice(this)" class="pageButton">Book</button></h2>-->
+
                     </div>
                 </section>
             </div>
