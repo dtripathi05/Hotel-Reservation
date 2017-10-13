@@ -36,9 +36,6 @@
         </nav>
     </div>
 
-    <div class="container heading">
-        <h1> Available Options </h1>
-    </div>
     <div id="hotelList-container">
         <div class="col-md-12">
             <div class="col-md-offset-6">
@@ -47,28 +44,32 @@
         </div>
     </div>
     <div id="hotelList-container"></div>
+
+
     <script id="hotel-item" type="text/x-handlebars-template">
+        <div class="container heading">
+            <h1> Available Options </h1>
+        </div>
+
         {{#each this}}
         <div style="border:solid 1px gray;margin-bottom:10px" class="container">
             <div class="col-md-12">
                 <section>
                     <!--Image-->
-                    <div class="col-md-5">
+                    <div class="col-md-4">
                         <img src="{{image}}" width="200" height="250" alt="No Image Available" />
                     </div>
                 </section>
                 <section>
                     <!--Hotel Details-->
-                    <div class="col-md-4">
-                        <h3><u>{{name}}</u></h3>
-                        <h3>Address : {{address}}</h3>
-
-                        <h3>
+                    <div class="col-md-6">
+                        <h4><u>{{name}}</u></h4>
+                        <h4>Address : {{address}}</h4>
+                        <h4>
                             Rating :{{#times stars}}
                             <span class="glyphicon glyphicon-star blue-icon"></span>
                             {{/times}}
-
-                        </h3>
+                        </h4>
                     </div>
                 </section>
                 <section>

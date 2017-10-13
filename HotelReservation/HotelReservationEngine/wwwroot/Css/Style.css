@@ -7,9 +7,9 @@
 
 .container {
     opacity: 0.9;
-    font-size: 24px;
+    font-size: 20px;
     color: white;
-    font-weight: bold;
+    font-weight:normal;
     background-color: black;
     font-family: Dosis;
     padding: 0px;
@@ -25,8 +25,9 @@ btn.btn-primary:active {
 }
 
 label {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 10px;
+    font-weight:normal;
+    margin-top:2px;
 }
 
 .datePicker {
@@ -62,6 +63,6 @@ label {
 .anchorLink {
     color: black;
 }
-.h4 {
-margin-bottom:30px;
+h4 {
+margin-bottom:40px;
 }
