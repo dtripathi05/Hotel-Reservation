@@ -1,15 +1,14 @@
-﻿var roomList;
-var room;
+﻿var room;
 $(document).ready(function () {
 
     roomList = sessionStorage.getItem("rooms");
     room = JSON.parse(roomList);
 
-    var roomType = [];
+    var roomTypes = [];
     var img = "";
     for (var i = 0; i < room.itinerary.rooms.length; i++) {
         img = room.itinerary.hotelProperty.mediaContent[i].url.toString();
-        roomType.push({
+        roomTypes.push({
 
             hotelname: room.itinerary.hotelProperty.name,
             description: room.itinerary.rooms[i].roomDescription,
@@ -20,9 +19,15 @@ $(document).ready(function () {
         });
 
     }
+    var hotel = {
+        hotelname: room.itinerary.hotelProperty.name,
+        address: room.itinerary.hotelProperty.address.completeAddress,
+        imageurl: img,
+        roomTypes: roomTypes
+    };
     var temp = $("#x");
     var cmp = Handlebars.compile(temp.html());
-    var htm = cmp({ hotelname: roomType[0].hotelname });
+    var htm = cmp(hotel);
     $("#roomList-container").html(htm);
 
     var template = $('#room-item');
