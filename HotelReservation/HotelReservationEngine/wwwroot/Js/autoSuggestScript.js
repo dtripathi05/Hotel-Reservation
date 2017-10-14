@@ -8,7 +8,7 @@
             startDate.setDate(startDate.getDate() + 1);
             var minDate = $(this).datepicker('getDate');
             checkOutDate.datepicker('setDate', minDate);
-            checkOutDate.datepicker('option', 'minDate', minDate);
+            checkOutDate.datepicker('option', 'minDate', startDate);
         }
     });
     $('#checkoutdate').datepicker({
@@ -46,7 +46,6 @@ function extractData() {
     };
 
     var modifiedData = JSON.stringify(data);
-
     $.ajax({
         url: '/api/search/newRequest',
         type: 'post',
@@ -54,7 +53,8 @@ function extractData() {
         success: function (result) {
             window.location.href = "/hotel/" + result;
         },
-        data: modifiedData
+        data: modifiedData,
+        
     });
 }
 
