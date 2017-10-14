@@ -23,5 +23,11 @@ namespace HotelReservationEngine.Controllers
         {
             return File(new FileStream("wwwroot/HtmlPages/roomListing.html", FileMode.Open), "text/html");
         }
+
+        [HttpGet("roomPricing")]
+        public IActionResult GetRoomPrice()
+        {
+            return File(new FileStream("wwwroot/HtmlPages/pricing.html", FileMode.Open), "text/html");
+        }
     }
 }
