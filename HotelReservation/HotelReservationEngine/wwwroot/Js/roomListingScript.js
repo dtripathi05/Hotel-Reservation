@@ -60,7 +60,7 @@ function roomPrice(data1) {
                 crossDomain: true,
                 success: function (roomPrice) {
                     sessionStorage.setItem('roomPrice', JSON.stringify(roomPrice));
-                    window.location.href = "/roomPrice";
+                    window.location.href = "/roomPricing";
                 }
             });
 
