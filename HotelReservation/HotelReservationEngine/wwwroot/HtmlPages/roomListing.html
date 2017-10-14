@@ -49,7 +49,7 @@
     </div>
 
     <script id="x" type="text/x-handlebars-template">
-        <div class="container heading" id="hotelnm">
+        <div class="container-list heading" id="hotelnm">
             <h1>{{ hotelname }}</h1>
         </div>
     </script>
@@ -58,7 +58,7 @@
 
     <script id="room-item" type="text/x-handlebars-template">
         {{#each this}}
-        <div style="border:solid 1px gray;margin-bottom:10px" class="container">
+        <div style="border:solid 1px gray;margin-bottom:10px" class="container container-list">
             <div class="col-md-12">
                 <section>
                     <!--Image-->
@@ -69,9 +69,9 @@
                 <section>
                     <!--Room Details-->
                     <div class="col-md-6">
-                        <h4>{{roomtype}}</h4>
-                        <h4>{{address}}</h4>
-                        <h4>{{description}}</h4>
+                        <h3 class="space"><span class="glyphicon glyphicon-bed orange"></span> <b>{{roomtype}}</b></h3>
+                        <h4 class="space"><span class="glyphicon glyphicon-map-marker green"></span> {{address}}</h4>
+                        <h4 class="space"><span class="glyphicon glyphicon-hand-right green"></span> {{description}}</h4>
                     </div>
                 </section>
                 <section>
@@ -79,20 +79,16 @@
                     <div class="col-md-2 ">
                         <!-- item -->
                         <div class="panel panel-pricing">
-                            <div class="panel-heading">
+                            <div class="panel-heading text-center">
                                 <h4><u>Starting From</u></h4>
                             </div>
                             <div class="panel-body text-center">
                                 <p class="p-price">$ {{price}}</p>
                             </div>
-                            <div class="panel-footer">
+                            <div class="panel-body text-center">
                                 <button name="BookBtn" id="viewRoomsButton" class="panelButton" value="{{roomtype}}" onclick="roomPrice(this)">Book Now</button>
                             </div>
-
                         </div>
-
-                        <!--<h2><button class="pageButton">Price : {{price}} $</button></h2>
-                        <h2><button name="BookBtn" id="viewRoomsButton" value="{{roomtype}}" onClick="roomPrice(this)" class="pageButton">Book</button></h2>-->
                     </div>
                 </section>
             </div>

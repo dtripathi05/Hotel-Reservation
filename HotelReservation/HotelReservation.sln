@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelEntities", "HotelEntit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservation.Test", "HotelEngineReservation.Test\HotelReservation.Test.csproj", "{B797FE39-4AC2-4B8B-A830-8BD6D5F4389A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TripEngine", "TripEngine\TripEngine.csproj", "{33B51C5E-FF04-4FA6-BFC5-4A57AAF8644E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripEngine", "TripEngine\TripEngine.csproj", "{33B51C5E-FF04-4FA6-BFC5-4A57AAF8644E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

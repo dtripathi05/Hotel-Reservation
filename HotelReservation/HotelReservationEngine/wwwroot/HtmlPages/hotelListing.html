@@ -43,31 +43,30 @@
             </div>
         </div>
     </div>
+
     <div id="hotelList-container"></div>
-
-
     <script id="hotel-item" type="text/x-handlebars-template">
-        <div class="container heading">
-            <h1> Available Options </h1>
+        <div class="container-list heading">
+            <h1>Available Hotels</h1>
         </div>
-
         {{#each this}}
-        <div style="border:solid 1px gray;margin-bottom:10px" class="container">
+        <div style="border:solid 1px gray;margin-bottom:10px" class=" container container-list">
             <div class="col-md-12">
                 <section>
                     <!--Image-->
-                    <div class="col-md-4">
-                        <img src="{{image}}" width="200" height="250" alt="No Image Available" />
+                    <div class="col-md-3">
+                        <img src="{{image}}" width="200" height="200" alt="No Image Available" />
                     </div>
                 </section>
                 <section>
                     <!--Hotel Details-->
-                    <div class="col-md-6">
-                        <h4><u>{{name}}</u></h4>
-                        <h4>Address : {{address}}</h4>
+                    <div class="col-md-7">
+                        <h3 class="space"><u>{{name}}</u></h3>
+                        <h4 class="space"><span class="glyphicon glyphicon-map-marker green"></span> {{address}}</h4>
+                          
                         <h4>
-                            Rating :{{#times stars}}
-                            <span class="glyphicon glyphicon-star blue-icon"></span>
+                            <b>Rating </b>:{{#times stars}}
+                            <span class="glyphicon glyphicon-star orange"></span>
                             {{/times}}
                         </h4>
                     </div>
@@ -82,6 +81,7 @@
         </div>
         {{/each}}
     </script>
+    
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
     <script src="/Js/hotelListingScript.js"></script>
