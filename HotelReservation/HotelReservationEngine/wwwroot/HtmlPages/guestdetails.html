@@ -37,11 +37,9 @@
             </div>
         </nav>
     </div>
-    <br />
-    <br />
-    <br />
+  
     <article>
-        <div class="container">
+        <div class="container-list heading">
             <div id="guestDetails">
                 <form id="guestDetailsForm" onsubmit="importDetails(); return false">
                     <div class="row">
@@ -79,7 +77,7 @@
                                 <!--Age-->
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="age">Age</label>
+                                        <label for="age">Country</label>
                                         <input type="text" class="form-control placeholderfont" id="age" name="age" placeholder="Age">
                                     </div>
                                 </div>
@@ -102,9 +100,69 @@
                                 </div>
                             </section>
                             <section>
-                                <!--Save Button-->
-                                <div class="col-md-12">
-                                    <button name="savebutton" id="saveButton" class="pageButton">Save</button>
+                                <div class="col-md-8">
+                                    <h3>Payment Details</h3>
+                                    <!--Card Number-->
+                                    <section>
+                                        <div class="col-md-8">
+                                            <label for="cardNumber">Card Number</label>
+                                            <input type="text" class="form-control placeholderfont" id="cardNumber" placeholder="Card Number">
+                                        </div>
+
+                                    </section>
+                                    <!--Card Holder Name-->
+                                    <section>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <label for="cardHolder">Card Holder</label>
+                                                <input type="text" class="form-control placeholderfont" id="cardHolder" placeholder=" Card Holder's Name">
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <!--Expiry-->
+                                    <section>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <label>Expiry</label>
+                                            </div>
+
+                                            <!--MM-->
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control placeholderfont" id="month" placeholder="MM">
+                                                </div>
+                                            </div>
+                                            <!--YY-->
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control placeholderfont" id="year" placeholder="YY">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <!--Cvv-->
+                                    <section>
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <label for="cvv">CVV</label>
+                                                <input type="text" class="form-control placeholderfont" id="cvv" placeholder="***">
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <!--Error Messaging-->
+                                    <section>
+                                        <div class="form-group">
+                                            <div class="col-md-9 col-md-offset-3">
+                                                <div id="errors"></div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <!--Submit Button-->
+                                    <section>
+                                        <div class="col-md-8">
+                                            <button type="submit" class="pageButton" id="paynowButton">Pay Now</button>
+                                        </div>
+                                    </section>
                                 </div>
                             </section>
                         </div>
