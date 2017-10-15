@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Css/Style.css">
+    <link rel="stylesheet" href="/Css/indexStyle.css">
     <link rel="icon" type="image/png" href="/Image/favicon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-darkness/jquery-ui.min.css" />
@@ -50,7 +51,10 @@
                                         <div class="col-md-10">
                                             <div class="form-group">
                                                 <label for="place">Going To</label>
-                                                <input type="text" class="form-control placeholderfont" name="goingTo" id="place" placeholder="City,Landmark,Address,Station Name,Hotel Name..">
+                                                <div class="inner-addon left-addon">
+                                                    <i class="glyphicon glyphicon-search black"></i>
+                                                    <input type="text" class="form-control placeholderfont" name="goingTo" id="place" placeholder="City,Landmark,Address,Station Name,Hotel Name..">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -75,7 +79,6 @@
                                             <div class="form-group">
                                                 <label>Check Out</label>
                                                 <div class="input-group">
-    
                                                     <input class="form-control datePicker placeholderfont" type="text" name="checkout" placeholder="yyyy-mm-dd" id="checkoutdate" required>
                                                 </div>
                                             </div>
