@@ -50,7 +50,7 @@
             <h1>Available Hotels</h1>
         </div>
         {{#each this}}
-        <div style="border:solid 1px gray;margin-bottom:10px" class=" container container-list">
+        <div class=" container container-list border-panel">
             <div class="col-md-12">
                 <section>
                     <!--Image-->
@@ -61,11 +61,11 @@
                 <section>
                     <!--Hotel Details-->
                     <div class="col-md-7">
-                        <h3 class="space"><u>{{name}}</u></h3>
+                        <h3 class="space underline-text">{{name}}</h3>
                         <h4 class="space"><span class="glyphicon glyphicon-map-marker green"></span> {{address}}</h4>
                           
-                        <h4>
-                            <b>Rating </b>:{{#times stars}}
+                        <h4 class="bold-text">
+                            Rating:{{#times stars}}
                             <span class="glyphicon glyphicon-star orange"></span>
                             {{/times}}
                         </h4>
