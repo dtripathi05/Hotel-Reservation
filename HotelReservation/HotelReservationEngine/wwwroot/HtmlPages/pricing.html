@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/Image/favicon-bed.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Css/Style.css">
+    <link rel="stylesheet" href="/Css/StyleSheet.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -44,189 +45,46 @@
             </div>
         </div>
     </div>
+
     <div id="hotelList-container">
     </div>
-    <div class="conatiner heading">
+    <div class="container container-list">
         <script id="hotel-item" type="text/x-handlebars-template">
             {{#each this}}
-            <div class="container heading">
+            <div class="container heading container-list border-panel">
                 <div class="col-md-12">
-                    <div class="col-md-3"></div>
-                    <div class="col-md-3">
-                        <label>Total Amount Payable</label>
-                    </div>
-                    <div class="col-md-6">
-                        <label>{{totalPrice}}</label>
-                        <label>{{bedtype}}</label>
-                        <label>{{roomName}}</label>
-                        <label>{{guestCount}}</label>
-                        <label>{{checkin}}</label>
-                        <label>{{checkout}}</label>
-                        <label>{{address}}</label>
+                    <section>
+                        <!--View Details-->
+                        <div class="col-md-8">
+                            <div class="panel panel-pricing">
+                                <div class="panel-heading text-center">
+                                    <h3 class="underline-text">Booking Details</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <p class="panel-font"><span class="glyphicon glyphicon-arrow-right green"></span> <b>{{checkin}}</b><span class="glyphicon glyphicon-arrow-left green"></span> <b>{{checkout}}</b></p>
+                                    <p class="panel-font"><span class="glyphicon glyphicon-arrow-left green"></span> <b>{{hotelName}}</b></p>
+                                    <p class="panel-font"><span class="glyphicon glyphicon-map-marker green"></span>  <b>{{address}}</b></p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
-                    </div>
-                    <!--View Rooms Button-->
+                    <section>
+                        <div class="col-md-4 ">
+                           <div>
+                            <ul class="price ">
+                                <li class="header">Total Amount Payable</li>
+                                <li class="grey panel-font">$ {{totalPrice}}</li>
+                                <li><button name="proceedBtn" id="proceedButton" onClick="paymentPage()" class="button">Proceed</button></li>
+                            </ul>
+                               </div>
+                            </div>
+                    </section>
                     <div>
-                        <div class="col-md-8"></div>
-                        <button name="proceedBtn" id="proceedButton" onClick="" class="pageButton">Proceed</button>
-                        <button name="cancelBtn" id="cancelButton" class="pageButton">Cancel</button>
                     </div>
                 </div>
-            </div>
-            {{/each}}
+                {{/each}}
         </script>
-    </div>
-
-    <div id="personalDetails">
-        <article>
-            <div class="container">
-                <div id="guestDetails">
-                    <form id="guestDetailsForm" onsubmit="importDetails(); return false">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <label>Personal Details</label>
-                                <!--First Name-->
-                                <section>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="firstName">First Name</label>
-                                                    <input type="text" class="form-control placeholderfont" id="firstName" name="firstname" placeholder="First Name">
-                                                </div>
-                                            </div>
-                                            <!--Last Name-->
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="lastName">Last Name</label>
-                                                    <input type="text" class="form-control placeholderfont" id="lastName" name="lastname" placeholder="Last Name">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section>
-                                    <!--Mobile Number-->
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="mobileNumber">Mobile Number</label>
-                                            <input type="text" class="form-control placeholderfont" id="mobileNumber" name="mobilenumber" placeholder="Mobile Number">
-                                        </div>
-                                    </div>
-
-                                    <!--Age-->
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="age">Age</label>
-                                            <input type="text" class="form-control placeholderfont" id="age" name="age" placeholder="Age">
-                                        </div>
-                                    </div>
-                                </section>
-                                <section>
-                                    <!--Email-Id-->
-                                    <div class="col-md-12">
-                                        <div class="form-group">
-                                            <label for="emailId">Email-Id</label>
-                                            <input type="text" class="form-control placeholderfont" id="emailId" name="emailid" placeholder="Example:abc@gmail.com">
-                                        </div>
-                                    </div>
-                                </section>
-                                <section>
-                                    <!--Error Messaging-->
-                                    <div class="form-group">
-                                        <div class="col-md-9 col-md-offset-3">
-                                            <div id="errors"></div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <section>
-                                    <!--Save Button-->
-                                    <div class="col-md-12">
-                                        <button name="savebutton" id="saveButton" class="pageButton">Save</button>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </article>
-    </div>
-    <div id="paymentDetails">
-        <article>
-            <div class="container">
-                <div id="cardDetails">
-                    <form id="cardDetailsForm" onsubmit="importCardDetails(); return false">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h3>Payment Details</h3>
-                                <!--Card Number-->
-                                <section>
-                                    <div class="col-md-8">
-                                        <label for="cardNumber">Card Number</label>
-                                        <input type="text" class="form-control placeholderfont" id="cardNumber" placeholder="Card Number">
-                                    </div>
-
-                                </section>
-                                <!--Card Holder Name-->
-                                <section>
-                                    <div class="col-md-8">
-                                        <div class="form-group">
-                                            <label for="cardHolder">Card Holder</label>
-                                            <input type="text" class="form-control placeholderfont" id="cardHolder" placeholder=" Card Holder's Name">
-                                        </div>
-                                    </div>
-                                </section>
-                                <!--Expiry-->
-                                <section>
-                                    <div class="col-md-8">
-                                        <div class="form-group">
-                                            <label>Expiry</label>
-                                        </div>
-
-                                        <!--MM-->
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control placeholderfont" id="month" placeholder="MM">
-                                            </div>
-                                        </div>
-                                        <!--YY-->
-                                        <div class="col-md-4">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control placeholderfont" id="year" placeholder="YY">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <!--Cvv-->
-                                <section>
-                                    <div class="col-md-8">
-                                        <div class="form-group">
-                                            <label for="cvv">CVV</label>
-                                            <input type="text" class="form-control placeholderfont" id="cvv" placeholder="***">
-                                        </div>
-                                    </div>
-                                </section>
-                                <!--Error Messaging-->
-                                <section>
-                                    <div class="form-group">
-                                        <div class="col-md-9 col-md-offset-3">
-                                            <div id="errors"></div>
-                                        </div>
-                                    </div>
-                                </section>
-                                <!--Submit Button-->
-                                <section>
-                                    <div class="col-md-8">
-                                        <button type="submit" class="pageButton" id="paynowButton">Pay Now</button>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </article>
     </div>
 
     <footer class="foot">Tavisca &copy; 2017|<a class="anchorLink" href="http://www.tavisca.com/">Open Company Website</a></footer>

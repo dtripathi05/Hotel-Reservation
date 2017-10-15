@@ -31,6 +31,18 @@
     margin-top: 90px;
 }
 
+.border-panel {
+    border: solid 2px gray;
+    margin-bottom: 10px;
+}
+
+.underline-text{
+text-decoration:underline;
+font-weight:bold;
+}
+.bold-text{
+    font-weight:bold;
+}
 btn.btn-primary:active {
     background-color: grey !important;
 }
@@ -97,7 +109,7 @@ label {
 }
 
     .panel-pricing:hover {
-        box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.6);
     }
 
     .panel-pricing .panel-heading {
@@ -111,8 +123,10 @@ label {
 }
 
 .panel-pricing .panel-body {
-    font-size: 30px;
+    font-size: 25px;
     margin: 0px;
     background-color:white;
 }
-
+.panel-font{
+    font-size:25px;
+}

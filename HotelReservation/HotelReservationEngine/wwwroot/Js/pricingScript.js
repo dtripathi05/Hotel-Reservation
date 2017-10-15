@@ -10,8 +10,8 @@ $(document).ready(function () {
     roomDescription.push({
 
         totalPrice: roomsPrice.product.hotelItinerary.rooms[0].displayRoomRate.totalFare.amount,
-        bedtype: roomsPrice.product.hotelItinerary.rooms[0].bedType,
-        roomName: roomsPrice.product.hotelItinerary.rooms[0].roomName,
+        roomtype: roomsPrice.product.hotelItinerary.rooms[0].roomType,
+        hotelName: roomsPrice.product.hotelItinerary.hotelProperty.name,
         guestCount: roomsPrice.product.hotelItinerary.rooms[0].guestCount,
         checkin: roomsPrice.product.hotelItinerary.rooms[0].stayPeriod.start,
         checkout: roomsPrice.product.hotelItinerary.rooms[0].stayPeriod.end,
@@ -19,4 +19,13 @@ $(document).ready(function () {
 
     });
 
+    var template = $('#hotel-item');
+    var compiledTemplate = Handlebars.compile(template.html());
+    var html = compiledTemplate(roomDescription);
+    $('#hotelList-container').html(html);
 });
+
+function paymentPage()
+{
+    window.location.href = "/guestDetails";
+}
