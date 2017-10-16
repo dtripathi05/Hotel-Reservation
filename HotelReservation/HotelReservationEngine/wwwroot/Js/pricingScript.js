@@ -1,14 +1,13 @@
 ﻿var room;
-var roomsPrice;
+var price;
 $(document).ready(function () {
 
     room = sessionStorage.getItem("roomPrice");
-    roomsPrice = JSON.parse(room);
+    price = JSON.parse(room);
 
     var roomDescription = [];
 
     roomDescription.push({
-
         totalPrice: roomsPrice.product.hotelItinerary.rooms[0].displayRoomRate.totalFare.amount,
         roomtype: roomsPrice.product.hotelItinerary.rooms[0].roomName,
         hotelName: roomsPrice.product.hotelItinerary.hotelProperty.name,
@@ -23,9 +22,11 @@ $(document).ready(function () {
     var compiledTemplate = Handlebars.compile(template.html());
     var html = compiledTemplate(roomDescription);
     $('#priceList-container').html(html);
+
 });
 
 function paymentPage()
 {
+    sessionStorage.setItem('price', JSON.stringify(price));
     window.location.href = "/guestDetails";
 }

@@ -58,5 +58,11 @@ namespace HotelReservationEngine.Controllers
             return deserialize;
 
         }
+        //[HttpPost("completePayment")]
+        //public async Task<RoomPricingResponse> Booking([FromBody]BookTripRQ bookTripRQ)
+        //{
+            
+
+        //}
     }
 }

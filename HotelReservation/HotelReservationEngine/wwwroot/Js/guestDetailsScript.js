@@ -1,5 +1,10 @@
 ﻿var result;
+var bookingDetails;
+$(document).ready(function () {
 
+    room = sessionStorage.getItem("roomPrice");
+    bookingDetails = JSON.parse(room);
+});
 function importDetails() {
 
     var fName = $("#firstName")[0].value;
@@ -23,7 +28,9 @@ function importDetails() {
         "CardHolder": cardHolder,
         "Month": mm,
         "Year": yy,
-        "Cvv": cvv
+        "Cvv": cvv,
+        "RoomPricingResponse": bookingDetails
+
 
     };
 
