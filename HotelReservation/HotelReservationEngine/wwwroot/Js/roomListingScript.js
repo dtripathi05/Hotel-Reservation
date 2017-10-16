@@ -36,7 +36,7 @@ $(document).ready(function () {
 var roomName;
 var roomSelected;
 
-function roomPrice(data1) {
+function price(data1) {
     console.log(data1);
     roomName = data1.value;
     for (i = 0; i < room.itinerary.rooms.length; i++) {
