@@ -127,8 +127,8 @@ namespace HotelReservationEngine.DataParser
                             },
                         }
                      },
-                    Products = new TripProduct[] 
-                    { 
+                    Products = new TripProduct[]
+                    {
                        bookTripRQ.RoomPricingResponse.Product
                     },
                 },
@@ -139,8 +139,15 @@ namespace HotelReservationEngine.DataParser
             };
             tripFolderBookRQ.TripFolder.Products[0].Owner = tripFolderBookRQ.TripFolder.Owner;
             TripsEngineClient tripsEngineClient = new TripsEngineClient();
-            var response = await tripsEngineClient.BookTripFolderAsync(tripFolderBookRQ);
-            // TripFolderCache.Cache[sessionId] = response;
+            TripFolderBookRS response;
+            try
+            {
+                response = await tripsEngineClient.BookTripFolderAsync(tripFolderBookRQ);
+            }
+            catch (Exception e)
+            {
+                throw;
+            }// TripFolderCache.Cache[sessionId] = response;
             return response;
         }
     }

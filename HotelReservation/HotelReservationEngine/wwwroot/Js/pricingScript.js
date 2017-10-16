@@ -1,7 +1,6 @@
 ﻿var room;
 var price;
 $(document).ready(function () {
-
     room = sessionStorage.getItem("roomPrice");
     price = JSON.parse(room);
 
@@ -15,14 +14,11 @@ $(document).ready(function () {
         checkin: price.product.hotelSearchCriterion.stayPeriod.start,
         checkout: price.product.hotelSearchCriterion.stayPeriod.end,
         address: price.product.hotelItinerary.hotelProperty.address.completeAddress
-
     });
-
     var template = $('#price-item');
     var compiledTemplate = Handlebars.compile(template.html());
     var html = compiledTemplate(roomDescription);
     $('#priceList-container').html(html);
-
 });
 
 function paymentPage()
