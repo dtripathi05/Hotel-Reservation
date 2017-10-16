@@ -9,31 +9,29 @@ namespace HotelReservationEngine.DataParser
 {
     public class BookTripParser
     {
-        public TripFolderBookRQ tripFolderBookRQParser(BookTripRQ bookTripRQ)
+        public async Task<TripFolderBookRS> tripFolderBookRQParser(BookTripRQ bookTripRQ)
         {
-            return new TripFolderBookRQ
+            TripFolderBookRQ tripFolderBookRQ = new TripFolderBookRQ()
             {
                 SessionId = bookTripRQ.RoomPricingResponse.SessionId,
-                TripFolder = new TripFolder() {
-                    Products = new TripProduct[]
+                ResultRequested = ResponseType.Unknown,
+                TripFolder = new TripFolder()
+                {
+                    Creator = new User()
                     {
-                       bookTripRQ.RoomPricingResponse.Product,
+                        Email = "sshrikhande@tavisca.com",
+                        FirstName = "Shweta",
+                        LastName = "Shrikhande",
+                        UserId = 26149061229281280,
+                        UserName = "sshrikhande"
                     },
-                    Creator = new User
-                    {
-                        Email = bookTripRQ.EmailId,
-                        FirstName = bookTripRQ.FirstName,
-                        LastName = bookTripRQ.LastName,
-                        UserName = bookTripRQ.FirstName + Guid.NewGuid().ToString(),
-
-                    },
-                    //FolderName=
+                    FolderName = "sshrikhande",
+                    Id = new Guid("00000000-0000-0000-0000-000000000000"),
                     LastModifiedDate = new DateTime(),
-                    Id = Guid.NewGuid(),
-                    Owner=new User
+                    Owner = new User()
                     {
                         AdditionalInfo = new StateBag[]
-                        {
+                         {
                             new StateBag()
                             {
                                 Name = "AgencyName",
@@ -49,14 +47,14 @@ namespace HotelReservationEngine.DataParser
                                 Name = "UserType",
                                 Value = "Normal"
                             },
-                        },
-                        Email=bookTripRQ.EmailId,
-                        FirstName=bookTripRQ.FirstName,
-                        LastName=bookTripRQ.LastName,
-                        //UserId=
-                        //UserName
+                         },
+                        Email = "sshrikhande@tavisca.com",
+                        FirstName = "Shweta",
+                        LastName = "Shrikhande",
+                        UserId = 26149061229281280,
+                        UserName = "sshrikhande"
                     },
-                    Pos=new PointOfSale
+                    Pos = new PointOfSale()
                     {
                         PosId = 101,
                         Requester = new Company()
@@ -64,12 +62,13 @@ namespace HotelReservationEngine.DataParser
                             DK = "200000D",
                             ID = 0,
                             CodeContext = CompanyCodeContext.HotelChain,
+
                         }
                     },
-                    Type =TripFolderType.Personal,
-                    Passengers=new Passenger[]
-                    {
-                        new Passenger
+                    Type = TripFolderType.Personal,
+                    Passengers = new Passenger[]
+                     {
+                        new Passenger()
                         {
                             Age = 27,
                             BirthDate = new DateTime(1990,03,03),
@@ -84,24 +83,25 @@ namespace HotelReservationEngine.DataParser
                             UserId = 0,
                             UserName = "sshrikhande@tavisca.com"
                         }
-                    },
-                    Payments=new CreditCardPayment[]
-                    {
-                        new CreditCardPayment
+                     },
+                    Payments = new CreditCardPayment[]
+                     {
+                        new CreditCardPayment()
                         {
-                            CardMake=new CreditCardMake
+
+                            CardMake = new CreditCardMake()
                             {
-                                 Code = "VI",
+                                Code = "VI",
                                 Name = "Visa"
                             },
-                             CardType = CreditCardType.Personal,
+                            CardType = CreditCardType.Personal,
                             ExpiryMonthYear = new DateTime(2019, 01, 01),
                             NameOnCard = "Saurabh Cache",
                             IsThreeDAuthorizeRequired = false,
                             Number = "0000000000001111",
                             SecurityCode = "123",
-                            //Amount =
-                            Amount= new Money()
+                            Amount =/*bookTripRQ.RoomPricingResponse.Product.HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Amount,*/
+                            new Money()
                             {
                                 Amount = 200.34M,
                                 Currency = "USD",
@@ -124,12 +124,32 @@ namespace HotelReservationEngine.DataParser
                                     State = "TX"
 
                                 }
-                            }
+                            },
                         }
-                    }
+                     },
+                    Products = new TripProduct[] 
+                    { 
+                       bookTripRQ.RoomPricingResponse.Product
+                    },
                 },
-                ResultRequested=ResponseType.Unknown
+                TripProcessingInfo = new TripProcessingInfo()
+                {
+                    TripProductRphs = new int[] { 0 }
+                }
             };
+            tripFolderBookRQ.TripFolder.Products[0].Owner = tripFolderBookRQ.TripFolder.Owner;
+            TripsEngineClient tripsEngineClient = new TripsEngineClient();
+            var response = await tripsEngineClient.BookTripFolderAsync(tripFolderBookRQ);
+            // TripFolderCache.Cache[sessionId] = response;
+            return response;
         }
     }
 }
+
+
+
+
+
+
+
+

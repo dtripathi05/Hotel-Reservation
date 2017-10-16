@@ -12,8 +12,8 @@ $(document).ready(function () {
         roomtype: price.product.hotelItinerary.rooms[0].roomName,
         hotelName: price.product.hotelItinerary.hotelProperty.name,
         guestCount: price.product.hotelItinerary.rooms[0].guestCount,
-        checkin: price.product.hotelItinerary.rooms[0].stayPeriod.start,
-        checkout: price.product.hotelItinerary.rooms[0].stayPeriod.end,
+        checkin: price.product.hotelSearchCriterion.stayPeriod.start,
+        checkout: price.product.hotelSearchCriterion.stayPeriod.end,
         address: price.product.hotelItinerary.hotelProperty.address.completeAddress
 
     });
