@@ -30,7 +30,7 @@ namespace HotelReservationEngine.Adapter
                 tripProductPriceRS = await engineClient.PriceTripProductAsync(tripProductPriceRQ);
                 roomPricingResponse = parser.RoomPriceRSParser(tripProductPriceRS, deserialize);
             }
-            catch(Exception excep)
+            catch
             {
                 throw;
             }

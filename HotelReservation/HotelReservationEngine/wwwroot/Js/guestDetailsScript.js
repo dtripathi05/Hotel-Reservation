@@ -31,6 +31,7 @@ function importDetails() {
         "Cvv": cvv,
         "RoomPricingResponse": bookingDetails
 
+
     };
 
     var modifiedData = JSON.stringify(data);

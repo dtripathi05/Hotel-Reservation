@@ -46,11 +46,13 @@
 
     <div id="hotelList-container"></div>
     <script id="hotel-item" type="text/x-handlebars-template">
-        <div class="container-list heading">
+        <div class=" container heading text-center">
             <h1>Available Hotels</h1>
         </div>
         {{#each this}}
-        <div class=" container container-list border-panel">
+
+        <div class="container container-list border-panel">
+
             <div class="col-md-12">
                 <section>
                     <!--Image-->
@@ -81,7 +83,6 @@
         </div>
         {{/each}}
     </script>
-    
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
     <script src="/Js/hotelListingScript.js"></script>

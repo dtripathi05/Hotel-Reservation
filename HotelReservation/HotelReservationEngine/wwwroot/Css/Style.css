@@ -1,10 +1,4 @@
 ﻿@import url('https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans');
-
-.indexBackground {
-    background: url("/Image/wallpaper.jpg") no-repeat fixed 100%;
-    background-size: cover;
-}
-
 .container {
     opacity: 0.9;
     font-size: 20px;
@@ -14,6 +8,40 @@
     font-family: Dosis;
     padding: 0px;
     margin-top: 16px;
+}
+.heading {
+    margin-top: 90px;
+}
+
+.heading-panel {
+    margin-top: 60px;
+}
+.heading-card {
+margin-top:4px;
+
+}
+label {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 6px;
+}
+.pageButton {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    max-height: 80px;
+    color: white;
+    font-size: 25px;
+    background: #ff3300;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.foot {
+    margin-top: 80px;
+    color: black;
+}
+.anchorLink {
+    color: black;
 }
 
 .container-list {
@@ -25,12 +53,7 @@
     font-family: Dosis;
     padding: 0px;
     margin-top: 16px;
-}
-
-.heading {
-    margin-top: 90px;
-}
-
+}   
 .border-panel {
     border: solid 2px gray;
     margin-bottom: 10px;
@@ -47,32 +70,6 @@ btn.btn-primary:active {
     background-color: grey !important;
 }
 
-label {
-    font-size: 20px;
-    font-weight: normal;
-    margin-top: 6px;
-}
-
-.datePicker {
-    border: 1px solid #c4c4c4;
-    border-radius: 2px;
-    background-color: #fff;
-    color: grey;
-    font-size: 16px;
-}
-
-.pageButton {
-    margin-top: 60px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    max-height: 80px;
-    color: white;
-    font-size: 25px;
-    background: #ff3300;
-    border-radius: 4px;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-}
-
 .panelButton {
     color: white;
     font-size: 25px;
@@ -80,19 +77,6 @@ label {
     border-radius: 4px;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
-
-.foot {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 80px;
-    color: black;
-}
-
-.anchorLink {
-    color: black;
-}
-
 .space {
     margin-bottom: 40px;
 }
@@ -102,6 +86,7 @@ label {
 .green {
     color: #00b300;
 }
+
 .panel-pricing {
     -moz-transition: all .3s ease;
     -o-transition: all .3s ease;
