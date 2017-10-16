@@ -17,7 +17,7 @@ $(document).ready(function () {
                 description: room.itinerary.rooms[i].roomDescription,
                 address: room.itinerary.hotelProperty.address.completeAddress,
                 roomtype: room.itinerary.rooms[i].roomName,
-                price: room.itinerary.rooms[i].displayRoomRate.totalFare.amount,
+                price: room.itinerary.rooms[i].displayRoomRate.baseFare.amount,
                 imageurl: img
             });
         }
