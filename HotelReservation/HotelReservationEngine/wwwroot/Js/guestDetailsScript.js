@@ -39,10 +39,12 @@ function importDetails() {
     $.ajax({
         url: '/api/search/completePayment',
         type: 'post',
+        data: modifiedData,
+        crossDomain: true,
+        dataType: 'json',
         contentType: "application/json",
         success: function (result) {
-            alert(result);
+            console(result);
         },
-        data: modifiedData
     });
 }

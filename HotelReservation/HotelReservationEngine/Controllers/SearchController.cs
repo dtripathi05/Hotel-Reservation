@@ -9,6 +9,7 @@ using HotelReservationEngine.Contracts;
 using HotelReservationEngine.HotelMultiAvailItinerary;
 using TripEngine.Model;
 using TripEngineService;
+using HotelReservationEngine.DataParser;
 
 namespace HotelReservationEngine.Controllers
 {
@@ -58,11 +59,13 @@ namespace HotelReservationEngine.Controllers
             return deserialize;
 
         }
-        //[HttpPost("completePayment")]
-        //public async Task<RoomPricingResponse> Booking([FromBody]BookTripRQ bookTripRQ)
-        //{
-            
+        [HttpPost("completePayment")]
+        public async Task<TripFolderBookRS> Booking([FromBody]BookTripRQ bookTripRQ)
+        {
+            BookTripParser bookTripParser = new BookTripParser();
+            var result =await bookTripParser.tripFolderBookRQParser(bookTripRQ);
+            return result;
 
-        //}
+        }
     }
 }
