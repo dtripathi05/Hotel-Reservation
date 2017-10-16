@@ -8,16 +8,19 @@ $(document).ready(function () {
     var roomType = [];
     var img = "";
     for (var i = 0; i < room.itinerary.rooms.length; i++) {
-        img = room.itinerary.hotelProperty.mediaContent[i].url.toString();
-        roomType.push({
+        if (room.itinerary.rooms[i].hotelFareSource.name == "HotelBeds Test") {
 
-            hotelname: room.itinerary.hotelProperty.name,
-            description: room.itinerary.rooms[i].roomDescription,
-            address: room.itinerary.hotelProperty.address.completeAddress,
-            roomtype: room.itinerary.rooms[i].roomName,
-            price: room.itinerary.rooms[i].displayRoomRate.totalFare.amount,
-            imageurl: img
-        });
+            img = room.itinerary.hotelProperty.mediaContent[i].url.toString();
+            roomType.push({
+
+                hotelname: room.itinerary.hotelProperty.name,
+                description: room.itinerary.rooms[i].roomDescription,
+                address: room.itinerary.hotelProperty.address.completeAddress,
+                roomtype: room.itinerary.rooms[i].roomName,
+                price: room.itinerary.rooms[i].displayRoomRate.totalFare.amount,
+                imageurl: img
+            });
+        }
 
     }
     var temp = $("#x");
