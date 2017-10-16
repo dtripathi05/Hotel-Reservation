@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hotel Express</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/HomePage/Style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <h6>Hotel Reservation Engine</h6>
+    </header>
+    <div class="col-md-12">
+        <nav class="navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Hotel Reservation</a>
+                </div>
+                <ul class=" nav navbar-nav navbar-right ">
+                    <li class="navbar-nav nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Sign In</a></li>
+                            <li><a href="#">Create An Account</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <article>
+        <div class="container">
+            <div id="cardDetails">
+                <form id="cardDetailsForm" onsubmit="importCardDetails(); return false">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h3>Payment Details</h3>
+                            <!--Card Number-->
+                            <section>
+                                <div class="col-md-8">
+                                    <label for="cardNumber">Card Number</label>
+                                    <input type="text" class="form-control placeholderfont" id="cardNumber" placeholder="Card Number">
+                                </div>
+
+                            </section>
+                            <!--Card Holder Name-->
+                            <section>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="cardHolder">Card Holder</label>
+                                        <input type="text" class="form-control placeholderfont" id="cardHolder" placeholder=" Card Holder's Name">
+                                    </div>
+                                </div>
+                            </section>
+                            <!--Expiry-->
+                            <section>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>Expiry</label>
+                                    </div>
+
+                                    <!--MM-->
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control placeholderfont" id="month" placeholder="MM">
+                                        </div>
+                                    </div>
+                                    <!--YY-->
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control placeholderfont" id="year" placeholder="YY">
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!--Cvv-->
+                            <section>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" class="form-control placeholderfont" id="cvv" placeholder="***">
+                                    </div>
+                                </div>
+                            </section>
+                            <!--Error Messaging-->
+                            <section>
+                                <div class="form-group">
+                                    <div class="col-md-9 col-md-offset-3">
+                                        <div id="errors"></div>
+                                    </div>
+                                </div>
+                            </section>
+                            <!--Submit Button-->
+                            <section>
+                                <div class="col-md-8">
+                                    <button type="submit" class="pageButton" id="paynowButton">Pay Now</button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </article>
+    <footer class="foot"><p> Tavisca &copy; 2017|<a href="#">Open Company Website</a></p></footer>
+    <script src="/Js/paymentScript.js"></script>
+</body>
+</html>
