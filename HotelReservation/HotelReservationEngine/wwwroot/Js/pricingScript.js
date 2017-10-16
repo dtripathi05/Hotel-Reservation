@@ -8,13 +8,13 @@ $(document).ready(function () {
     var roomDescription = [];
 
     roomDescription.push({
-        totalPrice: roomsPrice.product.hotelItinerary.rooms[0].displayRoomRate.totalFare.amount,
-        roomtype: roomsPrice.product.hotelItinerary.rooms[0].roomName,
-        hotelName: roomsPrice.product.hotelItinerary.hotelProperty.name,
-        guestCount: roomsPrice.product.hotelItinerary.rooms[0].guestCount,
-        checkin: roomsPrice.product.hotelItinerary.rooms[0].stayPeriod.start,
-        checkout: roomsPrice.product.hotelItinerary.rooms[0].stayPeriod.end,
-        address: roomsPrice.product.hotelItinerary.hotelProperty.address.completeAddress
+        totalPrice: price.product.hotelItinerary.rooms[0].displayRoomRate.totalFare.amount,
+        roomtype: price.product.hotelItinerary.rooms[0].roomName,
+        hotelName: price.product.hotelItinerary.hotelProperty.name,
+        guestCount: price.product.hotelItinerary.rooms[0].guestCount,
+        checkin: price.product.hotelItinerary.rooms[0].stayPeriod.start,
+        checkout: price.product.hotelItinerary.rooms[0].stayPeriod.end,
+        address: price.product.hotelItinerary.hotelProperty.address.completeAddress
 
     });
 
