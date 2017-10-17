@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Hotel Express</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/Image/favicon-bed.png">
+    <link rel="stylesheet" href="/Css/Style.css">
+    <link rel="stylesheet" href="/Css/pricingStyleSheet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <h6>.</h6>
+    </header>
+    <div class="col-md-12">
+        <nav class="navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand">Hotel Reservation</a>
+                </div>
+                <ul class=" nav navbar-nav navbar-right ">
+                    <li class="navbar-nav nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Sign In</a></li>
+                            <li><a href="#">Create An Account</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div id="priceList-container">
+        <div class="col-md-12">
+            <div class="col-md-offset-6">
+                <img src="/Image/circlepreloader.gif" alt="Loading.." />
+            </div>
+        </div>
+    </div>
+    <div id="priceList-container">
+    </div>
+    <script id="price-item" type="text/x-handlebars-template">
+        <div class="heading">
+        </div>
+        {{#each this}}
+        <div class="container container-list border-panel heading">
+
+            <div class="col-md-12">
+                <section>
+                    <!--View Details-->
+                    <div class="col-md-8">
+                        <div class="panel panel-pricing">
+                            <div class="panel-heading text-center">
+                                <h3 class="underline-text">Booking Status</h3>
+                            </div>
+                            <div class="panel-body">
+                                <p class="panel-font underline-text">{{hotelName}}</p>
+                                <p class="panel-font">Room : <b>{{roomtype}}</b></p>
+                                <p class="panel-font">Check-In-Date : <b>{{checkin}}</b></p>
+                                <p class="panel-font">Check-Out-Date : <b>{{checkout}}</b></p>
+                                <p class="panel-font">Address : <b>{{address}}</b></p>
+                                <p class="panel-font">Amount Paid : <b>{{amountPaid}} $</b></p>
+                                <p class="panel-font">Conformation Status : <b>{{bookingStatus}}</b></p>
+                                <button name="ok" id="okButton" class="panelButton" onclick="finishBooking()">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script src="/Js/bookingConformationScript.js"></script>
+</body>
+</html>
