@@ -63,7 +63,7 @@ namespace HotelReservationEngine.Controllers
         public async Task<TripFolderBookRS> Booking([FromBody]BookTripRQ bookTripRQ)
         {
             BookTripParser bookTripParser = new BookTripParser(bookTripRQ);
-            var result = await bookTripParser.GetTripFolderBookRS(bookTripParser.TripFolderBookRQ);
+            var result = await bookTripParser.GetTripFolderBookRS(bookTripParser.TripFolderBookRQ());
            // var result =await bookTripParser.tripFolderBookRQParser(bookTripRQ);
             return result;
 

@@ -18,7 +18,6 @@ namespace HotelReservationEngine.DataParser
         private int _qty;
         private decimal _fareToAuthorise;
         private BookTripRQ _bookTripRQ;
-
         public BookTripParser(BookTripRQ bookTripRQ)
         {
             _bookTripRQ = bookTripRQ;
@@ -31,51 +30,52 @@ namespace HotelReservationEngine.DataParser
             _ages = new int[] { _age };
             _fareToAuthorise = _hotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Amount;
         }
-
-        public TripFolderBookRQ TripFolderBookRQ => new TripFolderBookRQ()
+        public TripFolderBookRQ TripFolderBookRQ()
         {
-            SessionId = _sessionId,
-            ResultRequested = ResponseType.Unknown,
-            TripFolder = new TripFolder()
+            return new TripFolderBookRQ()
             {
-                Creator = new User()
+                SessionId = _sessionId,
+                ResultRequested = ResponseType.Unknown,
+                TripFolder = new TripFolder()
                 {
-                    AdditionalInfo = new StateBag[]
+                    Creator = new User()
+                    {
+                        AdditionalInfo = new StateBag[]
                     {
                         new StateBag(){ Name="AgencyName", Value="WV"},
                         new StateBag(){ Name="CompanyName", Value= "Rovia"},
                         new StateBag(){ Name="UserType", Value="Normal"}
                     },
-                    Email = "sbejugam@v-worldventures.com",
-                    FirstName = "Sandbox",
-                    LastName = "Test",
-                    MiddleName = "User",
-                    Prefix = "Mr.",
-                    Title = "Mr",
-                    UserId = 169050,
-                    UserName = "3285301"
-                },
-                FolderName = _tripFolderName,
-                Owner = new User()
-                {
-                    AdditionalInfo = new StateBag[]
+                        Email = "sbejugam@v-worldventures.com",
+                        FirstName = "Sandbox",
+                        LastName = "Test",
+                        MiddleName = "User",
+                        Prefix = "Mr.",
+                        Title = "Mr",
+                        UserId = 169050,
+                        UserName = "3285301"
+                    },
+                    FolderName = _tripFolderName,
+                    Owner = new User()
+                    {
+                        AdditionalInfo = new StateBag[]
                     {
                         new StateBag(){ Name="AgencyName", Value="WV"},
                         new StateBag(){ Name="CompanyName", Value= "Rovia"},
                         new StateBag(){ Name="UserType", Value="Normal"}
                     },
-                    Email = "sbejugam@v-worldventures.com",
-                    FirstName = "Sandbox",
-                    LastName = "Test",
-                    MiddleName = "User",
-                    Prefix = "Mr.",
-                    Title = "Mr",
-                    UserId = 169050,
-                    UserName = "3285301"
-                },
-                Pos = new PointOfSale()
-                {
-                    AdditionalInfo = new StateBag[]
+                        Email = "sbejugam@v-worldventures.com",
+                        FirstName = "Sandbox",
+                        LastName = "Test",
+                        MiddleName = "User",
+                        Prefix = "Mr.",
+                        Title = "Mr",
+                        UserId = 169050,
+                        UserName = "3285301"
+                    },
+                    Pos = new PointOfSale()
+                    {
+                        AdditionalInfo = new StateBag[]
                     {
                             new StateBag() { Name = "IPAddress", Value = "127.0.0.1" },
                             new StateBag() { Name = "DealerUrl", Value = "localhost" },
@@ -89,28 +89,28 @@ namespace HotelReservationEngine.DataParser
                             new StateBag() { Name = "DKCommissionIdentifier", Value = "3285301P" },
                             new StateBag() { Name = "MemberSignUpDate", Value = "Tue, 04 Jan 2011" }
                     },
-                    PosId = 101,
-                    Requester = new Company()
-                    {
-                        Agency = new Agency()
+                        PosId = 101,
+                        Requester = new Company()
                         {
-                            AgencyAddress = new Address()
+                            Agency = new Agency()
                             {
-                                CodeContext = LocationCodeContext.Address,
-                                AddressLine1 = "Test1",
-                                AddressLine2 = "Test2",
-                                ZipCode = "89002"
+                                AgencyAddress = new Address()
+                                {
+                                    CodeContext = LocationCodeContext.Address,
+                                    AddressLine1 = "Test1",
+                                    AddressLine2 = "Test2",
+                                    ZipCode = "89002"
+                                },
+                                AgencyName = "WV",
                             },
-                            AgencyName = "WV",
+                            Code = "DTP",
+                            CodeContext = CompanyCodeContext.Airline,
+                            DK = "3285301P",
+                            FullName = "Rovia"
                         },
-                        Code = "DTP",
-                        CodeContext = CompanyCodeContext.Airline,
-                        DK = "3285301P",
-                        FullName = "Rovia"
                     },
-                },
-                Type = TripFolderType.Personal,
-                Passengers = new Passenger[]
+                    Type = TripFolderType.Personal,
+                    Passengers = new Passenger[]
                 {
                     new Passenger()
                     {
@@ -131,22 +131,14 @@ namespace HotelReservationEngine.DataParser
                         UserName="rsarda@tavisca.com"
                     }
                 },
-                Payments = new CreditCardPayment[]
-                {
+                    Payments = new CreditCardPayment[]
+                    {
                     new CreditCardPayment()
                     {
                         PaymentType=PaymentType.Credit,
                         Amount=_amount,
-                        Attributes=new StateBag[]
-                        {
-                            new StateBag() { Name="API_SESSION_ID", Value=_sessionId},
-                            new StateBag(){ Name="PointOfSaleRule"},
-                            new StateBag(){ Name="SectorRule"},
-                            new StateBag(){ Name="_AttributeRule_Rovia_Username"},
-                            new StateBag(){ Name="_AttributeRule_Rovia_Password"},
-                        },
-                        BillingAddress=new Address()
-                        {
+                         BillingAddress=new Address()
+                         {
                             CodeContext=LocationCodeContext.Address,
                             AddressLine1="E Sunset Rd",
                             AddressLine2="Near Trade Center",
@@ -159,11 +151,19 @@ namespace HotelReservationEngine.DataParser
                             },
                             PhoneNumber="123456",
                             ZipCode="123456"
-                        } ,
-                        CardMake=new CreditCardMake()
-                        {
+                         } ,
+                         CardMake=new CreditCardMake()
+                         {
                             Code="VI",
                             Name="VISA"
+                         },
+                        Attributes=new StateBag[]
+                        {
+                            new StateBag() { Name="API_SESSION_ID", Value=_sessionId},
+                            new StateBag(){ Name="PointOfSaleRule"},
+                            new StateBag(){ Name="SectorRule"},
+                            new StateBag(){ Name="_AttributeRule_Rovia_Username"},
+                            new StateBag(){ Name="_AttributeRule_Rovia_Password"},
                         },
                         CardType=CreditCardType.Personal,
                         ExpiryMonthYear=DateTime.Parse("2020-12-01T00:00:00"),
@@ -172,87 +172,16 @@ namespace HotelReservationEngine.DataParser
                         Number="0000000000001111",
                         SecurityCode="123"
                     }
+                    },
+                    Status = TripStatus.Planned,
+                    Products = new HotelTripProduct[] { _bookTripRQ.RoomPricingResponse.Product },
                 },
-                Products = new HotelTripProduct[] { _bookTripRQ.RoomPricingResponse.Product },
-                //new HotelTripProduct[]
-                //{
-                //   new HotelTripProduct()
-                //   {
-                //       Attributes=new StateBag[]
-                //       {
-                //           new StateBag{ Name ="API_SESSION_ID", Value=_sessionId},
-                //           new StateBag{ Name ="token", Value=""},
-                //           new StateBag{ Name ="ChargingHoursPriorToCPW", Value="48"},
-                //           new StateBag{ Name ="IsLoginWhileSearching", Value="Y"},
-                //           new StateBag{ Name ="IsInsuranceSelected", Value="no"},
-                //       },
-                //       IsOnlyLeadPaxInfoRequired=true,
-                //       Owner=new User()
-                //       {
-                //           AdditionalInfo=new StateBag[]
-                //           {
-                //               new StateBag(){Name="AgencyName", Value="WV"},
-                //               new StateBag(){ Name="CompanyName", Value="Rovia"},
-                //               new StateBag(){ Name="UserType", Value="Normal"}
-                //           },
-                //            Email = "sbejugam@v-worldventures.com",
-                //            FirstName = "Sandbox",
-                //            LastName = "Test",
-                //            MiddleName = "User",
-                //            Prefix = "Mr.",
-                //            Title = "Mr",
-                //            UserId = 169050,
-                //            UserName = "3285301"
-                //       },
-                //       PassengerSegments=new PassengerSegment[]
-                //       {
-                //           new PassengerSegment()
-                //           {
-                //               BookingStatus=TripProductStatus.Planned,
-                //               PostBookingStatus=PostBookingTripStatus.None,
-                //               Rph=4
-                //           }
-                //       },
-                //       PaymentBreakups=new PaymentBreakup[]
-                //       {
-                //           new PaymentBreakup()
-                //           {
-                //               Amount=_amount
-                //           }
-                //       },
-                //       PaymentOptions=new PaymentType[]
-                //       {
-                //           PaymentType.SoftCash,
-                //           PaymentType.External,
-                //           PaymentType.Credit
-                //       },
-                //       Rph=0,
-                //       HotelItinerary=_hotelItinerary,
-                //       HotelSearchCriterion=_hotelSearchCriterion,
-                //       RoomOccupancyTypes=new RoomOccupancyType[]
-                //       {
-                //           new RoomOccupancyType()
-                //           {
-                //               PaxQuantities=new PassengerTypeQuantity[]
-                //               {
-                //                   new PassengerTypeQuantity()
-                //                   {
-                //                       Ages=_ages,
-                //                       PassengerType=PassengerType.Adult,
-                //                       Quantity=_qty
-                //                   }
-                //               }
-                //           }
-                //       }
-                //   }
-                //},
-                Status = TripStatus.Planned,
-            },
-            TripProcessingInfo = new TripProcessingInfo()
-            {
-                TripProductRphs = new int[] { 0 }
-            }
-        };
+                TripProcessingInfo = new TripProcessingInfo()
+                {
+                    TripProductRphs = new int[] { 0 }
+                }
+            };
+        }
         public async Task<TripFolderBookRS> GetTripFolderBookRS(TripFolderBookRQ tripFolderBookRQ)
         {
             tripFolderBookRQ.TripFolder.Products[0].Owner = tripFolderBookRQ.TripFolder.Owner;
@@ -262,9 +191,9 @@ namespace HotelReservationEngine.DataParser
             TripFolderBookRS response = await tripsEngineClient.BookTripFolderAsync(tripFolderBookRQ);
             return response;
         }
+
     }
 }
-
 
 
 

@@ -8,9 +8,16 @@ $(document).ready(function () {
     var roomType = [];
     var img = "";
     for (var i = 0; i < room.itinerary.rooms.length; i++) {
-        if (room.itinerary.rooms[i].hotelFareSource.name == "HotelBeds Test") {
-
-            img = room.itinerary.hotelProperty.mediaContent[i].url.toString();
+        if (room.itinerary.rooms[i].hotelFareSource.name == "HotelBeds Test")
+        {
+            for (k = 0; k < room.itinerary.hotelProperty.mediaContent.length; k++)
+            {
+                if (room.itinerary.hotelProperty.mediaContent[k].url != null) {
+                    img = room.itinerary.hotelProperty.mediaContent[k].url.toString();
+                    break;
+                }
+            }
+           // img = room.itinerary.hotelProperty.mediaContent[i].url.toString();
             roomType.push({
 
                 hotelname: room.itinerary.hotelProperty.name,
