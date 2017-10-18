@@ -11,7 +11,7 @@ namespace TripEngine.Model
         private string _firstName;
         private string _lastName;
         private string _mobileNumber;
-        private string _country;
+        private string _age;
         private string _mailId;
         private string _cardNumber;
         private string _cardHolder;
@@ -39,10 +39,10 @@ namespace TripEngine.Model
             get { return this._mobileNumber; }
             set { this._mobileNumber= value; }
         }
-        public string Country
+        public string Age
         {
-            get { return this._country; }
-            set { this._country= value; }
+            get { return this._age; }
+            set { this._age= value; }
         }
         public string EmailId
         {
@@ -59,17 +59,17 @@ namespace TripEngine.Model
             get { return this._cardHolder; }
             set { this._cardHolder= value; }
         }
-        public string MM
+        public string Month
         {
             get { return this._mm; }
             set { this._mm= value; }
         }
-        public string YY
+        public string Year
         {
             get { return this._yy; }
             set { this._yy= value; }
         }
-        public string CVV
+        public string Cvv
         {
             get { return this._cvv; }
             set { this._cvv= value; }
