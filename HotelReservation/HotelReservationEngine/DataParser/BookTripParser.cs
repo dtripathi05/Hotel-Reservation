@@ -266,7 +266,6 @@ namespace HotelReservationEngine.DataParser
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }

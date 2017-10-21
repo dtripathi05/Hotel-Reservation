@@ -38,9 +38,9 @@ namespace HotelReservation.Test
         public async Task MultiAvailParser_Test()
         {
             HotelEngineClient cLient = new HotelEngineClient();
-            IHotelFactory hotelFactory = Factory.GetHotelFactory("HotelsListing");
+            IHotelFactory hotelFactory = Factory.GetHotelServices("HotelsListing");
             MultiAvailParser multiAvailParser = new MultiAvailParser();
-            HotelSearchRS hotelSearchRS = await cLient.HotelAvailAsync(multiAvailParser.RequestTranslator(request));
+            HotelSearchRS hotelSearchRS = await cLient.HotelAvailAsync(multiAvailParser.MultiAvailRQParser(request));
             Assert.NotNull(hotelSearchRS);
         }
     }

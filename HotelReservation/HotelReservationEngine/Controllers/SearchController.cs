@@ -31,18 +31,18 @@ namespace HotelReservationEngine.Controllers
             return Cache.GetSearchRequest(guid);
         }
         [HttpPost("hotel")]
-        public async Task<MultiAvailItinery> Hotel([FromBody]MultiAvailSearchRequest searchFields)
+        public async Task<MultiAvailItinerary> Hotel([FromBody]MultiAvailSearchRequest searchFields)
         {
-            IHotelFactory hotelFactory = Factory.GetHotelFactory("HotelsListing");
+            IHotelFactory hotelFactory = Factory.GetHotelServices("HotelsListing");
             var serialize = JsonConvert.SerializeObject(searchFields);
             var result = await hotelFactory.SearchAsync(serialize);
-            var deserialize = JsonConvert.DeserializeObject<MultiAvailItinery>(result);
+            var deserialize = JsonConvert.DeserializeObject<MultiAvailItinerary>(result);
             return deserialize;
         }
         [HttpPost("room")]
         public async Task<SingleAvailItinerary> Rooms([FromBody]SingleAvailItinerary hotelItinerary)
         {
-            IHotelFactory hotelFactory = Factory.GetHotelFactory("RoomListing");
+            IHotelFactory hotelFactory = Factory.GetHotelServices("RoomListing");
             var serialize = JsonConvert.SerializeObject(hotelItinerary);
             var result = await hotelFactory.SearchAsync(serialize);
             var deserialize = JsonConvert.DeserializeObject<SingleAvailItinerary>(result);
@@ -52,7 +52,7 @@ namespace HotelReservationEngine.Controllers
         public async Task<RoomPricingResponse> MarkUp([FromBody]RoomPricingItinerary room)
         {
             RoomPricingItinerary roomPricingItinerary = new RoomPricingItinerary().GetSelectedRoom(room);
-            IHotelFactory hotelFactory = Factory.GetHotelFactory("RoomPricing");
+            IHotelFactory hotelFactory = Factory.GetHotelServices("RoomPricing");
             var serialize = JsonConvert.SerializeObject(roomPricingItinerary);
             var result = await hotelFactory.SearchAsync(serialize);
             var deserialize = JsonConvert.DeserializeObject<RoomPricingResponse>(result);

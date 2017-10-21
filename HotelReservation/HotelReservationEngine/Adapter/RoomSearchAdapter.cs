@@ -3,36 +3,39 @@ using HotelReservationEngine.DataParser;
 using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelSearchService;
 using Newtonsoft.Json;
+using System;
 using System.Threading.Tasks;
 
 namespace HotelReservationEngine.Adapter
 {
     public class RoomSearchAdapter : IHotelFactory
     {
+        private HotelEngineClient _engineRepresentative = null;
+        private HotelRoomAvailRQ _hotelRoomAvailRQ = null;
+        private HotelRoomAvailRS _hotelRoomAvailRS = null;
+        private SingleAvailItinerary _singleAvailItinerary = null;
+        private SingleAvailParser _parser = null;
+
         public async Task<string> SearchAsync(string request)
         {
-            HotelEngineClient engineRepresentative = null;
-            HotelRoomAvailRQ hotelRoomAvailRQ = null;
-            HotelRoomAvailRS hotelRoomAvailRS = null;
-            SingleAvailItinerary singleAvailItinerary = null;
             try
             {
                 var convert = JsonConvert.DeserializeObject<SingleAvailItinerary>(request);
-                engineRepresentative = new HotelEngineClient();
-                SingleAvailParser parser = new SingleAvailParser();
-                hotelRoomAvailRQ = parser.RoomRequestTranslator(convert);
-                hotelRoomAvailRS = await  engineRepresentative.HotelRoomAvailAsync(hotelRoomAvailRQ);
-                singleAvailItinerary = parser.RoomResponseTranslator(hotelRoomAvailRS, convert);
+                _engineRepresentative = new HotelEngineClient();
+                _parser = new SingleAvailParser();
+                _hotelRoomAvailRQ = _parser.RoomRequestParser(convert);
+                _hotelRoomAvailRS = await _engineRepresentative.HotelRoomAvailAsync(_hotelRoomAvailRQ);
+                _singleAvailItinerary = _parser.RoomResponseParser(_hotelRoomAvailRS, convert);
             }
-            catch
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
             finally
             {
-                await engineRepresentative.CloseAsync();
+                await _engineRepresentative.CloseAsync();
             }
-            return JsonConvert.SerializeObject(singleAvailItinerary);
+            return JsonConvert.SerializeObject(_singleAvailItinerary);
         }
     }
 }

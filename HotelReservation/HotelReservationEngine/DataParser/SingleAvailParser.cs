@@ -5,7 +5,7 @@ namespace HotelReservationEngine.DataParser
 {
     public class SingleAvailParser
     {
-        public HotelRoomAvailRQ RoomRequestTranslator(SingleAvailItinerary singleAvailItinerary)
+        public HotelRoomAvailRQ RoomRequestParser(SingleAvailItinerary singleAvailItinerary)
         {
             return new HotelRoomAvailRQ
             {
@@ -15,7 +15,7 @@ namespace HotelReservationEngine.DataParser
                 Itinerary = singleAvailItinerary.Itinerary
             };
         }
-        public SingleAvailItinerary RoomResponseTranslator(HotelRoomAvailRS hotelRoomAvailRS,SingleAvailItinerary singleAvailItinerary)
+        public SingleAvailItinerary RoomResponseParser(HotelRoomAvailRS hotelRoomAvailRS,SingleAvailItinerary singleAvailItinerary)
         {
             return new SingleAvailItinerary
             {
