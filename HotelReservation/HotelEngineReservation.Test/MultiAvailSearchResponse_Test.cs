@@ -3,10 +3,11 @@ using System.Text;
 using Xunit;
 using HotelEntities;
 using System.Threading.Tasks;
-using HotelReservationEngine.Contracts;
 using HotelReservationEngine.Adapter;
 using HotelSearchService;
 using Parser;
+using HotelReservation.Contract;
+
 namespace HotelReservation.Test
 {
     public class MultiAvailSearchResponse_Test
