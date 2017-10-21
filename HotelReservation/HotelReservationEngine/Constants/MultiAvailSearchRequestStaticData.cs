@@ -25,5 +25,6 @@ namespace HotelReservationEngine.Constants
         public readonly static int _companyId = 0;
         public readonly static string _priceCurrencyCode = "USD";
         public readonly static float _searchRadius = 10;
+
     }
 }

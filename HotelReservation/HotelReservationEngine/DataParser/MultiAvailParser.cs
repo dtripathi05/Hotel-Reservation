@@ -33,7 +33,7 @@ namespace Parser
             {"GeoCode",LocationCodeContext.GeoCode },
             {"Hotel", LocationCodeContext.GeoCode }
             };
-        public HotelSearchRQ RequestTranslator(MultiAvailSearchRequest searchRequest)
+        public HotelSearchRQ MultiAvailRQParser(MultiAvailSearchRequest searchRequest)
         {
             HotelSearchRQ listRQ = new HotelSearchRQ();
             listRQ.SessionId = Guid.NewGuid().ToString();
@@ -113,7 +113,6 @@ namespace Parser
                 GeoCode = JsonConvert.DeserializeObject<GeoCode>(json)
             };
         }
-
         private PassengerTypeQuantity[] GetGuestDetails(int adultCount, int childCount)
         {
 
@@ -121,28 +120,9 @@ namespace Parser
             PassengerTypeQuantity adultPassengers = new PassengerTypeQuantity();
             adultPassengers.PassengerType = PassengerType.Adult;
             adultPassengers.Quantity = adultCount;
-            //PassengerTypeQuantity childPassengers = new PassengerTypeQuantity();
-            //childPassengers.PassengerType = PassengerType.Child;
-            //childPassengers.Quantity = childCount;
-            //childPassengers.Ages = new int[childCount];
-            //if (childCount == 0)
-            //{
-            //    childPassengers.Ages = new int[1];
-            //}
-            //else
-            //{
-            //    childPassengers.Ages = new int[childCount];
-            //}
-            //for (int i = 0; i < childPassengers.Ages.Length; i++)
-            //{
-            //    childPassengers.Ages[i] = 12;
-            //}
-            //childPassengers.Quantity = childCount;childPassengers
-            //passengerTypeQuantity[0] = childPassengers;
             passengerTypeQuantity[0] = adultPassengers;
             return passengerTypeQuantity;
         }
-
         private Company GetDefaultRequester()
         {
             Company company = new Company();
@@ -167,8 +147,7 @@ namespace Parser
             company.ID = MultiAvailSearchRequestStaticData._companyId;
             return company;
         }
-
-        public MultiAvailItinery ResponseTranslator(HotelSearchRS hotelSearchRS,HotelSearchRQ hotelSearchRQ)
+        public MultiAvailItinery MultiAvailRSParser(HotelSearchRS hotelSearchRS,HotelSearchRQ hotelSearchRQ)
         {
             MultiAvailItinery multiAvailItinery = new MultiAvailItinery();
             List<HotelItinerary> itinerary = new List<HotelItinerary>();

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelReservation.Contract;
+using System;
 
 namespace HotelAdapter
 {
@@ -19,13 +20,13 @@ namespace HotelAdapter
                 var convert = JsonConvert.DeserializeObject<MultiAvailSearchRequest>(request);
                 engineRepresentative = new HotelEngineClient();
                 MultiAvailParser parser = new MultiAvailParser();
-                HotelSearchRQ hotelSearchReq = parser.RequestTranslator(convert);
+                HotelSearchRQ hotelSearchReq = parser.MultiAvailRQParser(convert);
                 HotelSearchRS hotelSearchRS = await engineRepresentative.HotelAvailAsync(hotelSearchReq);
-                searchResponse = parser.ResponseTranslator(hotelSearchRS,hotelSearchReq);
+                searchResponse = parser.MultiAvailRSParser(hotelSearchRS,hotelSearchReq);
             }
-            catch
+            catch(Exception ex)
             {
-                throw;
+                throw ex;
             }
             finally
             {

@@ -36,7 +36,7 @@ namespace HotelReservation.Test
             HotelEngineClient cLient = new HotelEngineClient();
             IHotelFactory hotelFactory = Factory.GetHotelFactory("HotelsListing");
             MultiAvailParser multiAvailParser = new MultiAvailParser();
-            Assert.NotNull(multiAvailParser.RequestTranslator(request));
+            Assert.NotNull(multiAvailParser.MultiAvailRQParser(request));
         }
     }
 }
