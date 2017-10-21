@@ -8,7 +8,7 @@ $(document).ready(function () {
     var roomType = [];
     var img = "";
     for (var i = 0; i < room.itinerary.rooms.length; i++) {
-        if (room.itinerary.rooms[i].hotelFareSource.name == "HotelBeds Test")
+       // if (room.itinerary.rooms[i].hotelFareSource.name == "HotelBeds Test")
         {
             for (k = 0; k < room.itinerary.hotelProperty.mediaContent.length; k++)
             {

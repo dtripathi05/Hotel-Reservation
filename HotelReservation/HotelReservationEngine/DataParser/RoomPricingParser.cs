@@ -20,17 +20,17 @@ namespace HotelReservationEngine.DataParser
                 {
                     HotelSearchCriterion = roomPricingItinerary.Criteria,
                     HotelItinerary = roomPricingItinerary.Itinerary,
-                } ,
-                ResultRequested=TripEngineService.ResponseType.Complete,
+                },
+                ResultRequested = TripEngineService.ResponseType.Complete,
             };
         }
         public RoomPricingResponse RoomPriceRSParser(TripEngineService.TripProductPriceRS tripProductPriceRS, RoomPricingItinerary roomPricingItinerary)
         {
             return new RoomPricingResponse
             {
-                Product=((HotelTripProduct)tripProductPriceRS.TripProduct),
-                SessionId=tripProductPriceRS.SessionId,
-                Criteria= roomPricingItinerary.Criteria
+                Product = ((HotelTripProduct)tripProductPriceRS.TripProduct),
+                SessionId = tripProductPriceRS.SessionId,
+                Criteria = roomPricingItinerary.Criteria
             };
         }
     }
