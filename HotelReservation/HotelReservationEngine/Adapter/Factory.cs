@@ -10,7 +10,7 @@ namespace HotelReservationEngine.Adapter
         {
             { "HotelsListing",new HotelSearchAdapter()},{"RoomListing",new RoomSearchAdapter()},{"RoomPricing",new RoomPricingAdapter()}
         };
-        public static IHotelFactory GetHotelFactory(string type)
+        public static IHotelFactory GetHotelServices(string type)
         {
             IHotelFactory result;
             _services.TryGetValue(type, out result);

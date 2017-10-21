@@ -147,18 +147,18 @@ namespace Parser
             company.ID = MultiAvailSearchRequestStaticData._companyId;
             return company;
         }
-        public MultiAvailItinery MultiAvailRSParser(HotelSearchRS hotelSearchRS,HotelSearchRQ hotelSearchRQ)
+        public MultiAvailItinerary MultiAvailRSParser(HotelSearchRS hotelSearchRS,HotelSearchRQ hotelSearchRQ)
         {
-            MultiAvailItinery multiAvailItinery = new MultiAvailItinery();
+            MultiAvailItinerary multiAvailItinerary = new MultiAvailItinerary();
             List<HotelItinerary> itinerary = new List<HotelItinerary>();
             foreach (var itineraries in hotelSearchRS.Itineraries)
             {
                 itinerary.Add(itineraries);
             }
-            multiAvailItinery.Itinerary = itinerary;
-            multiAvailItinery.SessionId = hotelSearchRS.SessionId;
-            multiAvailItinery.hotelSearchCriterion = hotelSearchRQ.HotelSearchCriterion;
-            return multiAvailItinery;
+            multiAvailItinerary.Itinerary = itinerary;
+            multiAvailItinerary.SessionId = hotelSearchRS.SessionId;
+            multiAvailItinerary.HotelSearchCriterion = hotelSearchRQ.HotelSearchCriterion;
+            return multiAvailItinerary;
         }
     }
 }

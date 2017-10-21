@@ -14,31 +14,32 @@ namespace HotelReservationEngine.Adapter
 {
     public class RoomPricingAdapter : IHotelFactory
     {
-        TripsEngineClient engineClient;
-        TripProductPriceRQ tripProductPriceRQ;
-        TripProductPriceRS tripProductPriceRS;
-        RoomPricingResponse roomPricingResponse;
+        private TripsEngineClient _engineClient = null;
+        private TripProductPriceRQ _tripProductPriceRQ = null;
+        private TripProductPriceRS _tripProductPriceRS = null;
+        private RoomPricingResponse _roomPricingResponse = null;
+        private RoomPricingParser _parser = null;
 
         public async Task<string> SearchAsync(string request)
         {
             try
             {
-                engineClient = new TripsEngineClient();
+                _engineClient = new TripsEngineClient();
                 var deserialize = JsonConvert.DeserializeObject<RoomPricingItinerary>(request);
-                RoomPricingParser parser = new RoomPricingParser();
-                tripProductPriceRQ = parser.RoomPriceRQParser(deserialize);
-                tripProductPriceRS = await engineClient.PriceTripProductAsync(tripProductPriceRQ);
-                roomPricingResponse = parser.RoomPriceRSParser(tripProductPriceRS, deserialize);
+                _parser = new RoomPricingParser();
+                _tripProductPriceRQ = _parser.RoomPriceRQParser(deserialize);
+                _tripProductPriceRS = await _engineClient.PriceTripProductAsync(_tripProductPriceRQ);
+                _roomPricingResponse = _parser.RoomPriceRSParser(_tripProductPriceRS, deserialize);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
             finally
             {
-                await engineClient.CloseAsync();
+                await _engineClient.CloseAsync();
             }
-            return JsonConvert.SerializeObject(roomPricingResponse);
+            return JsonConvert.SerializeObject(_roomPricingResponse);
         }
     }
 }

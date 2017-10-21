@@ -11,28 +11,32 @@ namespace HotelAdapter
 {
     public class HotelSearchAdapter : IHotelFactory
     {
+        private HotelEngineClient _engineClient = null;
+        private MultiAvailItinerary _searchResponse = null;
+        private MultiAvailParser _parser = null;
+        private HotelSearchRQ _hotelSearchRQ = null;
+        private HotelSearchRS _hotelSearchRS = null;
+
         public async Task<string> SearchAsync(string request)
         {
-            HotelEngineClient engineRepresentative = null;
-            MultiAvailItinery searchResponse = null;
             try
             {
                 var convert = JsonConvert.DeserializeObject<MultiAvailSearchRequest>(request);
-                engineRepresentative = new HotelEngineClient();
-                MultiAvailParser parser = new MultiAvailParser();
-                HotelSearchRQ hotelSearchReq = parser.MultiAvailRQParser(convert);
-                HotelSearchRS hotelSearchRS = await engineRepresentative.HotelAvailAsync(hotelSearchReq);
-                searchResponse = parser.MultiAvailRSParser(hotelSearchRS,hotelSearchReq);
+                _engineClient = new HotelEngineClient();
+                _parser = new MultiAvailParser();
+                _hotelSearchRQ = _parser.MultiAvailRQParser(convert);
+                _hotelSearchRS = await _engineClient.HotelAvailAsync(_hotelSearchRQ);
+                _searchResponse = _parser.MultiAvailRSParser(_hotelSearchRS, _hotelSearchRQ);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 throw ex;
             }
             finally
             {
-                await engineRepresentative.CloseAsync();
+                await _engineClient.CloseAsync();
             }
-            return JsonConvert.SerializeObject(searchResponse);
+            return JsonConvert.SerializeObject(_searchResponse);
         }
     }
 }

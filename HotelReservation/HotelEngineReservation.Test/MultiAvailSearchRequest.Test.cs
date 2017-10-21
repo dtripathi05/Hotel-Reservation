@@ -34,7 +34,7 @@ namespace HotelReservation.Test
         public void MultiAvailParser_Test()
         {
             HotelEngineClient cLient = new HotelEngineClient();
-            IHotelFactory hotelFactory = Factory.GetHotelFactory("HotelsListing");
+            IHotelFactory hotelFactory = Factory.GetHotelServices("HotelsListing");
             MultiAvailParser multiAvailParser = new MultiAvailParser();
             Assert.NotNull(multiAvailParser.MultiAvailRQParser(request));
         }
