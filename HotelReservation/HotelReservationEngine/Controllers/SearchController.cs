@@ -5,7 +5,7 @@ using HotelEntities;
 using HotelReservationEngine.Model;
 using HotelReservationEngine.Adapter;
 using Newtonsoft.Json;
-using HotelReservationEngine.Contracts;
+//using HotelReservationEngine.Contracts;
 using HotelReservationEngine.HotelMultiAvailItinerary;
 using TripEngine.Model;
 using TripEngineService;

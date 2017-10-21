@@ -3,8 +3,8 @@ using HotelSearchService;
 using Parser;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using HotelReservationEngine.Contracts;
 using HotelReservationEngine.HotelMultiAvailItinerary;
+using HotelReservation.Contract;
 
 namespace HotelAdapter
 {
