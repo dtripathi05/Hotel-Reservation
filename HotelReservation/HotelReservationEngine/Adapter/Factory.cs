@@ -1,5 +1,5 @@
 ﻿using HotelAdapter;
-using HotelReservationEngine.Contracts;
+using HotelReservation.Contract;
 using System.Collections.Generic;
 
 namespace HotelReservationEngine.Adapter

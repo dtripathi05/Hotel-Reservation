@@ -1,4 +1,4 @@
-﻿using HotelReservationEngine.Contracts;
+﻿using HotelReservation.Contract;
 using HotelReservationEngine.DataParser;
 using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelSearchService;

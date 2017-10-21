@@ -5,11 +5,11 @@ using HotelEntities;
 using HotelReservationEngine.Model;
 using HotelReservationEngine.Adapter;
 using Newtonsoft.Json;
-using HotelReservationEngine.Contracts;
 using HotelReservationEngine.HotelMultiAvailItinerary;
 using TripEngine.Model;
 using TripEngineService;
 using HotelReservationEngine.DataParser;
+using HotelReservation.Contract;
 
 namespace HotelReservationEngine.Controllers
 {

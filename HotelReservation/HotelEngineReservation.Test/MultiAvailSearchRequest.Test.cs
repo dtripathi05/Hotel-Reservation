@@ -1,6 +1,6 @@
 using HotelEntities;
+using HotelReservation.Contract;
 using HotelReservationEngine.Adapter;
-using HotelReservationEngine.Contracts;
 using HotelSearchService;
 using Parser;
 using System;

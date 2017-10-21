@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using HotelSearchService;
 using HotelReservationEngine.DataParser;
 using HotelReservationEngine.HotelMultiAvailItinerary;
-using HotelReservationEngine.Contracts;
 using Newtonsoft.Json;
 using TripEngineService;
 using TripEngine.Model;
+using HotelReservation.Contract;
 
 namespace HotelReservationEngine.Adapter
 {
