@@ -12,13 +12,13 @@ using TripEngine.Model;
 
 namespace HotelReservationEngine.Adapter
 {
-    public class RoomPricingAdapter:IHotelFactory
+    public class RoomPricingAdapter : IHotelFactory
     {
         TripsEngineClient engineClient;
         TripProductPriceRQ tripProductPriceRQ;
         TripProductPriceRS tripProductPriceRS;
         RoomPricingResponse roomPricingResponse;
-        
+
         public async Task<string> SearchAsync(string request)
         {
             try

@@ -13,7 +13,7 @@ namespace HotelReservationEngine.Adapter
         public static IHotelFactory GetHotelFactory(string type)
         {
             IHotelFactory result;
-             _services.TryGetValue(type, out result);
+            _services.TryGetValue(type, out result);
             return result;
         }
     }

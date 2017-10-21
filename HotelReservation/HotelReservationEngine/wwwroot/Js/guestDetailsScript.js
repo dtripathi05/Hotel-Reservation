@@ -44,7 +44,7 @@ function importDetails() {
         dataType: 'json',
         contentType: "application/json",
         success: function (result) {
-            console(result);
+            console.log(result);
         },
     });
 }

@@ -11,7 +11,7 @@ namespace TripEngine.Model
         private string _firstName;
         private string _lastName;
         private string _mobileNumber;
-        private string _country;
+        private string _age;
         private string _mailId;
         private string _cardNumber;
         private string _cardHolder;
@@ -22,57 +22,57 @@ namespace TripEngine.Model
         public RoomPricingResponse RoomPricingResponse
         {
             get { return this._roomPricingResponse; }
-            set { this._roomPricingResponse= value; }
+            set { this._roomPricingResponse = value; }
         }
         public string FirstName
         {
             get { return this._firstName; }
-            set { this._firstName= value; }
+            set { this._firstName = value; }
         }
         public string LastName
         {
             get { return this._lastName; }
-            set { this._lastName= value; }
+            set { this._lastName = value; }
         }
         public string MobileNumber
         {
             get { return this._mobileNumber; }
-            set { this._mobileNumber= value; }
+            set { this._mobileNumber = value; }
         }
-        public string Country
+        public string Age
         {
-            get { return this._country; }
-            set { this._country= value; }
+            get { return this._age; }
+            set { this._age = value; }
         }
         public string EmailId
         {
             get { return this._mailId; }
-            set { this._mailId= value; }
+            set { this._mailId = value; }
         }
         public string CardNumber
         {
             get { return this._cardNumber; }
-            set { this._cardNumber= value; }
+            set { this._cardNumber = value; }
         }
         public string CardHolder
         {
             get { return this._cardHolder; }
-            set { this._cardHolder= value; }
+            set { this._cardHolder = value; }
         }
-        public string MM
+        public string Month
         {
             get { return this._mm; }
-            set { this._mm= value; }
+            set { this._mm = value; }
         }
-        public string YY
+        public string Year
         {
             get { return this._yy; }
-            set { this._yy= value; }
+            set { this._yy = value; }
         }
-        public string CVV
+        public string Cvv
         {
             get { return this._cvv; }
-            set { this._cvv= value; }
+            set { this._cvv = value; }
         }
     }
 }

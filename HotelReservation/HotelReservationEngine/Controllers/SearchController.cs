@@ -53,17 +53,18 @@ namespace HotelReservationEngine.Controllers
         {
             RoomPricingItinerary roomPricingItinerary = new RoomPricingItinerary().GetSelectedRoom(room);
             IHotelFactory hotelFactory = Factory.GetHotelFactory("RoomPricing");
-            var serialize= JsonConvert.SerializeObject(roomPricingItinerary);
-            var result= await hotelFactory.SearchAsync(serialize);
-            var deserialize= JsonConvert.DeserializeObject<RoomPricingResponse>(result);
+            var serialize = JsonConvert.SerializeObject(roomPricingItinerary);
+            var result = await hotelFactory.SearchAsync(serialize);
+            var deserialize = JsonConvert.DeserializeObject<RoomPricingResponse>(result);
             return deserialize;
 
         }
         [HttpPost("completePayment")]
         public async Task<TripFolderBookRS> Booking([FromBody]BookTripRQ bookTripRQ)
         {
-            BookTripParser bookTripParser = new BookTripParser();
-            var result =await bookTripParser.tripFolderBookRQParser(bookTripRQ);
+            BookTripParser bookTripParser = new BookTripParser(bookTripRQ);
+            var result = await bookTripParser.GetTripFolderBookRS(bookTripParser.TripFolderBookRQ);
+            // var result =await bookTripParser.tripFolderBookRQParser(bookTripRQ);
             return result;
 
         }
