@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using TripEngineService;
 using TripEngine.Model;
 using HotelReservation.Contract;
+using HotelReservation.Logger;
 
 namespace HotelReservationEngine.Adapter
 {
@@ -33,7 +34,7 @@ namespace HotelReservationEngine.Adapter
             }
             catch (Exception ex)
             {
-                throw ex;
+                Log.ExcpLogger(ex);
             }
             finally
             {

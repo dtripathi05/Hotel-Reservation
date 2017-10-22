@@ -1,4 +1,5 @@
 ﻿using HotelReservation.Contract;
+using HotelReservation.Logger;
 using HotelReservationEngine.DataParser;
 using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelSearchService;
@@ -29,7 +30,7 @@ namespace HotelReservationEngine.Adapter
             }
             catch (Exception ex)
             {
-                throw ex;
+                Log.ExcpLogger(ex);
             }
             finally
             {

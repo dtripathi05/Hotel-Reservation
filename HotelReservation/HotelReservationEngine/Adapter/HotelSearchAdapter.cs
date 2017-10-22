@@ -32,7 +32,6 @@ namespace HotelAdapter
             catch (Exception ex)
             {
                 Log.ExcpLogger(ex);
-                throw new Exception();
             }
             finally
             {

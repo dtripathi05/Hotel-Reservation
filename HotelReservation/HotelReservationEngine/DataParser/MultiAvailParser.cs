@@ -5,6 +5,7 @@ using HotelEntities;
 using Newtonsoft.Json;
 using HotelReservationEngine.Constants;
 using HotelReservationEngine.HotelMultiAvailItinerary;
+using HotelReservation.Logger;
 
 namespace Parser
 {
@@ -89,9 +90,10 @@ namespace Parser
                     End = checkOutDate,
                 };
             }
-            catch
+            catch(Exception ex)
             {
-                throw;
+                Log.ExcpLogger(ex);
+                throw new Exception();
             }
         }
         private int GetMinimumRoomsRequired(int adultsCount, int childrensCount)
@@ -149,6 +151,17 @@ namespace Parser
         }
         public MultiAvailItinerary MultiAvailRSParser(HotelSearchRS hotelSearchRS,HotelSearchRQ hotelSearchRQ)
         {
+            try
+            {
+                if (hotelSearchRS == null && hotelSearchRQ ==null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch(Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
             MultiAvailItinerary multiAvailItinerary = new MultiAvailItinerary();
             List<HotelItinerary> itinerary = new List<HotelItinerary>();
             foreach (var itineraries in hotelSearchRS.Itineraries)
