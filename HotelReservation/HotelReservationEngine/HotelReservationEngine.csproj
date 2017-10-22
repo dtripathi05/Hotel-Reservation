@@ -31,6 +31,7 @@
   <ItemGroup>
     <ProjectReference Include="..\HotelEntities\HotelEntities.csproj" />
     <ProjectReference Include="..\HotelReservation.Contract\HotelReservation.Contract.csproj" />
+    <ProjectReference Include="..\HotelReservation.Logger\HotelReservation.Logger.csproj" />
     <ProjectReference Include="..\TripEngine\TripEngine.csproj" />
   </ItemGroup>
 

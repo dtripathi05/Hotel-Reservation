@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelReservation.Logger;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -255,19 +256,22 @@ namespace HotelReservationEngine.DataParser
         };
         public async Task<TripFolderBookRS> GetTripFolderBookRS(TripFolderBookRQ tripFolderBookRQ)
         {
+            TripFolderBookRS response=null;
             try
             {
                 tripFolderBookRQ.TripFolder.Products[0].Owner = tripFolderBookRQ.TripFolder.Owner;
                 ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).HotelSearchCriterion = _hotelSearchCriterion;
                 ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).HotelItinerary = _hotelItinerary;
                 TripsEngineClient tripsEngineClient = new TripsEngineClient();
-                TripFolderBookRS response = await tripsEngineClient.BookTripFolderAsync(tripFolderBookRQ);
-                return response;
+                //TripFolderBookRS response = await tripsEngineClient.BookTripFolderAsync(tripFolderBookRQ);
+                response = await tripsEngineClient.BookTripFolderAsync(tripFolderBookRQ);
+                
             }
             catch (Exception ex)
             {
-                throw ex;
+                Log.ExcpLogger(ex);
             }
+            return response;
         }
     }
 }

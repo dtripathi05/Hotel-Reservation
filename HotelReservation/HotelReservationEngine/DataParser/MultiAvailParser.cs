@@ -5,6 +5,7 @@ using HotelEntities;
 using Newtonsoft.Json;
 using HotelReservationEngine.Constants;
 using HotelReservationEngine.HotelMultiAvailItinerary;
+using HotelReservation.Logger;
 
 namespace Parser
 {
@@ -35,6 +36,17 @@ namespace Parser
             };
         public HotelSearchRQ MultiAvailRQParser(MultiAvailSearchRequest searchRequest)
         {
+            try
+            {
+                if (searchRequest == null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
             HotelSearchRQ listRQ = new HotelSearchRQ();
             listRQ.SessionId = Guid.NewGuid().ToString();
             listRQ.ResultRequested = ResponseType.Complete;
@@ -81,18 +93,22 @@ namespace Parser
             }
         private DateTimeSpan GetStayPeriod(DateTime checkInDate, DateTime checkOutDate)
         {
+            DateTimeSpan dateTimeSpan = new DateTimeSpan();
             try
             {
-                return new DateTimeSpan()
-                {
-                    Start = checkInDate,
-                    End = checkOutDate,
-                };
+                //return new DateTimeSpan()
+                //{
+                //    Start = checkInDate,
+                //    End = checkOutDate,
+                //};
+                dateTimeSpan.Start = checkInDate;
+                dateTimeSpan.End = checkOutDate;
             }
-            catch
+            catch(Exception ex)
             {
-                throw;
+                Log.ExcpLogger(ex);
             }
+            return dateTimeSpan;
         }
         private int GetMinimumRoomsRequired(int adultsCount, int childrensCount)
         {
@@ -149,6 +165,17 @@ namespace Parser
         }
         public MultiAvailItinerary MultiAvailRSParser(HotelSearchRS hotelSearchRS,HotelSearchRQ hotelSearchRQ)
         {
+            try
+            {
+                if (hotelSearchRS == null && hotelSearchRQ ==null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch(Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
             MultiAvailItinerary multiAvailItinerary = new MultiAvailItinerary();
             List<HotelItinerary> itinerary = new List<HotelItinerary>();
             foreach (var itineraries in hotelSearchRS.Itineraries)
