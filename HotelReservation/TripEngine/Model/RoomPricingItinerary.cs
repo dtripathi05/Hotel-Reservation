@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelReservation.Logger;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -15,6 +16,17 @@ namespace TripEngine.Model
 
         public RoomPricingItinerary GetSelectedRoom(RoomPricingItinerary roomPricingItinerary)
         {
+            try
+            {
+                if (roomPricingItinerary == null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
             return new RoomPricingItinerary
             {
                 Criteria = roomPricingItinerary.Criteria,
@@ -24,6 +36,18 @@ namespace TripEngine.Model
         }
         public HotelItinerary GetItinerary(HotelItinerary hotelItinerary, string roomName)
         {
+            try
+            {
+                if (hotelItinerary == null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
+
             HotelItinerary hotel = hotelItinerary;
             Room room = new Room();
             for (int i = 0; i < hotelItinerary.Rooms.Length; i++)
