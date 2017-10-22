@@ -6,6 +6,7 @@ using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelSearchService;
 using TripEngine.Model;
 using TripEngineService;
+using HotelReservation.Logger;
 
 namespace HotelReservationEngine.DataParser
 {
@@ -13,6 +14,17 @@ namespace HotelReservationEngine.DataParser
     {
         public TripProductPriceRQ RoomPriceRQParser(RoomPricingItinerary roomPricingItinerary)
         {
+            try
+            {
+                if (roomPricingItinerary == null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
             return new TripProductPriceRQ
             {
                 SessionId = roomPricingItinerary.SessionId,
@@ -26,6 +38,17 @@ namespace HotelReservationEngine.DataParser
         }
         public RoomPricingResponse RoomPriceRSParser(TripEngineService.TripProductPriceRS tripProductPriceRS, RoomPricingItinerary roomPricingItinerary)
         {
+            try
+            {
+                if (tripProductPriceRS == null && roomPricingItinerary == null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
             return new RoomPricingResponse
             {
                 Product = ((HotelTripProduct)tripProductPriceRS.TripProduct),
