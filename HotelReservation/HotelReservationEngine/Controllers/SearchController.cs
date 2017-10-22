@@ -10,6 +10,8 @@ using TripEngine.Model;
 using TripEngineService;
 using HotelReservationEngine.DataParser;
 using HotelReservation.Contract;
+using System;
+using HotelReservation.Logger;
 
 namespace HotelReservationEngine.Controllers
 {
@@ -22,6 +24,17 @@ namespace HotelReservationEngine.Controllers
         [HttpPost("newRequest")]
         public string NewRequest([FromBody]MultiAvailSearchRequest searchFields)
         {
+            try
+            {
+                if (searchFields == null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
             return Cache.AddToCache(searchFields);
         }
 
@@ -31,8 +44,19 @@ namespace HotelReservationEngine.Controllers
             return Cache.GetSearchRequest(guid);
         }
         [HttpPost("hotel")]
-        public async Task<MultiAvailItinerary> Hotel([FromBody]MultiAvailSearchRequest searchFields)
+        public async Task<MultiAvailItinerary> MultipleItinerary([FromBody]MultiAvailSearchRequest searchFields)
         {
+            try
+            {
+                if (searchFields == null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
             IHotelFactory hotelFactory = Factory.GetHotelServices("HotelsListing");
             var serialize = JsonConvert.SerializeObject(searchFields);
             var result = await hotelFactory.SearchAsync(serialize);
@@ -40,8 +64,19 @@ namespace HotelReservationEngine.Controllers
             return deserialize;
         }
         [HttpPost("room")]
-        public async Task<SingleAvailItinerary> Rooms([FromBody]SingleAvailItinerary hotelItinerary)
+        public async Task<SingleAvailItinerary> SingleItinerary([FromBody]SingleAvailItinerary hotelItinerary)
         {
+            try
+            {
+                if (hotelItinerary == null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
             IHotelFactory hotelFactory = Factory.GetHotelServices("RoomListing");
             var serialize = JsonConvert.SerializeObject(hotelItinerary);
             var result = await hotelFactory.SearchAsync(serialize);
@@ -49,8 +84,19 @@ namespace HotelReservationEngine.Controllers
             return deserialize;
         }
         [HttpPost("roomPrice")]
-        public async Task<RoomPricingResponse> MarkUp([FromBody]RoomPricingItinerary room)
+        public async Task<RoomPricingResponse> RoomPricing([FromBody]RoomPricingItinerary room)
         {
+            try
+            {
+                if (room == null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
             RoomPricingItinerary roomPricingItinerary = new RoomPricingItinerary().GetSelectedRoom(room);
             IHotelFactory hotelFactory = Factory.GetHotelServices("RoomPricing");
             var serialize = JsonConvert.SerializeObject(roomPricingItinerary);
