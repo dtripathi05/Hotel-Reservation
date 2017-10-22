@@ -1,5 +1,7 @@
 ﻿using HotelAdapter;
 using HotelReservation.Contract;
+using HotelReservation.Logger;
+using System;
 using System.Collections.Generic;
 
 namespace HotelReservationEngine.Adapter
@@ -12,9 +14,17 @@ namespace HotelReservationEngine.Adapter
         };
         public static IHotelFactory GetHotelServices(string type)
         {
-            IHotelFactory result;
-            _services.TryGetValue(type, out result);
-            return result;
+            try
+            {
+                IHotelFactory result;
+                _services.TryGetValue(type, out result);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+                throw new Exception();
+            }
         }
     }
 }

@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelReservation.Contract;
 using System;
+using HotelReservation.Logger;
 
 namespace HotelAdapter
 {
@@ -30,7 +31,8 @@ namespace HotelAdapter
             }
             catch (Exception ex)
             {
-                throw ex;
+                Log.ExcpLogger(ex);
+                throw new Exception();
             }
             finally
             {
