@@ -36,6 +36,17 @@ namespace Parser
             };
         public HotelSearchRQ MultiAvailRQParser(MultiAvailSearchRequest searchRequest)
         {
+            try
+            {
+                if (searchRequest == null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
             HotelSearchRQ listRQ = new HotelSearchRQ();
             listRQ.SessionId = Guid.NewGuid().ToString();
             listRQ.ResultRequested = ResponseType.Complete;
@@ -82,19 +93,22 @@ namespace Parser
             }
         private DateTimeSpan GetStayPeriod(DateTime checkInDate, DateTime checkOutDate)
         {
+            DateTimeSpan dateTimeSpan = new DateTimeSpan();
             try
             {
-                return new DateTimeSpan()
-                {
-                    Start = checkInDate,
-                    End = checkOutDate,
-                };
+                //return new DateTimeSpan()
+                //{
+                //    Start = checkInDate,
+                //    End = checkOutDate,
+                //};
+                dateTimeSpan.Start = checkInDate;
+                dateTimeSpan.End = checkOutDate;
             }
             catch(Exception ex)
             {
                 Log.ExcpLogger(ex);
-                throw new Exception();
             }
+            return dateTimeSpan;
         }
         private int GetMinimumRoomsRequired(int adultsCount, int childrensCount)
         {
