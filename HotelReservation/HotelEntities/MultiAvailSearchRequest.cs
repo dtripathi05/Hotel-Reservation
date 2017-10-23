@@ -1,8 +1,9 @@
-﻿using System;
+﻿using HotelReservation.Contract;
+using System;
 
 namespace HotelEntities
 {
-    public class MultiAvailSearchRequest
+    public class MultiAvailSearchRequest:IItinerary
     {
         private Location _pickedHotel;
         private DateTime _checkInDate;

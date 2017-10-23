@@ -17,16 +17,15 @@ namespace HotelReservationEngine.Adapter
         private SingleAvailItinerary _singleAvailItinerary = null;
         private SingleAvailParser _parser = null;
 
-        public async Task<string> SearchAsync(string request)
+        public async Task<IItinerary> SearchAsync(IItinerary requestedItinerary)
         {
             try
             {
-                var convert = JsonConvert.DeserializeObject<SingleAvailItinerary>(request);
                 _engineRepresentative = new HotelEngineClient();
                 _parser = new SingleAvailParser();
-                _hotelRoomAvailRQ = _parser.RoomRequestParser(convert);
+                _hotelRoomAvailRQ = _parser.RoomRequestParser((SingleAvailItinerary)requestedItinerary);
                 _hotelRoomAvailRS = await _engineRepresentative.HotelRoomAvailAsync(_hotelRoomAvailRQ);
-                _singleAvailItinerary = _parser.RoomResponseParser(_hotelRoomAvailRS, convert);
+                _singleAvailItinerary = _parser.RoomResponseParser(_hotelRoomAvailRS, (SingleAvailItinerary)requestedItinerary);
             }
             catch (Exception ex)
             {
@@ -36,7 +35,7 @@ namespace HotelReservationEngine.Adapter
             {
                 await _engineRepresentative.CloseAsync();
             }
-            return JsonConvert.SerializeObject(_singleAvailItinerary);
+            return _singleAvailItinerary;
         }
     }
 }

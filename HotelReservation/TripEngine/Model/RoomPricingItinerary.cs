@@ -1,4 +1,5 @@
-﻿using HotelReservation.Logger;
+﻿using HotelReservation.Contract;
+using HotelReservation.Logger;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using TripEngineService;
 
 namespace TripEngine.Model
 {
-    public class RoomPricingItinerary
+    public class RoomPricingItinerary : IItinerary
     {
         public HotelItinerary Itinerary { get; set; }
         public HotelSearchCriterion Criteria { get; set; }

@@ -21,16 +21,15 @@ namespace HotelReservationEngine.Adapter
         private RoomPricingResponse _roomPricingResponse = null;
         private RoomPricingParser _parser = null;
 
-        public async Task<string> SearchAsync(string request)
+        public async Task<IItinerary> SearchAsync(IItinerary requestedItinerary)
         {
             try
             {
                 _engineClient = new TripsEngineClient();
-                var deserialize = JsonConvert.DeserializeObject<RoomPricingItinerary>(request);
                 _parser = new RoomPricingParser();
-                _tripProductPriceRQ = _parser.RoomPriceRQParser(deserialize);
+                _tripProductPriceRQ = _parser.RoomPriceRQParser((RoomPricingItinerary)requestedItinerary);
                 _tripProductPriceRS = await _engineClient.PriceTripProductAsync(_tripProductPriceRQ);
-                _roomPricingResponse = _parser.RoomPriceRSParser(_tripProductPriceRS, deserialize);
+                _roomPricingResponse = _parser.RoomPriceRSParser(_tripProductPriceRS, (RoomPricingItinerary)requestedItinerary);
             }
             catch (Exception ex)
             {
@@ -40,7 +39,7 @@ namespace HotelReservationEngine.Adapter
             {
                 await _engineClient.CloseAsync();
             }
-            return JsonConvert.SerializeObject(_roomPricingResponse);
+            return _roomPricingResponse;
         }
     }
 }
