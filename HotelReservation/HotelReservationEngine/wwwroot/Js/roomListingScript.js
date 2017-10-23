@@ -8,16 +8,15 @@ $(document).ready(function () {
     var roomType = [];
     var img = "";
     for (var i = 0; i < room.itinerary.rooms.length; i++) {
-       // if (room.itinerary.rooms[i].hotelFareSource.name == "HotelBeds Test")
+        //if (room.itinerary.rooms[i].hotelFareSource.name == "HotelBeds Test")
         {
-            for (k = 0; k < room.itinerary.hotelProperty.mediaContent.length; k++)
-            {
+            for (k = 0; k < room.itinerary.hotelProperty.mediaContent.length; k++) {
                 if (room.itinerary.hotelProperty.mediaContent[k].url != null) {
                     img = room.itinerary.hotelProperty.mediaContent[k].url.toString();
                     break;
                 }
             }
-           // img = room.itinerary.hotelProperty.mediaContent[i].url.toString();
+            // img = room.itinerary.hotelProperty.mediaContent[i].url.toString();
             roomType.push({
 
                 hotelname: room.itinerary.hotelProperty.name,
@@ -28,8 +27,8 @@ $(document).ready(function () {
                 imageurl: img
             });
         }
-
     }
+
     var temp = $("#x");
     var cmp = Handlebars.compile(temp.html());
     var htm = cmp({ hotelname: roomType[0].hotelname });
