@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using TripEngine.Model;
 using TripEngineService;
 
 namespace HotelReservationEngine.DataParser
 {
     public class CompleteBookingParser
     {
-        public async Task<CompleteBookingRS> BookingRS(TripFolderBookRS tripFolderBookRS)
+        public async Task<CompleteBookingRS> BookingRS(BookTripFolderResponse bookTripFolderResponse)
         {
             CompleteBookingRQ completeBookingRQ = new CompleteBookingRQ()
             {
                 ResultRequested = ResponseType.Unknown,
-                SessionId = tripFolderBookRS.SessionId,
-                ExternalPayment = tripFolderBookRS.TripFolder.Payments[0],
-                TripFolderId = tripFolderBookRS.TripFolder.Id
+                SessionId = bookTripFolderResponse.SessionId,
+                ExternalPayment = new CreditCardPayment(),
+                TripFolderId = bookTripFolderResponse.TripFolderBookResponse.TripFolder.Id
             };
             completeBookingRQ.ExternalPayment.Attributes = new StateBag[]
                {
