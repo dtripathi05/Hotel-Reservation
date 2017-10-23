@@ -9,7 +9,7 @@ namespace HotelReservation.Logger
         {
             string message = string.Format("==>>  Time: {0}", DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt"));
             message += Environment.NewLine;
-            message += "-----------------------------------------------------------";
+            message += "-----------------------------------**START**-------------------------------------";
             message += Environment.NewLine;
             message += string.Format("Message: {0}", ex.Message);
             message += Environment.NewLine;
@@ -19,7 +19,7 @@ namespace HotelReservation.Logger
             message += Environment.NewLine;
             message += string.Format("TargetSite: {0}", ex.TargetSite.ToString());
             message += Environment.NewLine;
-            message += "=================================================================";
+            message += "===================================**END**==============================";
             message += Environment.NewLine;
             using (StreamWriter writer = new StreamWriter("C:/Users/Deependra Tripathi/Desktop/Log.txt", true))
             {
