@@ -58,10 +58,13 @@ namespace HotelReservationEngine.Controllers
                 Log.ExcpLogger(ex);
             }
             IHotelFactory hotelFactory = Factory.GetHotelServices("HotelsListing");
-            var serialize = JsonConvert.SerializeObject(searchFields);
-            var result = await hotelFactory.SearchAsync(serialize);
-            var deserialize = JsonConvert.DeserializeObject<MultiAvailItinerary>(result);
-            return deserialize;
+            // var serialize = JsonConvert.SerializeObject(searchFields);
+            // var result = await hotelFactory.SearchAsync(serialize);
+            var result = await hotelFactory.SearchAsync(searchFields);
+            // var deserialize = JsonConvert.DeserializeObject<MultiAvailItinerary>(result);
+            // return deserialize;
+            MultiAvailItinerary multiAvailItinerary = (MultiAvailItinerary)result;
+            return multiAvailItinerary;
         }
         [HttpPost("room")]
         public async Task<SingleAvailItinerary> SingleItinerary([FromBody]SingleAvailItinerary hotelItinerary)
@@ -78,10 +81,12 @@ namespace HotelReservationEngine.Controllers
                 Log.ExcpLogger(ex);
             }
             IHotelFactory hotelFactory = Factory.GetHotelServices("RoomListing");
-            var serialize = JsonConvert.SerializeObject(hotelItinerary);
-            var result = await hotelFactory.SearchAsync(serialize);
-            var deserialize = JsonConvert.DeserializeObject<SingleAvailItinerary>(result);
-            return deserialize;
+            // var serialize = JsonConvert.SerializeObject(hotelItinerary);
+            // var result = await hotelFactory.SearchAsync(serialize);
+            var result = await hotelFactory.SearchAsync(hotelItinerary);
+            // var deserialize = JsonConvert.DeserializeObject<SingleAvailItinerary>(result);
+            SingleAvailItinerary singleAvailItinerary = (SingleAvailItinerary)result;
+            return singleAvailItinerary;
         }
         [HttpPost("roomPrice")]
         public async Task<RoomPricingResponse> RoomPricing([FromBody]RoomPricingItinerary room)
@@ -99,10 +104,12 @@ namespace HotelReservationEngine.Controllers
             }
             RoomPricingItinerary roomPricingItinerary = new RoomPricingItinerary().GetSelectedRoom(room);
             IHotelFactory hotelFactory = Factory.GetHotelServices("RoomPricing");
-            var serialize = JsonConvert.SerializeObject(roomPricingItinerary);
-            var result = await hotelFactory.SearchAsync(serialize);
-            var deserialize = JsonConvert.DeserializeObject<RoomPricingResponse>(result);
-            return deserialize;
+            //var serialize = JsonConvert.SerializeObject(roomPricingItinerary);
+            //var result = await hotelFactory.SearchAsync(serialize);
+            //var deserialize = JsonConvert.DeserializeObject<RoomPricingResponse>(result);
+            var result = await hotelFactory.SearchAsync(roomPricingItinerary);
+            RoomPricingResponse roomPricingResponse = (RoomPricingResponse)result;
+            return roomPricingResponse;
 
         }
         [HttpPost("completePayment")]

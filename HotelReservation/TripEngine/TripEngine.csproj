@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HotelReservation.Contract\HotelReservation.Contract.csproj" />
     <ProjectReference Include="..\HotelReservation.Logger\HotelReservation.Logger.csproj" />
   </ItemGroup>
 
