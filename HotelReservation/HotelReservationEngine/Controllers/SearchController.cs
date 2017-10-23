@@ -58,11 +58,7 @@ namespace HotelReservationEngine.Controllers
                 Log.ExcpLogger(ex);
             }
             IHotelFactory hotelFactory = Factory.GetHotelServices("HotelsListing");
-            // var serialize = JsonConvert.SerializeObject(searchFields);
-            // var result = await hotelFactory.SearchAsync(serialize);
             var result = await hotelFactory.SearchAsync(searchFields);
-            // var deserialize = JsonConvert.DeserializeObject<MultiAvailItinerary>(result);
-            // return deserialize;
             MultiAvailItinerary multiAvailItinerary = (MultiAvailItinerary)result;
             return multiAvailItinerary;
         }
@@ -81,10 +77,7 @@ namespace HotelReservationEngine.Controllers
                 Log.ExcpLogger(ex);
             }
             IHotelFactory hotelFactory = Factory.GetHotelServices("RoomListing");
-            // var serialize = JsonConvert.SerializeObject(hotelItinerary);
-            // var result = await hotelFactory.SearchAsync(serialize);
             var result = await hotelFactory.SearchAsync(hotelItinerary);
-            // var deserialize = JsonConvert.DeserializeObject<SingleAvailItinerary>(result);
             SingleAvailItinerary singleAvailItinerary = (SingleAvailItinerary)result;
             return singleAvailItinerary;
         }
@@ -104,9 +97,6 @@ namespace HotelReservationEngine.Controllers
             }
             RoomPricingItinerary roomPricingItinerary = new RoomPricingItinerary().GetSelectedRoom(room);
             IHotelFactory hotelFactory = Factory.GetHotelServices("RoomPricing");
-            //var serialize = JsonConvert.SerializeObject(roomPricingItinerary);
-            //var result = await hotelFactory.SearchAsync(serialize);
-            //var deserialize = JsonConvert.DeserializeObject<RoomPricingResponse>(result);
             var result = await hotelFactory.SearchAsync(roomPricingItinerary);
             RoomPricingResponse roomPricingResponse = (RoomPricingResponse)result;
             return roomPricingResponse;
@@ -117,7 +107,6 @@ namespace HotelReservationEngine.Controllers
         {
             BookTripParser bookTripParser = new BookTripParser(bookTripRQ);
             var result = await bookTripParser.GetTripFolderBookRS(bookTripParser.TripFolderBookRQ);
-            // var result =await bookTripParser.tripFolderBookRQParser(bookTripRQ);
             return result;
 
         }
