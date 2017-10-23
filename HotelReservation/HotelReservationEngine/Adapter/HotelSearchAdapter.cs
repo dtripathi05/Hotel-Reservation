@@ -18,14 +18,14 @@ namespace HotelAdapter
         private HotelSearchRQ _hotelSearchRQ = null;
         private HotelSearchRS _hotelSearchRS = null;
 
-        public async Task<string> SearchAsync(string request)
+        public async Task<IItinerary> SearchAsync(IItinerary requestedItinerary)
         {
             try
             {
-                var convert = JsonConvert.DeserializeObject<MultiAvailSearchRequest>(request);
+               // var convert = JsonConvert.DeserializeObject<MultiAvailSearchRequest>(request);
                 _engineClient = new HotelEngineClient();
                 _parser = new MultiAvailParser();
-                _hotelSearchRQ = _parser.MultiAvailRQParser(convert);
+                _hotelSearchRQ = _parser.MultiAvailRQParser((MultiAvailSearchRequest)requestedItinerary);
                 _hotelSearchRS = await _engineClient.HotelAvailAsync(_hotelSearchRQ);
                 _searchResponse = _parser.MultiAvailRSParser(_hotelSearchRS, _hotelSearchRQ);
             }
@@ -37,7 +37,8 @@ namespace HotelAdapter
             {
                 await _engineClient.CloseAsync();
             }
-            return JsonConvert.SerializeObject(_searchResponse);
+            //return JsonConvert.SerializeObject(_searchResponse);
+            return _searchResponse;
         }
     }
 }
