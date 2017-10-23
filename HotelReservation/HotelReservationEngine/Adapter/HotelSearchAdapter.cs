@@ -22,7 +22,6 @@ namespace HotelAdapter
         {
             try
             {
-               // var convert = JsonConvert.DeserializeObject<MultiAvailSearchRequest>(request);
                 _engineClient = new HotelEngineClient();
                 _parser = new MultiAvailParser();
                 _hotelSearchRQ = _parser.MultiAvailRQParser((MultiAvailSearchRequest)requestedItinerary);
@@ -37,7 +36,6 @@ namespace HotelAdapter
             {
                 await _engineClient.CloseAsync();
             }
-            //return JsonConvert.SerializeObject(_searchResponse);
             return _searchResponse;
         }
     }

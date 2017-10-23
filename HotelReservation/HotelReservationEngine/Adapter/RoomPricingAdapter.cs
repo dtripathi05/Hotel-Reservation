@@ -26,7 +26,6 @@ namespace HotelReservationEngine.Adapter
             try
             {
                 _engineClient = new TripsEngineClient();
-                //var deserialize = JsonConvert.DeserializeObject<RoomPricingItinerary>(request);
                 _parser = new RoomPricingParser();
                 _tripProductPriceRQ = _parser.RoomPriceRQParser((RoomPricingItinerary)requestedItinerary);
                 _tripProductPriceRS = await _engineClient.PriceTripProductAsync(_tripProductPriceRQ);
@@ -40,7 +39,6 @@ namespace HotelReservationEngine.Adapter
             {
                 await _engineClient.CloseAsync();
             }
-            //return JsonConvert.SerializeObject(_roomPricingResponse);
             return _roomPricingResponse;
         }
     }

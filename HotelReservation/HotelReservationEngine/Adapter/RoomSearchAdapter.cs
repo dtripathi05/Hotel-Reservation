@@ -21,7 +21,6 @@ namespace HotelReservationEngine.Adapter
         {
             try
             {
-               // var convert = JsonConvert.DeserializeObject<SingleAvailItinerary>(request);
                 _engineRepresentative = new HotelEngineClient();
                 _parser = new SingleAvailParser();
                 _hotelRoomAvailRQ = _parser.RoomRequestParser((SingleAvailItinerary)requestedItinerary);
@@ -36,7 +35,6 @@ namespace HotelReservationEngine.Adapter
             {
                 await _engineRepresentative.CloseAsync();
             }
-            // return JsonConvert.SerializeObject(_singleAvailItinerary);
             return _singleAvailItinerary;
         }
     }
