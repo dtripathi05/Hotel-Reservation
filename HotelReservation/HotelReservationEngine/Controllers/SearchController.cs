@@ -118,7 +118,8 @@ namespace HotelReservationEngine.Controllers
             }
             IHotelFactory hotelFactory = Factory.GetHotelServices("TripBookFolder");
             var result = await hotelFactory.SearchAsync(bookTripRQ);
-
+            CompleteBookingParser completeBookingParser = new CompleteBookingParser();
+            var response = await completeBookingParser.BookingRS((BookTripFolderResponse)result);
             return null;
         }
     }
