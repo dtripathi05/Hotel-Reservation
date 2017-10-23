@@ -1,11 +1,12 @@
-﻿using System;
+﻿using HotelReservation.Contract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace TripEngine.Model
 {
-    public class BookTripRQ
+    public class BookTripRQ: IItinerary
     {
         private RoomPricingResponse _roomPricingResponse;
         private string _firstName;

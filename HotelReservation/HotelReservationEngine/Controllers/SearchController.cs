@@ -105,11 +105,21 @@ namespace HotelReservationEngine.Controllers
         [HttpPost("completePayment")]
         public async Task<TripFolderBookRS> Booking([FromBody]BookTripRQ bookTripRQ)
         {
-            BookTripParser bookTripParser = new BookTripParser(bookTripRQ);
-            var result = await bookTripParser.GetTripFolderBookRS(bookTripParser.TripFolderBookRQ);
-            // var result =await bookTripParser.tripFolderBookRQParser(bookTripRQ);
-            return result;
+            try
+            {
+                if (bookTripRQ == null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
+            IHotelFactory hotelFactory = Factory.GetHotelServices("TripBookFolder");
+            var result = await hotelFactory.SearchAsync(bookTripRQ);
 
+            return null;
         }
     }
 }
