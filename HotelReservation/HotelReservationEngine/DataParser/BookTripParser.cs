@@ -30,6 +30,7 @@ namespace HotelReservationEngine.DataParser
             _tripFolderName = $"TripFolder{DateTime.Now.Date}";
             _amount = bookTripRQ.RoomPricingResponse.Product.HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare;
             _ages = new int[] { _age };
+            _qty = 1;
             _fareToAuthorise = _hotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Amount;
         }
 
@@ -262,7 +263,14 @@ namespace HotelReservationEngine.DataParser
                 tripFolderBookRQ.TripFolder.Products[0].Owner = tripFolderBookRQ.TripFolder.Owner;
                 ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).HotelSearchCriterion = _hotelSearchCriterion;
                 ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).HotelItinerary = _hotelItinerary;
+                //if (_hotelItinerary.HotelCancellationPolicy == null)
+                var samplerules = new List<HotelCancellationRule>();
+                    _hotelItinerary.HotelCancellationPolicy = new HotelCancellationPolicy() {CancellationRules= samplerules.ToArray() };
                 TripsEngineClient tripsEngineClient = new TripsEngineClient();
+                ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).HotelSearchCriterion.Guests[0].Ages = new int[] { 30 };
+                ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).HotelSearchCriterion.RoomOccupancyTypes[0].PaxQuantities[0].Ages = new int[] { 30 };
+                ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).HotelSearchCriterion.RoomOccupancyTypes[0].PaxQuantities[0].Quantity = 1;
+                ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).CancellationDetails = new CancellationDetails() { AppliedRule=new HotelCancellationRule()};
                 //TripFolderBookRS response = await tripsEngineClient.BookTripFolderAsync(tripFolderBookRQ);
                 response = await tripsEngineClient.BookTripFolderAsync(tripFolderBookRQ);
                 
