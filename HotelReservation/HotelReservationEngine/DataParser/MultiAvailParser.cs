@@ -83,7 +83,7 @@ namespace Parser
             listRQ.HotelSearchCriterion.StayPeriod = GetStayPeriod(searchRequest.CheckInDate, searchRequest.CheckOutDate);
             listRQ.PagingInfo = new PagingInfo()
             {
-                Enabled = true,
+                Enabled = false,
                 StartNumber = MultiAvailSearchRequestStaticData._pagingInfoStartNumber,
                 EndNumber = MultiAvailSearchRequestStaticData._pagingInfoEndNumber,
                 TotalRecordsBeforeFiltering = MultiAvailSearchRequestStaticData._totalRecordsBeforeFiltering,
@@ -96,11 +96,6 @@ namespace Parser
             DateTimeSpan dateTimeSpan = new DateTimeSpan();
             try
             {
-                //return new DateTimeSpan()
-                //{
-                //    Start = checkInDate,
-                //    End = checkOutDate,
-                //};
                 dateTimeSpan.Start = checkInDate;
                 dateTimeSpan.End = checkOutDate;
             }
