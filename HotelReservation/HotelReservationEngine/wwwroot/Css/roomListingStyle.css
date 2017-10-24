@@ -46,7 +46,6 @@
     text-align: center;
     text-decoration: none;
     font-size: 18px;
-    margin-top:2px;
     margin-bottom:2px;
 }
 
@@ -54,4 +53,12 @@
     .columns {
         width: 100%;
     }
+}
+.container-heading {
+    font-size: 20px;
+    font-weight: normal;
+    background-color: white;
+    font-family: Dosis;
+    padding: 0px;
+    margin-top: 16px;
 }

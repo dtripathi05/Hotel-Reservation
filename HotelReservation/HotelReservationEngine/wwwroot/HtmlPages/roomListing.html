@@ -11,7 +11,6 @@
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
     <title>Hotel Express</title>
-    <script src="/Js/roomListingScript.js"></script>
 </head>
 <body>
     <header>
@@ -49,38 +48,52 @@
     </div>
 
     <script id="x" type="text/x-handlebars-template">
-        <div class="container heading text-center" id="hotelnm">
-
-            <h1 class="underline-text">{{ hotelname }}</h1>
+        <div class=" container-heading heading" id="hotelnm">
+        </div>
+        <!--Image-->
+        <div class="container container-list heading border-panel">
+            <div class="col-md-12 wrapper">
+                <div class="col-md-4">
+                    <img src="{{imageurl}}" class="img-responsive" alt="No Image Available" />
+                </div>
+                <div class="col-md-6">
+                    <h3 class="space underline-text">{{hotelname}}</h3>
+                    <h4 class="bold-text"><span class="glyphicon glyphicon-map-marker green"></span> {{address}}</h4>
+                    <h4 class="bold-text">
+                        Rating:{{#times rating}}
+                        <span class="glyphicon glyphicon-star orange"></span>
+                        {{/times}}
+                    </h4>
+                    <h4 class="bold-text">Distance : {{distance}} Km</h4>
+                    <h4 class="bold-text">Duration : {{duration}} Day</h4>
+                    
+                </div>
+            </div>
         </div>
     </script>
+
     <div id="roomList-container">
     </div>
 
     <script id="room-item" type="text/x-handlebars-template">
         {{#each this}}
-        <div class="container container-list border-panel">
+
+        <div class="col-md-8 col-md-offset-2 container-list  heading border-panel">
             <div class="col-md-12">
                 <section>
-                    <!--Image-->
-                    <div class="col-md-3">
-                        <img src="{{imageurl}}" width="200" height="250" alt="No Image Available" />
+
+                    <!--Room Details-->
+                    <div class="col-md-8">
+                        <h3 class="space bold-text"><span class="glyphicon glyphicon-bed orange"></span> {{roomtype}}</h3>
+                        <h4 class="underline-text"><span class="glyphicon glyphicon-paperclip green"></span> {{{description}}}</h4>
                     </div>
                 </section>
                 <section>
-                    <!--Room Details-->
-                    <div class="col-md-6">
-                        <h3 class="space bold-text"><span class="glyphicon glyphicon-bed orange"></span> {{roomtype}}</h3>
-                        <h4 class="space"><span class="glyphicon glyphicon-map-marker green"></span>  {{address}}</h4>
-                        <h4 class="underline-text"><span class="glyphicon glyphicon-paperclip green"></span> {{{description}}}</h4>
-                    </div>
-                </section>	
-                <section>
                     <!--View Rooms Button-->
-                    <div class="col-md-2 ">
+                    <div class="col-md-3 ">
                         <!-- item -->
                         <div class="panel panel-pricing">
-                            <div class="panel-heading text-center">
+                            <div class="text-center">
                                 <h4 class="underline-text">Starting From</h4>
                             </div>
                             <div class="panel-body text-center">
@@ -95,7 +108,6 @@
             </div>
         </div>
         {{/each}}
-
     </script>
     <script src="/Js/roomListingScript.js"></script>
 </body>
