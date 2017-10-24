@@ -121,10 +121,6 @@ namespace HotelReservationEngine.Controllers
             IHotelFactory factory= Factory.GetHotelServices("CompleteBooking");
             var completeBookingResult = await factory.SearchAsync(tripBookResult);
             return null;
-            //CompleteBookingParser completeBookingParser = new CompleteBookingParser();
-            //var response = await completeBookingParser.BookingRS((BookTripFolderResponse)result);
-            //var rs = response;
-            //return null;
         }
     }
 }
