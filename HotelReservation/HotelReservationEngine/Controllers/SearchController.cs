@@ -117,9 +117,9 @@ namespace HotelReservationEngine.Controllers
                 Log.ExcpLogger(ex);
             }
             IHotelFactory hotelFactory = Factory.GetHotelServices("TripBookFolder");
-            var result = await hotelFactory.SearchAsync(bookTripRQ);
-            CompleteBookingParser completeBookingParser = new CompleteBookingParser();
-            var response = await completeBookingParser.BookingRS((BookTripFolderResponse)result);
+            var tripBookResult = await hotelFactory.SearchAsync(bookTripRQ);
+            IHotelFactory factory= Factory.GetHotelServices("CompleteBooking");
+            var completeBookingResult = await factory.SearchAsync(tripBookResult);
             return null;
         }
     }

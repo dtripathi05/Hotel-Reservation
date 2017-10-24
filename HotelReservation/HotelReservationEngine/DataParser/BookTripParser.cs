@@ -14,9 +14,20 @@ namespace HotelReservationEngine.DataParser
 
         public TripFolderBookRQ TripFolderBookRQParser(BookTripRQ bookTripRQ)
         {
+            try
+            {
+                if (bookTripRQ == null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
             _hotelItinerary = bookTripRQ.RoomPricingResponse.Product.HotelItinerary;
             _hotelSearchCriterion = bookTripRQ.RoomPricingResponse.Criteria;
-            TripFolderBookRQ tripFolderBookRQ= new TripFolderBookRQ()
+            TripFolderBookRQ tripFolderBookRQ = new TripFolderBookRQ()
             {
                 SessionId = bookTripRQ.RoomPricingResponse.SessionId.ToString(),
                 ResultRequested = ResponseType.Unknown,
@@ -263,8 +274,8 @@ namespace HotelReservationEngine.DataParser
 
             return new BookTripFolderResponse
             {
-                SessionId=bookTripRQ.RoomPricingResponse.SessionId,
-                TripFolderBookResponse=tripFolderBookRS
+                SessionId = bookTripRQ.RoomPricingResponse.SessionId,
+                TripFolderBookResponse = tripFolderBookRS
             };
         }
     }

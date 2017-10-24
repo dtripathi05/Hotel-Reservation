@@ -1,4 +1,6 @@
-﻿using System.Threading.Tasks;
+﻿using HotelReservation.Logger;
+using System;
+using System.Threading.Tasks;
 using TripEngine.Model;
 using TripEngineService;
 
@@ -6,8 +8,19 @@ namespace HotelReservationEngine.DataParser
 {
     public class CompleteBookingParser
     {
-        public async Task<CompleteBookingRS> BookingRS(BookTripFolderResponse bookTripFolderResponse)
+        public CompleteBookingRQ CompleteBookingRQParser(BookTripFolderResponse bookTripFolderResponse)
         {
+            try
+            {
+                if (bookTripFolderResponse == null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
             CompleteBookingRQ completeBookingRQ = new CompleteBookingRQ()
             {
                 ResultRequested = ResponseType.Unknown,
@@ -82,11 +95,9 @@ namespace HotelReservationEngine.DataParser
                Name = "_AttributeRule_Rovia_Password",
                Value = "true"
                }
-        };
 
-            TripsEngineClient tripsEngineClient = new TripsEngineClient();
-            CompleteBookingRS response = await tripsEngineClient.CompleteBookingAsync(completeBookingRQ);
-            return response;
+            };
+            return completeBookingRQ;
         }
     }
 }
