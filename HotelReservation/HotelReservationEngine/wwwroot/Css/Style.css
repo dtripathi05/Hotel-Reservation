@@ -12,7 +12,11 @@
 .heading {
     margin-top: 90px;
 }
-
+.preloader-img {
+    margin:auto;
+    padding-top:200px;
+    width:50%;
+}
 .heading-panel {
     margin-top: 60px;
 }
@@ -26,10 +30,8 @@ label {
     margin-top: 6px;
 }
 .pageButton {
-    margin-top: 60px;
+    margin-top: 40px;
     margin-bottom: 20px;
-    margin-left: 10px;
-    max-height: 80px;
     color: white;
     font-size: 25px;
     background: #ff3300;
@@ -39,6 +41,8 @@ label {
 .foot {
     margin-top: 80px;
     color: black;
+    font-size:16px;
+    font-weight:bold;
 }
 .anchorLink {
     color: black;

@@ -9,8 +9,6 @@
     <link rel="icon" type="image/png" href="/Image/favicon.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-darkness/jquery-ui.min.css" />
-
-
 </head>
 <body class="indexBackground">
     <header>
@@ -66,19 +64,21 @@
                             <section>
                                 <div class="row">
                                     <div class="col-md-10">
-                                        <div class="col-md-3">
+                                        <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Check-In</label>
-                                                <div class="input-group">
-                                                    <input class="form-control datePicker placeholderfont" type="text" name="checkin" placeholder="yyyy-mm-dd" id="checkindate" required>
+                                                    <div class="inner-addon left-addon">
+                                                        <i class="glyphicon glyphicon-calendar black"></i>
+                                                        <input class="form-control datePicker placeholderfont" type="text" name="checkin" placeholder="yyyy-mm-dd" id="checkindate" required>
                                                 </div>
                                             </div>
                                         </div>
                                         <!--Check Out Date-->
-                                        <div class="col-md-9">
+                                        <div class="col-md-4">
                                             <div class="form-group">
                                                 <label>Check Out</label>
-                                                <div class="input-group">
+                                                <div class="inner-addon left-addon">
+                                                    <i class="glyphicon glyphicon-calendar black"></i>
                                                     <input class="form-control datePicker placeholderfont" type="text" name="checkout" placeholder="yyyy-mm-dd" id="checkoutdate" required>
                                                 </div>
                                             </div>
