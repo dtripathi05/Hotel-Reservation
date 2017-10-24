@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/Css/Style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Hotel Express</title>
 </head>
 <body>
@@ -38,26 +40,24 @@
 
     <div id="hotelList-container">
         <div class="col-md-12">
-            <div class="col-md-offset-6">
-                <img src="/Image/circlepreloader.gif" alt="Loading.." />
+            <div class="col-md-offset-6 preloader-img">
+                <img src="/Image/circlepreloader.gif" class="img-responsive" alt="Loading.." />
             </div>
         </div>
     </div>
-
     <div id="hotelList-container"></div>
     <script id="hotel-item" type="text/x-handlebars-template">
         <div class=" container heading text-center">
-            <h1>Available Hotels</h1>
+            <h1>Search Results</h1>
         </div>
         {{#each this}}
-
         <div class="container container-list border-panel">
 
             <div class="col-md-12">
                 <section>
                     <!--Image-->
-                    <div class="col-md-3">
-                        <img src="{{image}}" width="200" height="200" alt="No Image Available" />
+                    <div class="col-md-3 wrapper">
+                        <img src="{{image}}" class="img-responsive" alt="No Image Available" />
                     </div>
                 </section>
                 <section>
@@ -65,7 +65,6 @@
                     <div class="col-md-7">
                         <h3 class="space underline-text">{{name}}</h3>
                         <h4 class="space"><span class="glyphicon glyphicon-map-marker green"></span> {{address}}</h4>
-                          
                         <h4 class="bold-text">
                             Rating:{{#times stars}}
                             <span class="glyphicon glyphicon-star orange"></span>

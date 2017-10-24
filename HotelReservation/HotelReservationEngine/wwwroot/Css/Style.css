@@ -12,7 +12,14 @@
 .heading {
     margin-top: 90px;
 }
-
+.preloader-img {
+    margin:auto;
+    padding-top:200px;
+    width:50%;
+}
+.wrapper{
+    width:80%;
+}
 .heading-panel {
     margin-top: 60px;
 }
@@ -26,10 +33,8 @@ label {
     margin-top: 6px;
 }
 .pageButton {
-    margin-top: 60px;
+    margin-top: 40px;
     margin-bottom: 20px;
-    margin-left: 10px;
-    max-height: 80px;
     color: white;
     font-size: 25px;
     background: #ff3300;
@@ -39,13 +44,14 @@ label {
 .foot {
     margin-top: 80px;
     color: black;
+    font-size:16px;
+    font-weight:bold;
 }
 .anchorLink {
     color: black;
 }
 
 .container-list {
-    opacity: 0.9;
     font-size: 20px;
     color: black;
     font-weight: normal;
@@ -53,6 +59,7 @@ label {
     font-family: Dosis;
     padding: 0px;
     margin-top: 16px;
+    width:auto;
 }   
 .border-panel {
     border: solid 2px gray;

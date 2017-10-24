@@ -1,4 +1,11 @@
-﻿var roomList;
+﻿Handlebars.registerHelper('times', function (n, block) {
+    var accum = '';
+    for (var i = 0; i < n; ++i)
+        accum += block.fn(i);
+    return accum;
+});
+
+var roomList;
 var room;
 $(document).ready(function () {
 
@@ -8,7 +15,6 @@ $(document).ready(function () {
     var roomType = [];
     var img = "";
     for (var i = 0; i < room.itinerary.rooms.length; i++) {
-        //if (room.itinerary.rooms[i].hotelFareSource.name == "HotelBeds Test")
         {
             for (k = 0; k < room.itinerary.hotelProperty.mediaContent.length; k++) {
                 if (room.itinerary.hotelProperty.mediaContent[k].url != null) {
@@ -16,30 +22,32 @@ $(document).ready(function () {
                     break;
                 }
             }
-            // img = room.itinerary.hotelProperty.mediaContent[i].url.toString();
             roomType.push({
 
                 hotelname: room.itinerary.hotelProperty.name,
                 description: room.itinerary.rooms[i].roomDescription,
-                address: room.itinerary.hotelProperty.address.completeAddress,
                 roomtype: room.itinerary.rooms[i].roomName,
                 price: room.itinerary.rooms[i].displayRoomRate.baseFare.amount,
                 imageurl: img
-            });
+        });
         }
     }
-
+    
     var temp = $("#x");
     var cmp = Handlebars.compile(temp.html());
-    var htm = cmp({ hotelname: roomType[0].hotelname });
+    var htm = cmp({
+        hotelname: roomType[0].hotelname,
+        address: room.itinerary.hotelProperty.address.completeAddress,
+        imageurl: roomType[0].imageurl,
+        rating: room.itinerary.hotelProperty.hotelRating.rating,
+        duration: room.itinerary.stayPeriod.duration,
+        distance: room.itinerary.hotelProperty.distance.amount
+    });
     $("#roomList-container").html(htm);
 
     var template = $('#room-item');
-    //console.log(roomType[0].hotelname);
-    //console.log(template.html());
     var compiledTemplate = Handlebars.compile(template.html());
     var html = compiledTemplate(roomType);
-    //console.log(html);
     $('#roomList-container').append(html);
 });
 var roomName;
