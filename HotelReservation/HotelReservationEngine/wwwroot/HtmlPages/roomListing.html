@@ -53,10 +53,10 @@
         <!--Image-->
         <div class="container container-list heading border-panel">
             <div class="col-md-12 wrapper">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <img src="{{imageurl}}" class="img-responsive" alt="No Image Available" />
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <h3 class="space underline-text">{{hotelname}}</h3>
                     <h4 class="bold-text"><span class="glyphicon glyphicon-map-marker green"></span> {{address}}</h4>
                     <h4 class="bold-text">
@@ -67,6 +67,9 @@
                     <h4 class="bold-text">Distance : {{distance}} Km</h4>
                     <h4 class="bold-text">Duration : {{duration}} Day</h4>
                     
+                </div>
+                <div class="col-md-4">
+                    <iframe class="map-bottom" width="200" height="200" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCIYzzzQZGLWDSOSovKWaq2UsyX1dQ796c&q={{this.latitude}},{{this.longitude}}" allowfullscreen></iframe>    
                 </div>
             </div>
         </div>

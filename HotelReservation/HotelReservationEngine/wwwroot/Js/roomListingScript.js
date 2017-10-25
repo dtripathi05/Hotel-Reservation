@@ -33,8 +33,8 @@ $(document).ready(function () {
                 description: room.itinerary.rooms[i].roomDescription,
                 roomtype: room.itinerary.rooms[i].roomName,
                 price: room.itinerary.rooms[i].displayRoomRate.baseFare.amount,
-                imageurl: img
-
+                imageurl: img,
+               
             });
         }
     }
@@ -53,7 +53,9 @@ $(document).ready(function () {
         imageurl: roomType[0].imageurl,
         rating: room.itinerary.hotelProperty.hotelRating.rating,
         duration: room.itinerary.stayPeriod.duration,
-        distance: room.itinerary.hotelProperty.distance.amount
+        distance: room.itinerary.hotelProperty.distance.amount,
+        latitude: room.itinerary.hotelProperty.geoCode.latitude,
+        longitude: room.itinerary.hotelProperty.geoCode.longitude
     });
     $("#roomList-container").html(htm);
 
