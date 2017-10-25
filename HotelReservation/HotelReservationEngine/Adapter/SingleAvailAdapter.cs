@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HotelReservationEngine.Adapter
 {
-    public class MultiToSingleAdapter
+    public class SingleAvailAdapter
     {
         private SingleAvailItinerary _singleAvail = null;
         public SingleAvailItinerary GetSingleAvail(IItinerary requestedItinerary)
