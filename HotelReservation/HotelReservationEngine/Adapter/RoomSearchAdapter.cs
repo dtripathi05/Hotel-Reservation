@@ -1,4 +1,5 @@
-﻿using HotelReservation.Contract;
+﻿using HotelEntities;
+using HotelReservation.Contract;
 using HotelReservation.Logger;
 using HotelReservationEngine.DataParser;
 using HotelReservationEngine.HotelMultiAvailItinerary;

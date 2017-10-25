@@ -250,13 +250,56 @@ namespace HotelReservationEngine.DataParser
             tripFolderBookRQ.TripFolder.Products[0].Owner = tripFolderBookRQ.TripFolder.Owner;
             ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).HotelSearchCriterion = _hotelSearchCriterion;
             ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).HotelItinerary = _hotelItinerary;
+            ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).HotelItinerary.Rooms[0].DisplayRoomRate.BaseFare.DisplayAmount = _hotelItinerary.Rooms[0].DisplayRoomRate.BaseFare.Amount;
+            ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).HotelItinerary.Rooms[0].DisplayRoomRate.BaseFare.DisplayCurrency = _hotelItinerary.Rooms[0].DisplayRoomRate.BaseFare.Currency;
+            ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.DisplayAmount = _hotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Amount;
+            ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.DisplayCurrency = _hotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Currency;
             var samplerules = new List<HotelCancellationRule>();
             _hotelItinerary.HotelCancellationPolicy = new HotelCancellationPolicy() { CancellationRules = samplerules.ToArray() };
             ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).HotelSearchCriterion.Guests[0].Ages = new int[] { 30 };
             ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).HotelSearchCriterion.RoomOccupancyTypes[0].PaxQuantities[0].Ages = new int[] { 30 };
             ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).HotelSearchCriterion.RoomOccupancyTypes[0].PaxQuantities[0].Quantity = 1;
             ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0])).CancellationDetails = new CancellationDetails() { AppliedRule = new HotelCancellationRule() };
+            var hotelTripProduct = ((HotelTripProduct)(tripFolderBookRQ.TripFolder.Products[0]));
+            setDisplayValues(hotelTripProduct);
             return tripFolderBookRQ;
+        }
+        private void setDisplayValues(HotelTripProduct hotelTripProduct)
+        {
+            hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.BaseFare.DisplayAmount = hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.BaseFare.Amount;
+            hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.BaseFare.DisplayCurrency = hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.BaseFare.Currency;
+            hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.DisplayAmount = hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Amount;
+            hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.DisplayCurrency = hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Currency;
+            hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.DailyRates[0].DisplayCurrency = hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.DailyRates[0].Currency;
+            hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.DailyRates[0].DisplayAmount = hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.DailyRates[0].Amount;
+            hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.Taxes[0].DisplayAmount = hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.Taxes[0].Amount;
+            hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.Taxes[0].DisplayCurrency = hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.Taxes[0].Currency;
+            hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalCommission.DisplayCurrency = hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalCommission.Currency;
+            hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalCommission.DisplayAmount = hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalCommission.Amount;
+            hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalDiscount.DisplayCurrency = hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalDiscount.Currency;
+            hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalDiscount.DisplayAmount = hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalDiscount.Amount;
+            hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.DisplayCurrency = hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Currency;
+            hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.DisplayAmount = hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalFare.Amount;
+            hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalTax.DisplayCurrency = hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalTax.Currency;
+            hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalTax.DisplayAmount = hotelTripProduct.HotelItinerary.Rooms[0].DisplayRoomRate.TotalTax.Amount;
+            hotelTripProduct.HotelItinerary.Fare.AvgDailyRate.DisplayAmount = hotelTripProduct.HotelItinerary.Fare.AvgDailyRate.Amount;
+            hotelTripProduct.HotelItinerary.Fare.AvgDailyRate.DisplayCurrency = hotelTripProduct.HotelItinerary.Fare.AvgDailyRate.Currency;
+            hotelTripProduct.HotelItinerary.Fare.BaseFare.DisplayAmount = hotelTripProduct.HotelItinerary.Fare.BaseFare.Amount;
+            hotelTripProduct.HotelItinerary.Fare.BaseFare.DisplayCurrency = hotelTripProduct.HotelItinerary.Fare.BaseFare.Currency;
+            hotelTripProduct.HotelItinerary.Fare.MaxDailyRate.DisplayAmount = hotelTripProduct.HotelItinerary.Fare.MaxDailyRate.Amount;
+            hotelTripProduct.HotelItinerary.Fare.MaxDailyRate.DisplayCurrency = hotelTripProduct.HotelItinerary.Fare.MaxDailyRate.Currency;
+            hotelTripProduct.HotelItinerary.Fare.MinDailyRate.DisplayAmount = hotelTripProduct.HotelItinerary.Fare.MinDailyRate.Amount;
+            hotelTripProduct.HotelItinerary.Fare.MinDailyRate.DisplayCurrency = hotelTripProduct.HotelItinerary.Fare.MinDailyRate.Currency;
+            hotelTripProduct.HotelItinerary.Fare.TotalCommission.DisplayAmount = hotelTripProduct.HotelItinerary.Fare.TotalCommission.Amount;
+            hotelTripProduct.HotelItinerary.Fare.TotalCommission.DisplayCurrency = hotelTripProduct.HotelItinerary.Fare.TotalCommission.Currency;
+            hotelTripProduct.HotelItinerary.Fare.TotalDiscount.DisplayAmount = hotelTripProduct.HotelItinerary.Fare.TotalDiscount.Amount;
+            hotelTripProduct.HotelItinerary.Fare.TotalDiscount.DisplayCurrency = hotelTripProduct.HotelItinerary.Fare.TotalDiscount.Currency;
+            hotelTripProduct.HotelItinerary.Fare.TotalFare.DisplayAmount = hotelTripProduct.HotelItinerary.Fare.TotalFare.Amount;
+            hotelTripProduct.HotelItinerary.Fare.TotalFare.DisplayCurrency = hotelTripProduct.HotelItinerary.Fare.TotalFare.Currency;
+            hotelTripProduct.HotelItinerary.Fare.TotalFee.DisplayAmount = hotelTripProduct.HotelItinerary.Fare.TotalFee.Amount;
+            hotelTripProduct.HotelItinerary.Fare.TotalFee.DisplayCurrency = hotelTripProduct.HotelItinerary.Fare.TotalFee.Currency;
+            hotelTripProduct.HotelItinerary.Fare.TotalTax.DisplayAmount = hotelTripProduct.HotelItinerary.Fare.TotalTax.Amount;
+            hotelTripProduct.HotelItinerary.Fare.TotalTax.DisplayCurrency = hotelTripProduct.HotelItinerary.Fare.TotalTax.Currency;
         }
         public BookTripFolderResponse TripFolderBookRSParser(BookTripRQ bookTripRQ, TripFolderBookRS tripFolderBookRS)
         {

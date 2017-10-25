@@ -1,5 +1,7 @@
 ﻿using HotelEntities;
+using HotelReservation.Contract;
 using HotelReservation.Logger;
+using HotelReservationEngine.HotelMultiAvailItinerary;
 using System;
 using System.Collections.Generic;
 
@@ -7,8 +9,8 @@ namespace HotelReservationEngine.Model
 {
     public class Cache
     {
-        private static Dictionary<string, MultiAvailSearchRequest> _searchStore = new Dictionary<string, MultiAvailSearchRequest>();
-        public static string AddToCache(MultiAvailSearchRequest request)
+        private static Dictionary<string, IItinerary> _searchStore = new Dictionary<string, IItinerary>();
+        public static string AddToCache(IItinerary request)
         {
             var guidId = Guid.NewGuid().ToString();
 
@@ -18,7 +20,7 @@ namespace HotelReservationEngine.Model
                 {
                     throw new NullReferenceException();
                 }
-                _searchStore.Add(guidId, request);
+                _searchStore.Add(guidId,request);
             }
             catch (Exception ex)
             {
@@ -26,7 +28,7 @@ namespace HotelReservationEngine.Model
             }
             return guidId;
         }
-        public static MultiAvailSearchRequest GetSearchRequest(string guid)
+        public static IItinerary GetSearchRequest(string guid)
         {
             return _searchStore[guid];
         }

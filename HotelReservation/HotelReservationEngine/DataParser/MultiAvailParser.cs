@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using HotelReservationEngine.Constants;
 using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelReservation.Logger;
+using HotelReservationEngine.Model;
 
 namespace Parser
 {
@@ -90,7 +91,7 @@ namespace Parser
                 TotalResults = MultiAvailSearchRequestStaticData._totalResults
             };
             return listRQ;
-            }
+        }
         private DateTimeSpan GetStayPeriod(DateTime checkInDate, DateTime checkOutDate)
         {
             DateTimeSpan dateTimeSpan = new DateTimeSpan();
@@ -99,7 +100,7 @@ namespace Parser
                 dateTimeSpan.Start = checkInDate;
                 dateTimeSpan.End = checkOutDate;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Log.ExcpLogger(ex);
             }
@@ -158,29 +159,63 @@ namespace Parser
             company.ID = MultiAvailSearchRequestStaticData._companyId;
             return company;
         }
-        public MultiAvailItinerary MultiAvailRSParser(HotelSearchRS hotelSearchRS,HotelSearchRQ hotelSearchRQ)
+        public HotelList MultiAvailRSParser(HotelSearchRS hotelSearchRS, HotelSearchRQ hotelSearchRQ)
         {
             try
             {
-                if (hotelSearchRS == null && hotelSearchRQ ==null)
+                if (hotelSearchRS == null && hotelSearchRQ == null)
                 {
                     throw new NullReferenceException();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Log.ExcpLogger(ex);
             }
-            MultiAvailItinerary multiAvailItinerary = new MultiAvailItinerary();
+
             List<HotelItinerary> itinerary = new List<HotelItinerary>();
             foreach (var itineraries in hotelSearchRS.Itineraries)
             {
                 itinerary.Add(itineraries);
             }
-            multiAvailItinerary.Itinerary = itinerary;
-            multiAvailItinerary.SessionId = hotelSearchRS.SessionId;
-            multiAvailItinerary.HotelSearchCriterion = hotelSearchRQ.HotelSearchCriterion;
-            return multiAvailItinerary;
+            MultiAvailItinerary multiAvailItinerary = new MultiAvailItinerary()
+            {
+                Itinerary = itinerary,
+                SessionId = hotelSearchRS.SessionId,
+                HotelSearchCriterion = hotelSearchRQ.HotelSearchCriterion
+            };
+            var cache = Cache.AddToCache(multiAvailItinerary);
+            // return multiAvailItinerary;
+            List<HotelInfo> hotelInfo = new List<HotelInfo>();
+            foreach (var info in itinerary)
+            {
+                //if (info.HotelFareSource.Name == "HotelBeds Test" || info.HotelFareSource.Name == "TouricoTGSTest")
+                {
+                    string imageUrl = "";
+                    for (int i = 0; i <= info.HotelProperty.MediaContent.Length; i++)
+                    {
+                        if (info.HotelProperty.MediaContent[i].Url != null)
+                        {
+                            imageUrl = info.HotelProperty.MediaContent[i].Url.ToString();
+                            break;
+                        }
+                    }
+                    HotelInfo hotel=new HotelInfo()
+                    {
+                        GuidId = cache,
+                        Address = info.HotelProperty.Address.CompleteAddress,
+                        ImgUrl = imageUrl,
+                        Name = info.HotelProperty.Name,
+                        Rating = info.HotelProperty.HotelRating.Rating,
+                        HotelId = info.HotelProperty.Id,
+                        SessionId=hotelSearchRS.SessionId,
+                        Supplier=info.HotelFareSource.Name
+                    };
+                    hotelInfo.Add(hotel);
+                }
+            }
+            var result = new HotelList() { Hotels = hotelInfo };
+            return result;
         }
     }
 }
