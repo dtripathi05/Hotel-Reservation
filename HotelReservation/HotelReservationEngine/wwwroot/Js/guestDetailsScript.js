@@ -6,7 +6,7 @@ $(document).ready(function () {
     bookingDetails = JSON.parse(room);
 });
 function importDetails() {
-
+    var prefix = $("#prefix")[0].value; 
     var fName = $("#firstName")[0].value;
     var lName = $("#lastName")[0].value;
     var mobileNumber = $("#mobileNumber")[0].value;
@@ -19,6 +19,7 @@ function importDetails() {
     var cvv = $("#cvv")[0].value;
 
     var data = {
+        "Prefix": prefix,
         "FirstName": fName,
         "LastName": lName,
         "MobileNumber": mobileNumber,

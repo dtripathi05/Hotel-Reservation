@@ -9,6 +9,7 @@ namespace TripEngine.Model
     public class BookTripRQ: IItinerary
     {
         private RoomPricingResponse _roomPricingResponse;
+        private string _prefix;
         private string _firstName;
         private string _lastName;
         private string _mobileNumber;
@@ -24,6 +25,11 @@ namespace TripEngine.Model
         {
             get { return this._roomPricingResponse; }
             set { this._roomPricingResponse = value; }
+        }
+        public string Prefix
+        {
+            get { return this._prefix; }
+            set { this._prefix = value; }
         }
         public string FirstName
         {

@@ -77,7 +77,7 @@ namespace HotelReservationEngine.Controllers
             {
                 Log.ExcpLogger(ex);
             }
-            MultiToSingleAdapter multiToSingleAdapter = new MultiToSingleAdapter();
+            SingleAvailAdapter multiToSingleAdapter = new SingleAvailAdapter();
             var singleAvail = multiToSingleAdapter.GetSingleAvail(hotelInfo);
             IHotelFactory hotelFactory = Factory.GetHotelServices("RoomListing");
             var result = await hotelFactory.SearchAsync(singleAvail);
@@ -100,8 +100,8 @@ namespace HotelReservationEngine.Controllers
                 Log.ExcpLogger(ex);
             }
             // SingleAvailItinerary res = (SingleAvailItinerary)Cache.GetSearchRequest(room.GuidId);
-            //RoomsToRoomPricing roomsToRoomPricing = new RoomsToRoomPricing();
-            //RoomPricingItinerary pricingItinerary = roomsToRoomPricing.GetRoomPricing(room);
+            //PricingItineraryAdapter roomPricing = new PricingItineraryAdapter();
+            //RoomPricingItinerary pricingItinerary = roomPricing.GetRoomPricing(room);
             //RoomPricingItinerary roomPricingItinerary = new RoomPricingItinerary().GetSelectedRoom(pricingItinerary,room.RoomName);
             RoomPricingItinerary roomPricingItinerary = new RoomPricingItinerary().GetSelectedRoom(room);
             IHotelFactory hotelFactory = Factory.GetHotelServices("RoomPricing");

@@ -11,7 +11,7 @@ using TripEngine.Model;
 
 namespace HotelReservationEngine.Adapter
 {
-    public class RoomsToRoomPricing
+    public class PricingItineraryAdapter
     {
         private RoomPricingItinerary _roomPricing = null;
         private SingleAvailItinerary _singleAvailItinerary = null;

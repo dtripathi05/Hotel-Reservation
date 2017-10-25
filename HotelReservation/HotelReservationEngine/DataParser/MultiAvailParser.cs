@@ -187,32 +187,39 @@ namespace Parser
             var cache = Cache.AddToCache(multiAvailItinerary);
             // return multiAvailItinerary;
             List<HotelInfo> hotelInfo = new List<HotelInfo>();
-            foreach (var info in itinerary)
+            try
             {
-                //if (info.HotelFareSource.Name == "HotelBeds Test" || info.HotelFareSource.Name == "TouricoTGSTest")
+                foreach (var info in itinerary)
                 {
-                    string imageUrl = "";
-                    for (int i = 0; i <= info.HotelProperty.MediaContent.Length; i++)
+                    //if (info.HotelFareSource.Name == "HotelBeds Test" || info.HotelFareSource.Name == "TouricoTGSTest")
                     {
-                        if (info.HotelProperty.MediaContent[i].Url != null)
+                        string imageUrl = "";
+                        for (int i = 0; i < info.HotelProperty.MediaContent.Length; i++)
                         {
-                            imageUrl = info.HotelProperty.MediaContent[i].Url.ToString();
-                            break;
+                            if (info.HotelProperty.MediaContent[i].Url != null)
+                            {
+                                imageUrl = info.HotelProperty.MediaContent[i].Url.ToString();
+                                break;
+                            }
                         }
+                        HotelInfo hotel = new HotelInfo()
+                        {
+                            GuidId = cache,
+                            Address = info.HotelProperty.Address.CompleteAddress,
+                            ImgUrl = imageUrl,
+                            Name = info.HotelProperty.Name,
+                            Rating = info.HotelProperty.HotelRating.Rating,
+                            HotelId = info.HotelProperty.Id,
+                            SessionId = hotelSearchRS.SessionId,
+                            Supplier = info.HotelFareSource.Name
+                        };
+                        hotelInfo.Add(hotel);
                     }
-                    HotelInfo hotel=new HotelInfo()
-                    {
-                        GuidId = cache,
-                        Address = info.HotelProperty.Address.CompleteAddress,
-                        ImgUrl = imageUrl,
-                        Name = info.HotelProperty.Name,
-                        Rating = info.HotelProperty.HotelRating.Rating,
-                        HotelId = info.HotelProperty.Id,
-                        SessionId=hotelSearchRS.SessionId,
-                        Supplier=info.HotelFareSource.Name
-                    };
-                    hotelInfo.Add(hotel);
                 }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
             }
             var result = new HotelList() { Hotels = hotelInfo };
             return result;
