@@ -7,13 +7,14 @@ using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelReservation.Contract;
 using System;
 using HotelReservation.Logger;
+using System.Collections.Generic;
 
 namespace HotelAdapter
 {
     public class HotelSearchAdapter : IHotelFactory
     {
         private HotelEngineClient _engineClient = null;
-        private MultiAvailItinerary _searchResponse = null;
+        private HotelList _searchResponse = null;
         private MultiAvailParser _parser = null;
         private HotelSearchRQ _hotelSearchRQ = null;
         private HotelSearchRS _hotelSearchRS = null;

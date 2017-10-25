@@ -28,6 +28,7 @@ namespace HotelReservationEngine.DataParser
             return new TripProductPriceRQ
             {
                 SessionId = roomPricingItinerary.SessionId,
+                AdditionalInfo = new TripEngineService.StateBag[1] { new TripEngineService.StateBag() { Name = "API_SESSION_ID", Value=roomPricingItinerary.SessionId } },
                 TripProduct = new HotelTripProduct
                 {
                     HotelSearchCriterion = roomPricingItinerary.Criteria,

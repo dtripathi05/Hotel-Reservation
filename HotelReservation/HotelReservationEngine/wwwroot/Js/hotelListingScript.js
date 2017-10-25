@@ -23,27 +23,30 @@ $.ajax({
                     hotelResult = hotel;
                     var hotelList = [];
                     var urlImage = "";
-                    for (i = 0; i < hotel.itinerary.length; i++) {
-                        if (hotel.itinerary[i].hotelFareSource.name == "HotelBeds Test" || hotel.itinerary[i].hotelFareSource.name == "TouricoTGSTest") {
-                            for (k = 0; k < hotel.itinerary[i].hotelProperty.mediaContent.length; k++) {
-                                if (hotel.itinerary[i].hotelProperty.mediaContent[k].url != null) {
-                                    urlImage = hotel.itinerary[i].hotelProperty.mediaContent[k].url.toString();
-                                    break;
-                                }
+                    for (i = 0; i < hotel.hotels.length; i++) {
+                        console.log(hotel.hotels[i].supplier.toString());
+                       // if (hotel.hotels[i].supplier == "HotelBeds Test" || hotel.hotels[i].supplier == "TouricoTGSTest")
+                        {
+                            //for (k = 0; k < hotel.itinerary[i].hotelProperty.mediaContent.length; k++) {
+                            //    if (hotel.itinerary[i].hotelProperty.mediaContent[k].url != null) {
+                            //        urlImage = hotel.itinerary[i].hotelProperty.mediaContent[k].url.toString();
+                            //        break;
+                            //    }
+                            //}
+                            {
+                                hotelList.push({
+                                    image: hotel.hotels[i].imgUrl,
+                                    name: hotel.hotels[i].name,
+                                    address: hotel.hotels[i].address,
+                                    stars: hotel.hotels[i].rating,
+                                    // buttonName: hotel.itinerary[i].hotelProperty.name
+                                });
                             }
-                            hotelList.push({
-                                image: urlImage,
-                                name: hotel.itinerary[i].hotelProperty.name,
-                                address: hotel.itinerary[i].hotelProperty.address.completeAddress,
-                                stars: hotel.itinerary[i].hotelProperty.hotelRating.rating,
-                                buttonName: hotel.itinerary[i].hotelProperty.name
-                            });
+                            var template = $('#hotel-item');
+                            var compiledTemplate = Handlebars.compile(template.html());
+                            var html = compiledTemplate(hotelList);
+                            $('#hotelList-container').html(html);
                         }
-
-                        var template = $('#hotel-item');
-                        var compiledTemplate = Handlebars.compile(template.html());
-                        var html = compiledTemplate(hotelList);
-                        $('#hotelList-container').html(html);
                     }
                 }
             });
@@ -58,14 +61,18 @@ $.ajax({
 function roomDetails(data) {
     console.log(data.value);
     var hotelName = data.value;
-    for (i = 0; i < hotelResult.itinerary.length; i++) {
-        var check = hotelResult.itinerary[i].hotelProperty.name.toString();
+    for (i = 0; i < hotelResult.hotels.length; i++) {
+        var check = hotelResult.hotels[i].name.toString();
         if (hotelName.toString() == check) {
             var data1 =
                 {
-                    "Itinerary": hotelResult.itinerary[i],
-                    "Criteria": hotelResult.hotelSearchCriterion,
-                    "SessionId": hotelResult.sessionId
+                    "SessionId": hotelResult.hotels[i].sessionId,
+                    "ImgUrl": hotelResult.hotels[i].imgUrl,
+                    "Name": hotelResult.hotels[i].name,
+                    "Address": hotelResult.hotels[i].address,
+                    "Rating": hotelResult.hotels[i].rating,
+                    "GuidId": hotelResult.hotels[i].guidId,
+                    "HotelId": hotelResult.hotels[i].hotelId
                 };
             $.ajax({
                 type: "post",
