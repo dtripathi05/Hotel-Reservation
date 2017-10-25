@@ -11,7 +11,7 @@ namespace HotelReservationEngine.Constants
         public readonly static int _totalRecordsBeforeFiltering = 0;
         public readonly static int _totalResults = 0;
         public readonly static bool _availableItenaries = true;
-        public readonly static int _maxResults = 1000;
+        public readonly static int _maxResults = 1500;
         public readonly static int _defaultPosId = 101;
         public readonly static bool _matrixResults = true;
         public readonly static int _gmtOffsetMin = 0;
@@ -24,6 +24,6 @@ namespace HotelReservationEngine.Constants
         public readonly static string _companyName = "Rovia";
         public readonly static int _companyId = 0;
         public readonly static string _priceCurrencyCode = "USD";
-        public readonly static float _searchRadius = 10;
+        public readonly static float _searchRadius = 0;
     }
 }
