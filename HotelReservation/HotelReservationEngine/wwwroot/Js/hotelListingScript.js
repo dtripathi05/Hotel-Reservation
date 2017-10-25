@@ -24,7 +24,7 @@ $.ajax({
                     var hotelList = [];
                     var urlImage = "";
                     for (i = 0; i < hotel.itinerary.length; i++) {
-                        if (hotel.itinerary[i].hotelFareSource.name == "HotelBeds Test" || hotel.itinerary[i].hotelFareSource.name == "TouricoTGSTest") {
+                        //if (hotel.itinerary[i].hotelFareSource.name == "HotelBeds Test" || hotel.itinerary[i].hotelFareSource.name == "TouricoTGSTest") {
                             for (k = 0; k < hotel.itinerary[i].hotelProperty.mediaContent.length; k++) {
                                 if (hotel.itinerary[i].hotelProperty.mediaContent[k].url != null) {
                                     urlImage = hotel.itinerary[i].hotelProperty.mediaContent[k].url.toString();
@@ -45,7 +45,7 @@ $.ajax({
                         var html = compiledTemplate(hotelList);
                         $('#hotelList-container').html(html);
                     }
-                }
+               // }
             });
         }
         catch (err) {

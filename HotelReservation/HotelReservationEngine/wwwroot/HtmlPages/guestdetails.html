@@ -6,20 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/Image/favicon-bed.png">
     <link rel="stylesheet" href="/Css/Style.css">
+    <link rel="stylesheet" href="/Css/guestDetailsStyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </head>
 <body>
+    <!--header-->
     <header>
         <h6>.</h6>
     </header>
+    <!--nav-bar-->
     <div class="col-md-12">
         <nav class="navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand">Hotel Reservation</a>
+                    <a class="navbar-brand">Hotel-Reservation</a>
                 </div>
                 <ul class=" nav navbar-nav navbar-right ">
                     <li class="navbar-nav nav">
@@ -38,143 +42,171 @@
         </nav>
     </div>
     <article>
-        <div class="container heading text-center">
-            <h1>Personal Details</h1>
-        </div>
         <div id="guestDetails">
-            <form id="guestDetailsForm" onsubmit="importDetails(); return false">
-                <div class="col-md-12">
-                    <div class="container container-list border-panel">
-                        <!--First Name-->
-                        <section>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="firstName">First Name</label>
-                                            <input type="text" class="form-control placeholderfont" id="firstName" name="firstname" placeholder="First Name" required>
-                                        </div>
-                                    </div>
-                                    <!--Last Name-->
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label for="lastName">Last Name</label>
-                                            <input type="text" class="form-control placeholderfont" id="lastName" name="lastname" placeholder="Last Name" required>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <!--Mobile Number-->
-                        <section>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="mobileNumber">Mobile Number</label>
-                                    <input type="text" class="form-control placeholderfont" id="mobileNumber" name="mobilenumber" placeholder="Mobile Number" required>
-                                </div>
-                            </div>
-
-                            <!--Age-->
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="age">Age</label>
-                                    <input type="text" class="form-control placeholderfont" id="age" name="age" placeholder="Age" required>
-                                </div>
-                            </div>
-                        </section>
-                        <!--Email-Id-->
-                        <section>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="emailId">Email-Id</label>
-                                    <input type="text" class="form-control placeholderfont" id="emailId" name="emailid" placeholder="Example:abc@gmail.com" required>
-                                </div>
-                            </div>
-                        </section>
-                        <!--Error Messaging-->
-                        <section>
-                            <div class="form-group">
-                                <div class="col-md-9 col-md-offset-3">
-                                    <div id="errors"></div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-
-                    <div class=" container text-center heading-card">
-                        <h1>Credit Card Details</h1>
-                    </div>
+            <form id="guestDetailsForm" class="contact-form" onsubmit="importDetails(); return false">
+                <div class=" col-md-8 col-md-offset-2 container-guest container-list border-panel">
                     <section>
-                        <div class=" container container-list border-panel">
-                            <!--Card Number-->
-                            <section>
-                                <div class="col-md-8">
-                                    <label for="cardNumber">Card Number</label>
-                                    <input type="text" class="form-control placeholderfont" id="cardNumber" placeholder="Card Number" required>
+                        <div>
+                            <h2><span class="glyphicon glyphicon-user"></span>Personal Details</h2>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="col-md-12">
+                            <div>
+                                <!--Prefix-->
+                                <div class="col-md-3">
+                                    <div class="form-group input-text">
+                                        <label for="prefix">Prefix</label>
+                                        <select name="prefixs" class="form-control" id="prefix">
+                                            <option selected="selected" value="Mr">Mr</option>
+                                            <option value="Mrs">Mrs</option>
+                                            <option value="Miss">Miss</option>
+                                        </select>
+                                    </div>
                                 </div>
-
-                            </section>
-                            <!--Card Holder Name-->
-                            <section>
-                                <div class="col-md-8">
+                                <!--First Name-->
+                                <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="cardHolder">Card Holder</label>
-                                        <input type="text" class="form-control placeholderfont" id="cardHolder" placeholder=" Card Holder's Name" required>
+                                        <label for="firstName">First Name</label>
+                                        <input type="text" class="form-control placeholderfont" id="firstName" name="firstname" placeholder="First Name" required>
                                     </div>
                                 </div>
-                            </section>
-                            <!--Expiry-->
-                            <section>
-                                <div class="col-md-8">
+                                <!--Middle Name-->
+                                <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Expiry</label>
-                                    </div>
-
-                                    <!--MM-->
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control placeholderfont" id="month" placeholder="MM" required>
-                                        </div>
-                                    </div>
-                                    <!--YY-->
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control placeholderfont" id="year" placeholder="YYYY" required>
-                                        </div>
-
+                                        <label for="middleName">Middle Name</label>
+                                        <input type="text" class="form-control placeholderfont" id="middleName" name="middlename" placeholder="Middle Name" required>
                                     </div>
                                 </div>
-                            </section>
-                            <!--Cvv-->
-                            <section>
-                                <div class="col-md-8">
+                                <!--Last Name-->
+                                <div class="col-md-3">
                                     <div class="form-group">
-                                        <label for="cvv">CVV</label>
-                                        <input type="password" class="form-control placeholderfont" id="cvv" placeholder="***" required>
+                                        <label for="lastName">Last Name</label>
+                                        <input type="text" class="form-control placeholderfont" id="lastName" name="lastname" placeholder="Last Name" required>
                                     </div>
                                 </div>
-                            </section>
-                            <!--Error Messaging-->
-                            <section>
-                                <div class="form-group">
-                                    <div class="col-md-9 col-md-offset-3">
-                                        <div id="errors"></div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="col-md-12">
+                            <div>
+                                <!--Email-Id-->
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label for="emailId">Email-Id</label>
+                                        <input type="email" class="form-control placeholderfont" id="emailId" name="emailid" placeholder="Example:abc@gmail.com" required>
                                     </div>
                                 </div>
-                            </section>
-                            <!--Submit Button-->
-                            <section>
-                                <div class="col-md-8">
-                                    <button type="submit" class="panelButton" id="paynowButton">Pay Now</button>
+                                <!--Mobile Number-->
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label for="mobileNumber">Mobile Number</label>
+                                        <input type="text" class="form-control placeholderfont" id="mobileNumber" name="mobilenumber" placeholder="Mobile Number" required>
+                                    </div>
                                 </div>
-                            </section>
+                                <!--Age-->
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label for="age">Age</label>
+                                        <input type="number" min="1" max="100" class="form-control placeholderfont" id="age" name="age" placeholder="Age" required>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </div>
+                <div class=" col-md-6 col-md-offset-3  container-guest container-list border-panel">
+                    <section>
+                        <div>
+                            <h2><i class="fa fa-cc-visa" style="font-size:36px"></i> Credit Card Details</h2>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="col-md-12">
+                            <div>
+                                <!--Card Number-->
+                                <section>
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <label for="cardNumber">Card Number</label>
+                                        <input type="number" min="4000000000000000" max="4999999999999999" class="form-control placeholderfont text-center" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx" required>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="col-md-12">
+                            <div>
+                                <!--Card Holder Name-->
+                                <section>
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <label for="cardHolder">Card Holder</label>
+                                        <input type="text" class="form-control placeholderfont text-center" id="cardHolder" placeholder=" Card Holder's Name" required>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="col-md-12">
+                            <div>
+                                <section>
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <!--Expiry-->
+                                        <section>
+                                            <div class="form-group">
+                                                <label>Expiry</label>
+                                            </div>
+                                        </section>
+
+                                        <!--MM-->
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control placeholderfont" id="month" placeholder="MM" required>
+                                            </div>
+                                        </div>
+                                        <!--YY-->
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control placeholderfont" id="year" placeholder="YYYY" required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="col-md-12">
+                            <div>
+                                <!--CVV-->
+                                <section>
+                                    <div class="col-md-8 col-md-offset-2">
+                                        <label for="cvv">CVV</label>
+                                        <input type="password" class="form-control placeholderfont text-center" id="cvv" placeholder="***" required>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="col-md-8 col-md-offset-4">
+                            <div>
+                                <!--Submit Button-->
+                                <section>
+                                    <div class="col-md-8">
+                                        <button type="submit" class="payButton" id="paynowButton">Pay Now</button>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
             </form>
         </div>
     </article>
-    <footer class="foot text-center">Tavisca &copy; 2017|<a class="anchorLink" href="http://www.tavisca.com/">Open Company Website</a></footer>
     <script src="/Js/guestDetailsScript.js"></script>
 </body>
 </html>
