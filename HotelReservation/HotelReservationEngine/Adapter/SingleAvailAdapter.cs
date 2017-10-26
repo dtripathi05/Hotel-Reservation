@@ -1,5 +1,6 @@
 ﻿using HotelEntities;
 using HotelReservation.Contract;
+using HotelReservation.Logger;
 using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelReservationEngine.Model;
 using System;
@@ -14,20 +15,27 @@ namespace HotelReservationEngine.Adapter
         private SingleAvailItinerary _singleAvail = null;
         public SingleAvailItinerary GetSingleAvail(IItinerary requestedItinerary)
         {
-            var req = (HotelInfo)requestedItinerary;
-            var hotelName = req.Name;
-            MultiAvailItinerary multiAvailItinerary = (MultiAvailItinerary)Cache.GetSearchRequest(req.GuidId.ToString());
-            foreach (var itinerary in multiAvailItinerary.Itinerary)
+            try
             {
-                if (itinerary.HotelProperty.Name == hotelName)
+                var req = (HotelInfo)requestedItinerary;
+                var hotelName = req.Name;
+                MultiAvailItinerary multiAvailItinerary = (MultiAvailItinerary)Cache.GetSearchRequest(req.GuidId.ToString());
+                foreach (var itinerary in multiAvailItinerary.Itinerary)
                 {
-                    _singleAvail = new SingleAvailItinerary
+                    if (itinerary.HotelProperty.Name == hotelName)
                     {
-                        Criteria = multiAvailItinerary.HotelSearchCriterion,
-                        SessionId = multiAvailItinerary.SessionId,
-                        Itinerary = itinerary
-                    };
+                        _singleAvail = new SingleAvailItinerary
+                        {
+                            Criteria = multiAvailItinerary.HotelSearchCriterion,
+                            SessionId = multiAvailItinerary.SessionId,
+                            Itinerary = itinerary
+                        };
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
             }
             return  _singleAvail;
         }
