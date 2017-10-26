@@ -42,7 +42,7 @@ label {
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
 .foot {
-    margin-top: 80px;
+    margin-top: 60px;
     color: black;
     font-size:16px;
     font-weight:bold;
@@ -121,4 +121,7 @@ btn.btn-primary:active {
 }
 .panel-font{
     font-size:25px;
+}
+.currencyCode {
+color:green;
 }

@@ -34,7 +34,11 @@ $(document).ready(function () {
             }
         }
     }
-
+    if (roomType.length == 0)
+    {
+        alert("Sorry No Rooms Found Please Select Another Hotel");
+        window.location.href = "/hotel";
+    }
     var temp = $("#x");
     var cmp = Handlebars.compile(temp.html());
     var htm = cmp({
@@ -80,7 +84,11 @@ function price(data1) {
                 success: function (roomPrice) {
                     sessionStorage.setItem('roomPrice', JSON.stringify(roomPrice));
                     window.location.href = "/roomPricing";
-                }
+                },
+                error: function (data) {
+                    alert("Some Error Occured");
+                    window.location.href = "/index";
+                },
             });
 
         }

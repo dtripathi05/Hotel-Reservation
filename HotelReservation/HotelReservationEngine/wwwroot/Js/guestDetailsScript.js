@@ -49,5 +49,9 @@ function importDetails() {
             window.location.href = "/bookingPage";
             console.log(result);
         },
+        error: function (data) {
+            alert("Some Error Occured");
+            window.location.href = "/index";
+        }
     });
 }
