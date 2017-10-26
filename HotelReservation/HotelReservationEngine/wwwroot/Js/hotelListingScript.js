@@ -74,7 +74,8 @@ function roomDetails(data) {
                     "Rating": hotelResult.hotels[i].rating,
                     "GuidId": hotelResult.hotels[i].guidId,
                     "HotelId": hotelResult.hotels[i].hotelId,
-                    "BasePrice": hotelResult.hotels[i].basePrice
+                    "BasePrice": hotelResult.hotels[i].basePrice,
+                    "CurrencyCode": hotelResult.hotels[i].currencyCode
                 };
             $.ajax({
                 type: "post",

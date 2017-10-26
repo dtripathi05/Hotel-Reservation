@@ -43,11 +43,11 @@ namespace HotelReservationEngine.DataParser
                         new StateBag(){ Name="UserType", Value="Normal"}
                      },
                         Email = "sbejugam@v-worldventures.com",
-                        FirstName = "Sandbox",
-                        LastName = "Test",
+                        FirstName = bookTripRQ.FirstName,
+                        LastName = bookTripRQ.LastName,
                         MiddleName = "User",
-                        Prefix = "Mr.",
-                        Title = "Mr",
+                        Prefix = bookTripRQ.Prefix,
+                        Title = bookTripRQ.Prefix,
                         UserId = 169050,
                         UserName = "3285301"
                     },

@@ -102,13 +102,28 @@ namespace HotelReservationEngine.DataParser
 
         public CompleteBookingResponse CompleteBookingResponseParser(CompleteBookingRS completeBookingRS)
         {
-            return new CompleteBookingResponse
+            try
+            {
+                if (completeBookingRS == null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
+            return new CompleteBookingResponse()
             {
                 ConfirmationNumber = completeBookingRS.TripFolder.Products[0].PassengerSegments[0].VendorConfirmationNumber,
-                AmountPaid=completeBookingRS.TripFolder.Payments[0].Amount.Amount,
-                CheckIn=completeBookingRS.TripFolder.StartDate,
-                CheckOut=completeBookingRS.TripFolder.EndDate,
+                AmountPaid = completeBookingRS.TripFolder.Payments[0].Amount.Amount,
+                CheckIn = completeBookingRS.TripFolder.StartDate,
+                CheckOut = completeBookingRS.TripFolder.EndDate,
+                TravelerName = completeBookingRS.TripFolder.Passengers[0].FirstName
             };
+
+
+
         }
     }
 }
