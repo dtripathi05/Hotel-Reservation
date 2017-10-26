@@ -26,22 +26,14 @@ $.ajax({
                     for (i = 0; i < hotel.hotels.length; i++) {
                         console.log(hotel.hotels[i].supplier.toString());
                         if (hotel.hotels[i].supplier == "HotelBeds Test" || hotel.hotels[i].supplier == "TouricoTGSTest")
-                        //{
-                        //    console.log(hotel.hotels[i].supplier);
-                        //}
                         {
-                            //for (k = 0; k < hotel.itinerary[i].hotelProperty.mediaContent.length; k++) {
-                            //    if (hotel.itinerary[i].hotelProperty.mediaContent[k].url != null) {
-                            //        urlImage = hotel.itinerary[i].hotelProperty.mediaContent[k].url.toString();
-                            //        break;
-                            //    }
-                            //}
                             {
                                 hotelList.push({
                                     image: hotel.hotels[i].imgUrl,
                                     name: hotel.hotels[i].name,
                                     address: hotel.hotels[i].address,
                                     stars: hotel.hotels[i].rating,
+                                    fare: hotel.hotels[i].basePrice
                                     // buttonName: hotel.itinerary[i].hotelProperty.name
                                 });
                             }
@@ -75,7 +67,8 @@ function roomDetails(data) {
                     "Address": hotelResult.hotels[i].address,
                     "Rating": hotelResult.hotels[i].rating,
                     "GuidId": hotelResult.hotels[i].guidId,
-                    "HotelId": hotelResult.hotels[i].hotelId
+                    "HotelId": hotelResult.hotels[i].hotelId,
+                    "BasePrice": hotelResult.hotels[i].basePrice
                 };
             $.ajax({
                 type: "post",
