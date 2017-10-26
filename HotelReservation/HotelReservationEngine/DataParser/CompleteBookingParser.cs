@@ -99,6 +99,17 @@ namespace HotelReservationEngine.DataParser
             };
             return completeBookingRQ;
         }
+
+        public CompleteBookingResponse CompleteBookingResponseParser(CompleteBookingRS completeBookingRS)
+        {
+            return new CompleteBookingResponse
+            {
+                ConfirmationNumber = completeBookingRS.TripFolder.Products[0].PassengerSegments[0].VendorConfirmationNumber,
+                AmountPaid=completeBookingRS.TripFolder.Payments[0].Amount.Amount,
+                CheckIn=completeBookingRS.TripFolder.StartDate,
+                CheckOut=completeBookingRS.TripFolder.EndDate,
+            };
+        }
     }
 }
 
