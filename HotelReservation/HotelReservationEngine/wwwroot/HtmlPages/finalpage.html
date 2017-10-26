@@ -51,7 +51,7 @@
     <div id="booking-container">
     </div>
 
-    <script id="price-item" type="text/x-handlebars-template">
+    <script id="booking-item" type="text/x-handlebars-template">
         <div class="heading">
         </div>
         {{#each this}}
@@ -68,10 +68,9 @@
                             </div>
                             <div class="panel-body">
                                 <p class="panel-font"><span class="underline-text"></span> <b>{{hotelName}}</b></p>
+                                <p class="panel-font">Booking-Id<b>{{bookingId}}</b></p>
                                 <p class="panel-font">Check-In :<b>{{checkin}}</b></p>
                                 <p class="panel-font">Check-Out:<b>{{checkout}}</b></p>
-                                <p class="panel-font">Booking-Id<b>{{bookingId}}</b></p>
-                                <p class="panel-font">Booking Status :<b>{{bookingStatus}}</b></p>
                             </div>
                         </div>
                     </div>
@@ -98,6 +97,6 @@
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
-    <script src="/Js/pricingScript.js" type=""></script>
+    <script src="/Js/bookingDetailsScript.js" type=""></script>
 </body>
 </html>

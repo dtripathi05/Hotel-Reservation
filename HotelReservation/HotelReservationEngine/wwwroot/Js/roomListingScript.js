@@ -16,26 +16,29 @@ $(document).ready(function () {
     var img = "";
     for (var i = 0; i < room.itinerary.rooms.length; i++) {
         {
-                for (k = 0; k < room.itinerary.hotelProperty.mediaContent.length; k++) {
-                    if (room.itinerary.hotelProperty.mediaContent[k].url != null) {
-                        img = room.itinerary.hotelProperty.mediaContent[k].url.toString();
-                        break;
-                    }
+            for (k = 0; k < room.itinerary.hotelProperty.mediaContent.length; k++) {
+                if (room.itinerary.hotelProperty.mediaContent[k].url != null) {
+                    img = room.itinerary.hotelProperty.mediaContent[k].url.toString();
+                    break;
                 }
-            roomType.push({
+            }
+            if (room.itinerary.rooms[i].hotelFareSource.name == "TouricoTGSTest")
+            {
+                roomType.push({
 
-                //hotelname: room.rooms[i].hotelName,
-                //description: room.rooms[i].roomDiscription,
-                //roomtype: room.rooms[i].roomName,
-                //price: room.rooms[i].price,
-                //imageurl: room.rooms[i].imageUrl
-                hotelname: room.itinerary.hotelProperty.name,
-                description: room.itinerary.rooms[i].roomDescription,
-                roomtype: room.itinerary.rooms[i].roomName,
-                price: room.itinerary.rooms[i].displayRoomRate.baseFare.amount,
-                imageurl: img,
-               
-            });
+                    //hotelname: room.rooms[i].hotelName,
+                    //description: room.rooms[i].roomDiscription,
+                    //roomtype: room.rooms[i].roomName,
+                    //price: room.rooms[i].price,
+                    //imageurl: room.rooms[i].imageUrl
+                    hotelname: room.itinerary.hotelProperty.name,
+                    description: room.itinerary.rooms[i].roomDescription,
+                    roomtype: room.itinerary.rooms[i].roomName,
+                    price: room.itinerary.rooms[i].displayRoomRate.baseFare.amount,
+                    imageurl: img,
+
+                });
+            }
         }
     }
 
@@ -77,10 +80,10 @@ function price(data1) {
         if (roomName.toString() == check) {
             var data1 =
                 {
-                        "Itinerary": room.itinerary,
-                        "Criteria": room.criteria,
-                        "SessionId": room.sessionId,
-                        "RoomName": roomName
+                    "Itinerary": room.itinerary,
+                    "Criteria": room.criteria,
+                    "SessionId": room.sessionId,
+                    "RoomName": roomName
                     //"HotelName": room.rooms[0].hotelName,
                     //"RoomName": room.rooms[i].roomName,
                     //"RoomDiscription": room.rooms[0].roomDiscription,
