@@ -42,7 +42,7 @@ $.ajax({
                                     name: hotel.hotels[i].name,
                                     address: hotel.hotels[i].address,
                                     stars: hotel.hotels[i].rating,
-                                    // buttonName: hotel.itinerary[i].hotelProperty.name
+                                    fare: hotel.hotels[i].fare
                                 });
                             }
                             var template = $('#hotel-item');
