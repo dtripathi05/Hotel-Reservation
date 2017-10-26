@@ -24,6 +24,9 @@
 .heading-panel {
     margin-top: 60px;
 }
+.heading-panel1 {
+    margin-top: 20px;
+}
 .heading-card {
 margin-top:4px;
 
@@ -116,7 +119,7 @@ btn.btn-primary:active {
 }
 
 .panel-pricing .panel-body {
-    font-size: 25px;
+    font-size: 20px;
     margin: 0px;
     background-color:white;
 }
