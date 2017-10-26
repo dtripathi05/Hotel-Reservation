@@ -12,5 +12,6 @@ namespace TripEngine.Model
         public decimal AmountPaid { get; set; }
         public DateTime CheckIn { get; set; }
         public DateTime CheckOut { get; set; }
+        public string TravelerName { get; set; }
     }
 }

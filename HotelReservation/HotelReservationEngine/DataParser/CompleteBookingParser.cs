@@ -108,6 +108,7 @@ namespace HotelReservationEngine.DataParser
                 AmountPaid=completeBookingRS.TripFolder.Payments[0].Amount.Amount,
                 CheckIn=completeBookingRS.TripFolder.StartDate,
                 CheckOut=completeBookingRS.TripFolder.EndDate,
+                TravelerName=completeBookingRS.TripFolder.Passengers[0].FirstName
             };
         }
     }
