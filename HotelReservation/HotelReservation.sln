@@ -11,9 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservation.Test", "Ho
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TripEngine", "TripEngine\TripEngine.csproj", "{33B51C5E-FF04-4FA6-BFC5-4A57AAF8644E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservation.Contract", "HotelReservation.Contract\HotelReservation.Contract.csproj", "{E0BFCE54-1FD5-4734-A23D-3705F9CD5EF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservation.Contract", "HotelReservation.Contract\HotelReservation.Contract.csproj", "{E0BFCE54-1FD5-4734-A23D-3705F9CD5EF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservation.Logger", "HotelReservation.Logger\HotelReservation.Logger.csproj", "{8E395C93-6BC9-4D8F-8D07-E9474954D706}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservation.Logger", "HotelReservation.Logger\HotelReservation.Logger.csproj", "{8E395C93-6BC9-4D8F-8D07-E9474954D706}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

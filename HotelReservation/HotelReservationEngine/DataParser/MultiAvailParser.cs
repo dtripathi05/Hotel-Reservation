@@ -51,6 +51,7 @@ namespace Parser
             HotelSearchRQ listRQ = new HotelSearchRQ();
             listRQ.SessionId = Guid.NewGuid().ToString();
             listRQ.ResultRequested = ResponseType.Complete;
+            listRQ.AdditionalInfo = new StateBag[] { new StateBag() { Name = "API_SESSION_ID", Value = listRQ.SessionId } };
             listRQ.Filters = new AvailabilityFilter[1]
             {
                 new AvailabilityFilter()
