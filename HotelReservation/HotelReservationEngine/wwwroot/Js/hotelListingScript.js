@@ -26,9 +26,9 @@ $.ajax({
                     for (i = 0; i < hotel.hotels.length; i++) {
                         console.log(hotel.hotels[i].supplier.toString());
                         if (hotel.hotels[i].supplier == "HotelBeds Test" || hotel.hotels[i].supplier == "TouricoTGSTest")
-                        {
-                            console.log(hotel.hotels[i].supplier);
-                        }
+                        //{
+                        //    console.log(hotel.hotels[i].supplier);
+                        //}
                         {
                             //for (k = 0; k < hotel.itinerary[i].hotelProperty.mediaContent.length; k++) {
                             //    if (hotel.itinerary[i].hotelProperty.mediaContent[k].url != null) {

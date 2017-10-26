@@ -116,8 +116,8 @@ namespace HotelReservationEngine.DataParser
                             new StateBag(){ Name="Boyd Gaming"},
                             new StateBag(){ Name="IsPassportRequired" , Value="false"}
                         },
-                        Email="rsarda@tavisca.com",
-                        FirstName="Sandbox",
+                        Email="dtripathi@tavisca.com",
+                        FirstName="Deependra",
                         Gender=Gender.Male,
                         KnownTravelerNumber="789456",
                         LastName="Test",
