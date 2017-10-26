@@ -4,6 +4,8 @@ $(document).ready(function () {
     room = sessionStorage.getItem("roomPrice");
     bookingDetails = JSON.parse(room);
 });
+
+var flag = false;
 function importDetails() {
     var prefix = $("#prefix")[0].value; 
     var fName = $("#firstName")[0].value;
@@ -16,6 +18,21 @@ function importDetails() {
     var mm = $("#month")[0].value;
     var yy = $("#year")[0].value;
     var cvv = $("#cvv")[0].value;
+
+    if (/^\d{10}$/.test(mobileNumber)) {
+        flag = true;
+    }
+    else {
+        alert("Invalid Mobile Number; must be ten digits");
+    }
+
+    if (/^[0-9]{3}$/.test(cvv)) {
+        flag = true;
+    }
+    else {
+        alert("Invalid CVV Number; must be three digits");
+
+    }
 
     var data = {
         "Prefix": prefix,
@@ -42,12 +59,21 @@ function importDetails() {
         dataType: 'json',
         contentType: "application/json",
         success: function (result) {
-            window.location.href = "/bookingPage";
-            sessionStorage.setItem('bookingDetails', JSON.stringify(result));
+            if (result.confirmationNumber == null) {
+                alert("Unable To Complete Resquest ! Please Try After Sometime");
+                window.location.href = "/index";
+            }
+            else {
+
+                window.location.href = "/bookingPage";
+                sessionStorage.setItem('bookingDetails', JSON.stringify(result));
+            }
         },
         error: function (data) {
-            alert("Some Error Occured");
+            alert("Some Error Occured");          
             window.location.href = "/index";
+
         }
     });
+    return flag;
 }
