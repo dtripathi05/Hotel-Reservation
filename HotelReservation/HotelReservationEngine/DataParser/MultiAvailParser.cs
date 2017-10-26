@@ -51,6 +51,7 @@ namespace Parser
             HotelSearchRQ listRQ = new HotelSearchRQ();
             listRQ.SessionId = Guid.NewGuid().ToString();
             listRQ.ResultRequested = ResponseType.Complete;
+            listRQ.AdditionalInfo = new StateBag[] { new StateBag() { Name = "API_SESSION_ID", Value = listRQ.SessionId } };
             listRQ.Filters = new AvailabilityFilter[1]
             {
                 new AvailabilityFilter()
@@ -60,9 +61,33 @@ namespace Parser
             };
             GeoAxisCode geoAxis = new GeoAxisCode(searchRequest.Destination.Longitude, searchRequest.Destination.Latitude);
             listRQ.HotelSearchCriterion = new HotelSearchCriterion();
+            listRQ.HotelSearchCriterion.Attributes = new StateBag[6]
+            {
+                new StateBag() { Name = "API_SESSION_ID", Value = listRQ.SessionId },
+                new StateBag(){ Name="FareType",Value="BaseFare"},
+                new StateBag(){ Name="ResetFiltersIfNoResults",Value="true"},
+                new StateBag(){ Name="ReturnRestrictedRelevanceProperties",Value="true"},
+                new StateBag(){ Name="MaxHideawayRelevancePropertiesToDisplay",Value="5"},
+                new StateBag(){ Name="MaxHotelRelevancePropertiesToDisplay",Value="10"}
+            };
             listRQ.HotelSearchCriterion.MatrixResults = MultiAvailSearchRequestStaticData._matrixResults;
             listRQ.HotelSearchCriterion.MaximumResults = MultiAvailSearchRequestStaticData._maxResults;
             listRQ.HotelSearchCriterion.Pos = new PointOfSale();
+            listRQ.HotelSearchCriterion.Pos.AdditionalInfo = new StateBag[12]
+            {
+                new StateBag() { Name = "API_SESSION_ID", Value = listRQ.SessionId },
+                new StateBag() { Name = "IPAddress", Value = "127.0.0.1" },
+                new StateBag() { Name = "DealerUrl", Value = "localhost" },
+                new StateBag() { Name = "SiteUrl", Value = "ota" },
+                new StateBag() { Name = "AccountId", Value = "169050" },
+                new StateBag() { Name = "UserId", Value = "3285301" },
+                new StateBag() { Name = "CountryName", Value = "United States" },
+                new StateBag() { Name = "CountryCode", Value = "US" },
+                new StateBag() { Name = "UserProfileCountryCode", Value = "US" },
+                new StateBag() { Name = "CustomerType", Value = "DTP" },
+                new StateBag() { Name = "DKCommissionIdentifier", Value = "3285301P" },
+                new StateBag() { Name = "MemberSignUpDate", Value = "Tue, 04 Jan 2011" }
+            };
             listRQ.HotelSearchCriterion.Pos.PosId = MultiAvailSearchRequestStaticData._defaultPosId;
             listRQ.HotelSearchCriterion.Pos.Requester = GetDefaultRequester();
             listRQ.HotelSearchCriterion.PriceCurrencyCode = MultiAvailSearchRequestStaticData._priceCurrencyCode;
