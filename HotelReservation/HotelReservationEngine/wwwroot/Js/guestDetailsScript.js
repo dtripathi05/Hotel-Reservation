@@ -42,8 +42,14 @@ function importDetails() {
         dataType: 'json',
         contentType: "application/json",
         success: function (result) {
-            window.location.href = "/bookingPage";
-            sessionStorage.setItem('bookingDetails', JSON.stringify(result));
+            if (result.confirmationNumber == null) {
+                alert("Unable To Complete Request ! Please Try After Sometime");
+                window.location.href = "/index";
+            }
+            else {
+                window.location.href = "/bookingPage";
+                sessionStorage.setItem('bookingDetails', JSON.stringify(result));
+            }
         },
         error: function (data) {
             alert("Some Error Occured");
