@@ -34,7 +34,6 @@ $.ajax({
                                     address: hotel.hotels[i].address,
                                     stars: hotel.hotels[i].rating,
                                     fare: hotel.hotels[i].basePrice
-                                    // buttonName: hotel.itinerary[i].hotelProperty.name
                                 });
                             }
                             var template = $('#hotel-item');

@@ -58,7 +58,6 @@ function extractData() {
     });
 }
 
-
 $(function () {
 
     $("#place").autocomplete({

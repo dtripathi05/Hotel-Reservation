@@ -22,8 +22,7 @@ $(document).ready(function () {
                     break;
                 }
             }
-            if (room.itinerary.rooms[i].hotelFareSource.name == "TouricoTGSTest")
-            {
+            if (room.itinerary.rooms[i].hotelFareSource.name == "TouricoTGSTest") {
                 roomType.push({
                     hotelname: room.itinerary.hotelProperty.name,
                     description: room.itinerary.rooms[i].roomDescription,
