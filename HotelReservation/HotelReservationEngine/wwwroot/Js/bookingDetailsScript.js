@@ -9,7 +9,7 @@ $(document).ready(function () {
         bookingId: completeBooking.confirmationNumber,
         checkin: completeBooking.checkIn,
         checkout: completeBooking.checkOut,
-        totalPrice: completeBooking.amountPaid
+        totalPrice: completeBooking.amountPaid,
     });
     var template = $('#booking-item');
     var compiledTemplate = Handlebars.compile(template.html());
@@ -18,6 +18,7 @@ $(document).ready(function () {
 });
 
 function startPage() {
+    window.print();
     sessionStorage.clear();
     alert("Thank You For Booking With Us..!!Do Visit Again");
     window.location.href = "/index";

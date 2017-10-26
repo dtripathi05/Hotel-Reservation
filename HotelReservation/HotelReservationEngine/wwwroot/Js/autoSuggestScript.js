@@ -53,8 +53,11 @@ function extractData() {
         success: function (result) {
             window.location.href = "/hotel/" + result;
         },
+        error: function (data) {
+            alert("fail");
+        },
         data: modifiedData,
-        
+
     });
 }
 
@@ -80,19 +83,8 @@ $(function () {
                     }
                     response(hotelList);
                 },
-                statusCode: {
-                    404: function () {
-                        alert("Page Not Found");
-                        window.location.href = "/index";
-                    },
-                    402: function () {
-                        alert("Bad GatewaY Error");
-                        window.location.href = "/index";
-                    },
-                    500: function () {
-                        alert("Some Error Occured,Redirecting To Start Page");
-                        window.location.href = "/index";
-                    }
+                error: function (data) {
+                    alert("fail");
                 }
             });
         },
