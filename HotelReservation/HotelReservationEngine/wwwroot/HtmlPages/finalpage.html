@@ -41,11 +41,7 @@
     </div>
     <!--preloader-->
     <div id="booking-container">
-        <div class="col-md-12">
-            <div class="col-md-offset-6">
-                <img src="/Image/circlepreloader.gif" class="img-responsive" alt="Loading.." />
-            </div>
-        </div>
+        <div class="loader"></div>
     </div>
 
     <div id="booking-container">
@@ -66,12 +62,14 @@
                                     <li class="header">Booking Details</li>
                                 </ul>
                             </div>
-                            <div class="panel-body">
-                                <h3> Dear {{name}}</h3>
-                                <p> Your Booking-Id is : {{bookingId}}</p>
-                                <p> Your Check-In Date : {{checkin}} </p>
-                                <p> Your Check-Out Date: {{checkout}}</p>
-                                <p>Check Your Mail For the Details.Thank You for Booking With Us !</p>
+                            <div class="panel-body booking-message">
+                                <h3 class="bold-text"> Dear <span class="orange">{{name}}</span> ,</h3>
+                                <p>Check Your Mail for your Booking Details</p>
+                                <p> Your Booking-Id is : <span class="bold-text orange"> {{bookingId}}</span></p>
+                                <p> Your Check-In Date :<span class="bold-text orange"> {{checkin}}</span></p>
+                                <p> Your Check-Out Date :<span class="bold-text orange"> {{checkout}}</span></p>
+                                <p class="underline-text">Thank You For Booking With Us !</p>
+                               
                             </div>
                         </div>
                     </div>
@@ -84,7 +82,7 @@
                         <div>
                             <ul class="price ">
                                 <li class="header">Total Amount Paid</li>
-                                <li class="grey panel-font">$ {{totalPrice}}</li>
+                                <li class="grey panel-font bold-text"><span class="bold-text">{{currencyCode}}</span> {{totalPrice}}</li>
                                 <li><button name="startBtn" id="startButton" onClick="startPage()" class="button">OK</button></li>
                             </ul>
                         </div>
@@ -94,6 +92,7 @@
         </div>
         {{/each}}
     </script>
+   
     <footer class="foot text-center">Tavisca &copy; 2017|<a class="anchorLink" href="http://www.tavisca.com/">Open Company Website</a></footer>
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

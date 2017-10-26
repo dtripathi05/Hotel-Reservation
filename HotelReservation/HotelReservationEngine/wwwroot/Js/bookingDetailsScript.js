@@ -1,16 +1,20 @@
 ﻿var details;
 var completeBooking;
+var currency;
 $(document).ready(function () {
     details = sessionStorage.getItem("bookingDetails");
+    currency = sessionStorage.getItem("rooms");
     completeBooking = JSON.parse(details);
+    currencyCode = JSON.parse(currency);
 
     var bookingDescription = [];
     bookingDescription.push({
         bookingId: completeBooking.confirmationNumber,
-        checkin: completeBooking.checkIn,
-        checkout: completeBooking.checkOut,
+        checkin: completeBooking.checkIn.substring(0, 10),
+        checkout: completeBooking.checkOut.substring(0, 10),
         totalPrice: completeBooking.amountPaid,
-        name: completeBooking.travelerName
+        name: completeBooking.travelerName,
+        currencyCode: currencyCode.itinerary.fare.baseFare.currency
     });
     var template = $('#booking-item');
     var compiledTemplate = Handlebars.compile(template.html());

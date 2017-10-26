@@ -1,7 +1,6 @@
 ﻿var result;
 var bookingDetails;
 $(document).ready(function () {
-
     room = sessionStorage.getItem("roomPrice");
     bookingDetails = JSON.parse(room);
 });
@@ -31,8 +30,6 @@ function importDetails() {
         "Year": yy,
         "Cvv": cvv,
         "RoomPricingResponse": bookingDetails
-
-
     };
 
     var modifiedData = JSON.stringify(data);
@@ -45,9 +42,8 @@ function importDetails() {
         dataType: 'json',
         contentType: "application/json",
         success: function (result) {
-            sessionStorage.setItem('bookingDetails', JSON.stringify(result));
             window.location.href = "/bookingPage";
-            console.log(result);
+            sessionStorage.setItem('bookingDetails', JSON.stringify(result));
         },
         error: function (data) {
             alert("Some Error Occured");

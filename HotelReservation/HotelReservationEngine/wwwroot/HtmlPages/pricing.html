@@ -39,11 +39,7 @@
     </div>
 
     <div id="priceList-container">
-        <div class="col-md-12">
-            <div class="col-md-offset-6">
-                <img src="/Image/circlepreloader.gif" alt="Loading.." />
-            </div>
-        </div>
+        <div class="loader"></div>
     </div>
     <div id="priceList-container">
     </div>
@@ -64,7 +60,7 @@
                                     </ul>
                                 </div>
                                 <div class="panel-body">
-                                    <p class="panel-font"><span class="underline-text"></span> <b>{{hotelName}}</b></p>
+                                    <p class="panel-font"><span class="underline-text bold-text">{{hotelName}}</span> </p>
                                     <p class="panel-font"><span class="glyphicon glyphicon-bed green"></span> <b>{{roomtype}}</b></p>
                                     <p class="panel-font"><span class="glyphicon glyphicon-arrow-right green"></span> <b>{{checkin}}</b></p>
                                     <p class="panel-font"><span class="glyphicon glyphicon-arrow-left green"></span> <b>{{checkout}}</b></p>
@@ -81,7 +77,7 @@
                             <div>
                                 <ul class="price ">
                                     <li class="header">Total Amount Payable</li>
-                                    <li class="grey panel-font">$ {{totalPrice}}</li>
+                                    <li class="grey panel-font">{{currencyCode}} <b>{{totalPrice}}</b></li>
                                     <li><button name="proceedBtn" id="proceedButton" onClick="paymentPage()" class="button">Proceed</button></li>
                                 </ul>
                             </div>
