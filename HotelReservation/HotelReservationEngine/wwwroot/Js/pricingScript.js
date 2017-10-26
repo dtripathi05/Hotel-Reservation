@@ -11,9 +11,10 @@ $(document).ready(function () {
         roomtype: price.product.hotelItinerary.rooms[0].roomName,
         hotelName: price.product.hotelItinerary.hotelProperty.name,
         guestCount: price.product.hotelItinerary.rooms[0].guestCount,
-        checkin: price.product.hotelSearchCriterion.stayPeriod.start,
-        checkout: price.product.hotelSearchCriterion.stayPeriod.end,
-        address: price.product.hotelItinerary.hotelProperty.address.completeAddress
+        checkin: price.product.hotelSearchCriterion.stayPeriod.start.substring(0, 10),
+        checkout: price.product.hotelSearchCriterion.stayPeriod.end.substring(0, 10),
+        address: price.product.hotelItinerary.hotelProperty.address.completeAddress,
+        currencyCode:price.product.hotelItinerary.fare.baseFare.currency
     });
     var template = $('#price-item');
     var compiledTemplate = Handlebars.compile(template.html());

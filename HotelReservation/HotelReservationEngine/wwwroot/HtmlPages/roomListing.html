@@ -40,11 +40,7 @@
     </div>
 
     <div id="roomList-container">
-        <div class="col-md-12">
-            <div class="col-md-offset-6 preloader-img">
-                <img src="/Image/circlepreloader.gif" alt="Loading.." />
-            </div>
-        </div>
+        <div class="loader"></div>
     </div>
 
     <script id="x" type="text/x-handlebars-template">
@@ -95,12 +91,12 @@
                     <!--View Rooms Button-->
                     <div class="col-md-3 ">
                         <!-- item -->
-                        <div class="panel panel-pricing">
+                        <div class="panel panel-pricing border-panel">
                             <div class="text-center">
                                 <h4 class="underline-text">Starting From</h4>
                             </div>
                             <div class="panel-body text-center">
-                                <p class="p-price">$ {{price}}</p>
+                                <p class="p-price"><b>{{currencyCode}}</b> {{price}}</p>
                             </div>
                             <div class="panel-body text-center">
                                 <button name="BookBtn" id="viewRoomsButton" class="panelButton" value="{{roomtype}}" onclick="price(this)">Book Now</button>

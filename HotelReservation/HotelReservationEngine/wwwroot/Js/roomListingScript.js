@@ -29,6 +29,7 @@ $(document).ready(function () {
                     roomtype: room.itinerary.rooms[i].roomName,
                     price: room.itinerary.rooms[i].displayRoomRate.baseFare.amount,
                     imageurl: img,
+                    currencyCode:room.itinerary.fare.baseFare.currency
 
                 });
             }

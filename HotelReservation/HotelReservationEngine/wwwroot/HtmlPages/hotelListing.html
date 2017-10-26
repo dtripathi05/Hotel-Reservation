@@ -39,11 +39,7 @@
     </div>
 
     <div id="hotelList-container">
-        <div class="col-md-12">
-            <div class="col-md-offset-6 preloader-img">
-                <img src="/Image/circlepreloader.gif" class="img-responsive" alt="Loading.." />
-            </div>
-        </div>
+            <div class="loader"></div>
     </div>
     <div id="hotelList-container"></div>
     <script id="hotel-item" type="text/x-handlebars-template">
@@ -64,7 +60,7 @@
                     <!--Hotel Details-->
                     <div class="col-md-6">
                         <h3 class="underline-text">{{name}}</h3>
-                        <h4 class="bold-text"><span class="currencyCode">{{currency}}</span>  {{fare}}</h4>
+                        <h4>Base Fare :<span class="bold-text">{{currency}}</span>  {{fare}}</h4>
                         <h4 class="bold-text">
                             {{#times stars}}
                             <span class="glyphicon glyphicon-star orange"></span>
