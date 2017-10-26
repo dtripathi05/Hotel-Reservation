@@ -42,6 +42,10 @@ $.ajax({
                             $('#hotelList-container').html(html);
                         }
                     }
+                    if (hotelList.length == 0) {
+                        alert("No Results Found");
+                        window.location.href = "/index";
+                    }
                 }
             });
         }
@@ -79,6 +83,20 @@ function roomDetails(data) {
                 success: function (room) {
                     sessionStorage.setItem('rooms', JSON.stringify(room));
                     window.location.href = "/rooms";
+                },
+                statusCode: {
+                    404: function () {
+                        alert("Page Not Found");
+                        window.location.href = "/index";
+                    },
+                    402: function () {
+                        alert("Bad GatewaY Error");
+                        window.location.href = "/index";
+                    },
+                    500: function () {
+                        alert("Some Error Occured,Redirecting To Start Page");
+                        window.location.href = "/index";
+                    }
                 }
             });
         }

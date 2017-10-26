@@ -34,7 +34,11 @@ $(document).ready(function () {
             }
         }
     }
-
+    if (roomType.length == 0)
+    {
+        alert("Sorry No Rooms Found Please Select Another Hotel");
+        window.location.href = "/hotel";
+    }
     var temp = $("#x");
     var cmp = Handlebars.compile(temp.html());
     var htm = cmp({
@@ -80,6 +84,20 @@ function price(data1) {
                 success: function (roomPrice) {
                     sessionStorage.setItem('roomPrice', JSON.stringify(roomPrice));
                     window.location.href = "/roomPricing";
+                },
+                statusCode: {
+                    404: function () {
+                        alert("Page Not Found");
+                        window.location.href = "/index";
+                    },
+                    402: function () {
+                        alert("Bad Gateway Error");
+                        window.location.href = "/index";
+                    },
+                    500: function () {
+                        alert("Some Error Occured,Redirecting To Start Page");
+                        window.location.href = "/index";
+                    }
                 }
             });
 

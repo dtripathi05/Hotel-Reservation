@@ -19,5 +19,6 @@ $(document).ready(function () {
 
 function startPage() {
     sessionStorage.clear();
+    alert("Thank You For Booking With Us..!!Do Visit Again");
     window.location.href = "/index";
 }
