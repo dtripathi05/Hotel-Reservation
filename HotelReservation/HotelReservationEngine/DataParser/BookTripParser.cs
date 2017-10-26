@@ -11,7 +11,7 @@ namespace HotelReservationEngine.DataParser
     {
         private HotelItinerary _hotelItinerary;
         private HotelSearchCriterion _hotelSearchCriterion;
-
+        private string _gender;
         public TripFolderBookRQ TripFolderBookRQParser(BookTripRQ bookTripRQ)
         {
             try
@@ -27,6 +27,7 @@ namespace HotelReservationEngine.DataParser
             }
             _hotelItinerary = bookTripRQ.RoomPricingResponse.Product.HotelItinerary;
             _hotelSearchCriterion = bookTripRQ.RoomPricingResponse.Criteria;
+
             TripFolderBookRQ tripFolderBookRQ = new TripFolderBookRQ()
             {
                 SessionId = bookTripRQ.RoomPricingResponse.SessionId.ToString(),
@@ -116,14 +117,17 @@ namespace HotelReservationEngine.DataParser
                             new StateBag(){ Name="Boyd Gaming"},
                             new StateBag(){ Name="IsPassportRequired" , Value="false"}
                         },
-                        Email="dtripathi@tavisca.com",
-                        FirstName="Deependra",
+                        //Email="dtripathi@tavisca.com",
+                        //FirstName="Deependra",
+                        FirstName=bookTripRQ.FirstName,
+                        Email=bookTripRQ.EmailId,
                         Gender=Gender.Male,
                         KnownTravelerNumber="789456",
-                        LastName="Test",
+                        LastName=bookTripRQ.LastName,
                         PassengerType=PassengerType.Adult,
-                        PhoneNumber="1111111111",
-                        UserName="rsarda@tavisca.com"
+                        PhoneNumber=bookTripRQ.MobileNumber,
+                        UserName="rsarda@tavisca.com",
+                        Prefix=bookTripRQ.Prefix
                     }
                  },
                     Payments = new CreditCardPayment[]
