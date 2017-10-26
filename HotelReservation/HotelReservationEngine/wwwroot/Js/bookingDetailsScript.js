@@ -10,6 +10,7 @@ $(document).ready(function () {
         checkin: completeBooking.checkIn,
         checkout: completeBooking.checkOut,
         totalPrice: completeBooking.amountPaid,
+        name: completeBooking.travelerName
     });
     var template = $('#booking-item');
     var compiledTemplate = Handlebars.compile(template.html());

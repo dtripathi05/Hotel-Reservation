@@ -85,20 +85,10 @@ function price(data1) {
                     sessionStorage.setItem('roomPrice', JSON.stringify(roomPrice));
                     window.location.href = "/roomPricing";
                 },
-                statusCode: {
-                    404: function () {
-                        alert("Page Not Found");
-                        window.location.href = "/index";
-                    },
-                    402: function () {
-                        alert("Bad Gateway Error");
-                        window.location.href = "/index";
-                    },
-                    500: function () {
-                        alert("Some Error Occured,Redirecting To Start Page");
-                        window.location.href = "/index";
-                    }
-                }
+                error: function (data) {
+                    alert("Some Error Occured");
+                    window.location.href = "/index";
+                },
             });
 
         }

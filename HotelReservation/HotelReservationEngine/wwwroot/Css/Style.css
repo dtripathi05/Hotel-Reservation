@@ -122,3 +122,6 @@ btn.btn-primary:active {
 .panel-font{
     font-size:25px;
 }
+.currencyCode {
+color:green;
+}

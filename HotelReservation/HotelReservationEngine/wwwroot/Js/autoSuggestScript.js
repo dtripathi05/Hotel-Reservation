@@ -54,7 +54,8 @@ function extractData() {
             window.location.href = "/hotel/" + result;
         },
         error: function (data) {
-            alert("fail");
+            alert("Some Error Occured");
+            window.location.href = "/index";
         },
         data: modifiedData,
 
@@ -84,7 +85,8 @@ $(function () {
                     response(hotelList);
                 },
                 error: function (data) {
-                    alert("fail");
+                    alert("Some Error Occured");
+                    window.location.href = "/index";
                 }
             });
         },

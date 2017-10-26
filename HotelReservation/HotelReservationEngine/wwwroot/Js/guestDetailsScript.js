@@ -49,19 +49,9 @@ function importDetails() {
             window.location.href = "/bookingPage";
             console.log(result);
         },
-        statusCode: {
-            404: function () {
-                alert("Page Not Found");
-                window.location.href = "/index";
-            },
-            402: function () {
-                alert("Bad GatewaY Error");
-                window.location.href = "/index";
-            },
-            500: function () {
-                alert("Some Error Occured,Redirecting To Start Page");
-                window.location.href = "/index";
-            }
+        error: function (data) {
+            alert("Some Error Occured");
+            window.location.href = "/index";
         }
     });
 }

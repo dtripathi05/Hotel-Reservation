@@ -33,7 +33,8 @@ $.ajax({
                                     name: hotel.hotels[i].name,
                                     address: hotel.hotels[i].address,
                                     stars: hotel.hotels[i].rating,
-                                    fare: hotel.hotels[i].basePrice
+                                    fare: hotel.hotels[i].basePrice,
+                                    currency: hotel.hotels[i].currencyCode
                                 });
                             }
                             var template = $('#hotel-item');
@@ -48,7 +49,8 @@ $.ajax({
                     }
                 },
                 error: function (data) {
-                    alert("fail");
+                    alert("Some Error Occured");
+                    window.location.href = "/index";
                 }
             });
         }
@@ -74,8 +76,7 @@ function roomDetails(data) {
                     "Rating": hotelResult.hotels[i].rating,
                     "GuidId": hotelResult.hotels[i].guidId,
                     "HotelId": hotelResult.hotels[i].hotelId,
-                    "BasePrice": hotelResult.hotels[i].basePrice,
-                    "CurrencyCode": hotelResult.hotels[i].currencyCode
+                    "BasePrice": hotelResult.hotels[i].basePrice
                 };
             $.ajax({
                 type: "post",
@@ -89,7 +90,8 @@ function roomDetails(data) {
                     window.location.href = "/rooms";
                 },
                 error: function (data) {
-                    alert("fail");
+                    alert("Some Error Occured");
+                    window.location.href = "/index";
                 }
             });
         }
