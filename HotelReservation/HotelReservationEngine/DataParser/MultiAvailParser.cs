@@ -236,7 +236,8 @@ namespace Parser
                             Rating = info.HotelProperty.HotelRating.Rating,
                             HotelId = info.HotelProperty.Id,
                             SessionId = hotelSearchRS.SessionId,
-                            Supplier = info.HotelFareSource.Name
+                            Supplier = info.HotelFareSource.Name,
+                            BasePrice=info.Fare.BaseFare.Amount
                         };
                         hotelInfo.Add(hotel);
                     }

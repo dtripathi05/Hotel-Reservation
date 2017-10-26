@@ -15,5 +15,6 @@ namespace HotelEntities
         public string GuidId { get; set; }
         public int HotelId { get; set; }
         public string Supplier { get; set; }
+        public decimal BasePrice { get; set; }
     }
 }

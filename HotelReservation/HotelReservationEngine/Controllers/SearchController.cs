@@ -111,7 +111,7 @@ namespace HotelReservationEngine.Controllers
 
         }
         [HttpPost("completePayment")]
-        public async Task<TripFolderBookRS> Booking([FromBody]BookTripRQ bookTripRQ)
+        public async Task<CompleteBookingResponse> Booking([FromBody]BookTripRQ bookTripRQ)
         {
             try
             {
@@ -127,8 +127,9 @@ namespace HotelReservationEngine.Controllers
             IHotelFactory hotelFactory = Factory.GetHotelServices("TripBookFolder");
             var tripBookResult = await hotelFactory.SearchAsync(bookTripRQ);
             IHotelFactory factory = Factory.GetHotelServices("CompleteBooking");
-            var completeBookingResult = await factory.SearchAsync(tripBookResult);
-            return null;
+            var result = await factory.SearchAsync(tripBookResult);
+            CompleteBookingResponse completeBookingResult = (CompleteBookingResponse)result;
+            return completeBookingResult;
         }
     }
 }

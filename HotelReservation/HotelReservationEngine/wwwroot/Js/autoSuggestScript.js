@@ -51,10 +51,6 @@ function extractData() {
         type: 'post',
         contentType: "application/json",
         success: function (result) {
-            sessionStorage.setItem('destination', cityName);
-            sessionStorage.setItem('checkin', checkInDate);
-            sessionStorage.setItem('checkout', checkOutDate);
-            sessionStorage.setItem('adult', adultNumber);
             window.location.href = "/hotel/" + result;
         },
         data: modifiedData,

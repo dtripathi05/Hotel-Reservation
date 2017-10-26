@@ -45,6 +45,8 @@ function importDetails() {
         dataType: 'json',
         contentType: "application/json",
         success: function (result) {
+            sessionStorage.setItem('bookingDetails', JSON.stringify(result));
+            window.location.href = "/bookingPage";
             console.log(result);
         },
     });
