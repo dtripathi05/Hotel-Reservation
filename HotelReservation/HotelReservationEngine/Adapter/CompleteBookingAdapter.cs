@@ -16,7 +16,7 @@ namespace HotelReservationEngine.Adapter
         private CompleteBookingRQ _completeBookingRQ = null;
         private CompleteBookingRS _completeBookingRS = null;
         private CompleteBookingParser _completeBookingParser = null;
-        
+        private CompleteBookingResponse _completeBookingResponse = null;
         public async Task<IItinerary> SearchAsync(IItinerary request)
         {
             try
@@ -25,7 +25,7 @@ namespace HotelReservationEngine.Adapter
                 _completeBookingParser = new CompleteBookingParser();
                 _completeBookingRQ = _completeBookingParser.CompleteBookingRQParser((BookTripFolderResponse)request);
                 _completeBookingRS = await _tripsEngine.CompleteBookingAsync(_completeBookingRQ);
-                var response = _completeBookingRS;
+                _completeBookingResponse = _completeBookingParser.CompleteBookingResponseParser(_completeBookingRS);
             }
             catch (Exception ex)
             {
@@ -35,7 +35,7 @@ namespace HotelReservationEngine.Adapter
             {
                 await _tripsEngine.CloseAsync();
             }
-            return null;
+            return _completeBookingResponse;
         }
     }
 }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace TripEngine.Model
 {
-    public class CompleteBookingResponse: IItinerary
+    public class CompleteBookingResponse : IItinerary
     {
+        public string ConfirmationNumber { get; set; }
+        public decimal AmountPaid { get; set; }
+        public DateTime CheckIn { get; set; }
+        public DateTime CheckOut { get; set; }
     }
 }

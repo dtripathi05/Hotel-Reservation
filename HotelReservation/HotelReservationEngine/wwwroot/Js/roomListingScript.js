@@ -16,38 +16,29 @@ $(document).ready(function () {
     var img = "";
     for (var i = 0; i < room.itinerary.rooms.length; i++) {
         {
-                for (k = 0; k < room.itinerary.hotelProperty.mediaContent.length; k++) {
-                    if (room.itinerary.hotelProperty.mediaContent[k].url != null) {
-                        img = room.itinerary.hotelProperty.mediaContent[k].url.toString();
-                        break;
-                    }
+            for (k = 0; k < room.itinerary.hotelProperty.mediaContent.length; k++) {
+                if (room.itinerary.hotelProperty.mediaContent[k].url != null) {
+                    img = room.itinerary.hotelProperty.mediaContent[k].url.toString();
+                    break;
                 }
-            roomType.push({
+            }
+            if (room.itinerary.rooms[i].hotelFareSource.name == "TouricoTGSTest")
+            {
+                roomType.push({
+                    hotelname: room.itinerary.hotelProperty.name,
+                    description: room.itinerary.rooms[i].roomDescription,
+                    roomtype: room.itinerary.rooms[i].roomName,
+                    price: room.itinerary.rooms[i].displayRoomRate.baseFare.amount,
+                    imageurl: img,
 
-                //hotelname: room.rooms[i].hotelName,
-                //description: room.rooms[i].roomDiscription,
-                //roomtype: room.rooms[i].roomName,
-                //price: room.rooms[i].price,
-                //imageurl: room.rooms[i].imageUrl
-                hotelname: room.itinerary.hotelProperty.name,
-                description: room.itinerary.rooms[i].roomDescription,
-                roomtype: room.itinerary.rooms[i].roomName,
-                price: room.itinerary.rooms[i].displayRoomRate.baseFare.amount,
-                imageurl: img,
-               
-            });
+                });
+            }
         }
     }
 
     var temp = $("#x");
     var cmp = Handlebars.compile(temp.html());
     var htm = cmp({
-        //hotelname: roomType[0].hotelname,
-        //address: room.rooms[0].address,
-        //imageurl: roomType[0].imageurl,
-        //rating: room.rooms[0].rating,
-        //duration: room.rooms[0].duration,
-        //distance: room.rooms[0].distance
         hotelname: roomType[0].hotelname,
         address: room.itinerary.hotelProperty.address.completeAddress,
         imageurl: roomType[0].imageurl,
@@ -72,26 +63,13 @@ function price(data1) {
     roomName = data1.value;
     for (i = 0; i < room.itinerary.rooms.length; i++) {
         var check = room.itinerary.rooms[i].roomName.toString();
-        //roomSelected = room.itinerary.rooms[i];
-        //room.itinerary.rooms = roomSelected;
         if (roomName.toString() == check) {
             var data1 =
                 {
-                        "Itinerary": room.itinerary,
-                        "Criteria": room.criteria,
-                        "SessionId": room.sessionId,
-                        "RoomName": roomName
-                    //"HotelName": room.rooms[0].hotelName,
-                    //"RoomName": room.rooms[i].roomName,
-                    //"RoomDiscription": room.rooms[0].roomDiscription,
-                    //"price": room.rooms[i].price,
-                    //"ImageUrl": room.rooms[i].imageUrl,
-                    //"GuidId": room.rooms[i].guidId,
-                    //"Address": room.rooms[i].address,
-                    //"Rating": room.rooms[i].rating,
-                    //"Distance": room.rooms[i].distance,
-                    //"Duration": room.rooms[i].duration
-
+                    "Itinerary": room.itinerary,
+                    "Criteria": room.criteria,
+                    "SessionId": room.sessionId,
+                    "RoomName": roomName
                 };
             $.ajax({
                 type: "post",

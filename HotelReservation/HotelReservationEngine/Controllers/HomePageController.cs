@@ -35,5 +35,10 @@ namespace HotelReservationEngine.Controllers
         {
             return File(new FileStream("wwwroot/HtmlPages/guestDetails.html", FileMode.Open), "text/html");
         }
+        [HttpGet("bookingPage")]
+        public IActionResult GetBookingPage()
+        {
+            return File(new FileStream("wwwroot/HtmlPages/finalpage.html", FileMode.Open), "text/html");
+        }
     }
 }
