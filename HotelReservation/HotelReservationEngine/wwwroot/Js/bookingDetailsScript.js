@@ -23,8 +23,10 @@ $(document).ready(function () {
 });
 
 function startPage() {
-    window.print();
     sessionStorage.clear();
     alert("Thank You For Booking With Us..!!Do Visit Again");
     window.location.href = "/index";
+}
+function printPage() {
+    window.print();
 }
