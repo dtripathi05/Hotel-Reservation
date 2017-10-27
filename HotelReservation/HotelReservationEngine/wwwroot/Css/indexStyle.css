@@ -1,0 +1,28 @@
+﻿.indexBackground {
+    background: url("/Image/wallpaper.jpg") no-repeat fixed 100%;
+    background-size: cover;
+}
+.datePicker {
+    border: 1px solid #c4c4c4;
+    border-radius: 2px;
+    background-color: #fff;
+    color: grey;
+    font-size: 16px;
+}
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+.inner-addon {
+    position: relative;
+}
+.left-addon .glyphicon {
+    left: 0px;
+}
+.left-addon input {
+    padding-left: 30px;
+}
+.black {
+    color: black;
+}

@@ -1,0 +1,177 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Oregano');
+.container {
+    opacity: 0.9;
+    font-size: 20px;
+    color: white;
+    font-weight: normal;
+    background-color: black;
+    font-family: Dosis;
+    padding: 0px;
+    margin-top: 16px;
+}
+.heading {
+    margin-top: 90px;
+}
+.preloader-img {
+    margin:auto;
+    padding-top:200px;
+    width:50%;
+}
+.wrapper{
+    width:80%;
+}
+.heading-panel {
+    margin-top: 60px;
+}
+.heading-panel1 {
+    margin-top: 20px;
+}
+.heading-card {
+margin-top:4px;
+
+}
+label {
+    font-size: 20px;
+    font-weight: normal;
+    margin-top: 6px;
+}
+.pageButton {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: white;
+    font-size: 25px;
+    background: #ff3300;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.foot {
+    margin-top: 60px;
+    color: black;
+    font-size:16px;
+    font-weight:bold;
+}
+.anchorLink {
+    color: black;
+}
+
+.container-list {
+    font-size: 20px;
+    color: black;
+    font-weight: normal;
+    background-color: white;
+    font-family: Dosis;
+    padding: 0px;
+    margin-top: 16px;
+    width: auto;
+}   
+.border-panel {
+    border: solid 2px #404040;
+    margin-bottom: 10px;
+}
+
+.underline-text{
+text-decoration:underline;
+font-weight:bold;
+}
+.bold-text{
+    font-weight:bold;
+}
+btn.btn-primary:active {
+    background-color: grey !important;
+}
+
+.panelButton {
+    color: white;
+    font-size: 25px;
+    background: #ff3300;
+    border-radius: 4px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.space {
+    margin-bottom: 40px;
+}
+.orange {
+    color: #ff3300;
+}
+.green {
+    color: #00b300;
+}
+
+.panel-pricing {
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+}
+
+    .panel-pricing:hover {
+        box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .panel-pricing .panel-heading {
+        color: black;
+        background-color: white;
+        margin-top: 4px;
+    }
+
+.panel {
+    margin-top: 6px;
+}
+
+.panel-pricing .panel-body {
+    font-size: 20px;
+    margin: 0px;
+    background-color:white;
+}
+.panel-font{
+    font-size:20px;
+}
+.currencyCode {
+    color: #0040ff;
+}
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('/Image/circlepreloader.gif') 50% 50% no-repeat white;
+}
+.booking-message {
+    font-family: Oregano;
+    font-size: 20px;
+    color: #404040;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
