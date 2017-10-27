@@ -4,6 +4,11 @@ $(document).ready(function () {
     room = sessionStorage.getItem("roomPrice");
     bookingDetails = JSON.parse(room);
 });
+
+$(document).ready(function () {
+    $("#loader").hide();
+});
+
 function importDetails() {
     var prefix = $("#prefix")[0].value; 
     var fName = $("#firstName")[0].value;
@@ -33,7 +38,7 @@ function importDetails() {
     };
 
     var modifiedData = JSON.stringify(data);
-
+    $("#loader").show();
     $.ajax({
         url: '/api/search/completePayment',
         type: 'post',
