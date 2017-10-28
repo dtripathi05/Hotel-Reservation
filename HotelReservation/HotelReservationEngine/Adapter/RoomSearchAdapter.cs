@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HotelReservationEngine.Adapter
 {
-    public class RoomSearchAdapter : IHotelFactory
+    public class RoomSearchAdapter : IHotelServiceFactory
     {
         private HotelEngineClient _engineRepresentative = null;
         private HotelRoomAvailRQ _hotelRoomAvailRQ = null;
@@ -18,15 +18,15 @@ namespace HotelReservationEngine.Adapter
         private SingleAvailItinerary _singleAvailItinerary = null;
         private SingleAvailParser _parser = null;
 
-        public async Task<IItinerary> SearchAsync(IItinerary requestedItinerary)
+        public async Task<IItinerary> GetHotelServiceRSAsync(IItinerary request)
         {
             try
             {
                 _engineRepresentative = new HotelEngineClient();
                 _parser = new SingleAvailParser();
-                _hotelRoomAvailRQ = _parser.RoomRequestParser((SingleAvailItinerary)requestedItinerary);
+                _hotelRoomAvailRQ = _parser.RoomRequestParser((SingleAvailItinerary)request);
                 _hotelRoomAvailRS = await _engineRepresentative.HotelRoomAvailAsync(_hotelRoomAvailRQ);
-                _singleAvailItinerary = _parser.RoomResponseParser(_hotelRoomAvailRS, (SingleAvailItinerary)requestedItinerary);
+                _singleAvailItinerary = _parser.RoomResponseParser(_hotelRoomAvailRS, (SingleAvailItinerary)request);
             }
             catch (Exception ex)
             {

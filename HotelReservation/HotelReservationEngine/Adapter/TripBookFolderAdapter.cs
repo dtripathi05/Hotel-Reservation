@@ -10,22 +10,22 @@ using TripEngineService;
 
 namespace HotelReservationEngine.Adapter
 {
-    public class TripBookFolderAdapter: IHotelFactory
+    public class TripBookFolderAdapter: IHotelServiceFactory
     {
         private TripsEngineClient _tripsEngineClient = null;
         private BookTripParser _bookTripParser = null;
         private TripFolderBookRQ _tripFolderBookRQ = null;
         private TripFolderBookRS _tripFolderBookRS = null;
         private BookTripFolderResponse _bookTripFolderResponse = null;
-        public async Task<IItinerary> SearchAsync(IItinerary requestedItinerary)
+        public async Task<IItinerary> GetHotelServiceRSAsync(IItinerary request)
         {
             try
             {
                 _tripsEngineClient = new TripsEngineClient();
                 _bookTripParser = new BookTripParser();
-                _tripFolderBookRQ = _bookTripParser.TripFolderBookRQParser((BookTripRQ)requestedItinerary);
+                _tripFolderBookRQ = _bookTripParser.TripFolderBookRQParser((BookTripRQ)request);
                 _tripFolderBookRS = await _tripsEngineClient.BookTripFolderAsync(_tripFolderBookRQ);
-                _bookTripFolderResponse = _bookTripParser.TripFolderBookRSParser((BookTripRQ)requestedItinerary, _tripFolderBookRS);
+                _bookTripFolderResponse = _bookTripParser.TripFolderBookRSParser((BookTripRQ)request, _tripFolderBookRS);
             }
             catch (Exception ex)
             {

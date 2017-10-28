@@ -6,30 +6,30 @@
 });
 
 var roomList;
-var room;
+var hotel;
 $(document).ready(function () {
 
     roomList = sessionStorage.getItem("rooms");
-    room = JSON.parse(roomList);
+    hotel = JSON.parse(roomList);
 
     var roomType = [];
     var img = "";
-    for (var i = 0; i < room.itinerary.rooms.length; i++) {
+    for (var i = 0; i < hotel.itinerary.rooms.length; i++) {
         {
-            for (k = 0; k < room.itinerary.hotelProperty.mediaContent.length; k++) {
-                if (room.itinerary.hotelProperty.mediaContent[k].url != null) {
-                    img = room.itinerary.hotelProperty.mediaContent[k].url.toString();
+            for (k = 0; k < hotel.itinerary.hotelProperty.mediaContent.length; k++) {
+                if (hotel.itinerary.hotelProperty.mediaContent[k].url != null) {
+                    img = hotel.itinerary.hotelProperty.mediaContent[k].url.toString();
                     break;
                 }
             }
-            if (room.itinerary.rooms[i].hotelFareSource.name == "TouricoTGSTest") {
+            if (hotel.itinerary.rooms[i].hotelFareSource.name == "TouricoTGSTest") {
                 roomType.push({
-                    hotelname: room.itinerary.hotelProperty.name,
-                    description: room.itinerary.rooms[i].roomDescription,
-                    roomtype: room.itinerary.rooms[i].roomName,
-                    price: room.itinerary.rooms[i].displayRoomRate.baseFare.amount,
+                    hotelname: hotel.itinerary.hotelProperty.name,
+                    description: hotel.itinerary.rooms[i].roomDescription,
+                    roomtype: hotel.itinerary.rooms[i].roomName,
+                    price: hotel.itinerary.rooms[i].displayRoomRate.baseFare.amount,
                     imageurl: img,
-                    currencyCode:room.itinerary.fare.baseFare.currency
+                    currencyCode:hotel.itinerary.fare.baseFare.currency
 
                 });
             }
@@ -44,13 +44,13 @@ $(document).ready(function () {
     var cmp = Handlebars.compile(temp.html());
     var htm = cmp({
         hotelname: roomType[0].hotelname,
-        address: room.itinerary.hotelProperty.address.completeAddress,
+        address: hotel.itinerary.hotelProperty.address.completeAddress,
         imageurl: roomType[0].imageurl,
-        rating: room.itinerary.hotelProperty.hotelRating.rating,
-        duration: room.itinerary.stayPeriod.duration,
-        distance: room.itinerary.hotelProperty.distance.amount,
-        latitude: room.itinerary.hotelProperty.geoCode.latitude,
-        longitude: room.itinerary.hotelProperty.geoCode.longitude
+        rating: hotel.itinerary.hotelProperty.hotelRating.rating,
+        duration: hotel.itinerary.stayPeriod.duration,
+        distance: hotel.itinerary.hotelProperty.distance.amount,
+        latitude: hotel.itinerary.hotelProperty.geoCode.latitude,
+        longitude: hotel.itinerary.hotelProperty.geoCode.longitude
     });
     $("#roomList-container").html(htm);
 
@@ -62,28 +62,28 @@ $(document).ready(function () {
 var roomName;
 var roomSelected;
 
-function price(data1) {
-    console.log(data1);
-    roomName = data1.value;
-    for (i = 0; i < room.itinerary.rooms.length; i++) {
-        var check = room.itinerary.rooms[i].roomName.toString();
+function price(roomDetail) {
+    console.log(roomDetail);
+    roomName = roomDetail.value;
+    for (i = 0; i < hotel.itinerary.rooms.length; i++) {
+        var check = hotel.itinerary.rooms[i].roomName.toString();
         if (roomName.toString() == check) {
-            var data1 =
+            var roomPricingRq =
                 {
-                    "Itinerary": room.itinerary,
-                    "Criteria": room.criteria,
-                    "SessionId": room.sessionId,
+                    "Itinerary": hotel.itinerary,
+                    "Criteria": hotel.criteria,
+                    "SessionId": hotel.sessionId,
                     "RoomName": roomName
                 };
             $.ajax({
                 type: "post",
                 contentType: "application/json",
-                url: "/api/search/roomPrice",
-                data: JSON.stringify(data1),
+                url: "/api/hotel/roomPrice",
+                data: JSON.stringify(roomPricingRq),
                 dataType: 'json',
                 crossDomain: true,
-                success: function (roomPrice) {
-                    sessionStorage.setItem('roomPrice', JSON.stringify(roomPrice));
+                success: function (roomPricingRs) {
+                    sessionStorage.setItem('roomPrice', JSON.stringify(roomPricingRs));
                     window.location.href = "/roomPricing";
                 },
                 error: function (data) {

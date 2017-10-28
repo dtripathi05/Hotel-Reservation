@@ -11,30 +11,30 @@ var guidId = completeUrl.slice(end + 1);
 var hotelResult;
 $.ajax({
     type: "GET",
-    url: '../api/search/retriveRequest/' + guidId,
-    success: function (result1) {
+    url: '../api/hotel/retriveSearchField/' + guidId,
+    success: function (hotelSearchRq) {
         try {
             $.ajax({
                 type: "post",
-                url: "/api/search/hotel",
+                url: "/api/hotel/hotelSearch",
                 contentType: "application/json",
-                data: JSON.stringify(result1),
-                success: function (hotel) {
-                    hotelResult = hotel;
+                data: JSON.stringify(hotelSearchRq),
+                success: function (hotelSearchRs) {
+                    hotelResult = hotelSearchRs;
                     var hotelList = [];
                     var urlImage = "";
-                    for (i = 0; i < hotel.hotels.length; i++) {
-                        console.log(hotel.hotels[i].supplier.toString());
-                        if (hotel.hotels[i].supplier == "HotelBeds Test" || hotel.hotels[i].supplier == "TouricoTGSTest")
+                    for (i = 0; i < hotelSearchRs.hotels.length; i++) {
+                        console.log(hotelSearchRs.hotels[i].supplier.toString());
+                        if (hotelSearchRs.hotels[i].supplier == "HotelBeds Test" || hotelSearchRs.hotels[i].supplier == "TouricoTGSTest")
                         {
                             {
                                 hotelList.push({
-                                    image: hotel.hotels[i].imgUrl,
-                                    name: hotel.hotels[i].name,
-                                    address: hotel.hotels[i].address,
-                                    stars: hotel.hotels[i].rating,
-                                    fare: hotel.hotels[i].basePrice,
-                                    currency: hotel.hotels[i].currencyCode
+                                    image: hotelSearchRs.hotels[i].imgUrl,
+                                    name: hotelSearchRs.hotels[i].name,
+                                    address: hotelSearchRs.hotels[i].address,
+                                    stars: hotelSearchRs.hotels[i].rating,
+                                    fare: hotelSearchRs.hotels[i].basePrice,
+                                    currency: hotelSearchRs.hotels[i].currencyCode
                                 });
                             }
                             var template = $('#hotel-item');
@@ -61,13 +61,13 @@ $.ajax({
 });
 
 
-function roomDetails(data) {
-    console.log(data.value);
-    var hotelName = data.value;
+function roomDetails(hotelDetail) {
+    console.log(hotelDetail.value);
+    var hotelName = hotelDetail.value;
     for (i = 0; i < hotelResult.hotels.length; i++) {
         var check = hotelResult.hotels[i].name.toString();
         if (hotelName.toString() == check) {
-            var data1 =
+            var roomSearchRq =
                 {
                     "SessionId": hotelResult.hotels[i].sessionId,
                     "ImgUrl": hotelResult.hotels[i].imgUrl,
@@ -81,12 +81,12 @@ function roomDetails(data) {
             $.ajax({
                 type: "post",
                 contentType: "application/json",
-                url: "/api/search/room",
-                data: JSON.stringify(data1),
+                url: "/api/hotel/roomSearch",
+                data: JSON.stringify(roomSearchRq),
                 dataType: 'json',
                 crossDomain: true,
-                success: function (room) {
-                    sessionStorage.setItem('rooms', JSON.stringify(room));
+                success: function (roomSearchRs) {
+                    sessionStorage.setItem('rooms', JSON.stringify(roomSearchRs));
                     window.location.href = "/rooms";
                 },
                 error: function (data) {

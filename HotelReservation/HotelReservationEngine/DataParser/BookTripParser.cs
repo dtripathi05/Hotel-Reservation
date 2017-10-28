@@ -231,15 +231,16 @@ namespace HotelReservationEngine.DataParser
                        {
                            new RoomOccupancyType()
                            {
-                               PaxQuantities=new PassengerTypeQuantity[]
-                               {
-                                   new PassengerTypeQuantity()
-                                   {
-                                       Ages=new int[] { Convert.ToInt32(bookTripRQ.Age) },
-                                       PassengerType=PassengerType.Adult,
-                                       Quantity= 1
-                                   }
-                               }
+                               PaxQuantities=_hotelSearchCriterion.Guests
+                               //PaxQuantities=new PassengerTypeQuantity[]
+                               //{
+                               //    new PassengerTypeQuantity()
+                               //    {
+                               //        Ages=new int[] { Convert.ToInt32(bookTripRQ.Age) },
+                               //        PassengerType=PassengerType.Adult,
+                               //        Quantity= 1
+                               //    }
+                               //}
                            }
                        }
                       }
