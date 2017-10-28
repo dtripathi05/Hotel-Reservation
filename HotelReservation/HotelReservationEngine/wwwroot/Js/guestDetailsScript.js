@@ -1,8 +1,6 @@
-﻿var result;
-var bookingDetails;
+﻿var bookingDetails;
 $(document).ready(function () {
-    room = sessionStorage.getItem("roomPrice");
-    bookingDetails = JSON.parse(room);
+    bookingDetails = JSON.parse(sessionStorage.getItem("roomPrice"));
 });
 
 $(document).ready(function () {
@@ -47,7 +45,7 @@ function importDetails() {
         alert(message);
         return;
     }
-    var data = {
+    var guestDetail = {
         "Prefix": prefix,
         "FirstName": fName,
         "LastName": lName,
@@ -62,23 +60,23 @@ function importDetails() {
         "RoomPricingResponse": bookingDetails
     };
 
-    var modifiedData = JSON.stringify(data);
     $("#loader").show();
     $.ajax({
         url: '/api/hotel/completePayment',
         type: 'post',
-        data: modifiedData,
+        //data: modifiedData,
+        data: JSON.stringify(guestDetail),
         crossDomain: true,
         dataType: 'json',
         contentType: "application/json",
-        success: function (result) {
-            if (result.confirmationNumber == null) {
+        success: function (completeBookingRs) {
+            if (completeBookingRs.confirmationNumber == null) {
                 alert("Unable To Complete Request ! Please Try After Sometime");
                 window.location.href = "/index";
             }
             else {
                 window.location.href = "/bookingPage";
-                sessionStorage.setItem('bookingDetails', JSON.stringify(result));
+                sessionStorage.setItem('bookingDetails', JSON.stringify(completeBookingRs));
             }
         },
         error: function (data) {

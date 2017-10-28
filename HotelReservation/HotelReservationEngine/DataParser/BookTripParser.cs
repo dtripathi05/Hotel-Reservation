@@ -11,7 +11,6 @@ namespace HotelReservationEngine.DataParser
     {
         private HotelItinerary _hotelItinerary;
         private HotelSearchCriterion _hotelSearchCriterion;
-        private string _gender;
         public TripFolderBookRQ TripFolderBookRQParser(BookTripRQ bookTripRQ)
         {
             try
@@ -117,8 +116,6 @@ namespace HotelReservationEngine.DataParser
                             new StateBag(){ Name="Boyd Gaming"},
                             new StateBag(){ Name="IsPassportRequired" , Value="false"}
                         },
-                        //Email="dtripathi@tavisca.com",
-                        //FirstName="Deependra",
                         FirstName=bookTripRQ.FirstName,
                         Email=bookTripRQ.EmailId,
                         Gender=Gender.Male,
@@ -232,15 +229,6 @@ namespace HotelReservationEngine.DataParser
                            new RoomOccupancyType()
                            {
                                PaxQuantities=_hotelSearchCriterion.Guests
-                               //PaxQuantities=new PassengerTypeQuantity[]
-                               //{
-                               //    new PassengerTypeQuantity()
-                               //    {
-                               //        Ages=new int[] { Convert.ToInt32(bookTripRQ.Age) },
-                               //        PassengerType=PassengerType.Adult,
-                               //        Quantity= 1
-                               //    }
-                               //}
                            }
                        }
                       }
