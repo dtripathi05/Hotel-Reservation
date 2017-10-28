@@ -12,6 +12,7 @@ var flag = false;
 function importDetails() {
     var prefix = $("#prefix")[0].value;
     var fName = $("#firstName")[0].value;
+    var mName = $("#middleName")[0].value;
     var lName = $("#lastName")[0].value;
     var mobileNumber = $("#mobileNumber")[0].value;
     var age = $("#age")[0].value;
@@ -35,6 +36,26 @@ function importDetails() {
     if (flag === false) {
         invalidFields.push("Mobile Number");
     }
+    validateCardHolder(cardHolder);
+    if (flag === false) {
+        invalidFields.push(" Card-Holder ");
+    }
+
+    validateFirstName(fName)
+    if (flag === false) {
+        invalidFields.push(" First-Name ");
+    }
+
+    validateMiddleName(mName)
+    if (flag === false) {
+        invalidFields.push(" Middle-Name ");
+    }
+
+    validateLastName(lName)
+    if (flag === false) {
+        invalidFields.push(" Last-Name ");
+    }
+
     if (invalidFields.length > 0) {
         var i = 0;
         for (i = 0; i < invalidFields.length; i++) {
@@ -64,7 +85,6 @@ function importDetails() {
     $.ajax({
         url: '/api/hotel/completePayment',
         type: 'post',
-        //data: modifiedData,
         data: JSON.stringify(guestDetail),
         crossDomain: true,
         dataType: 'json',
@@ -130,6 +150,45 @@ function validateMobileNumber(mobileNumber) {
 function validateCVV(cvv) {
 
     if (/^[0-9]{3,4}$/.test(cvv)) {
+        flag = true;
+    }
+    else {
+        flag = false;
+    }
+}
+
+function validateCardHolder(cardHolder) {
+
+    if (/^[a-zA-Z ]*$/.test(cardHolder)) {
+        flag = true;
+    }
+    else {
+        flag = false;
+    }
+}
+
+function validateFirstName(fName) {
+
+    if (/^[a-zA-Z ]*$/.test(fName)) {
+        flag = true;
+    }
+    else {
+        flag = false;
+    }
+}
+
+function validateMiddleName(mName) {
+
+    if (/^[a-zA-Z ]*$/.test(mName)) {
+        flag = true;
+    }
+    else {
+        flag = false;
+    }
+}
+function validateLastName(lName) {
+
+    if (/^[a-zA-Z ]*$/.test(lName)) {
         flag = true;
     }
     else {
