@@ -18,37 +18,38 @@
     </div>
     <div id="hotelList-container"></div>
     <script id="hotel-item" type="text/x-handlebars-template">
-        <div class=" container heading text-center">
+        <div class="text-center">
             <h1>Search Results</h1>
         </div>
         {{#each this}}
-        <div class="container container-list border-panel">
-            <div class="col-md-12 col-xs-12">
-                <section>
-                    <div class="col-md-3  col-sm-4 col-xs-12">
-                        <img src="{{image}}" class="img-responsive" alt="No Image Available" />
+                <div class="container container-list border-panel">
+                    <div class="col-md-12 col-xs-12">
+                        <section>
+                            <div class="col-md-3  col-sm-4 col-xs-12">
+                                <img src="{{image}}" class="img-responsive" alt="No Image Available" />
+                            </div>
+                        </section>
+                        <section>
+                            <div class="col-md-6  col-sm-5 col-xs-12">
+                                <h3 class="underline-text">{{name}}</h3>
+                                <h4>Base Fare : {{currency}} <span class="bold-text">{{fare}}</span></h4>
+                                <h4 class="bold-text">
+                                    {{#times stars}}
+                                    <span class="glyphicon glyphicon-star orange"></span>
+                                    {{/times}}
+                                </h4>
+                                <h4><span class="glyphicon glyphicon-map-marker green"></span> {{address}}</h4>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="col-md-3 col-sm-3 col-xs-12">
+                                <button name="viewRoomsBtn" id="viewRoomsButton" value="{{name}}" onClick="roomDetails(this)" class="pageButton">View Rooms</button>
+                            </div>
+                        </section>
                     </div>
-                </section>
-                <section>
-                    <div class="col-md-6  col-sm-5 col-xs-12">
-                        <h3 class="underline-text">{{name}}</h3>
-                        <h4>Base Fare : {{currency}} <span class="bold-text">{{fare}}</span></h4>
-                        <h4 class="bold-text">
-                            {{#times stars}}
-                            <span class="glyphicon glyphicon-star orange"></span>
-                            {{/times}}
-                        </h4>
-                        <h4 class="space"><span class="glyphicon glyphicon-map-marker green"></span> {{address}}</h4>
-                    </div>
-                </section>
-                <section>
-                    <div class="col-md-3 col-sm-3 col-xs-12">
-                        <button name="viewRoomsBtn" id="viewRoomsButton" value="{{name}}" onClick="roomDetails(this)" class="pageButton">View Rooms</button>
-                    </div>
-                </section>
-            </div>
-        </div>
-        {{/each}}
+                </div>
+        
+                {{/each}}
     </script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
