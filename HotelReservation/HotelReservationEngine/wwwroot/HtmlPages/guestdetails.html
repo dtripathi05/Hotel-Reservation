@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/Image/favicon-bed.png">
-    <link rel="stylesheet" href="/Css/Style.css">
+    <link rel="stylesheet" href="../Css/guestDetailsStyle.css">
     <link rel="stylesheet" href="/Css/guestDetailsStyle.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -128,7 +128,7 @@
                                 <section>
                                     <div class="col-md-8 col-md-offset-2">
                                         <label for="cardNumber">Card Number</label>
-                                        <input type="number" min="4000000000000000" max="4999999999999999" class="form-control placeholderfont text-center" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx" required>
+                                        <input type="number" class="form-control placeholderfont text-center" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx" required>
                                     </div>
                                 </section>
                             </div>
@@ -161,15 +161,52 @@
 
                                         <!--MM-->
                                         <div class="col-md-4">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control placeholderfont" id="month" placeholder="MM" required>
-                                            </div>
+                                            <select name="month" class="form-control placeholderfont" id="month" placeholder="MM" required>
+                                                <option value="01">January</option>
+                                                <option value="02">February </option>
+                                                <option value="03">March</option>
+                                                <option value="04">April</option>
+                                                <option value="05">May</option>
+                                                <option value="06">June</option>
+                                                <option value="07">July</option>
+                                                <option value="08">August</option>
+                                                <option value="09">September</option>
+                                                <option value="10">October</option>
+                                                <option value="11">November</option>
+                                                <option value="12">December</option>
+                                            </select>
                                         </div>
                                         <!--YY-->
                                         <div class="col-md-4">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control placeholderfont" id="year" placeholder="YYYY" required>
-                                            </div>
+
+                                            <select name="year" class="form-control placeholderfont" id="year" placeholder="YYYY" required>
+
+                                                <option value="17"> 2017</option>
+                                                <option value="18"> 2018</option>
+                                                <option value="19"> 2019</option>
+                                                <option value="20"> 2020</option>
+                                                <option value="21"> 2021</option>
+                                                <option value="22"> 2022</option>
+                                                <option value="23"> 2023</option>
+                                                <option value="24"> 2024</option>
+                                                <option value="25"> 2025</option>
+                                                <option value="26"> 2026</option>
+                                                <option value="27"> 2027</option>
+                                                <option value="28"> 2028</option>
+                                                <option value="29"> 2029</option>
+                                                <option value="30"> 2030</option>
+                                                <option value="31"> 2031</option>
+                                                <option value="32"> 2032</option>
+                                                <option value="33"> 2033</option>
+                                                <option value="34"> 2034</option>
+                                                <option value="35"> 2035</option>
+                                                <option value="36"> 2036</option>
+                                                <option value="37"> 2037</option>
+                                                <option value="38"> 2038</option>
+                                                <option value="39"> 2039</option>
+                                                <option value="40"> 2040</option>
+
+                                            </select>
                                         </div>
                                     </div>
                                 </section>
@@ -205,10 +242,10 @@
 
             </form>
 
-                <div id="loader" class="loader"></div>
+            <div id="loader" class="loader"></div>
     </article>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="/Js/guestDetailsScript.js"></script>
+    <script src="../Js/guestDetailsScript.js"></script>
 </body>
 </html>
