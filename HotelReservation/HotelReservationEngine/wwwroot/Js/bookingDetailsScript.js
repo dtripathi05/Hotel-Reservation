@@ -28,5 +28,7 @@ function startPage() {
     window.location.href = "/index";
 }
 function printPage() {
+    var printPage = window.open(document.URL, '_blank');
+    setTimeout(printPage.print(), 5);
     window.print();
 }
