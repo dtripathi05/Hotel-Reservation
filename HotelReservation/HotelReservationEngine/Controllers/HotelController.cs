@@ -16,13 +16,13 @@ using HotelReservation.Logger;
 namespace HotelReservationEngine.Controllers
 {
 
-    [Route("api/search")]
-    public class SearchController : Controller
+    [Route("api/hotel")]
+    public class HotelController : Controller
     {
-        private static Dictionary<string, MultiAvailSearchRequest> _searchStore = new Dictionary<string, MultiAvailSearchRequest>();
+       // private static Dictionary<string, MultiAvailSearchRequest> _searchStore = new Dictionary<string, MultiAvailSearchRequest>();
 
-        [HttpPost("newRequest")]
-        public string NewRequest([FromBody]MultiAvailSearchRequest searchFields)
+        [HttpPost("searchField")]
+        public string HotelSearchFields([FromBody]MultiAvailSearchRequest searchFields)
         {
             try
             {
@@ -38,12 +38,12 @@ namespace HotelReservationEngine.Controllers
             return Cache.AddToCache(searchFields);
         }
 
-        [HttpGet("retriveRequest/{guid}")]
+        [HttpGet("retriveSearchField/{guid}")]
         public MultiAvailSearchRequest GetSearchFields(string guid)
         {
             return (MultiAvailSearchRequest)Cache.GetSearchRequest(guid);
         }
-        [HttpPost("hotel")]
+        [HttpPost("hotelSearch")]
         public async Task<HotelList> MultipleItinerary([FromBody]MultiAvailSearchRequest searchFields)
         {
             try
@@ -57,13 +57,12 @@ namespace HotelReservationEngine.Controllers
             {
                 Log.ExcpLogger(ex);
             }
-            IHotelFactory hotelFactory = Factory.GetHotelServices("HotelsListing");
-            var result = await hotelFactory.SearchAsync(searchFields);
+            IHotelServiceFactory hotelFactory = Factory.GetHotelServices("HotelsListing");
+            var result = await hotelFactory.GetHotelServiceRSAsync(searchFields);
             HotelList hotelList = (HotelList)result;
             return hotelList;
         }
-        [HttpPost("room")]
-        //public async Task<SingleAvailItinerary> SingleItinerary([FromBody]SingleAvailItinerary hotelItinerary)
+        [HttpPost("roomSearch")]
         public async Task<SingleAvailItinerary> SingleItinerary([FromBody]HotelInfo hotelInfo)
         {
             try
@@ -79,13 +78,12 @@ namespace HotelReservationEngine.Controllers
             }
             SingleAvailAdapter multiToSingleAdapter = new SingleAvailAdapter();
             var singleAvail = multiToSingleAdapter.GetSingleAvail(hotelInfo);
-            IHotelFactory hotelFactory = Factory.GetHotelServices("RoomListing");
-            var result = await hotelFactory.SearchAsync(singleAvail);
+            IHotelServiceFactory hotelFactory = Factory.GetHotelServices("RoomListing");
+            var result = await hotelFactory.GetHotelServiceRSAsync(singleAvail);
             SingleAvailItinerary singleAvailItinerary = (SingleAvailItinerary)result;
             return singleAvailItinerary;
         }
         [HttpPost("roomPrice")]
-        //public async Task<RoomPricingResponse> RoomPricing([FromBody]RoomInfo room)
         public async Task<RoomPricingResponse> RoomPricing([FromBody]RoomPricingItinerary room)
         {
             try
@@ -99,13 +97,9 @@ namespace HotelReservationEngine.Controllers
             {
                 Log.ExcpLogger(ex);
             }
-            // SingleAvailItinerary res = (SingleAvailItinerary)Cache.GetSearchRequest(room.GuidId);
-            //PricingItineraryAdapter roomPricing = new PricingItineraryAdapter();
-            //RoomPricingItinerary pricingItinerary = roomPricing.GetRoomPricing(room);
-            //RoomPricingItinerary roomPricingItinerary = new RoomPricingItinerary().GetSelectedRoom(pricingItinerary,room.RoomName);
             RoomPricingItinerary roomPricingItinerary = new RoomPricingItinerary().GetSelectedRoom(room);
-            IHotelFactory hotelFactory = Factory.GetHotelServices("RoomPricing");
-            var result = await hotelFactory.SearchAsync(roomPricingItinerary);
+            IHotelServiceFactory hotelFactory = Factory.GetHotelServices("RoomPricing");
+            var result = await hotelFactory.GetHotelServiceRSAsync(roomPricingItinerary);
             RoomPricingResponse roomPricingResponse = (RoomPricingResponse)result;
             return roomPricingResponse;
 
@@ -124,10 +118,10 @@ namespace HotelReservationEngine.Controllers
             {
                 Log.ExcpLogger(ex);
             }
-            IHotelFactory hotelFactory = Factory.GetHotelServices("TripBookFolder");
-            var tripBookResult = await hotelFactory.SearchAsync(bookTripRQ);
-            IHotelFactory factory = Factory.GetHotelServices("CompleteBooking");
-            var result = await factory.SearchAsync(tripBookResult);
+            IHotelServiceFactory hotelFactory = Factory.GetHotelServices("TripBookFolder");
+            var tripBookResult = await hotelFactory.GetHotelServiceRSAsync(bookTripRQ);
+            IHotelServiceFactory factory = Factory.GetHotelServices("CompleteBooking");
+            var result = await factory.GetHotelServiceRSAsync(tripBookResult);
             CompleteBookingResponse completeBookingResult = (CompleteBookingResponse)result;
             return completeBookingResult;
         }

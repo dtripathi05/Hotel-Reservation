@@ -10,14 +10,14 @@ using TripEngineService;
 
 namespace HotelReservationEngine.Adapter
 {
-    public class CompleteBookingAdapter : IHotelFactory
+    public class CompleteBookingAdapter : IHotelServiceFactory
     {
         private TripsEngineClient _tripsEngine = null;
         private CompleteBookingRQ _completeBookingRQ = null;
         private CompleteBookingRS _completeBookingRS = null;
         private CompleteBookingParser _completeBookingParser = null;
         private CompleteBookingResponse _completeBookingResponse = null;
-        public async Task<IItinerary> SearchAsync(IItinerary request)
+        public async Task<IItinerary> GetHotelServiceRSAsync(IItinerary request)
         {
             try
             {

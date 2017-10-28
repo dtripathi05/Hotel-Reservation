@@ -8,13 +8,13 @@ namespace HotelReservationEngine.Adapter
 {
     public class Factory
     {
-        private static Dictionary<string, IHotelFactory> _services = new Dictionary<string, IHotelFactory>()
+        private static Dictionary<string, IHotelServiceFactory> _services = new Dictionary<string, IHotelServiceFactory>()
         {
             { "HotelsListing",new HotelSearchAdapter()},{"RoomListing",new RoomSearchAdapter()},{"RoomPricing",new RoomPricingAdapter()},{"TripBookFolder",new TripBookFolderAdapter()},{"CompleteBooking",new CompleteBookingAdapter()}
         };
-        public static IHotelFactory GetHotelServices(string type)
+        public static IHotelServiceFactory GetHotelServices(string type)
         {
-            IHotelFactory result=null;
+            IHotelServiceFactory result=null;
             try
             {
                 _services.TryGetValue(type, out result);

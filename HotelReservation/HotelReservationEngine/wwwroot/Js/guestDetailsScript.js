@@ -1,8 +1,8 @@
 ﻿var result;
 var bookingDetails;
 $(document).ready(function () {
-    room = sessionStorage.getItem("roomPrice");
-    bookingDetails = JSON.parse(room);
+    hotel = sessionStorage.getItem("roomPrice");
+    bookingDetails = JSON.parse(hotel);
 });
 
 $(document).ready(function () {
@@ -40,7 +40,7 @@ function importDetails() {
     var modifiedData = JSON.stringify(data);
     $("#loader").show();
     $.ajax({
-        url: '/api/search/completePayment',
+        url: '/api/hotel/completePayment',
         type: 'post',
         data: modifiedData,
         crossDomain: true,
