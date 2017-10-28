@@ -13,7 +13,7 @@ using HotelReservation.Logger;
 
 namespace HotelReservationEngine.Adapter
 {
-    public class RoomPricingAdapter : IHotelFactory
+    public class RoomPricingAdapter : IHotelServiceFactory
     {
         private TripsEngineClient _engineClient = null;
         private TripProductPriceRQ _tripProductPriceRQ = null;
@@ -21,15 +21,15 @@ namespace HotelReservationEngine.Adapter
         private RoomPricingResponse _roomPricingResponse = null;
         private RoomPricingParser _parser = null;
 
-        public async Task<IItinerary> SearchAsync(IItinerary requestedItinerary)
+        public async Task<IItinerary> GetHotelServiceRSAsync(IItinerary request)
         {
             try
             {
                 _engineClient = new TripsEngineClient();
                 _parser = new RoomPricingParser();
-                _tripProductPriceRQ = _parser.RoomPriceRQParser((RoomPricingItinerary)requestedItinerary);
+                _tripProductPriceRQ = _parser.RoomPriceRQParser((RoomPricingItinerary)request);
                 _tripProductPriceRS = await _engineClient.PriceTripProductAsync(_tripProductPriceRQ);
-                _roomPricingResponse = _parser.RoomPriceRSParser(_tripProductPriceRS, (RoomPricingItinerary)requestedItinerary);
+                _roomPricingResponse = _parser.RoomPriceRSParser(_tripProductPriceRS, (RoomPricingItinerary)request);
             }
             catch (Exception ex)
             {

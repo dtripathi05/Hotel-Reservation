@@ -13,11 +13,11 @@ namespace HotelReservationEngine.Adapter
     public class SingleAvailAdapter
     {
         private SingleAvailItinerary _singleAvail = null;
-        public SingleAvailItinerary GetSingleAvail(IItinerary requestedItinerary)
+        public SingleAvailItinerary GetSingleAvail(IItinerary request)
         {
             try
             {
-                var req = (HotelInfo)requestedItinerary;
+                var req = (HotelInfo)request;
                 var hotelName = req.Name;
                 MultiAvailItinerary multiAvailItinerary = (MultiAvailItinerary)Cache.GetSearchRequest(req.GuidId.ToString());
                 foreach (var itinerary in multiAvailItinerary.Itinerary)

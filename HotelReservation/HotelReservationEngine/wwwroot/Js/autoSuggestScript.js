@@ -31,7 +31,7 @@ function extractData() {
     var childNumber = $("#children")[0].value;
 
 
-    var data = {
+    var hotelSearchField = {
         "Destination": {
             "Longitude": longitude,
             "Latitude": latitude,
@@ -45,13 +45,13 @@ function extractData() {
         "ChildrenCount": childNumber
     };
 
-    var modifiedData = JSON.stringify(data);
+    var modifiedData = JSON.stringify(hotelSearchField);
     $.ajax({
-        url: '/api/search/newRequest',
+        url: '/api/hotel/searchField',
         type: 'post',
         contentType: "application/json",
-        success: function (result) {
-            window.location.href = "/hotel/" + result;
+        success: function (guidId) {
+            window.location.href = "/hotel/" + guidId;
         },
         error: function (data) {
             alert("Some Error Occured");

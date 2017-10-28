@@ -11,7 +11,7 @@ using System.Collections.Generic;
 
 namespace HotelAdapter
 {
-    public class HotelSearchAdapter : IHotelFactory
+    public class HotelSearchAdapter : IHotelServiceFactory
     {
         private HotelEngineClient _engineClient = null;
         private HotelList _searchResponse = null;
@@ -19,13 +19,13 @@ namespace HotelAdapter
         private HotelSearchRQ _hotelSearchRQ = null;
         private HotelSearchRS _hotelSearchRS = null;
 
-        public async Task<IItinerary> SearchAsync(IItinerary requestedItinerary)
+        public async Task<IItinerary> GetHotelServiceRSAsync(IItinerary request)
         {
             try
             {
                 _engineClient = new HotelEngineClient();
                 _parser = new MultiAvailParser();
-                _hotelSearchRQ = _parser.MultiAvailRQParser((MultiAvailSearchRequest)requestedItinerary);
+                _hotelSearchRQ = _parser.MultiAvailRQParser((MultiAvailSearchRequest)request);
                 _hotelSearchRS = await _engineClient.HotelAvailAsync(_hotelSearchRQ);
                 _searchResponse = _parser.MultiAvailRSParser(_hotelSearchRS, _hotelSearchRQ);
             }
