@@ -19,8 +19,6 @@ namespace HotelReservationEngine.Controllers
     [Route("api/hotel")]
     public class HotelController : Controller
     {
-       // private static Dictionary<string, MultiAvailSearchRequest> _searchStore = new Dictionary<string, MultiAvailSearchRequest>();
-
         [HttpPost("searchField")]
         public string HotelSearchFields([FromBody]MultiAvailSearchRequest searchFields)
         {
