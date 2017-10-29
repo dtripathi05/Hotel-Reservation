@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/Image/favicon-bed.png">
-    <link rel="stylesheet" href="/Css/Style.css">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Oregano" rel="stylesheet">
+    <link rel="stylesheet" href="/Css/Style.css">
     <link rel="stylesheet" href="/Css/pricingStyleSheet.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
 <body>
-    <header> <h6>.</h6> </header>
+    <header><h6>.</h6></header>
     <div class="col-md-12"><nav class=" navbar navbar-inverse"><div class="container-fluid"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand">Hotel Reservation</a></div><div class="collapse navbar-collapse" id="myNavbar"><ul class=" nav navbar-nav navbar-right "><li class="navbar-nav nav"><li><a href="#">Home</a></li><li><a href="#">About Us</a></li><li><a href="#">Feedback</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="#">Sign In</a></li><li><a href="#">Create An Account</a></li></ul></li></ul></div></div></nav></div>
+    <div id="booking-container"><div class="loader"></div></div>
+    <div id="booking-container"></div>
     <script id="booking-item" type="text/x-handlebars-template">
-        <div class="heading"> </div>{{#each this}}
+        <div class="heading"></div>
+        {{#each this}}
         <div class="container container-list border-panel heading">
             <div class="col-md-12">
                 <section>
@@ -28,7 +33,10 @@
                             <div class="panel-body booking-message">
                                 <h3 class="bold-text"> Dear <span class="orange">{{name}}</span> ,</h3>
                                 <p>Check Your Mail for your Booking Details</p>
-                                <p> Your Booking-Id is : <span class="bold-text orange">{{bookingId}}</span></p><p> Your Check-In Date :<span class="bold-text orange">{{checkin}}</span></p><p> Your Check-Out Date :<span class="bold-text orange">{{checkout}}</span></p><p class="underline-text">Thank You For Booking With Us !</p>
+                                <p> Your Booking-Id is : <span class="bold-text orange"> {{bookingId}}</span></p>
+                                <p> Your Check-In Date :<span class="bold-text orange"> {{checkin}}</span></p>
+                                <p> Your Check-Out Date :<span class="bold-text orange"> {{checkout}}</span></p>
+                                <p class="underline-text">Thank You For Booking With Us !</p>
                             </div>
                         </div>
                     </div>
@@ -39,7 +47,7 @@
                         <div>
                             <ul class="price ">
                                 <li class="header">Total Amount Paid</li>
-                                <li class="grey panel-font bold-text"><span class="bold-text">{{currencyCode}}</span>{{totalPrice}}</li>
+                                <li class="grey panel-font bold-text"><span class="bold-text">{{currencyCode}}</span> {{totalPrice}}</li>
                                 <li><button name="startBtn" id="startButton" onClick="startPage()" class="button">OK</button><span class="space"><button name="printBtn" id="printButton" onClick="printPage()" class="button">Print This</button></span></li>
                             </ul>
                         </div>
@@ -52,8 +60,6 @@
     <footer class="foot text-center">Tavisca &copy; 2017|<a class="anchorLink" href="http://www.tavisca.com/">Open Company Website</a></footer>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="/Js/bookingDetailsScript.js"></script>
+    <script src="/Js/bookingDetailsScript.js" type=""></script>
 </body>
 </html>
