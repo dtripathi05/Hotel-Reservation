@@ -204,13 +204,12 @@ namespace Parser
                 HotelSearchCriterion = hotelSearchRQ.HotelSearchCriterion
             };
             var cache = Cache.AddToCache(multiAvailItinerary);
-            // return multiAvailItinerary;
             List<HotelInfo> hotelInfo = new List<HotelInfo>();
             try
             {
                 foreach (var info in itinerary)
                 {
-                    //if (info.HotelFareSource.Name == "HotelBeds Test" || info.HotelFareSource.Name == "TouricoTGSTest")
+                   // if (info.HotelFareSource.Name == "HotelBeds Test" || info.HotelFareSource.Name == "TouricoTGSTest")
                     {
                         string imageUrl = "";
                         for (int i = 0; i < info.HotelProperty.MediaContent.Length; i++)
