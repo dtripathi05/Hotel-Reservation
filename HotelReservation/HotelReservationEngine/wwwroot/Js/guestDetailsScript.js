@@ -108,7 +108,7 @@ function importDetails() {
 
 function validateCardNumber(cardNumber) {
 
-    if (/^[0-9]{16}$/.test(cardNumber)) {
+    if (/^[0-9]{13,14,15,16}$/.test(cardNumber)) {
         if (luhnCheck(cardNumber)) {
             flag = true;
         }
