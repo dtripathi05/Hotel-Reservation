@@ -18,5 +18,6 @@ namespace HotelReservationEngine.Model
         public string Supplier { get; set; }
         public decimal BasePrice { get; set; }
         public string CurrencyCode { get; set; }
+        public string HotelDetails { get; set; }
     }
 }
