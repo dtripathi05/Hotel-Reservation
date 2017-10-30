@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hotel Reservation</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Css/Style.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/Css/indexStyle.css">
+    <link rel="icon" type="image/png" href="/Image/favicon.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/ui-darkness/jquery-ui.min.css" />
+</head>
+<body class="indexBackground">
+    <header><h6>.</h6></header>
+    <div class="col-md-12"><nav class=" navbar navbar-inverse"><div class="container-fluid"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand">Hotel Reservation</a></div><div class="collapse navbar-collapse" id="myNavbar"><ul class=" nav navbar-nav navbar-right "><li class="nav"><li><a href="#">Home</a></li><li><a href="#">About Us</a></li><li><a href="#">Feedback</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="#">Sign In</a></li><li><a href="#">Create An Account</a></li></ul></li></ul></div></div></nav></div>
+    <article>
+        <div class="container heading">
+            <div id="hotelSearch">
+                <form id="hotelSearchForm" onsubmit="extractData(); return false">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <section>
+                                <div class="row">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                        <div class="col-md-10 col-xs-12">
+                                            <div class="form-group">
+                                                <label for="place">Going To</label>
+                                                <div class="inner-addon left-addon">
+                                                    <i class="glyphicon glyphicon-search black"></i>
+                                                    <input type="text" class="form-control placeholderfont" name="goingTo" id="place" placeholder="City,Landmark,Address,Station Name,Hotel Name.." required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <div class="row">
+                                    <div class="col-md-10 col-xs-12">
+                                        <div class="col-md-4 col-xs-6">
+                                            <div class="form-group">
+                                                <label>Check-In</label>
+                                                <div class="inner-addon left-addon">
+                                                    <i class="glyphicon glyphicon-calendar black"></i>
+                                                    <input class="form-control placeholderfont" type="text" name="checkin" placeholder="yyyy-mm-dd" id="checkindate" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-xs-6">
+                                            <div class="form-group">
+                                                <label>Check Out</label>
+                                                <div class="inner-addon left-addon">
+                                                    <i class="glyphicon glyphicon-calendar black"></i>
+                                                    <input class="form-control datePicker placeholderfont" type="text" name="checkout" placeholder="yyyy-mm-dd" id="checkoutdate" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <div class="col-md-2  col-sm-3 col-xs-4">
+                                    <label for="rooms">Rooms</label>
+                                    <select name="room" class="form-control" id="rooms">
+                                        <option selected="selected" value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <label for="adult">Adults(18+)</label>
+                                    <select name="adults" class="form-control" id="adult">
+                                        <option selected="selected" value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2 col-xs-4">
+                                    <label for="children">Children</label>
+                                    <select name="child" class="form-control" id="children">
+                                        <option selected="selected" value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </section>
+                            <section>
+                                <div class="col-md-12 col-xs-4">
+                                    <button name="searchBtn" id="searchButton" class="pageButton">Search</button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </article>
+    <footer class="foot text-center">Tavisca &copy; 2017|<a class="black" href="http://www.tavisca.com/">Open Company Website</a></footer>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/Js/autoSuggestScript.js"></script>
+</body>
+</html>

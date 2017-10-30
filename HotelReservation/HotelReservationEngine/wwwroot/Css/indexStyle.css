@@ -1,0 +1,26 @@
+﻿.indexBackground {
+    background: url(/Image/wallpaper.jpg) 100% no-repeat fixed;
+    background-size: cover
+}
+
+.inner-addon .glyphicon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none
+}
+
+.inner-addon {
+    position: relative
+}
+
+.left-addon .glyphicon {
+    left: 0
+}
+
+.left-addon input {
+    padding-left: 30px
+}
+
+.black {
+    color: #000
+}
