@@ -98,7 +98,7 @@ label {
 }
 
 btn.btn-primary:active {
-    background-color: #808080 !important
+    background-color: grey !important
 }
 
 .panelButton {
@@ -164,10 +164,11 @@ btn.btn-primary:active {
     font-size: 20px;
     color: #404040
 }
+
 .container-image {
     position: relative;
     width: 90%;
-    height:auto;
+    height: auto;
 }
 
 .image {
@@ -204,8 +205,9 @@ btn.btn-primary:active {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
-.description{
-    font-size:14px;
-    text-align:justify;
-    text-justify:inter-word;
+
+.description {
+    font-size: 14px;
+    text-align: justify;
+    text-justify: inter-word;
 }

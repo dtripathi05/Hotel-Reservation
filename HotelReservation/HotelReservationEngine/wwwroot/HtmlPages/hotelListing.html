@@ -3,8 +3,6 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
     <link rel="stylesheet" href="/Css/Style.css">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans" rel="stylesheet">
     <link rel="icon" type="image/png" href="/Image/favicon-bed.png">
@@ -14,18 +12,18 @@
 </head>
 <body>
     <header><h6>.</h6></header>
-    <div class="col-md-12"><nav class=" navbar navbar-inverse"><div class="container-fluid"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand">Hotel Reservation</a></div><div class="collapse navbar-collapse" id="myNavbar"><ul class=" nav navbar-nav navbar-right "><li class="navbar-nav nav"><li><a href="#">Home</a></li><li><a href="#">About Us</a></li><li><a href="#">Feedback</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="#">Sign In</a></li><li><a href="#">Create An Account</a></li></ul></li></ul></div></div></nav></div>
+    <div class="col-md-12"><nav class=" navbar navbar-inverse"><div class="container-fluid"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand">Hotel Reservation</a></div><div class="collapse navbar-collapse" id="myNavbar"><ul class=" nav navbar-nav navbar-right "><li class="nav"><li><a href="#">Home</a></li><li><a href="#">About Us</a></li><li><a href="#">Feedback</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="#">Sign In</a></li><li><a href="#">Create An Account</a></li></ul></li></ul></div></div></nav></div>
     <div id="hotelList-container"><div class="loader"></div></div>
     <div id="hotelList-container"></div>
     <script id="hotel-item" type="text/x-handlebars-template">
-        <div><h1><span class="glyphicon glyphicon-search black"></span> Search Results</h1></div>
+        <div class="text-center"><h1>Search Results</h1></div>
         {{#each this}}
         <div class="container container-list border-panel">
             <div class="col-md-12 col-xs-12">
                 <section>
                     <div class="col-md-3  col-sm-4 col-xs-12">
                         <div class="container-image">
-                            <img src="{{image}}" class="image responsive image" alt="No Image Available" />
+                            <img src="{{image}}" class="img-responsive image" alt="No Image Available" />
                             <div class="overlay">
                                 <div class=" underline-text text">Base Fare : {{currency}} {{fare}}</div>
                             </div>
@@ -41,7 +39,7 @@
                             <span class="glyphicon glyphicon-star orange"></span>
                             {{/times}}
                         </h4>
-                        <h4 class="bold-text"><span class="glyphicon glyphicon-map-marker green"></span> {{address}}</h4>
+                        <h4><span class="glyphicon glyphicon-map-marker green"></span> {{address}}</h4>
                         <p class="description"><span class="glyphicon glyphicon-map-list green"></span>{{description}}</p>
                     </div>
                 </section>
@@ -54,6 +52,8 @@
         </div>
         {{/each}}
     </script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/Js/hotelListingScript.js"></script>
