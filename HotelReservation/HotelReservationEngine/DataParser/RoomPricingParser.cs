@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelSearchService;
 using TripEngine.Model;
 using TripEngineService;

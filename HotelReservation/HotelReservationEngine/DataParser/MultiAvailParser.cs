@@ -1,10 +1,8 @@
 ﻿using System;
 using HotelSearchService;
 using System.Collections.Generic;
-using HotelEntities;
 using Newtonsoft.Json;
 using HotelReservationEngine.Constants;
-using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelReservation.Logger;
 using HotelReservationEngine.Model;
 
@@ -35,7 +33,7 @@ namespace Parser
             {"GeoCode",LocationCodeContext.GeoCode },
             {"Hotel", LocationCodeContext.GeoCode }
             };
-        public HotelSearchRQ MultiAvailRQParser(MultiAvailSearchRequest searchRequest)
+        public HotelSearchRQ MultiAvailRQParser(HotelSearchField searchRequest)
         {
             try
             {

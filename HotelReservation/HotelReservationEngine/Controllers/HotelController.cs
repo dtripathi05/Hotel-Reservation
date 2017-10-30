@@ -1,11 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using HotelEntities;
 using HotelReservationEngine.Model;
 using HotelReservationEngine.Adapter;
 using Newtonsoft.Json;
-using HotelReservationEngine.HotelMultiAvailItinerary;
 using TripEngine.Model;
 using TripEngineService;
 using HotelReservationEngine.DataParser;
@@ -19,7 +17,7 @@ namespace HotelReservationEngine.Controllers
     public class HotelController : Controller
     {
         [HttpPost("searchField")]
-        public string HotelSearchFields([FromBody]MultiAvailSearchRequest searchFields)
+        public string HotelSearchFields([FromBody]HotelSearchField searchFields)
         {
             try
             {
@@ -36,13 +34,13 @@ namespace HotelReservationEngine.Controllers
         }
 
         [HttpGet("retriveSearchField/{guid}")]
-        public MultiAvailSearchRequest GetSearchFields(string guid)
+        public HotelSearchField GetSearchFields(string guid)
         {
-            return (MultiAvailSearchRequest)Cache.GetSearchRequest(guid);
+            return (HotelSearchField)Cache.GetSearchRequest(guid);
         }
 
         [HttpPost("hotelSearch")]
-        public async Task<HotelList> MultipleItinerary([FromBody]MultiAvailSearchRequest searchFields)
+        public async Task<HotelList> MultipleItinerary([FromBody]HotelSearchField searchFields)
         {
             HotelList hotelList = null;
             try
