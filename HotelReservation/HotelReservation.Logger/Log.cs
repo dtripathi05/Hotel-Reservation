@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 namespace HotelReservation.Logger
 {
@@ -26,6 +28,26 @@ namespace HotelReservation.Logger
                 writer.WriteLine(message);
                 writer.Close();
             }
+        }
+
+        public static string  StatusLogger(string vendorConfirmationNumber)
+        {
+            string guidID = Guid.NewGuid().ToString();
+            string status = string.Format("==>>  Time :{0}", DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt"));
+            status += Environment.NewLine;
+            status += "---------------------------------------------------------------------------**START**---------------------------------------------------------------------------------------------";
+            status += Environment.NewLine;
+            status += string.Format("ConformationNumber :{0}", guidID);
+            status += Environment.NewLine;
+            status += string.Format("VendorConfirmationNo :{0}",vendorConfirmationNumber);
+            status += Environment.NewLine;
+            status += "=============================================================================**END**==============================================================================================";
+            using (StreamWriter writer = new StreamWriter("C:/Users/Deependra Tripathi/Desktop/Status.txt", true))
+            {
+                writer.WriteLine(status);
+                writer.Close();
+            }
+            return guidID;
         }
     }
 }

@@ -1,11 +1,12 @@
 ﻿using HotelReservation.Contract;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace HotelEntities
+namespace HotelReservationEngine.Model
 {
-    public class HotelList:IItinerary
+    public class HotelList : IItinerary
     {
         public List<HotelInfo> Hotels { get; set; }
     }

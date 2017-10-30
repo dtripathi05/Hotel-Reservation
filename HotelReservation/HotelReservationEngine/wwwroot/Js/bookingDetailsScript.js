@@ -1,10 +1,10 @@
-﻿var details;
+﻿var bookingdetail;
 var completeBooking;
 var currency;
 $(document).ready(function () {
-    details = sessionStorage.getItem("bookingDetails");
+    bookingdetail = sessionStorage.getItem("bookingDetails");
     currency = sessionStorage.getItem("rooms");
-    completeBooking = JSON.parse(details);
+    completeBooking = JSON.parse(bookingdetail);
     currencyCode = JSON.parse(currency);
 
     var bookingDescription = [];

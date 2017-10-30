@@ -3,56 +3,25 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="/Image/favicon-bed.png">
     <link rel="stylesheet" href="/Css/Style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/Image/favicon-bed.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" rel="stylesheet" media="all">
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
     <title>Hotel Express</title>
 </head>
 <body>
-    <header>
-        <h6>.</h6>
-    </header>
-    <div class="col-md-12" id="navibar">
-        <nav class="navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand">Hotel Reservation</a>
-                </div>
-                <ul class=" nav navbar-nav navbar-right ">
-                    <li class="navbar-nav nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Feedback</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Sign In</a></li>
-                            <li><a href="#">Create An Account</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-
-    <div id="roomList-container">
-        <div class="loader"></div>
-    </div>
-
+    <header><h6>.</h6></header>
+    <div class="col-md-12"><nav class=" navbar navbar-inverse"><div class="container-fluid"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand">Hotel Reservation</a></div><div class="collapse navbar-collapse" id="myNavbar"><ul class=" nav navbar-nav navbar-right "><li class="navbar-nav nav"><li><a href="#">Home</a></li><li><a href="#">About Us</a></li><li><a href="#">Feedback</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="#">Sign In</a></li><li><a href="#">Create An Account</a></li></ul></li></ul></div></div></nav></div>
+    <div id="roomList-container"><div class="loader"></div></div>
+    <div id="roomList-container"></div>
     <script id="x" type="text/x-handlebars-template">
-        <div class=" container-heading heading" id="hotelnm">
-        </div>
-        <!--Image-->
+        <div class="text-center"><h1>Avaliable Rooms</h1></div>
         <div class="container container-list heading border-panel">
-            <div class="col-md-12 wrapper">
-                <div class="col-md-3">
+            <div class="col-md-12 col-sm-12 col-xs-12 wrapper">
+                <div class="col-md-3  col-sm-4 col-xs-12">
                     <img src="{{imageurl}}" class="img-responsive" alt="No Image Available" />
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-4 col-xs-12">
                     <h3 class="underline-text">{{hotelname}}</h3>
                     <h4 class="bold-text"><span class="glyphicon glyphicon-map-marker green"></span> {{address}}</h4>
                     <h4 class="bold-text">
@@ -60,37 +29,28 @@
                         <span class="glyphicon glyphicon-star orange"></span>
                         {{/times}}
                     </h4>
-                    <h4 class="bold-text">Distance : {{distance}} Km</h4>
                     <h4 class="bold-text">Duration : {{duration}} Day</h4>
-                    
                 </div>
-                <div class="col-md-3">
-                    <iframe class="map-bottom" width="200" height="200" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCIYzzzQZGLWDSOSovKWaq2UsyX1dQ796c&q={{this.latitude}},{{this.longitude}}" allowfullscreen></iframe>    
+                <div class="col-md-3 col-sm-4 col-xs-12 hidden-xs">
+                    <iframe class="map-bottom" width="200" height="200" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCIYzzzQZGLWDSOSovKWaq2UsyX1dQ796c&q={{this.latitude}},{{this.longitude}}" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
     </script>
-
     <div id="roomList-container">
     </div>
-
     <script id="room-item" type="text/x-handlebars-template">
         {{#each this}}
-
-        <div class="col-md-8 col-md-offset-2 container-list  heading border-panel">
-            <div class="col-md-12">
+        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1 container-list  heading border-panel">
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 <section>
-
-                    <!--Room Details-->
-                    <div class="col-md-8">
+                    <div class="col-md-8 col-sm-8">
                         <h3 class="space bold-text"><span class="glyphicon glyphicon-bed orange"></span> {{roomtype}}</h3>
                         <h4 class="underline-text"><span class="glyphicon glyphicon-paperclip green"></span> {{{description}}}</h4>
                     </div>
                 </section>
                 <section>
-                    <!--View Rooms Button-->
-                    <div class="col-md-3 ">
-                        <!-- item -->
+                    <div class="col-md-3 col-sm-4">
                         <div class="panel panel-pricing border-panel">
                             <div class="text-center">
                                 <h4 class="underline-text">Starting From</h4>
@@ -108,6 +68,8 @@
         </div>
         {{/each}}
     </script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
     <script src="/Js/roomListingScript.js"></script>
 </body>
 </html>

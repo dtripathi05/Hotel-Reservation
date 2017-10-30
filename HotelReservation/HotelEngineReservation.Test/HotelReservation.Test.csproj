@@ -13,7 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HotelEntities\HotelEntities.csproj" />
     <ProjectReference Include="..\HotelReservationEngine\HotelReservationEngine.csproj" />
   </ItemGroup>
 

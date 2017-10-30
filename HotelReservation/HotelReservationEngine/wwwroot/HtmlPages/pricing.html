@@ -5,91 +5,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/Image/favicon-bed.png">
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Josefin+Sans" rel="stylesheet">
     <link rel="stylesheet" href="/Css/Style.css">
     <link rel="stylesheet" href="/Css/pricingStyleSheet.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <header>
-        <h6>.</h6>
-    </header>
-    <div class="col-md-12">
-        <nav class="navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand">Hotel Reservation</a>
-                </div>
-                <ul class=" nav navbar-nav navbar-right ">
-                    <li class="navbar-nav nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Feedback</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Sign In</a></li>
-                            <li><a href="#">Create An Account</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+    <header> <h6>.</h6> </header>
+    <div class="col-md-12"><nav class=" navbar navbar-inverse"><div class="container-fluid"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand">Hotel Reservation</a></div><div class="collapse navbar-collapse" id="myNavbar"><ul class=" nav navbar-nav navbar-right "><li class="navbar-nav nav"><li><a href="#">Home</a></li><li><a href="#">About Us</a></li><li><a href="#">Feedback</a></li><li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="#">Sign In</a></li><li><a href="#">Create An Account</a></li></ul></li></ul></div></div></nav></div>
+    <div id="priceList-container"><div class="loader"></div></div>
+    <div id="priceList-container"></div>
+    <script id="price-item" type="text/x-handlebars-template">
+        <div class="heading"></div>
+        {{#each this}}
 
-    <div id="priceList-container">
-        <div class="loader"></div>
-    </div>
-    <div id="priceList-container">
-    </div>
-           <script id="price-item" type="text/x-handlebars-template">
-               <div class="heading">
-               </div>
-            {{#each this}}
-            <div class="container container-list border-panel heading">
-
-                <div class="col-md-12">
-                    <section>
-                        <!--View Details-->
-                        <div class="col-md-8">
-                            <div class="panel panel-pricing">
-                                <div class="panel-heading text-center">
-                                    <ul class="price ">
-                                        <li class="header">Booking Details</li>
-                                    </ul>
-                                </div>
-                                <div class="panel-body">
-                                    <p class="panel-font"><span class="underline-text bold-text">{{hotelName}}</span> </p>
-                                    <p class="panel-font"><span class="glyphicon glyphicon-bed green"></span> <b>{{roomtype}}</b></p>
-                                    <p class="panel-font"><span class="glyphicon glyphicon-arrow-right green"></span> <b>{{checkin}}</b></p>
-                                    <p class="panel-font"><span class="glyphicon glyphicon-arrow-left green"></span> <b>{{checkout}}</b></p>
-                                    <p class="panel-font"><span class="glyphicon glyphicon-map-marker green"></span>  <b>{{address}}</b></p>
-                                </div>
+        <div class="container container-list border-panel heading">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <section>
+                    <div class="col-md-8  col-sm-12 col-xs-12">
+                        <div class="panel panel-pricing">
+                            <div class="panel-heading text-center">
+                                <ul class="price "><li class="header">Booking Details</li></ul>
+                            </div>
+                            <div class="panel-body">
+                                <p class="panel-font"><span class="underline-text bold-text">{{hotelName}}</span> </p>
+                                <p class="panel-font"><span class="glyphicon glyphicon-bed green"></span> <b>{{roomtype}}</b></p>
+                                <p class="panel-font"><span class="glyphicon glyphicon-arrow-right green"></span> <b>{{checkin}}</b></p>
+                                <p class="panel-font"><span class="glyphicon glyphicon-arrow-left green"></span> <b>{{checkout}}</b></p>
+                                <p class="panel-font"><span class="glyphicon glyphicon-map-marker green"></span>  <b>{{address}}</b></p>
                             </div>
                         </div>
-                    </section>
-
-                    <section>
-                        <div class="col-md-4 ">
-
-                            <div class="heading-panel"></div>
-                            <div>
-                                <ul class="price ">
-                                    <li class="header">Total Amount Payable</li>
-                                    <li class="grey panel-font">{{currencyCode}} <b>{{totalPrice}}</b></li>
-                                    <li><button name="proceedBtn" id="proceedButton" onClick="paymentPage()" class="button">Proceed</button></li>
-                                </ul>
-                            </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <div class="heading-panel"></div>
+                        <div>
+                            <ul class="price ">
+                                <li class="header">Total Amount Payable</li>
+                                <li class="grey panel-font">{{currencyCode}} <b>{{totalPrice}}</b></li>
+                                <li><button name="proceedBtn" id="proceedButton" onClick="paymentPage()" class="button">Proceed</button></li>
+                            </ul>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                </section>
             </div>
-            {{/each}}
-        </script>
+        </div>
+        {{/each}}
+    </script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
-    <script src="/Js/pricingScript.js" type=""></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/Js/pricingScript.js"></script>
 </body>
-
 </html>

@@ -11,10 +11,10 @@ namespace HotelReservation.Test
 {
     public class MultiAvailSearchRequest_Test
     {
-        MultiAvailSearchRequest request = null;
+        HotelSearchField request = null;
         public MultiAvailSearchRequest_Test()
         {
-            request = new MultiAvailSearchRequest
+            request = new HotelSearchField
             {
                 Destination = new HotelEntities.Location
                 {

@@ -113,17 +113,20 @@ namespace HotelReservationEngine.DataParser
             {
                 Log.ExcpLogger(ex);
             }
+            string bookingStatus = completeBookingRS.TripFolder.Products[0].PassengerSegments[0].VendorConfirmationNumber;
+            string confirmationNumber=null;
+            if (bookingStatus != null)
+            {
+               confirmationNumber= Log.StatusLogger(bookingStatus);
+            }
             return new CompleteBookingResponse()
             {
-                ConfirmationNumber = completeBookingRS.TripFolder.Products[0].PassengerSegments[0].VendorConfirmationNumber,
+                ConfirmationNumber = confirmationNumber,
                 AmountPaid = completeBookingRS.TripFolder.Payments[0].Amount.Amount,
                 CheckIn = completeBookingRS.TripFolder.StartDate,
                 CheckOut = completeBookingRS.TripFolder.EndDate,
                 TravelerName = completeBookingRS.TripFolder.Passengers[0].FirstName
             };
-
-
-
         }
     }
 }
