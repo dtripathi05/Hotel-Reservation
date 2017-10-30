@@ -1,13 +1,14 @@
-﻿using HotelEntities;
+﻿//using HotelEntities;
 using HotelSearchService;
 using Parser;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using HotelReservationEngine.HotelMultiAvailItinerary;
+//using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelReservation.Contract;
 using System;
 using HotelReservation.Logger;
 using System.Collections.Generic;
+using HotelReservationEngine.Model;
 
 namespace HotelAdapter
 {
@@ -25,7 +26,7 @@ namespace HotelAdapter
             {
                 _engineClient = new HotelEngineClient();
                 _parser = new MultiAvailParser();
-                _hotelSearchRQ = _parser.MultiAvailRQParser((MultiAvailSearchRequest)request);
+                _hotelSearchRQ = _parser.MultiAvailRQParser((HotelSearchField)request);
                 _hotelSearchRS = await _engineClient.HotelAvailAsync(_hotelSearchRQ);
                 _searchResponse = _parser.MultiAvailRSParser(_hotelSearchRS, _hotelSearchRQ);
             }

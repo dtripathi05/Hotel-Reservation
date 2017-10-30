@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using HotelSearchService;
 using HotelReservationEngine.DataParser;
-using HotelReservationEngine.HotelMultiAvailItinerary;
+//using HotelReservationEngine.HotelMultiAvailItinerary;
 using Newtonsoft.Json;
 using TripEngineService;
 using TripEngine.Model;

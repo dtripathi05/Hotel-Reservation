@@ -1,9 +1,7 @@
 ﻿using HotelSearchService;
-using HotelReservationEngine.HotelMultiAvailItinerary;
 using System;
 using HotelReservation.Logger;
 using HotelReservationEngine.Model;
-using HotelEntities;
 using System.Collections.Generic;
 
 namespace HotelReservationEngine.DataParser

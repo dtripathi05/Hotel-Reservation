@@ -1,11 +1,12 @@
 ﻿using HotelReservation.Contract;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace HotelEntities
+namespace HotelReservationEngine.Model
 {
-    public class HotelInfo: IItinerary
+    public class HotelInfo : IItinerary
     {
         public string SessionId { get; set; }
         public string ImgUrl { get; set; }
@@ -17,5 +18,6 @@ namespace HotelEntities
         public string Supplier { get; set; }
         public decimal BasePrice { get; set; }
         public string CurrencyCode { get; set; }
+        public string HotelDetails { get; set; }
     }
 }

@@ -1,6 +1,6 @@
-using HotelEntities;
 using HotelReservation.Contract;
 using HotelReservationEngine.Adapter;
+using HotelReservationEngine.Model;
 using HotelSearchService;
 using Parser;
 using System;
@@ -11,12 +11,12 @@ namespace HotelReservation.Test
 {
     public class MultiAvailSearchRequest_Test
     {
-        MultiAvailSearchRequest request = null;
+        HotelSearchField request = null;
         public MultiAvailSearchRequest_Test()
         {
-            request = new MultiAvailSearchRequest
+            request = new HotelSearchField
             {
-                Destination = new HotelEntities.Location
+                Destination = new HotelReservationEngine.Model.Location
                 {
                     Latitude = 18.5599861f,
                     Longitude = 73.91191f,

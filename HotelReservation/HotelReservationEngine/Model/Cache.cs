@@ -1,7 +1,5 @@
-﻿using HotelEntities;
-using HotelReservation.Contract;
+﻿using HotelReservation.Contract;
 using HotelReservation.Logger;
-using HotelReservationEngine.HotelMultiAvailItinerary;
 using System;
 using System.Collections.Generic;
 
@@ -30,6 +28,17 @@ namespace HotelReservationEngine.Model
         }
         public static IItinerary GetSearchRequest(string guid)
         {
+            try
+            {
+                if (guid == null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
             return _searchStore[guid];
         }
     }

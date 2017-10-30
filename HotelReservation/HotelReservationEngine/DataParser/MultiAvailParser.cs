@@ -1,10 +1,8 @@
 ﻿using System;
 using HotelSearchService;
 using System.Collections.Generic;
-using HotelEntities;
 using Newtonsoft.Json;
 using HotelReservationEngine.Constants;
-using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelReservation.Logger;
 using HotelReservationEngine.Model;
 
@@ -35,7 +33,7 @@ namespace Parser
             {"GeoCode",LocationCodeContext.GeoCode },
             {"Hotel", LocationCodeContext.GeoCode }
             };
-        public HotelSearchRQ MultiAvailRQParser(MultiAvailSearchRequest searchRequest)
+        public HotelSearchRQ MultiAvailRQParser(HotelSearchField searchRequest)
         {
             try
             {
@@ -110,10 +108,6 @@ namespace Parser
             listRQ.PagingInfo = new PagingInfo()
             {
                 Enabled = false,
-                //StartNumber = MultiAvailSearchRequestStaticData._pagingInfoStartNumber,
-                //EndNumber = MultiAvailSearchRequestStaticData._pagingInfoEndNumber,
-                //TotalRecordsBeforeFiltering = MultiAvailSearchRequestStaticData._totalRecordsBeforeFiltering,
-                //TotalResults = MultiAvailSearchRequestStaticData._totalResults
             };
             return listRQ;
         }
@@ -210,13 +204,12 @@ namespace Parser
                 HotelSearchCriterion = hotelSearchRQ.HotelSearchCriterion
             };
             var cache = Cache.AddToCache(multiAvailItinerary);
-            // return multiAvailItinerary;
             List<HotelInfo> hotelInfo = new List<HotelInfo>();
             try
             {
                 foreach (var info in itinerary)
                 {
-                    //if (info.HotelFareSource.Name == "HotelBeds Test" || info.HotelFareSource.Name == "TouricoTGSTest")
+                   // if (info.HotelFareSource.Name == "HotelBeds Test" || info.HotelFareSource.Name == "TouricoTGSTest")
                     {
                         string imageUrl = "";
                         for (int i = 0; i < info.HotelProperty.MediaContent.Length; i++)
@@ -238,7 +231,8 @@ namespace Parser
                             SessionId = hotelSearchRS.SessionId,
                             Supplier = info.HotelFareSource.Name,
                             BasePrice=info.Fare.BaseFare.Amount,
-                            CurrencyCode=info.Fare.BaseFare.Currency
+                            CurrencyCode=info.Fare.BaseFare.Currency,
+                            HotelDetails=info.HotelProperty.Descriptions[0].Description
                         };
                         hotelInfo.Add(hotel);
                     }

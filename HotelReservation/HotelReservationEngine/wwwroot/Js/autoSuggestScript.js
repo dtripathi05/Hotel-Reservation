@@ -45,7 +45,6 @@ function extractData() {
         "ChildrenCount": childNumber
     };
 
-    var modifiedData = JSON.stringify(hotelSearchField);
     $.ajax({
         url: '/api/hotel/searchField',
         type: 'post',
@@ -57,7 +56,7 @@ function extractData() {
             alert("Some Error Occured");
             window.location.href = "/index";
         },
-        data: modifiedData,
+        data: JSON.stringify(hotelSearchField),
 
     });
 }
@@ -73,13 +72,13 @@ $(function () {
                 data: {
                     query: request.term
                 },
-                success: function (data) {
-                    var data = data[0].ItemList;
+                success: function (autoCompleteRS) {
+                    var autoCompleteRS = autoCompleteRS[0].ItemList;
                     var hotelList = [];
-                    for (var i = 0; i < data.length; i++) {
+                    for (var i = 0; i < autoCompleteRS.length; i++) {
                         hotelList.push({
-                            value: data[i].CulturedText,
-                            data: data[i]
+                            value: autoCompleteRS[i].CulturedText,
+                            data: autoCompleteRS[i]
                         });
                     }
                     response(hotelList);
