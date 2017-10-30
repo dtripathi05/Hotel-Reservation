@@ -108,10 +108,6 @@ namespace Parser
             listRQ.PagingInfo = new PagingInfo()
             {
                 Enabled = false,
-                //StartNumber = MultiAvailSearchRequestStaticData._pagingInfoStartNumber,
-                //EndNumber = MultiAvailSearchRequestStaticData._pagingInfoEndNumber,
-                //TotalRecordsBeforeFiltering = MultiAvailSearchRequestStaticData._totalRecordsBeforeFiltering,
-                //TotalResults = MultiAvailSearchRequestStaticData._totalResults
             };
             return listRQ;
         }
