@@ -236,7 +236,8 @@ namespace Parser
                             SessionId = hotelSearchRS.SessionId,
                             Supplier = info.HotelFareSource.Name,
                             BasePrice=info.Fare.BaseFare.Amount,
-                            CurrencyCode=info.Fare.BaseFare.Currency
+                            CurrencyCode=info.Fare.BaseFare.Currency,
+                            HotelDetails=info.HotelProperty.Descriptions[0].Description
                         };
                         hotelInfo.Add(hotel);
                     }

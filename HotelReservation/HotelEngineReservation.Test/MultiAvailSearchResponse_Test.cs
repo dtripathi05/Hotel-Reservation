@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Text;
 using Xunit;
-using HotelEntities;
 using System.Threading.Tasks;
 using HotelReservationEngine.Adapter;
 using HotelSearchService;
 using Parser;
 using HotelReservation.Contract;
+using HotelReservationEngine.Model;
 
 namespace HotelReservation.Test
 {
@@ -18,18 +18,18 @@ namespace HotelReservation.Test
         {
             request = new HotelSearchField
             {
-                Destination = new HotelEntities.Location
+                Destination = new HotelReservationEngine.Model.Location
                 {
-                    Latitude = 18.5599861f,
-                    Longitude = 73.91191f,
-                    CityName = "Pune",
-                    SearchType = "Hotel"
+                    Latitude = 28.639f,
+                    Longitude = 77.223f,
+                    CityName = "New Delhi",
+                    SearchType = "City"
                 },
                 Adult = 1,
                 ChildrenCount = 2,
                 Rooms = 1,
-                CheckInDate = new DateTime(2017, 10, 11),
-                CheckOutDate = new DateTime(2017, 10, 12)
+                CheckInDate = new DateTime(2017, 11, 11),
+                CheckOutDate = new DateTime(2017, 11, 12)
             };
 
         }

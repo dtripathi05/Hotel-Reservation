@@ -1,5 +1,4 @@
-﻿using HotelEntities;
-using HotelReservationEngine.Model;
+﻿using HotelReservationEngine.Model;
 using System;
 using Xunit;
 

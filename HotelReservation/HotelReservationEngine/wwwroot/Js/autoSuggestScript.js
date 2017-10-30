@@ -45,7 +45,6 @@ function extractData() {
         "ChildrenCount": childNumber
     };
 
-    var modifiedData = JSON.stringify(hotelSearchField);
     $.ajax({
         url: '/api/hotel/searchField',
         type: 'post',
@@ -57,7 +56,7 @@ function extractData() {
             alert("Some Error Occured");
             window.location.href = "/index";
         },
-        data: modifiedData,
+        data: JSON.stringify(hotelSearchField),
 
     });
 }
