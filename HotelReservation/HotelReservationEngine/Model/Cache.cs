@@ -28,6 +28,17 @@ namespace HotelReservationEngine.Model
         }
         public static IItinerary GetSearchRequest(string guid)
         {
+            try
+            {
+                if (guid == null)
+                {
+                    throw new NullReferenceException();
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.ExcpLogger(ex);
+            }
             return _searchStore[guid];
         }
     }

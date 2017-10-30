@@ -37,32 +37,46 @@ namespace TripEngine.Model
         }
         public HotelItinerary GetItinerary(HotelItinerary hotelItinerary, string roomName)
         {
+            HotelItinerary hotel = null;
             try
             {
                 if (hotelItinerary == null)
                 {
                     throw new NullReferenceException();
                 }
+                hotel = hotelItinerary;
+                Room room = new Room();
+                for (int i = 0; i < hotelItinerary.Rooms.Length; i++)
+                {
+                    if (hotelItinerary.Rooms[i].RoomName == roomName)
+                    {
+                        room = hotelItinerary.Rooms[i];
+                        break;
+                    }
+                }
+                hotel.Rooms = new Room[1];
+                hotel.Rooms[0] = new Room();
+                hotel.Rooms[0] = room;
             }
             catch (Exception ex)
             {
                 Log.ExcpLogger(ex);
             }
-
-            HotelItinerary hotel = hotelItinerary;
-            Room room = new Room();
-            for (int i = 0; i < hotelItinerary.Rooms.Length; i++)
-            {
-                if (hotelItinerary.Rooms[i].RoomName == roomName)
-                {
-                    room = hotelItinerary.Rooms[i];
-                    break;
-                }
-            }
-            hotel.Rooms = new Room[1];
-            hotel.Rooms[0] = new Room();
-            hotel.Rooms[0] = room;
             return hotel;
+            //HotelItinerary hotel = hotelItinerary;
+            //Room room = new Room();
+            //for (int i = 0; i < hotelItinerary.Rooms.Length; i++)
+            //{
+            //    if (hotelItinerary.Rooms[i].RoomName == roomName)
+            //    {
+            //        room = hotelItinerary.Rooms[i];
+            //        break;
+            //    }
+            //}
+            //hotel.Rooms = new Room[1];
+            //hotel.Rooms[0] = new Room();
+            //hotel.Rooms[0] = room;
+            //return hotel;
         }
     }
 }
