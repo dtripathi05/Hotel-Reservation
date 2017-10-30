@@ -18,22 +18,22 @@
     <div id="hotelList-container"><div class="loader"></div></div>
     <div id="hotelList-container"></div>
     <script id="hotel-item" type="text/x-handlebars-template">
-        <div class="text-center"><h1>Search Results</h1></div>
+        <div><h1><span class="glyphicon glyphicon-search black"></span> Search Results</h1></div>
         {{#each this}}
         <div class="container container-list border-panel">
             <div class="col-md-12 col-xs-12">
                 <section>
-                    <div class="col-md-3  col-sm-5 col-xs-12">
+                    <div class="col-md-3  col-sm-4 col-xs-12">
                         <div class="container-image">
-                            <img src="{{image}}" class=" img-fluid image mask" alt="No Image Available" />
+                            <img src="{{image}}" width="225" height="225" class="image responsive image" alt="No Image Available" />
                             <div class="overlay">
-                                <div class="text">Hello World</div>
+                                <div class=" underline-text text">Base Fare : {{currency}} {{fare}}</div>
                             </div>
                         </div>
-                        </div>
+                    </div>
                 </section>
                 <section>
-                    <div class="col-md-6  col-sm-5 col-xs-12">
+                    <div class="col-md-8  col-sm-8 col-xs-12">
                         <h3 class="underline-text">{{name}}</h3>
                         <h4>Base Fare : {{currency}} <span class="bold-text">{{fare}}</span></h4>
                         <h4 class="bold-text">
@@ -41,11 +41,12 @@
                             <span class="glyphicon glyphicon-star orange"></span>
                             {{/times}}
                         </h4>
-                        <h4><span class="glyphicon glyphicon-map-marker green"></span> {{address}}</h4>
+                        <h4 class="bold-text"><span class="glyphicon glyphicon-map-marker green"></span> {{address}}</h4>
+                        <p class="description"><span class="glyphicon glyphicon-map-list green"></span>{{description}}</p>
                     </div>
                 </section>
                 <section>
-                    <div class="col-md-3 col-sm-2 col-xs-12">
+                    <div class="col-md-1 col-sm-12 col-xs-12">
                         <button name="viewRoomsBtn" id="viewRoomsButton" value="{{name}}" onClick="roomDetails(this)" class="pageButton">View Rooms</button>
                     </div>
                 </section>
