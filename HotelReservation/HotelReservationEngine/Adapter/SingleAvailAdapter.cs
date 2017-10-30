@@ -1,7 +1,7 @@
-﻿using HotelEntities;
+﻿//using HotelEntities;
 using HotelReservation.Contract;
 using HotelReservation.Logger;
-using HotelReservationEngine.HotelMultiAvailItinerary;
+//using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelReservationEngine.Model;
 using System;
 using System.Collections.Generic;

@@ -7,10 +7,10 @@ namespace HotelReservation.Test
 {
     public class Cache_Test
     {
-        MultiAvailSearchRequest request = null;
+        HotelSearchField request = null;
         public Cache_Test()
         {
-            request = new MultiAvailSearchRequest
+            request = new HotelSearchField
             {
                 Destination = new Location
                 {

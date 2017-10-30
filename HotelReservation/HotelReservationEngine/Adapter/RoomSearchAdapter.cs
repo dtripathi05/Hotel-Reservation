@@ -1,8 +1,9 @@
-﻿using HotelEntities;
+﻿//using HotelEntities;
 using HotelReservation.Contract;
 using HotelReservation.Logger;
 using HotelReservationEngine.DataParser;
-using HotelReservationEngine.HotelMultiAvailItinerary;
+using HotelReservationEngine.Model;
+//using HotelReservationEngine.HotelMultiAvailItinerary;
 using HotelSearchService;
 using Newtonsoft.Json;
 using System;
