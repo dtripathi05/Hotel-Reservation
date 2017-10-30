@@ -50,8 +50,7 @@ namespace HotelReservationEngine.Controllers
                     throw new NullReferenceException();
                 }
                 IHotelServiceFactory hotelFactory = Factory.GetHotelServices("HotelsListing");
-                var result = await hotelFactory.GetHotelServiceRSAsync(searchFields);
-                hotelList = (HotelList)result;
+                hotelList = (HotelList)await hotelFactory.GetHotelServiceRSAsync(searchFields);
             }
             catch (Exception ex)
             {
@@ -73,8 +72,7 @@ namespace HotelReservationEngine.Controllers
                 SingleAvailAdapter singleAvailAdapter = new SingleAvailAdapter();
                 var singleAvail = singleAvailAdapter.GetSingleAvail(hotelInfo);
                 IHotelServiceFactory hotelFactory = Factory.GetHotelServices("RoomListing");
-                var result = await hotelFactory.GetHotelServiceRSAsync(singleAvail);
-                singleAvailItinerary = (SingleAvailItinerary)result;
+                singleAvailItinerary = (SingleAvailItinerary)await hotelFactory.GetHotelServiceRSAsync(singleAvail);
             }
             catch (Exception ex)
             {
@@ -95,8 +93,7 @@ namespace HotelReservationEngine.Controllers
                 }
                 RoomPricingItinerary roomPricingItinerary = new RoomPricingItinerary().GetSelectedRoom(pricingItinerary);
                 IHotelServiceFactory hotelFactory = Factory.GetHotelServices("RoomPricing");
-                var result = await hotelFactory.GetHotelServiceRSAsync(roomPricingItinerary);
-                roomPricingResponse = (RoomPricingResponse)result;
+                roomPricingResponse = (RoomPricingResponse)await hotelFactory.GetHotelServiceRSAsync(roomPricingItinerary);
             }
             catch (Exception ex)
             {
@@ -118,8 +115,7 @@ namespace HotelReservationEngine.Controllers
                 IHotelServiceFactory hotelFactory = Factory.GetHotelServices("TripBookFolder");
                 var tripBookResult = await hotelFactory.GetHotelServiceRSAsync(bookTripRQ);
                 IHotelServiceFactory factory = Factory.GetHotelServices("CompleteBooking");
-                var result = await factory.GetHotelServiceRSAsync(tripBookResult);
-                completeBookingResult = (CompleteBookingResponse)result;
+                completeBookingResult = (CompleteBookingResponse)await factory.GetHotelServiceRSAsync(tripBookResult);
             }
             catch (Exception ex)
             {
