@@ -1,6 +1,6 @@
-using HotelEntities;
 using HotelReservation.Contract;
 using HotelReservationEngine.Adapter;
+using HotelReservationEngine.Model;
 using HotelSearchService;
 using Parser;
 using System;
@@ -16,7 +16,7 @@ namespace HotelReservation.Test
         {
             request = new HotelSearchField
             {
-                Destination = new HotelEntities.Location
+                Destination = new HotelReservationEngine.Model.Location
                 {
                     Latitude = 18.5599861f,
                     Longitude = 73.91191f,
