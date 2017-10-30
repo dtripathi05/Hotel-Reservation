@@ -8,6 +8,11 @@ namespace HotelReservationEngine.Model
 {
     public class HotelList : IItinerary
     {
-        public List<HotelInfo> Hotels { get; set; }
+        private List<HotelInfo> _hotel;
+        public List<HotelInfo> Hotels
+        {
+            get { return this._hotel; }
+            set { this._hotel = value; }
+        }
     }
 }

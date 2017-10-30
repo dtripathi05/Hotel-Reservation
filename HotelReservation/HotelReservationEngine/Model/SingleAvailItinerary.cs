@@ -9,8 +9,23 @@ namespace HotelReservationEngine.Model
 {
     public class SingleAvailItinerary : IItinerary
     {
-        public HotelItinerary Itinerary { get; set; }
-        public HotelSearchCriterion Criteria { get; set; }
-        public string SessionId { get; set; }
+        private HotelItinerary _hotelItinerary;
+        private HotelSearchCriterion _hotelSearchCriterion;
+        private string _sessionId;
+        public HotelItinerary Itinerary
+        {
+            get { return this._hotelItinerary; }
+            set { this._hotelItinerary = value; }
+        }
+        public HotelSearchCriterion Criteria
+        {
+            get { return this._hotelSearchCriterion; }
+            set { this._hotelSearchCriterion = value; }
+        }
+        public string SessionId
+        {
+            get { return this._sessionId; }
+            set { this._sessionId=value; }
+        }
     }
 }
