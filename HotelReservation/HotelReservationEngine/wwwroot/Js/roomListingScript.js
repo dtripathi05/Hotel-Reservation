@@ -13,13 +13,14 @@ $(document).ready(function () {
     hotel = JSON.parse(roomList);
 
     var roomType = [];
-    var img = "";
+    var img = [];
     for (var i = 0; i < hotel.itinerary.rooms.length; i++) {
         {
             for (k = 0; k < hotel.itinerary.hotelProperty.mediaContent.length; k++) {
                 if (hotel.itinerary.hotelProperty.mediaContent[k].url != null) {
-                    img = hotel.itinerary.hotelProperty.mediaContent[k].url.toString();
-                    break;
+                    img.push({
+                        img : hotel.itinerary.hotelProperty.mediaContent[k].url.toString()
+                    });
                 }
             }
             if (hotel.itinerary.rooms[i].hotelFareSource.name == "TouricoTGSTest") {
