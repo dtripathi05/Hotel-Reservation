@@ -35,7 +35,7 @@ $.ajax({
                                     stars: hotelSearchRs.hotels[i].rating,
                                     fare: hotelSearchRs.hotels[i].basePrice,
                                     currency: hotelSearchRs.hotels[i].currencyCode,
-                                    description:hotelSearchRs.hotels[0].hotelDetails
+                                    description:hotelSearchRs.hotels[i].hotelDetails
                                 });
                             }
                             var template = $('#hotel-item');
