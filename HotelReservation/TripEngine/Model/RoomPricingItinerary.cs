@@ -26,7 +26,7 @@ namespace TripEngine.Model
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             return new RoomPricingItinerary
             {
@@ -60,7 +60,7 @@ namespace TripEngine.Model
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             return hotel;
             //HotelItinerary hotel = hotelItinerary;

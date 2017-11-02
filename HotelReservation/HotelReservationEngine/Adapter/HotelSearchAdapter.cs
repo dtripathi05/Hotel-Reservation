@@ -32,7 +32,7 @@ namespace HotelAdapter
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             finally
             {

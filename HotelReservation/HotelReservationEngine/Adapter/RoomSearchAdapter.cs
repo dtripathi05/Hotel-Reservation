@@ -31,7 +31,7 @@ namespace HotelReservationEngine.Adapter
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             finally
             {

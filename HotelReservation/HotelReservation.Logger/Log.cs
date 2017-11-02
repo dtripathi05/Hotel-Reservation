@@ -7,7 +7,7 @@ namespace HotelReservation.Logger
 {
     public class Log
     {
-        public static void ExcpLogger(Exception ex)
+        public static void ExceptionLogger(Exception ex)
         {
             string message = string.Format("==>>  Time: {0}", DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss tt"));
             message += Environment.NewLine;

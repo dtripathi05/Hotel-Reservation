@@ -67,7 +67,7 @@ function roomDetails(hotelDetail) {
     var hotelName = hotelDetail.value;
     for (i = 0; i < hotelResult.hotels.length; i++) {
         var check = hotelResult.hotels[i].name.toString();
-        if (hotelName.toString() == check) {
+        if (hotelName.toString() === check) {
             var roomSearchRq =
                 {
                     "SessionId": hotelResult.hotels[i].sessionId,

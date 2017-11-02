@@ -44,7 +44,7 @@ namespace Parser
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             HotelSearchRQ listRQ = new HotelSearchRQ();
             listRQ.SessionId = Guid.NewGuid().ToString();
@@ -121,7 +121,7 @@ namespace Parser
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             return dateTimeSpan;
         }
@@ -189,7 +189,7 @@ namespace Parser
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
 
             List<HotelItinerary> itinerary = new List<HotelItinerary>();
@@ -240,7 +240,7 @@ namespace Parser
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             var result = new HotelList() { Hotels = hotelInfo };
             return result;

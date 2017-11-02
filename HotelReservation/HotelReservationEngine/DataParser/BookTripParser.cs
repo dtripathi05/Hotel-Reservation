@@ -22,7 +22,7 @@ namespace HotelReservationEngine.DataParser
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             _hotelItinerary = bookTripRQ.RoomPricingResponse.Product.HotelItinerary;
             _hotelSearchCriterion = bookTripRQ.RoomPricingResponse.Criteria;
@@ -305,7 +305,7 @@ namespace HotelReservationEngine.DataParser
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
 
             return new BookTripFolderResponse

@@ -1,16 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 using System.IO;
 
-namespace HotelReservationEngine.Controllers
+// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+namespace HotelReservation.Web.Controllers
 {
     [Route("/")]
-    public class HomePageController : Controller
+    public class PageController : Controller
     {
         [HttpGet()]
         [HttpGet("index")]
         public IActionResult GetIndexPage()
         {
             return File(new FileStream("wwwroot/HtmlPages/index.html", FileMode.Open), "text/html");
+
         }
         [HttpGet("hotel/{guidId}")]
         public IActionResult GetHotels(string guidId)

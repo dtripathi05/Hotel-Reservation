@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservation.Contract",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservation.Logger", "HotelReservation.Logger\HotelReservation.Logger.csproj", "{8E395C93-6BC9-4D8F-8D07-E9474954D706}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservation.Web", "HotelReservation.Web\HotelReservation.Web.csproj", "{7314C7E5-FD0F-4910-A78B-1ED3903AAA69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{8E395C93-6BC9-4D8F-8D07-E9474954D706}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E395C93-6BC9-4D8F-8D07-E9474954D706}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E395C93-6BC9-4D8F-8D07-E9474954D706}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7314C7E5-FD0F-4910-A78B-1ED3903AAA69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7314C7E5-FD0F-4910-A78B-1ED3903AAA69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7314C7E5-FD0F-4910-A78B-1ED3903AAA69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7314C7E5-FD0F-4910-A78B-1ED3903AAA69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

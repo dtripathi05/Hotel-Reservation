@@ -19,7 +19,7 @@ namespace HotelReservationEngine.DataParser
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             CompleteBookingRQ completeBookingRQ = new CompleteBookingRQ()
             {
@@ -111,7 +111,7 @@ namespace HotelReservationEngine.DataParser
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             string bookingStatus = completeBookingRS.TripFolder.Products[0].PassengerSegments[0].VendorConfirmationNumber;
             string confirmationNumber=null;

@@ -22,7 +22,7 @@ namespace HotelReservationEngine.Model
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             return guidId;
         }
@@ -37,7 +37,7 @@ namespace HotelReservationEngine.Model
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             return _searchStore[guid];
         }

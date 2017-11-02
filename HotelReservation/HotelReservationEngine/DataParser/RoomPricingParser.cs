@@ -22,7 +22,7 @@ namespace HotelReservationEngine.DataParser
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             return new TripProductPriceRQ
             {
@@ -47,7 +47,7 @@ namespace HotelReservationEngine.DataParser
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             return new RoomPricingResponse
             {

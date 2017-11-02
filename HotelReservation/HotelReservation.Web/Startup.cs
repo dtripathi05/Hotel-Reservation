@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace HotelReservationEngine
+namespace HotelReservation.Web
 {
     public class Startup
     {
@@ -36,7 +36,13 @@ namespace HotelReservationEngine
 
             app.UseStaticFiles();
             app.UseMvc();
-            
+            app.Run(ctx =>
+            {
+                ctx.Response.Redirect("/index.html");
+                return Task.FromResult(0);
+            });
+
+
         }
     }
 }

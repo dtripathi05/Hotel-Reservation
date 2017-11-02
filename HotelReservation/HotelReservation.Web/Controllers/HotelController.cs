@@ -11,7 +11,7 @@ using HotelReservation.Contract;
 using System;
 using HotelReservation.Logger;
 
-namespace HotelReservationEngine.Controllers
+namespace HotelReservation.Web.Controllers
 {
     [Route("api/hotel")]
     public class HotelController : Controller
@@ -28,7 +28,7 @@ namespace HotelReservationEngine.Controllers
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             return Cache.AddToCache(searchFields);
         }
@@ -54,7 +54,7 @@ namespace HotelReservationEngine.Controllers
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             return hotelList;
         }
@@ -76,7 +76,7 @@ namespace HotelReservationEngine.Controllers
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             return singleAvailItinerary;
         }
@@ -97,7 +97,7 @@ namespace HotelReservationEngine.Controllers
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             return roomPricingResponse;
         }
@@ -119,7 +119,7 @@ namespace HotelReservationEngine.Controllers
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             return completeBookingResult;
         }

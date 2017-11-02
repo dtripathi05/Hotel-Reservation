@@ -19,7 +19,7 @@ namespace HotelReservationEngine.DataParser
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             return new HotelRoomAvailRQ
             {
@@ -40,7 +40,7 @@ namespace HotelReservationEngine.DataParser
             }
             catch (Exception ex)
             {
-                Log.ExcpLogger(ex);
+                Log.ExceptionLogger(ex);
             }
             SingleAvailItinerary singleAvail= new SingleAvailItinerary()
             {
